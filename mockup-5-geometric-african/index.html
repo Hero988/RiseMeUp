@@ -1,0 +1,3034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiseMeUp — Sustainable Farming for the Nuba Mountain Community</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+:root {
+  --black: #0a0a0a;
+  --amber: #f59e0b;
+  --red: #b91c1c;
+  --brown: #78350f;
+  --warm-white: #fef3c7;
+  --teal: #0d9488;
+  --amber-dark: #d97706;
+  --amber-light: #fbbf24;
+  --red-light: #dc2626;
+  --teal-light: #14b8a6;
+  --teal-dark: #0f766e;
+  --gray-900: #111111;
+  --gray-800: #1a1a1a;
+  --gray-700: #2a2a2a;
+  --gray-400: #9ca3af;
+  --gray-300: #d1d5db;
+  --white: #ffffff;
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--warm-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul { list-style: none; }
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================
+   AFRICAN GEOMETRIC PATTERNS (CSS-only)
+   ============================================ */
+
+/* Zigzag border pattern */
+.zigzag-border {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  background:
+    linear-gradient(135deg, var(--amber) 25%, transparent 25%) -12px 0,
+    linear-gradient(225deg, var(--amber) 25%, transparent 25%) -12px 0,
+    linear-gradient(315deg, var(--amber) 25%, transparent 25%),
+    linear-gradient(45deg, var(--amber) 25%, transparent 25%);
+  background-size: 24px 24px;
+  background-color: var(--black);
+}
+
+.zigzag-border.red {
+  background:
+    linear-gradient(135deg, var(--red) 25%, transparent 25%) -12px 0,
+    linear-gradient(225deg, var(--red) 25%, transparent 25%) -12px 0,
+    linear-gradient(315deg, var(--red) 25%, transparent 25%),
+    linear-gradient(45deg, var(--red) 25%, transparent 25%);
+  background-size: 24px 24px;
+  background-color: var(--black);
+}
+
+.zigzag-border.teal {
+  background:
+    linear-gradient(135deg, var(--teal) 25%, transparent 25%) -12px 0,
+    linear-gradient(225deg, var(--teal) 25%, transparent 25%) -12px 0,
+    linear-gradient(315deg, var(--teal) 25%, transparent 25%),
+    linear-gradient(45deg, var(--teal) 25%, transparent 25%);
+  background-size: 24px 24px;
+  background-color: var(--black);
+}
+
+/* Kente cloth inspired color bar */
+.kente-bar {
+  display: flex;
+  height: 8px;
+  width: 100%;
+}
+
+.kente-bar span {
+  flex: 1;
+  display: block;
+}
+
+.kente-bar span:nth-child(1) { background: var(--amber); }
+.kente-bar span:nth-child(2) { background: var(--red); }
+.kente-bar span:nth-child(3) { background: var(--teal); }
+.kente-bar span:nth-child(4) { background: var(--brown); }
+.kente-bar span:nth-child(5) { background: var(--amber); }
+.kente-bar span:nth-child(6) { background: var(--red); }
+.kente-bar span:nth-child(7) { background: var(--teal); }
+.kente-bar span:nth-child(8) { background: var(--brown); }
+
+/* Diamond pattern background */
+.diamond-pattern {
+  background-image:
+    linear-gradient(45deg, var(--gray-800) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--gray-800) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--gray-800) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--gray-800) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+/* Triangle repeating pattern */
+.triangle-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(60deg, transparent 45%, rgba(245,158,11,0.05) 45%, rgba(245,158,11,0.05) 55%, transparent 55%),
+    linear-gradient(-60deg, transparent 45%, rgba(13,148,136,0.05) 45%, rgba(13,148,136,0.05) 55%, transparent 55%);
+  background-size: 60px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   SECTION TITLE STYLES
+   ============================================ */
+.section-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--amber);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--warm-white);
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray-400);
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.nav.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--amber);
+  padding: 10px 0;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--warm-white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo .logo-geo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo .logo-geo::before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: var(--amber);
+  transform: rotate(45deg);
+}
+
+.nav-logo .logo-geo::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: var(--black);
+  transform: rotate(45deg);
+}
+
+.nav-logo span {
+  color: var(--amber);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--warm-white);
+  transition: var(--transition);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--amber);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover {
+  color: var(--amber);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--amber);
+  color: var(--black) !important;
+  font-weight: 700 !important;
+  font-family: var(--font-heading) !important;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: var(--transition);
+}
+
+.nav-cta:hover {
+  background: var(--amber-light) !important;
+  color: var(--black) !important;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+/* Mobile menu button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--amber);
+  transition: var(--transition);
+  transform-origin: center;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: var(--gray-900);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    transition: var(--transition-slow);
+    border-left: 3px solid var(--amber);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-cta {
+    margin-top: 12px;
+  }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+}
+
+/* Animated geometric background */
+.hero-geo-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-geo-bg .geo-shape {
+  position: absolute;
+  opacity: 0.06;
+}
+
+.geo-shape.diamond {
+  width: 200px;
+  height: 200px;
+  background: var(--amber);
+  transform: rotate(45deg);
+  animation: floatGeo 12s ease-in-out infinite;
+}
+
+.geo-shape.diamond.d1 { top: 10%; right: 5%; width: 300px; height: 300px; }
+.geo-shape.diamond.d2 { bottom: 15%; left: -5%; width: 250px; height: 250px; animation-delay: -4s; }
+.geo-shape.diamond.d3 { top: 40%; right: 25%; width: 120px; height: 120px; opacity: 0.04; animation-delay: -8s; }
+
+.geo-shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 260px solid var(--red);
+  animation: floatGeo 16s ease-in-out infinite reverse;
+}
+
+.geo-shape.triangle.t1 { top: 5%; left: 15%; }
+.geo-shape.triangle.t2 { bottom: 5%; right: 10%; border-bottom-color: var(--teal); animation-delay: -6s; }
+
+.geo-shape.hex {
+  width: 180px;
+  height: 100px;
+  background: var(--teal);
+  position: absolute;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  animation: floatGeo 14s ease-in-out infinite;
+}
+
+.geo-shape.hex.h1 { top: 60%; left: 8%; animation-delay: -3s; }
+.geo-shape.hex.h2 { top: 20%; right: 40%; width: 100px; height: 56px; animation-delay: -7s; }
+
+/* Large geometric grid overlay */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245,158,11,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,158,11,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+}
+
+/* Animated pattern stripe */
+.hero-pattern-stripe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  z-index: 1;
+  background:
+    repeating-linear-gradient(
+      120deg,
+      transparent,
+      transparent 20px,
+      rgba(245,158,11,0.04) 20px,
+      rgba(245,158,11,0.04) 40px
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 0 80px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  border: 2px solid var(--amber);
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  margin-bottom: 28px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amber);
+  opacity: 0;
+  animation: wipeInLeft 0.8s ease forwards 0.3s;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 800;
+  color: var(--warm-white);
+  line-height: 1.05;
+  margin-bottom: 24px;
+  max-width: 800px;
+  opacity: 0;
+  animation: wipeInLeft 0.8s ease forwards 0.5s;
+}
+
+.hero-title .highlight {
+  color: var(--amber);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--amber);
+  opacity: 0.3;
+  transform: skewX(-12deg);
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  color: var(--gray-300);
+  max-width: 550px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  opacity: 0;
+  animation: wipeInLeft 0.8s ease forwards 0.7s;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: wipeInLeft 0.8s ease forwards 0.9s;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: var(--amber);
+  color: var(--black);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--amber-light);
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: transparent;
+  color: var(--warm-white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid var(--warm-white);
+  cursor: pointer;
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+  transform: translateX(4px);
+}
+
+/* Hero side geometric art */
+.hero-geo-art {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  z-index: 1;
+  opacity: 0;
+  animation: rotateIn 1.2s ease forwards 0.6s;
+}
+
+.hero-geo-art .ring {
+  position: absolute;
+  border: 3px solid;
+  transform: rotate(45deg);
+}
+
+.hero-geo-art .ring:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  border-color: rgba(245,158,11,0.15);
+  animation: spinSlow 30s linear infinite;
+}
+
+.hero-geo-art .ring:nth-child(2) {
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+  border-color: rgba(185,28,28,0.12);
+  animation: spinSlow 25s linear infinite reverse;
+}
+
+.hero-geo-art .ring:nth-child(3) {
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  border-color: rgba(13,148,136,0.15);
+  animation: spinSlow 20s linear infinite;
+}
+
+.hero-geo-art .center-diamond {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--amber);
+  opacity: 0.2;
+  animation: pulseDiamond 3s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .hero-geo-art { display: none; }
+}
+
+/* ============================================
+   HERITAGE / ABOUT SECTION
+   ============================================ */
+.heritage {
+  position: relative;
+  padding: 100px 0;
+  background: var(--gray-900);
+}
+
+.heritage .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.heritage-visual {
+  position: relative;
+  height: 450px;
+}
+
+.heritage-visual .pattern-block {
+  position: absolute;
+  background: var(--amber);
+  opacity: 0.08;
+}
+
+.heritage-visual .pattern-block:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 10%, 90% 0%, 100% 85%, 15% 100%);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--amber),
+      var(--amber) 4px,
+      transparent 4px,
+      transparent 20px
+    );
+  opacity: 0.06;
+}
+
+.heritage-visual .pattern-block:nth-child(2) {
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  background: var(--gray-800);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.heritage-visual .inner-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+}
+
+.heritage-visual .inner-symbol::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--amber);
+  transform: rotate(45deg);
+}
+
+.heritage-visual .inner-symbol::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+  border: 4px solid var(--red);
+  transform: rotate(45deg);
+}
+
+.heritage-visual .corner-accent {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.heritage-visual .corner-accent::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--amber);
+}
+
+.heritage-visual .corner-accent::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: var(--amber);
+}
+
+.heritage-visual .corner-accent.tl { top: 0; left: 0; }
+.heritage-visual .corner-accent.br { bottom: 0; right: 0; transform: rotate(180deg); }
+
+.heritage-text .desc {
+  color: var(--gray-300);
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.heritage-text .tagline {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--amber);
+  padding-left: 20px;
+  border-left: 4px solid var(--amber);
+  margin-top: 24px;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .heritage .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .heritage-visual { height: 300px; }
+}
+
+/* ============================================
+   VISION & MISSION — Diamond Split
+   ============================================ */
+.vision-mission {
+  position: relative;
+  padding: 100px 0;
+  background: var(--black);
+  clip-path: polygon(0 0, 100% 3%, 100% 97%, 0 100%);
+  overflow: hidden;
+}
+
+.vision-mission .triangle-pattern::before {
+  opacity: 0.4;
+}
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.vm-card {
+  padding: 48px;
+  position: relative;
+  background: var(--gray-900);
+  border: 2px solid var(--gray-700);
+  transition: var(--transition);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+.vm-card:hover {
+  border-color: var(--amber);
+  transform: translateY(-4px);
+}
+
+.vm-card .vm-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.vm-card.vision .vm-icon::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--amber);
+  transform: rotate(45deg);
+  top: 7px;
+  left: 7px;
+  opacity: 0.2;
+}
+
+.vm-card.vision .vm-icon::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--amber);
+  border-radius: 50%;
+  top: 18px;
+  left: 18px;
+}
+
+.vm-card.mission .vm-icon::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  border-bottom: 48px solid var(--teal);
+  opacity: 0.2;
+  top: 8px;
+  left: 4px;
+}
+
+.vm-card.mission .vm-icon::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--teal);
+  transform: rotate(45deg);
+  top: 28px;
+  left: 22px;
+}
+
+.vm-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.vm-card.vision h3 { color: var(--amber); }
+.vm-card.mission h3 { color: var(--teal); }
+
+.vm-card p {
+  color: var(--gray-300);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Center diamond separator */
+.vm-center-diamond {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 48px;
+  height: 48px;
+  background: var(--black);
+  border: 3px solid var(--amber);
+  z-index: 2;
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .vm-center-diamond { display: block; }
+}
+
+@media (max-width: 900px) {
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+  .vision-mission {
+    clip-path: none;
+  }
+}
+
+/* ============================================
+   PROJECTS SECTION — Tabbed with Geo Cards
+   ============================================ */
+.projects {
+  position: relative;
+  padding: 100px 0;
+  background: var(--gray-900);
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.projects-header .section-label {
+  justify-content: center;
+}
+
+.projects-header .section-subtitle {
+  margin: 0 auto;
+}
+
+/* Tab navigation */
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.project-tab {
+  padding: 12px 28px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--gray-800);
+  color: var(--gray-400);
+  border: 2px solid var(--gray-700);
+  cursor: pointer;
+  transition: var(--transition);
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.project-tab:hover {
+  border-color: var(--amber);
+  color: var(--warm-white);
+}
+
+.project-tab.active {
+  background: var(--amber);
+  color: var(--black);
+  border-color: var(--amber);
+}
+
+/* Project panels */
+.project-panel {
+  display: none;
+  animation: fadeInUp 0.5s ease;
+}
+
+.project-panel.active {
+  display: block;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.project-visual {
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+}
+
+.project-visual .pattern-fill {
+  position: absolute;
+  inset: 0;
+}
+
+.project-visual.biogas .pattern-fill {
+  background:
+    repeating-linear-gradient(
+      60deg,
+      var(--teal),
+      var(--teal) 3px,
+      transparent 3px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      var(--teal-dark),
+      var(--teal-dark) 3px,
+      transparent 3px,
+      transparent 28px
+    );
+  opacity: 0.15;
+  background-color: var(--gray-800);
+}
+
+.project-visual.greenhouse .pattern-fill {
+  background:
+    repeating-conic-gradient(
+      var(--amber) 0deg 10deg,
+      transparent 10deg 20deg
+    ) 0 0 / 80px 80px;
+  opacity: 0.08;
+  background-color: var(--gray-800);
+}
+
+.project-visual.packaging .pattern-fill {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      var(--red) 0px,
+      var(--red) 3px,
+      transparent 3px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--red) 0px,
+      var(--red) 3px,
+      transparent 3px,
+      transparent 20px
+    );
+  opacity: 0.08;
+  background-color: var(--gray-800);
+}
+
+.project-visual.poultry .pattern-fill {
+  background:
+    radial-gradient(circle 8px, var(--amber) 100%, transparent 100%) 0 0 / 32px 32px,
+    radial-gradient(circle 8px, var(--brown) 100%, transparent 100%) 16px 16px / 32px 32px;
+  opacity: 0.1;
+  background-color: var(--gray-800);
+}
+
+.project-visual .phase-label {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--amber);
+  background: rgba(10,10,10,0.8);
+  padding: 8px 20px;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.project-visual .big-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-visual .big-icon svg {
+  width: 100px;
+  height: 100px;
+  opacity: 0.3;
+}
+
+.project-info h3 {
+  font-size: 2rem;
+  color: var(--warm-white);
+  margin-bottom: 16px;
+}
+
+.project-info p {
+  color: var(--gray-300);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.project-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.project-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--warm-white);
+}
+
+.project-feature::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--amber);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+  .project-visual { height: 250px; }
+}
+
+/* ============================================
+   EXPERTS — Hexagonal Team Cards
+   ============================================ */
+.experts {
+  position: relative;
+  padding: 100px 0;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.experts-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.experts-header .section-label {
+  justify-content: center;
+}
+
+.hex-grid {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.hex-card {
+  width: 320px;
+  position: relative;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.hex-card:hover {
+  transform: translateY(-8px);
+}
+
+.hex-avatar {
+  width: 200px;
+  height: 230px;
+  margin: 0 auto 24px;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: var(--gray-800);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.hex-card:hover .hex-avatar {
+  background: var(--gray-700);
+}
+
+.hex-avatar .avatar-pattern {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-avatar .avatar-initials {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--amber);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.hex-avatar::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border: 2px solid var(--amber);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.hex-card:hover .hex-avatar::after {
+  opacity: 0.4;
+}
+
+.hex-card h4 {
+  font-size: 1.2rem;
+  color: var(--warm-white);
+  margin-bottom: 8px;
+}
+
+.hex-card .role {
+  font-size: 0.9rem;
+  color: var(--amber);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hex-card .credentials {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+/* ============================================
+   OBJECTIVES — Bold Icon Grid
+   ============================================ */
+.objectives {
+  position: relative;
+  padding: 100px 0;
+  background: var(--gray-900);
+  clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+}
+
+.objectives-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.objectives-header .section-label {
+  justify-content: center;
+}
+
+.obj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.obj-card {
+  padding: 36px;
+  background: var(--gray-800);
+  border: 2px solid var(--gray-700);
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.obj-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  transition: var(--transition-slow);
+}
+
+.obj-card:hover::before {
+  height: 100%;
+}
+
+.obj-card:nth-child(1)::before { background: var(--teal); }
+.obj-card:nth-child(2)::before { background: var(--amber); }
+.obj-card:nth-child(3)::before { background: var(--red); }
+.obj-card:nth-child(4)::before { background: var(--amber); }
+.obj-card:nth-child(5)::before { background: var(--teal); }
+.obj-card:nth-child(6)::before { background: var(--red); }
+
+.obj-card:hover {
+  border-color: var(--gray-400);
+  transform: translateY(-4px);
+}
+
+.obj-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.obj-icon .geo-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  transform: rotate(45deg);
+  transition: var(--transition);
+}
+
+.obj-card:nth-child(1) .geo-frame { border-color: var(--teal); }
+.obj-card:nth-child(2) .geo-frame { border-color: var(--amber); }
+.obj-card:nth-child(3) .geo-frame { border-color: var(--red); }
+.obj-card:nth-child(4) .geo-frame { border-color: var(--amber); }
+.obj-card:nth-child(5) .geo-frame { border-color: var(--teal); }
+.obj-card:nth-child(6) .geo-frame { border-color: var(--red); }
+
+.obj-card:hover .obj-icon .geo-frame {
+  transform: rotate(0deg);
+}
+
+.obj-icon svg {
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+}
+
+.obj-card h4 {
+  font-size: 1.15rem;
+  color: var(--warm-white);
+  margin-bottom: 10px;
+}
+
+.obj-card p {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .obj-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   UN SDGs SECTION
+   ============================================ */
+.sdgs {
+  position: relative;
+  padding: 100px 0;
+  background: var(--black);
+}
+
+.sdgs-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sdgs-header .section-label {
+  justify-content: center;
+}
+
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sdg-card {
+  padding: 32px 24px;
+  background: var(--gray-900);
+  text-align: center;
+  position: relative;
+  border: 2px solid var(--gray-700);
+  transition: var(--transition);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.sdg-card:hover {
+  transform: translateY(-6px);
+}
+
+.sdg-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.sdg-card:nth-child(1) { border-color: #fbbf24; }
+.sdg-card:nth-child(1)::after { background: #fbbf24; }
+.sdg-card:nth-child(2) { border-color: #f97316; }
+.sdg-card:nth-child(2)::after { background: #f97316; }
+.sdg-card:nth-child(3) { border-color: #ec4899; }
+.sdg-card:nth-child(3)::after { background: #ec4899; }
+.sdg-card:nth-child(4) { border-color: #a78bfa; }
+.sdg-card:nth-child(4)::after { background: #a78bfa; }
+
+.sdg-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  opacity: 0.15;
+  margin-bottom: 8px;
+}
+
+.sdg-card:nth-child(1) .sdg-number { color: #fbbf24; }
+.sdg-card:nth-child(2) .sdg-number { color: #f97316; }
+.sdg-card:nth-child(3) .sdg-number { color: #ec4899; }
+.sdg-card:nth-child(4) .sdg-number { color: #a78bfa; }
+
+.sdg-card h4 {
+  font-size: 1rem;
+  color: var(--warm-white);
+  margin-bottom: 10px;
+}
+
+.sdg-card p {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .sdg-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .sdg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   IMPACT NUMBERS — Animated Counters
+   ============================================ */
+.impact {
+  position: relative;
+  padding: 80px 0;
+  background: var(--gray-900);
+}
+
+.impact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 30px,
+      rgba(245,158,11,0.02) 30px,
+      rgba(245,158,11,0.02) 60px
+    );
+  pointer-events: none;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.impact-item {
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.impact-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(245,158,11,0.1);
+  transition: var(--transition);
+}
+
+.impact-item:hover::before {
+  border-color: rgba(245,158,11,0.3);
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.impact-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+
+.impact-label {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+.services {
+  position: relative;
+  padding: 100px 0;
+  background: var(--black);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-header .section-label {
+  justify-content: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  padding: 48px 32px;
+  background: var(--gray-900);
+  border: 2px solid var(--gray-700);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.service-card:nth-child(1)::before { background: var(--amber); }
+.service-card:nth-child(2)::before { background: var(--teal); }
+.service-card:nth-child(3)::before { background: var(--red); }
+
+.service-card:hover {
+  border-color: var(--amber);
+  transform: translateY(-6px);
+}
+
+.service-geo-header {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-geo-header .hex-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: var(--gray-800);
+  transition: var(--transition);
+}
+
+.service-card:hover .hex-bg {
+  background: var(--gray-700);
+}
+
+.service-geo-header svg {
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+}
+
+.service-card h4 {
+  font-size: 1.2rem;
+  color: var(--warm-white);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--gray-400);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CTA / TAKE ACTION
+   ============================================ */
+.cta {
+  position: relative;
+  padding: 120px 0;
+  background: var(--gray-900);
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(245,158,11,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(13,148,136,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content .section-label {
+  justify-content: center;
+}
+
+.cta-content .section-title {
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.cta-content .section-subtitle {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-donate {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 48px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+  transition: var(--transition);
+}
+
+.btn-donate:hover {
+  background: var(--red-light);
+  transform: scale(1.04);
+}
+
+/* ============================================
+   DONATE MODAL
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  padding: 24px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  background: var(--gray-900);
+  border: 2px solid var(--amber);
+  position: relative;
+  padding: 48px 40px;
+  transform: scale(0.9) rotate(-2deg);
+  transition: var(--transition-slow);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+.modal-overlay.active .modal {
+  transform: scale(1) rotate(0deg);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 2px solid var(--gray-700);
+  color: var(--warm-white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  border-color: var(--red);
+  color: var(--red);
+  transform: rotate(135deg);
+}
+
+.modal h3 {
+  font-size: 1.8rem;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+
+.modal .modal-tagline {
+  color: var(--gray-400);
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+.donate-amounts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.donate-amount {
+  padding: 12px 8px;
+  background: var(--gray-800);
+  border: 2px solid var(--gray-700);
+  color: var(--warm-white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.donate-amount:hover,
+.donate-amount.selected {
+  border-color: var(--amber);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--amber);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-form input {
+  padding: 14px 18px;
+  background: var(--gray-800);
+  border: 2px solid var(--gray-700);
+  color: var(--warm-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.modal-form input:focus {
+  outline: none;
+  border-color: var(--amber);
+}
+
+.modal-form input::placeholder {
+  color: var(--gray-400);
+}
+
+.modal-form .btn-submit {
+  padding: 16px;
+  background: var(--amber);
+  color: var(--black);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  transition: var(--transition);
+  margin-top: 4px;
+}
+
+.modal-form .btn-submit:hover {
+  background: var(--amber-light);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--gray-900);
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-brand .footer-logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--warm-white);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-brand .footer-logo span { color: var(--amber); }
+
+.footer-brand p {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  background: var(--gray-800);
+  border: 1px solid var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  border-color: var(--amber);
+  background: rgba(245,158,11,0.1);
+}
+
+.footer-social a svg {
+  transform: rotate(-45deg);
+  width: 16px;
+  height: 16px;
+}
+
+.footer-col h5 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--amber);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-col ul li a:hover {
+  color: var(--amber);
+  transform: translateX(4px);
+}
+
+.footer-col ul li a::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--amber);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.footer-col ul li a:hover::before {
+  opacity: 1;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  align-items: flex-start;
+}
+
+.footer-contact-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--amber);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gray-700);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  background: var(--amber);
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg) scale(0);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.back-to-top.visible {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  background: var(--amber-light);
+}
+
+.back-to-top svg {
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   ANIMATIONS & KEYFRAMES
+   ============================================ */
+@keyframes wipeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) rotate(-90deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(45deg); }
+  to { transform: rotate(405deg); }
+}
+
+@keyframes pulseDiamond {
+  0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) rotate(45deg) scale(1); }
+  50% { opacity: 0.4; transform: translate(-50%, -50%) rotate(45deg) scale(1.2); }
+}
+
+@keyframes floatGeo {
+  0%, 100% { transform: rotate(45deg) translate(0, 0); }
+  25% { transform: rotate(50deg) translate(10px, -15px); }
+  50% { transform: rotate(40deg) translate(-5px, 10px); }
+  75% { transform: rotate(48deg) translate(8px, 5px); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   UTILITY / MISC
+   ============================================ */
+::selection {
+  background: var(--amber);
+  color: var(--black);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amber);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-light);
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav class="nav" id="navbar">
+  <div class="container">
+    <a href="#hero" class="nav-logo">
+      <div class="logo-geo"></div>
+      Rise<span>MeUp</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#heritage">About</a>
+      <a href="#vision-mission">Vision</a>
+      <a href="#projects">Projects</a>
+      <a href="#experts">Experts</a>
+      <a href="#objectives">Goals</a>
+      <a href="#impact">Impact</a>
+      <a href="#cta" class="nav-cta">Donate</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Kente bar at very top (under nav when scrolled) -->
+<div class="kente-bar" style="position:fixed;top:0;left:0;right:0;z-index:1001;">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-geo-bg">
+    <div class="geo-shape diamond d1"></div>
+    <div class="geo-shape diamond d2"></div>
+    <div class="geo-shape diamond d3"></div>
+    <div class="geo-shape triangle t1"></div>
+    <div class="geo-shape triangle t2"></div>
+    <div class="geo-shape hex h1"></div>
+    <div class="geo-shape hex h2"></div>
+  </div>
+  <div class="hero-grid"></div>
+  <div class="hero-pattern-stripe"></div>
+
+  <div class="container hero-content">
+    <div class="hero-badge">Nuba Mountain &bull; Sudan</div>
+    <h1 class="hero-title">
+      Growing <span class="highlight">Futures</span> Through<br>Sustainable Farming
+    </h1>
+    <p class="hero-desc">
+      Transforming 130 acres of barren land into a thriving agricultural hub for the Nuba Mountain community. Think globally, act locally.
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="openDonateModal()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate Now
+      </button>
+      <a href="#projects" class="btn-secondary">
+        Explore Projects
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-geo-art">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="center-diamond"></div>
+  </div>
+</section>
+
+<!-- Zigzag divider -->
+<div class="zigzag-border"></div>
+
+<!-- ===================== HERITAGE / ABOUT ===================== -->
+<section class="heritage" id="heritage">
+  <div class="container">
+    <div class="heritage-visual reveal-left">
+      <div class="pattern-block"></div>
+      <div class="pattern-block"></div>
+      <div class="inner-symbol"></div>
+      <div class="corner-accent tl"></div>
+      <div class="corner-accent br"></div>
+    </div>
+    <div class="heritage-text reveal-right">
+      <div class="section-label">Our Heritage</div>
+      <h2 class="section-title">Committed to Grow Rural Communities</h2>
+      <p class="desc">
+        RiseMeUp Sustainable Farming is a non-profit charity dedicated to supporting the Nuba Mountain community in Sudan — survivors of genocide rebuilding their lives through agriculture and resilience.
+      </p>
+      <p class="desc">
+        Based in London, we bridge global resources with local needs, channeling investment into sustainable farming infrastructure that empowers communities to achieve food security and economic independence.
+      </p>
+      <p class="desc">
+        Investing in rural people is investing in a brighter future. With nearly 3 billion rural people globally — 40% of the world's population — and agriculture investment being 11 times more effective at reducing poverty, our work is not just meaningful, it is essential.
+      </p>
+      <div class="tagline">"Think globally, act locally"</div>
+    </div>
+  </div>
+</section>
+
+<!-- Zigzag divider red -->
+<div class="zigzag-border red"></div>
+
+<!-- ===================== VISION & MISSION ===================== -->
+<section class="vision-mission triangle-pattern" id="vision-mission">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label" style="justify-content:center;">Our Purpose</div>
+      <h2 class="section-title">Vision & Mission</h2>
+    </div>
+    <div class="vm-grid">
+      <div class="vm-card vision reveal-left">
+        <div class="vm-icon"></div>
+        <h3>Our Vision</h3>
+        <p>Taking steps towards sustainable development by developing 130 acres of poor-land into horticulture, farming and implementing Green Energy as the main source infrastructure of the farm — building a model for rural transformation across Africa.</p>
+      </div>
+      <div class="vm-card mission reveal-right">
+        <div class="vm-icon"></div>
+        <h3>Our Mission</h3>
+        <p>Turning 130 acres of non-productive land into a productive farm, creating new agricultural job opportunities to help, support the neediest and most excluded within this rural community — and ultimately, to end poverty through sustainable agriculture.</p>
+      </div>
+      <div class="vm-center-diamond"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Kente bar divider -->
+<div class="kente-bar">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="projects-header reveal">
+      <div class="section-label">Our Projects</div>
+      <h2 class="section-title">Four Phases of Transformation</h2>
+      <p class="section-subtitle">Each phase builds upon the last, creating a self-sustaining agricultural ecosystem for the Nuba Mountain community.</p>
+    </div>
+
+    <div class="project-tabs reveal">
+      <button class="project-tab active" data-tab="biogas">Phase 1: Biogas</button>
+      <button class="project-tab" data-tab="greenhouse">Phase 2: Greenhouses</button>
+      <button class="project-tab" data-tab="packaging">Phase 3: Packaging</button>
+      <button class="project-tab" data-tab="poultry">Phase 4: Poultry</button>
+    </div>
+
+    <!-- Biogas Panel -->
+    <div class="project-panel active" id="panel-biogas">
+      <div class="project-card">
+        <div class="project-visual biogas">
+          <div class="pattern-fill"></div>
+          <div class="phase-label">Phase 1</div>
+          <div class="big-icon">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="50" cy="50" r="35" stroke="#0d9488" opacity="0.5"/>
+              <path d="M50 15 L50 50 L75 65" stroke="#0d9488" opacity="0.5"/>
+              <circle cx="50" cy="50" r="18" stroke="#0d9488" opacity="0.3"/>
+              <path d="M35 25 Q50 10 65 25" stroke="#14b8a6" opacity="0.4"/>
+              <path d="M30 70 Q50 85 70 70" stroke="#14b8a6" opacity="0.4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Biogas Plant</h3>
+          <p>Our foundation phase establishes a biogas plant that uses all types of agricultural raw and residual materials to produce electricity, gas, and high-nutrient fertilizer — reducing dependency on external energy sources and strengthening rural infrastructure.</p>
+          <div class="project-features">
+            <div class="project-feature">Clean electricity</div>
+            <div class="project-feature">Natural gas supply</div>
+            <div class="project-feature">Organic fertilizer</div>
+            <div class="project-feature">Reduced dependency</div>
+            <div class="project-feature">Rural value chain</div>
+            <div class="project-feature">Green energy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Greenhouse Panel -->
+    <div class="project-panel" id="panel-greenhouse">
+      <div class="project-card">
+        <div class="project-visual greenhouse">
+          <div class="pattern-fill"></div>
+          <div class="phase-label">Phase 2</div>
+          <div class="big-icon">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="20" y="40" width="60" height="40" stroke="#f59e0b" opacity="0.4"/>
+              <path d="M20 40 L50 15 L80 40" stroke="#f59e0b" opacity="0.5"/>
+              <line x1="50" y1="15" x2="50" y2="80" stroke="#f59e0b" opacity="0.3"/>
+              <line x1="35" y1="27" x2="35" y2="80" stroke="#f59e0b" opacity="0.2"/>
+              <line x1="65" y1="27" x2="65" y2="80" stroke="#f59e0b" opacity="0.2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>10 Commercial Greenhouses</h3>
+          <p>Modern, technologically efficient greenhouse structures equipped with advanced irrigation systems for intensive agriculture. Growing off-season crops with better quality through climate and pest control, maximizing resource efficiency year-round.</p>
+          <div class="project-features">
+            <div class="project-feature">Off-season crops</div>
+            <div class="project-feature">Climate control</div>
+            <div class="project-feature">Pest management</div>
+            <div class="project-feature">Modern irrigation</div>
+            <div class="project-feature">Resource efficient</div>
+            <div class="project-feature">Higher yields</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Packaging Panel -->
+    <div class="project-panel" id="panel-packaging">
+      <div class="project-card">
+        <div class="project-visual packaging">
+          <div class="pattern-fill"></div>
+          <div class="phase-label">Phase 3</div>
+          <div class="big-icon">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="25" y="25" width="50" height="50" stroke="#b91c1c" opacity="0.4"/>
+              <rect x="35" y="35" width="30" height="30" stroke="#b91c1c" opacity="0.3"/>
+              <line x1="25" y1="25" x2="35" y2="35" stroke="#b91c1c" opacity="0.3"/>
+              <line x1="75" y1="25" x2="65" y2="35" stroke="#b91c1c" opacity="0.3"/>
+              <line x1="75" y1="75" x2="65" y2="65" stroke="#b91c1c" opacity="0.3"/>
+              <line x1="25" y1="75" x2="35" y2="65" stroke="#b91c1c" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Sorting & Packaging System</h3>
+          <p>Large fully automatic packaging lines encompassing fabrication, cleaning, filling, sealing, labeling, overwrapping, and palletizing — designed to make our produce competitive in both local and international markets.</p>
+          <div class="project-features">
+            <div class="project-feature">Auto packaging</div>
+            <div class="project-feature">Quality sealing</div>
+            <div class="project-feature">Smart labeling</div>
+            <div class="project-feature">Export ready</div>
+            <div class="project-feature">Market competitive</div>
+            <div class="project-feature">Full automation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poultry Panel -->
+    <div class="project-panel" id="panel-poultry">
+      <div class="project-card">
+        <div class="project-visual poultry">
+          <div class="pattern-fill"></div>
+          <div class="phase-label">Phase 4</div>
+          <div class="big-icon">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+              <ellipse cx="50" cy="50" rx="30" ry="20" stroke="#f59e0b" opacity="0.4"/>
+              <ellipse cx="50" cy="50" rx="15" ry="10" stroke="#78350f" opacity="0.4"/>
+              <circle cx="50" cy="50" r="4" fill="#f59e0b" opacity="0.3"/>
+              <path d="M20 50 Q50 20 80 50" stroke="#f59e0b" opacity="0.3"/>
+              <path d="M20 50 Q50 80 80 50" stroke="#78350f" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Poultry Farm</h3>
+          <p>A comprehensive poultry operation featuring egg-producing hens (2 halls of 40,000 each) and broiler hens (2 halls of 25,000 each). Providing protein, nutrition, and food security through short, efficient production cycles.</p>
+          <div class="project-features">
+            <div class="project-feature">80,000 layers</div>
+            <div class="project-feature">50,000 broilers</div>
+            <div class="project-feature">Protein supply</div>
+            <div class="project-feature">Food security</div>
+            <div class="project-feature">Short cycles</div>
+            <div class="project-feature">Nutrition boost</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Zigzag teal -->
+<div class="zigzag-border teal"></div>
+
+<!-- ===================== EXPERTS ===================== -->
+<section class="experts" id="experts">
+  <div class="container">
+    <div class="experts-header reveal">
+      <div class="section-label">Our Experts</div>
+      <h2 class="section-title">World-Class Agricultural Team</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Decades of combined expertise in sustainable agriculture, pathology, and international development.</p>
+    </div>
+
+    <div class="hex-grid">
+      <div class="hex-card reveal">
+        <div class="hex-avatar">
+          <div class="avatar-pattern">
+            <span class="avatar-initials">EA</span>
+          </div>
+        </div>
+        <h4>Prof. Dr. Elamin A. Ahmed</h4>
+        <div class="role">Fruit & Veg Production, Packaging & Exporting</div>
+        <div class="credentials">PhD INRA France | MSc University of Gezira | BSc University of Khartoum</div>
+      </div>
+
+      <div class="hex-card reveal" style="transition-delay:0.15s;">
+        <div class="hex-avatar">
+          <div class="avatar-pattern">
+            <span class="avatar-initials">MB</span>
+          </div>
+        </div>
+        <h4>Dr. Munir G. Botrus</h4>
+        <div class="role">Pesticide Application — 15 years with FAO/UN</div>
+        <div class="credentials">PhD University of London | BSc Agricultural Science</div>
+      </div>
+
+      <div class="hex-card reveal" style="transition-delay:0.3s;">
+        <div class="hex-avatar">
+          <div class="avatar-pattern">
+            <span class="avatar-initials">MK</span>
+          </div>
+        </div>
+        <h4>Dr. Mohammed A.F. Khames</h4>
+        <div class="role">Seed Pathology & Technology</div>
+        <div class="credentials">PhD Glassen University Germany | MSc Aberdeen UK | BSc Cairo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kente bar -->
+<div class="kente-bar">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ===================== OBJECTIVES ===================== -->
+<section class="objectives" id="objectives">
+  <div class="container">
+    <div class="objectives-header reveal">
+      <div class="section-label">Our Objectives</div>
+      <h2 class="section-title">Six Pillars of Impact</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Every project we undertake advances these core objectives for the Nuba Mountain community.</p>
+    </div>
+
+    <div class="obj-grid">
+      <div class="obj-card reveal">
+        <div class="obj-icon">
+          <div class="geo-frame"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <h4>Implementing Green Energy</h4>
+        <p>Building biogas infrastructure to provide clean, renewable energy for the entire farming operation and surrounding community.</p>
+      </div>
+
+      <div class="obj-card reveal" style="transition-delay:0.1s;">
+        <div class="obj-icon">
+          <div class="geo-frame"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Develop Rural Farming</h4>
+        <p>Transforming 130 acres of barren land into productive agricultural zones with modern greenhouses and sustainable methods.</p>
+      </div>
+
+      <div class="obj-card reveal" style="transition-delay:0.2s;">
+        <div class="obj-icon">
+          <div class="geo-frame"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>Creating New Jobs</h4>
+        <p>Generating agricultural employment opportunities for the Nuba Mountain community, especially for youth and marginalized groups.</p>
+      </div>
+
+      <div class="obj-card reveal" style="transition-delay:0.1s;">
+        <div class="obj-icon">
+          <div class="geo-frame"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h4>Ending Poverty</h4>
+        <p>Agriculture investment is 11 times more effective at reducing poverty than any other sector. We put that principle into action.</p>
+      </div>
+
+      <div class="obj-card reveal" style="transition-delay:0.2s;">
+        <div class="obj-icon">
+          <div class="geo-frame"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h4>Education & Training</h4>
+        <p>Equipping the next generation with agricultural knowledge and modern farming techniques for long-term sustainability.</p>
+      </div>
+
+      <div class="obj-card reveal" style="transition-delay:0.3s;">
+        <div class="obj-icon">
+          <div class="geo-frame"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <h4>Food Security</h4>
+        <p>With poultry, greenhouses, and sustainable farming, we ensure reliable access to nutritious food for thousands of families.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Zigzag -->
+<div class="zigzag-border"></div>
+
+<!-- ===================== UN SDGs ===================== -->
+<section class="sdgs" id="sdgs">
+  <div class="container">
+    <div class="sdgs-header reveal">
+      <div class="section-label">Global Alignment</div>
+      <h2 class="section-title">United Nations SDGs</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Our work directly advances four of the United Nations Sustainable Development Goals.</p>
+    </div>
+
+    <div class="sdg-grid">
+      <div class="sdg-card reveal">
+        <div class="sdg-number">#7</div>
+        <h4>Affordable & Clean Energy</h4>
+        <p>Our biogas plant delivers renewable energy to power the farm and surrounding communities, reducing reliance on fossil fuels.</p>
+      </div>
+
+      <div class="sdg-card reveal" style="transition-delay:0.1s;">
+        <div class="sdg-number">#9</div>
+        <h4>Industry, Innovation & Infrastructure</h4>
+        <p>Modern greenhouses, automated packaging, and agricultural technology bring innovation to rural Sudan.</p>
+      </div>
+
+      <div class="sdg-card reveal" style="transition-delay:0.2s;">
+        <div class="sdg-number">#10</div>
+        <h4>Reduced Inequalities</h4>
+        <p>Empowering genocide survivors and marginalized communities through economic opportunities and access to resources.</p>
+      </div>
+
+      <div class="sdg-card reveal" style="transition-delay:0.3s;">
+        <div class="sdg-number">#12</div>
+        <h4>Responsible Consumption & Production</h4>
+        <p>Sustainable farming practices, biogas energy, and efficient resource management for responsible food production.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kente bar -->
+<div class="kente-bar">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ===================== IMPACT NUMBERS ===================== -->
+<section class="impact" id="impact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label" style="justify-content:center;">Our Impact</div>
+      <h2 class="section-title">Numbers That Matter</h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item reveal">
+        <div class="impact-number" data-target="130" data-suffix="">0</div>
+        <div class="impact-label">Acres of Land</div>
+      </div>
+      <div class="impact-item reveal" style="transition-delay:0.1s;">
+        <div class="impact-number" data-target="130000" data-suffix="">0</div>
+        <div class="impact-label">Poultry Capacity</div>
+      </div>
+      <div class="impact-item reveal" style="transition-delay:0.2s;">
+        <div class="impact-number" data-target="10" data-suffix="">0</div>
+        <div class="impact-label">Greenhouses</div>
+      </div>
+      <div class="impact-item reveal" style="transition-delay:0.3s;">
+        <div class="impact-number" data-target="4" data-suffix="">0</div>
+        <div class="impact-label">Project Phases</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Zigzag red -->
+<div class="zigzag-border red"></div>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">How We Deliver Impact</h2>
+      <p class="section-subtitle" style="margin:0 auto;">From fundraising to operational management, we handle every step of the development process.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-geo-header">
+          <div class="hex-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>Fundraising & Investment</h4>
+        <p>Strategic fundraising campaigns and investment sourcing to secure sustainable funding for each project phase and beyond.</p>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:0.1s;">
+        <div class="service-geo-header">
+          <div class="hex-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h4>Development & Supervision</h4>
+        <p>Expert project development and on-the-ground supervision ensuring quality implementation at every stage of construction and deployment.</p>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:0.2s;">
+        <div class="service-geo-header">
+          <div class="hex-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h4>Project Operation Management</h4>
+        <p>End-to-end operational management including logistics, workforce coordination, and performance monitoring for sustained excellence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Zigzag teal -->
+<div class="zigzag-border teal"></div>
+
+<!-- ===================== CTA / TAKE ACTION ===================== -->
+<section class="cta" id="cta">
+  <div class="container cta-content">
+    <div class="section-label reveal">Take Action</div>
+    <h2 class="section-title reveal" style="transition-delay:0.1s;">Invest in a Brighter Future</h2>
+    <p class="section-subtitle reveal" style="transition-delay:0.2s;">
+      1.8 billion young people — the largest generation in history — deserve sustainable opportunities. Your contribution transforms lives in the Nuba Mountains.
+    </p>
+    <div class="cta-buttons reveal" style="transition-delay:0.3s;">
+      <button class="btn-donate" onclick="openDonateModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donate Now
+      </button>
+      <a href="mailto:info@risemeup.org" class="btn-secondary">
+        Contact Us
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Kente bar -->
+<div class="kente-bar">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          Rise<span>MeUp</span>
+        </div>
+        <p>Non-profit charity supporting the Nuba Mountain community in Sudan through sustainable farming, green energy, and agricultural innovation.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#heritage">About Us</a></li>
+          <li><a href="#vision-mission">Vision & Mission</a></li>
+          <li><a href="#projects">Our Projects</a></li>
+          <li><a href="#experts">Our Experts</a></li>
+          <li><a href="#objectives">Objectives</a></li>
+          <li><a href="#sdgs">UN SDGs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Projects</h5>
+        <ul>
+          <li><a href="#projects" onclick="selectTab('biogas')">Biogas Plant</a></li>
+          <li><a href="#projects" onclick="selectTab('greenhouse')">Greenhouses</a></li>
+          <li><a href="#projects" onclick="selectTab('packaging')">Sorting & Packaging</a></li>
+          <li><a href="#projects" onclick="selectTab('poultry')">Poultry Farm</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>2 Rosecroft Gardens<br>London, NW2 6HX</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+44 786 797 7844</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@risemeup.org</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>www.risemeup.org</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Geometric pattern footer bar -->
+  <div class="kente-bar" style="height:4px;">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      &copy; 2026 RiseMeUp Sustainable Farming. All rights reserved. | Registered Charity, London, UK
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== DONATE MODAL ===================== -->
+<div class="modal-overlay" id="donateModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeDonateModal()" aria-label="Close modal">
+      <span style="display:inline-block;transform:rotate(-45deg);">&#10005;</span>
+    </button>
+    <h3>Make a Donation</h3>
+    <p class="modal-tagline">Every contribution helps transform lives in the Nuba Mountains.</p>
+
+    <div class="donate-amounts">
+      <button class="donate-amount" data-amount="25">&pound;25</button>
+      <button class="donate-amount selected" data-amount="50">&pound;50</button>
+      <button class="donate-amount" data-amount="100">&pound;100</button>
+      <button class="donate-amount" data-amount="250">&pound;250</button>
+    </div>
+
+    <form class="modal-form" id="donateForm" onsubmit="handleDonate(event)">
+      <input type="text" id="donorName" placeholder="Full Name" required>
+      <input type="email" id="donorEmail" placeholder="Email Address" required>
+      <input type="number" id="donorAmount" placeholder="Custom Amount (&pound;)" value="50" min="1">
+      <button type="submit" class="btn-submit">
+        Complete Donation &rarr;
+      </button>
+    </form>
+    <p id="donateMessage" style="margin-top:16px;color:var(--teal);font-weight:600;text-align:center;display:none;"></p>
+  </div>
+</div>
+
+<!-- ===================== BACK TO TOP ===================== -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ---- Mobile Navigation ---- */
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', function() {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile nav on link click
+  navLinks.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  /* ---- Sticky Nav ---- */
+  const navbar = document.getElementById('navbar');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    lastScroll = currentScroll;
+  });
+
+  /* ---- Back to Top ---- */
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  /* ---- Project Tabs ---- */
+  const tabs = document.querySelectorAll('.project-tab');
+  const panels = document.querySelectorAll('.project-panel');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+      selectTab(targetTab);
+    });
+  });
+
+  window.selectTab = function(tabName) {
+    tabs.forEach(function(t) { t.classList.remove('active'); });
+    panels.forEach(function(p) { p.classList.remove('active'); });
+
+    const activeTab = document.querySelector('.project-tab[data-tab="' + tabName + '"]');
+    const activePanel = document.getElementById('panel-' + tabName);
+
+    if (activeTab) activeTab.classList.add('active');
+    if (activePanel) activePanel.classList.add('active');
+  };
+
+  /* ---- Donate Modal ---- */
+  const donateModal = document.getElementById('donateModal');
+
+  window.openDonateModal = function() {
+    donateModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeDonateModal = function() {
+    donateModal.classList.remove('active');
+    document.body.style.overflow = '';
+    // Reset message
+    document.getElementById('donateMessage').style.display = 'none';
+  };
+
+  // Close modal on overlay click
+  donateModal.addEventListener('click', function(e) {
+    if (e.target === donateModal) {
+      closeDonateModal();
+    }
+  });
+
+  // Escape key closes modal
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeDonateModal();
+    }
+  });
+
+  /* ---- Donate Amount Selection ---- */
+  const amountBtns = document.querySelectorAll('.donate-amount');
+  const amountInput = document.getElementById('donorAmount');
+
+  amountBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      amountBtns.forEach(function(b) { b.classList.remove('selected'); });
+      this.classList.add('selected');
+      amountInput.value = this.getAttribute('data-amount');
+    });
+  });
+
+  /* ---- Donate Form Submit ---- */
+  window.handleDonate = function(e) {
+    e.preventDefault();
+    const name = document.getElementById('donorName').value;
+    const amount = document.getElementById('donorAmount').value;
+    const msg = document.getElementById('donateMessage');
+
+    msg.textContent = 'Thank you, ' + name + '! Your generous donation of \u00A3' + amount + ' will help transform lives in the Nuba Mountains.';
+    msg.style.display = 'block';
+
+    // Reset form
+    document.getElementById('donateForm').reset();
+    amountBtns.forEach(function(b) { b.classList.remove('selected'); });
+
+    // Hide message after 5 seconds
+    setTimeout(function() {
+      msg.style.display = 'none';
+    }, 5000);
+  };
+
+  /* ---- Scroll Reveal Animation ---- */
+  function revealElements() {
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100;
+
+    reveals.forEach(function(el) {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('revealed');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealElements);
+  window.addEventListener('load', revealElements);
+
+  /* ---- Animated Counters ---- */
+  let countersAnimated = false;
+
+  function animateCounters() {
+    if (countersAnimated) return;
+
+    const impactSection = document.getElementById('impact');
+    if (!impactSection) return;
+
+    const sectionTop = impactSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight - 150) {
+      countersAnimated = true;
+      const counters = document.querySelectorAll('.impact-number[data-target]');
+
+      counters.forEach(function(counter) {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          // Ease out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.floor(eased * target);
+
+          if (target >= 1000) {
+            counter.textContent = current.toLocaleString() + suffix;
+          } else {
+            counter.textContent = current + suffix;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            if (target >= 1000) {
+              counter.textContent = target.toLocaleString() + suffix;
+            } else {
+              counter.textContent = target + suffix;
+            }
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+  }
+
+  window.addEventListener('scroll', animateCounters);
+  window.addEventListener('load', animateCounters);
+
+  /* ---- Smooth scroll for all anchor links ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ---- Active nav link on scroll ---- */
+  const sections = document.querySelectorAll('section[id]');
+
+  function highlightNav() {
+    const scrollY = window.pageYOffset + 120;
+
+    sections.forEach(function(section) {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+          link.style.color = '';
+        });
+        const activeLink = document.querySelector('.nav-links a[href="#' + sectionId + '"]');
+        if (activeLink && !activeLink.classList.contains('nav-cta')) {
+          activeLink.style.color = 'var(--amber)';
+        }
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightNav);
+
+})();
+</script>
+
+</body>
+</html>

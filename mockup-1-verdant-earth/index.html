@@ -1,0 +1,2983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiseMeUp — Sustainable Farming for the Nuba Mountain Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --forest: #1a3a2a;
+      --forest-dark: #0f2419;
+      --sage: #7c9a6e;
+      --sage-light: #a3bd96;
+      --cream: #f5f0e8;
+      --cream-dark: #e8dfd3;
+      --terracotta: #c4703f;
+      --terracotta-light: #d4884f;
+      --soil: #4a3728;
+      --soil-light: #6b5443;
+      --white: #ffffff;
+      --black: #111111;
+      --text-dark: #2a2a2a;
+      --text-light: #f5f0e8cc;
+      --shadow-sm: 0 2px 8px rgba(26,58,42,0.08);
+      --shadow-md: 0 4px 20px rgba(26,58,42,0.12);
+      --shadow-lg: 0 8px 40px rgba(26,58,42,0.18);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== ORGANIC GRAIN TEXTURE OVERLAY ===== */
+    .grain-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    /* ===== WAVE DIVIDERS ===== */
+    .wave-divider {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+
+    .wave-divider.flip {
+      transform: rotate(180deg);
+    }
+
+    /* ===== FLOATING LEAF PARTICLES ===== */
+    .leaf-particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .leaf {
+      position: absolute;
+      opacity: 0.12;
+      animation: leafFall linear infinite;
+      will-change: transform;
+    }
+
+    @keyframes leafFall {
+      0% {
+        transform: translateY(-10vh) rotate(0deg) translateX(0px);
+        opacity: 0;
+      }
+      10% { opacity: 0.12; }
+      90% { opacity: 0.12; }
+      100% {
+        transform: translateY(110vh) rotate(720deg) translateX(80px);
+        opacity: 0;
+      }
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+    }
+
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ===== NAVIGATION ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(26, 58, 42, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(124, 154, 110, 0.2);
+      transition: all var(--transition);
+    }
+
+    .navbar.scrolled {
+      background: rgba(15, 36, 25, 0.97);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+
+    .nav-logo-text span {
+      color: var(--sage-light);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      font-size: 0.92rem;
+      font-weight: 500;
+      opacity: 0.8;
+      transition: all var(--transition);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--sage-light);
+      transition: width var(--transition);
+      border-radius: 1px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      opacity: 1;
+      color: var(--sage-light);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-donate-btn {
+      background: var(--terracotta);
+      color: var(--cream) !important;
+      padding: 10px 24px !important;
+      border-radius: 50px;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+      transition: all var(--transition) !important;
+      box-shadow: 0 2px 12px rgba(196, 112, 63, 0.3);
+    }
+
+    .nav-donate-btn::after { display: none !important; }
+
+    .nav-donate-btn:hover {
+      background: var(--terracotta-light) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(196, 112, 63, 0.5);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2.5px;
+      background: var(--cream);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5.5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5.5px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, var(--forest-dark) 0%, var(--forest) 40%, #1f4a32 70%, var(--sage) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 120px 24px 80px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 80%, rgba(124, 154, 110, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(196, 112, 63, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(26, 58, 42, 0.3) 0%, transparent 80%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124, 154, 110, 0.2);
+      border: 1px solid rgba(124, 154, 110, 0.3);
+      padding: 8px 20px;
+      border-radius: 50px;
+      color: var(--sage-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      color: var(--cream);
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 .accent {
+      color: var(--sage-light);
+      font-style: italic;
+    }
+
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      color: var(--sage-light);
+      font-style: italic;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 650px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--cream);
+      box-shadow: 0 4px 20px rgba(196, 112, 63, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-light);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 30px rgba(196, 112, 63, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      border: 2px solid rgba(245, 240, 232, 0.4);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(245, 240, 232, 0.1);
+      border-color: var(--cream);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline-green {
+      background: transparent;
+      color: var(--forest);
+      border: 2px solid var(--sage);
+    }
+
+    .btn-outline-green:hover {
+      background: var(--forest);
+      color: var(--cream);
+      border-color: var(--forest);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-solid-green {
+      background: var(--forest);
+      color: var(--cream);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-solid-green:hover {
+      background: var(--forest-dark);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Hero floating SVG decorations */
+    .hero-deco {
+      position: absolute;
+      z-index: 1;
+      opacity: 0.08;
+    }
+
+    .hero-deco-1 {
+      top: 10%;
+      left: 5%;
+      width: 300px;
+      height: 300px;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .hero-deco-2 {
+      bottom: 10%;
+      right: 5%;
+      width: 250px;
+      height: 250px;
+      animation: float 10s ease-in-out infinite reverse;
+    }
+
+    .hero-deco-3 {
+      top: 50%;
+      right: 15%;
+      width: 150px;
+      height: 150px;
+      animation: float 6s ease-in-out infinite 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--sage-light);
+      opacity: 0.6;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .hero-scroll-indicator span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 600;
+      color: var(--sage);
+      margin-bottom: 12px;
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--sage);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--forest);
+      margin-bottom: 16px;
+    }
+
+    .section-title.light { color: var(--cream); }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--soil-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section-subtitle.light { color: var(--text-light); }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 50%, var(--terracotta) 100%);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-visual-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      padding: 40px;
+    }
+
+    .about-visual-icon {
+      width: 120px;
+      height: 120px;
+      opacity: 0.9;
+    }
+
+    .about-visual-text {
+      color: var(--cream);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    .about-content h3 {
+      font-size: 1.8rem;
+      color: var(--forest);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--soil-light);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .about-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+
+    .about-highlight:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-highlight-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1rem;
+    }
+
+    .about-highlight-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--forest);
+    }
+
+    /* ===== VISION / MISSION ===== */
+    .vision-mission {
+      background: var(--forest);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vision-mission::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 0% 50%, rgba(124, 154, 110, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 100% 50%, rgba(196, 112, 63, 0.08) 0%, transparent 60%);
+    }
+
+    .vm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      position: relative;
+    }
+
+    .vm-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(124, 154, 110, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      backdrop-filter: blur(8px);
+      transition: all var(--transition);
+    }
+
+    .vm-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(124, 154, 110, 0.4);
+      transform: translateY(-6px);
+    }
+
+    .vm-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .vm-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      color: var(--sage-light);
+    }
+
+    .vm-card p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* ===== WHAT WE OFFER / PHASES ===== */
+    .phases {
+      background: var(--cream);
+    }
+
+    .phases-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .phase-tab {
+      padding: 12px 28px;
+      border-radius: 50px;
+      border: 2px solid var(--sage);
+      background: transparent;
+      color: var(--forest);
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .phase-tab:hover {
+      background: rgba(124, 154, 110, 0.1);
+    }
+
+    .phase-tab.active {
+      background: var(--forest);
+      color: var(--cream);
+      border-color: var(--forest);
+      box-shadow: var(--shadow-md);
+    }
+
+    .phase-panel {
+      display: none;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    .phase-panel.active {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .phase-visual {
+      border-radius: var(--radius-lg);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phase-visual-1 {
+      background: linear-gradient(135deg, #2d5a3f, #4a8f6a, #c4703f);
+    }
+
+    .phase-visual-2 {
+      background: linear-gradient(135deg, #1a5a2e, #7c9a6e, #a3bd96);
+    }
+
+    .phase-visual-3 {
+      background: linear-gradient(135deg, #4a3728, #7c6a5a, #c4703f);
+    }
+
+    .phase-visual-4 {
+      background: linear-gradient(135deg, #c4703f, #8b5e3c, #1a3a2a);
+    }
+
+    .phase-visual svg {
+      width: 100px;
+      height: 100px;
+      opacity: 0.9;
+    }
+
+    .phase-visual-label {
+      color: var(--cream);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .phase-content h3 {
+      font-size: 1.8rem;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+
+    .phase-content .phase-number {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .phase-content p {
+      color: var(--soil-light);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .phase-benefits {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .phase-benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      font-size: 0.95rem;
+      color: var(--forest);
+      transition: all var(--transition);
+    }
+
+    .phase-benefit:hover {
+      transform: translateX(6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .phase-benefit svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--sage);
+    }
+
+    .phase-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .phase-details.expanded {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .phase-details-content {
+      padding-top: 16px;
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 16px;
+    }
+
+    .learn-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: transparent;
+      border: 2px solid var(--sage);
+      border-radius: 50px;
+      color: var(--forest);
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      margin-top: 8px;
+    }
+
+    .learn-more-btn:hover {
+      background: var(--forest);
+      color: var(--cream);
+      border-color: var(--forest);
+    }
+
+    .learn-more-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--transition);
+    }
+
+    .learn-more-btn.expanded svg {
+      transform: rotate(180deg);
+    }
+
+    /* ===== TEAM SECTION ===== */
+    .team {
+      background: var(--white);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .team-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 40px 28px;
+      text-align: center;
+      transition: all var(--transition);
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--sage), var(--terracotta));
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .team-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(124, 154, 110, 0.2);
+    }
+
+    .team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--cream);
+      box-shadow: var(--shadow-md);
+    }
+
+    .team-avatar-1 { background: linear-gradient(135deg, var(--forest), var(--sage)); }
+    .team-avatar-2 { background: linear-gradient(135deg, var(--terracotta), var(--soil)); }
+    .team-avatar-3 { background: linear-gradient(135deg, var(--sage), var(--forest-dark)); }
+
+    .team-card h4 {
+      font-size: 1.2rem;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+
+    .team-card .team-role {
+      font-size: 0.9rem;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .team-card .team-quals {
+      font-size: 0.82rem;
+      color: var(--soil-light);
+      line-height: 1.6;
+    }
+
+    /* ===== OBJECTIVES SECTION ===== */
+    .objectives {
+      background: var(--cream);
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .objective-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      text-align: center;
+      transition: all var(--transition);
+      border: 1px solid rgba(124, 154, 110, 0.1);
+      position: relative;
+    }
+
+    .objective-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--sage);
+    }
+
+    .objective-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, rgba(124, 154, 110, 0.15), rgba(26, 58, 42, 0.08));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+
+    .objective-card:hover .objective-icon {
+      background: var(--forest);
+      transform: scale(1.1);
+    }
+
+    .objective-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--forest);
+      transition: color var(--transition);
+    }
+
+    .objective-card:hover .objective-icon svg {
+      color: var(--cream);
+    }
+
+    .objective-card h4 {
+      font-size: 1.1rem;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+
+    .objective-card p {
+      font-size: 0.9rem;
+      color: var(--soil-light);
+    }
+
+    /* ===== UN SDGs SECTION ===== */
+    .sdgs {
+      background: var(--forest);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sdgs::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(124, 154, 110, 0.1) 0%, transparent 70%);
+    }
+
+    .sdgs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .sdg-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(124, 154, 110, 0.2);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      text-align: center;
+      transition: all var(--transition);
+      backdrop-filter: blur(4px);
+    }
+
+    .sdg-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-6px);
+      border-color: var(--sage-light);
+    }
+
+    .sdg-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, var(--sage-light), var(--terracotta-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sdg-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--cream);
+    }
+
+    .sdg-card p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services {
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      text-align: center;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--sage), var(--terracotta));
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+
+    .service-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+
+    .service-icon-1 { background: linear-gradient(135deg, var(--terracotta), var(--soil)); }
+    .service-icon-2 { background: linear-gradient(135deg, var(--forest), var(--sage)); }
+    .service-icon-3 { background: linear-gradient(135deg, var(--sage), var(--terracotta)); }
+
+    .service-icon svg {
+      width: 32px;
+      height: 32px;
+      color: var(--cream);
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .service-card h4 {
+      font-size: 1.2rem;
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--soil-light);
+    }
+
+    /* ===== IMPACT STATS ===== */
+    .stats {
+      background: linear-gradient(135deg, var(--forest-dark), var(--forest), var(--sage));
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(196, 112, 63, 0.1), transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(124, 154, 110, 0.1), transparent 50%);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(124, 154, 110, 0.2);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(4px);
+      transition: all var(--transition);
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-6px);
+      border-color: var(--sage-light);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--sage-light);
+      margin-bottom: 8px;
+    }
+
+    .stat-suffix {
+      font-size: 0.6em;
+      opacity: 0.8;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: 16px;
+    }
+
+    .contact-info > p {
+      color: var(--soil-light);
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+
+    .contact-item:hover {
+      transform: translateX(6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--sage-light);
+    }
+
+    .contact-item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .contact-item-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: var(--sage);
+    }
+
+    .contact-item-value {
+      font-size: 1rem;
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-form h3 {
+      font-size: 1.4rem;
+      color: var(--forest);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--forest);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--cream-dark);
+      border-radius: var(--radius-sm);
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      background: var(--cream);
+      transition: all var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--sage);
+      box-shadow: 0 0 0 3px rgba(124, 154, 110, 0.15);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--forest);
+      color: var(--cream);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .form-submit:hover {
+      background: var(--forest-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--forest-dark);
+      color: var(--cream);
+      padding: 60px 0 0;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(124, 154, 110, 0.2);
+    }
+
+    .footer-about h3 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-about h3 span { color: var(--sage-light); }
+
+    .footer-about p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .footer-slogan {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--sage-light);
+      font-size: 1rem;
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      color: var(--sage-light);
+    }
+
+    .footer-col a {
+      display: block;
+      padding: 4px 0;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      transition: all var(--transition);
+    }
+
+    .footer-col a:hover {
+      color: var(--cream);
+      transform: translateX(4px);
+    }
+
+    .footer-bottom {
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--cream);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all var(--transition);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--sage);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .back-to-top svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ===== DONATE MODAL ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 36, 25, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      padding: 24px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      max-width: 520px;
+      width: 100%;
+      padding: 48px;
+      position: relative;
+      transform: translateY(30px) scale(0.95);
+      transition: all 0.4s ease;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .modal-overlay.active .modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .modal-close:hover {
+      background: var(--forest);
+      color: var(--cream);
+      transform: rotate(90deg);
+    }
+
+    .modal-close svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .modal h3 {
+      font-size: 1.8rem;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+
+    .modal .modal-subtitle {
+      color: var(--soil-light);
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+
+    .donation-amounts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .donation-amount {
+      padding: 14px;
+      border: 2px solid var(--cream-dark);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--forest);
+      cursor: pointer;
+      transition: all var(--transition);
+      background: var(--white);
+    }
+
+    .donation-amount:hover,
+    .donation-amount.selected {
+      border-color: var(--forest);
+      background: var(--forest);
+      color: var(--cream);
+    }
+
+    .donation-custom {
+      margin-bottom: 24px;
+    }
+
+    .donation-custom input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid var(--cream-dark);
+      border-radius: var(--radius-sm);
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--text-dark);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+
+    .donation-custom input:focus {
+      outline: none;
+      border-color: var(--sage);
+      box-shadow: 0 0 0 3px rgba(124, 154, 110, 0.15);
+    }
+
+    .modal-donate-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--terracotta);
+      color: var(--cream);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .modal-donate-btn:hover {
+      background: var(--terracotta-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(196, 112, 63, 0.4);
+    }
+
+    .modal-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--soil-light);
+      margin-top: 16px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .sdgs-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background: var(--forest-dark);
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .hamburger { display: flex; }
+
+      .about-grid,
+      .vm-grid,
+      .phase-panel.active,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid,
+      .objectives-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .sdgs-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 { font-size: 2.4rem; }
+
+      .phases-tabs { gap: 8px; }
+      .phase-tab { padding: 10px 20px; font-size: 0.85rem; }
+
+      .modal { padding: 32px 24px; }
+      .donation-amounts { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .section-padding { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== FLOATING LEAF PARTICLES ===== -->
+  <div class="leaf-particles" id="leafParticles"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <svg class="nav-logo-icon" viewBox="0 0 42 42" fill="none">
+          <circle cx="21" cy="21" r="20" stroke="#7c9a6e" stroke-width="1.5" fill="none"/>
+          <path d="M21 8c0 0-8 6-8 16c0 4 2 7 4 9c2-3 4-8 4-14c0 6 2 11 4 14c2-2 4-5 4-9c0-10-8-16-8-16z" fill="#7c9a6e" opacity="0.8"/>
+          <path d="M21 12v18" stroke="#a3bd96" stroke-width="1" opacity="0.6"/>
+        </svg>
+        <span class="nav-logo-text">Rise<span>MeUp</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-section="about">About</a>
+        <a href="#vision-mission" data-section="vision-mission">Vision</a>
+        <a href="#phases" data-section="phases">Projects</a>
+        <a href="#team" data-section="team">Team</a>
+        <a href="#objectives" data-section="objectives">Objectives</a>
+        <a href="#sdgs" data-section="sdgs">UN SDGs</a>
+        <a href="#contact" data-section="contact">Contact</a>
+        <a href="#" class="nav-donate-btn" id="navDonateBtn">Donate Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="grain-overlay"></div>
+
+    <!-- Decorative SVG shapes -->
+    <div class="hero-deco hero-deco-1">
+      <svg viewBox="0 0 300 300" fill="none">
+        <path d="M150 10C150 10 50 60 30 150C10 240 80 290 150 290C220 290 290 240 270 150C250 60 150 10 150 10Z" fill="#a3bd96" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="hero-deco hero-deco-2">
+      <svg viewBox="0 0 250 250" fill="none">
+        <path d="M125 5C125 5 25 55 15 125C5 195 55 245 125 245C195 245 245 195 235 125C225 55 125 5 125 5Z" fill="#c4703f" opacity="0.2"/>
+      </svg>
+    </div>
+    <div class="hero-deco hero-deco-3">
+      <svg viewBox="0 0 150 150" fill="none">
+        <circle cx="75" cy="75" r="70" fill="#7c9a6e" opacity="0.15"/>
+        <path d="M75 20C75 20 40 50 40 90C40 115 55 130 75 130C95 130 110 115 110 90C110 50 75 20 75 20Z" fill="#7c9a6e" opacity="0.2"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M8 1L10 5.5L15 6.2L11.5 9.6L12.4 14.5L8 12.2L3.6 14.5L4.5 9.6L1 6.2L6 5.5L8 1Z" fill="currentColor"/></svg>
+        Non-Profit Charity &middot; London, UK
+      </div>
+      <h1>Growing <span class="accent">Hope</span> from<br>the Ground Up</h1>
+      <p class="hero-tagline">"Think globally, act locally"</p>
+      <p class="hero-description">
+        RiseMeUp Sustainable Farming supports the Nuba Mountain community in Sudan,
+        transforming 130 acres of barren land into thriving farms that create jobs,
+        provide food security, and build a sustainable future for genocide survivors.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary donate-trigger" id="heroDonateBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          Donate Now
+        </button>
+        <a href="#about" class="btn btn-secondary">
+          Learn Our Story
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+  </section>
+
+  <!-- Wave: Hero to About -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,30 L1440,0 L0,0 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">About RiseMeUp</h2>
+        <p class="section-subtitle">Committed to grow rural communities and invest in a brighter future for the Nuba Mountain people.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-visual-inner">
+            <svg class="about-visual-icon" viewBox="0 0 120 120" fill="none">
+              <path d="M60 15C60 15 20 40 20 75C20 100 38 110 60 110C82 110 100 100 100 75C100 40 60 15 60 15Z" fill="#f5f0e8" opacity="0.3"/>
+              <path d="M60 30C60 30 35 50 35 75C35 92 46 102 60 102C74 102 85 92 85 75C85 50 60 30 60 30Z" fill="#f5f0e8" opacity="0.2"/>
+              <line x1="60" y1="40" x2="60" y2="100" stroke="#f5f0e8" stroke-width="1.5" opacity="0.5"/>
+              <path d="M60 55C50 50 42 55 42 55" stroke="#f5f0e8" stroke-width="1.5" fill="none" opacity="0.4"/>
+              <path d="M60 70C72 65 78 70 78 70" stroke="#f5f0e8" stroke-width="1.5" fill="none" opacity="0.4"/>
+            </svg>
+            <div class="about-visual-text">"Investing in rural people is investing in a brighter future"</div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <h3>Transforming Lives Through Sustainable Agriculture</h3>
+          <p>
+            RiseMeUp Sustainable Farming is a London-based non-profit charity dedicated to supporting
+            the Nuba Mountain community in Sudan -- genocide survivors who deserve a chance to rebuild
+            their lives with dignity and self-sufficiency.
+          </p>
+          <p>
+            We are transforming 130 acres of poor, non-productive land into a thriving agricultural hub
+            through horticulture, farming, and green energy infrastructure, creating new opportunities
+            for the neediest and most excluded members of this rural community.
+          </p>
+          <div class="about-highlights">
+            <div class="about-highlight">
+              <div class="about-highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="about-highlight-text">London-Based Charity</span>
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              </div>
+              <span class="about-highlight-text">Nuba Mountain, Sudan</span>
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="about-highlight-text">130 Acres of Farmland</span>
+            </div>
+            <div class="about-highlight">
+              <div class="about-highlight-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="about-highlight-text">Community Driven</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: About to Vision/Mission -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C240,60 480,0 720,30 C960,60 1200,10 1440,40 L1440,60 L0,60 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== VISION / MISSION SECTION ===== -->
+  <section class="vision-mission section-padding" id="vision-mission">
+    <div class="grain-overlay"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" style="color: var(--sage-light);">Our Purpose</div>
+        <h2 class="section-title light">Vision & Mission</h2>
+        <p class="section-subtitle light">Where we are headed and how we plan to get there.</p>
+      </div>
+      <div class="vm-grid">
+        <div class="vm-card reveal-left">
+          <svg class="vm-icon" viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="28" stroke="#a3bd96" stroke-width="1.5" fill="none"/>
+            <path d="M30 10C30 10 15 22 15 35C15 45 22 52 30 52C38 52 45 45 45 35C45 22 30 10 30 10Z" fill="#a3bd96" opacity="0.3"/>
+            <circle cx="30" cy="22" r="4" fill="#a3bd96" opacity="0.6"/>
+            <path d="M30 26V48" stroke="#a3bd96" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+          <h3>Our Vision</h3>
+          <p>
+            Taking steps towards sustainable development by developing 130 acres of poor-land
+            into horticulture, farming, and implementing Green Energy as the main source of
+            infrastructure for the farm -- creating a self-sustaining model of rural development.
+          </p>
+        </div>
+        <div class="vm-card reveal-right">
+          <svg class="vm-icon" viewBox="0 0 60 60" fill="none">
+            <rect x="4" y="4" width="52" height="52" rx="12" stroke="#c4703f" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <path d="M20 42L30 18L40 42" stroke="#c4703f" stroke-width="2" fill="none"/>
+            <path d="M23 36H37" stroke="#c4703f" stroke-width="1.5"/>
+            <circle cx="30" cy="18" r="3" fill="#c4703f" opacity="0.5"/>
+          </svg>
+          <h3>Our Mission</h3>
+          <p>
+            Turning 130 acres of non-productive land into productive farmland, creating new
+            agricultural job opportunities to help, support the neediest and excluded within
+            this rural community -- working together to end poverty and build lasting food security.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Vision to Phases -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,40 C360,0 720,60 1080,20 C1260,10 1380,50 1440,30 L1440,0 L0,0 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== WHAT WE OFFER / PROJECT PHASES ===== -->
+  <section class="phases section-padding" id="phases">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Our Project Phases</h2>
+        <p class="section-subtitle">A comprehensive four-phase plan to transform the Nuba Mountain community through sustainable agriculture.</p>
+      </div>
+
+      <div class="phases-tabs reveal" id="phaseTabs">
+        <button class="phase-tab active" data-phase="1">Biogas Plant</button>
+        <button class="phase-tab" data-phase="2">Greenhouses</button>
+        <button class="phase-tab" data-phase="3">Packaging</button>
+        <button class="phase-tab" data-phase="4">Poultry Farm</button>
+      </div>
+
+      <!-- Phase 1 -->
+      <div class="phase-panel active" id="phase-1">
+        <div class="phase-visual phase-visual-1 reveal-left">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="35" stroke="#f5f0e8" stroke-width="2" opacity="0.4"/>
+            <path d="M50 20V80" stroke="#f5f0e8" stroke-width="1.5" opacity="0.3"/>
+            <path d="M20 50H80" stroke="#f5f0e8" stroke-width="1.5" opacity="0.3"/>
+            <circle cx="50" cy="50" r="15" fill="#f5f0e8" opacity="0.2"/>
+            <path d="M42 42L58 58M58 42L42 58" stroke="#f5f0e8" stroke-width="2" opacity="0.5"/>
+            <path d="M50 30C50 30 35 40 35 52C35 60 42 65 50 65C58 65 65 60 65 52C65 40 50 30 50 30Z" fill="#f5f0e8" opacity="0.15"/>
+          </svg>
+          <div class="phase-visual-label">Renewable Energy Hub</div>
+        </div>
+        <div class="phase-content reveal-right">
+          <div class="phase-number">Phase 1</div>
+          <h3>Biogas Plant</h3>
+          <p>
+            Our biogas plant uses all types of agricultural raw and residual materials to generate
+            clean, renewable energy -- providing electricity, gas, and organic fertilizer for the farm.
+          </p>
+          <div class="phase-benefits">
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Clean electricity generation
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Natural gas production
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Organic fertilizer output
+            </div>
+          </div>
+          <button class="learn-more-btn" data-target="details-1">
+            Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="phase-details" id="details-1">
+            <div class="phase-details-content">
+              <p>
+                The biogas facility is designed to process agricultural waste products, converting them
+                into three valuable outputs: electricity for farm operations, gas for heating and cooking,
+                and nutrient-rich fertilizer that returns to the soil. This closed-loop system dramatically
+                reduces the community's dependency on external and costly resources, while promoting
+                environmental sustainability and energy independence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="phase-panel" id="phase-2">
+        <div class="phase-visual phase-visual-2 reveal-left">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M15 75L50 25L85 75Z" stroke="#f5f0e8" stroke-width="2" fill="#f5f0e8" fill-opacity="0.1"/>
+            <path d="M25 75L50 35L75 75Z" stroke="#f5f0e8" stroke-width="1.5" fill="#f5f0e8" fill-opacity="0.08"/>
+            <line x1="50" y1="25" x2="50" y2="75" stroke="#f5f0e8" stroke-width="1" opacity="0.3"/>
+            <line x1="15" y1="75" x2="85" y2="75" stroke="#f5f0e8" stroke-width="1.5" opacity="0.4"/>
+            <circle cx="35" cy="62" r="4" fill="#f5f0e8" opacity="0.3"/>
+            <circle cx="50" cy="58" r="4" fill="#f5f0e8" opacity="0.3"/>
+            <circle cx="65" cy="62" r="4" fill="#f5f0e8" opacity="0.3"/>
+          </svg>
+          <div class="phase-visual-label">Modern Agriculture</div>
+        </div>
+        <div class="phase-content reveal-right">
+          <div class="phase-number">Phase 2</div>
+          <h3>10 Commercial Greenhouses</h3>
+          <p>
+            Modern, technologically efficient greenhouse structures equipped with the best
+            equipment and advanced irrigation systems for intensive, year-round agriculture.
+          </p>
+          <div class="phase-benefits">
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Off-season crop production
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Climate and pest control
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Higher quality produce
+            </div>
+          </div>
+          <button class="learn-more-btn" data-target="details-2">
+            Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="phase-details" id="details-2">
+            <div class="phase-details-content">
+              <p>
+                Our 10 commercial greenhouses represent a leap in agricultural capability for the region.
+                With controlled environments, advanced irrigation, and modern growing technology, these
+                structures enable year-round production of high-value crops. Benefits include off-season
+                growing for market advantage, superior crop quality, precise climate control, integrated
+                pest management, and efficient use of water and fertilizer resources.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="phase-panel" id="phase-3">
+        <div class="phase-visual phase-visual-3 reveal-left">
+          <svg viewBox="0 0 100 100" fill="none">
+            <rect x="15" y="30" width="70" height="45" rx="4" stroke="#f5f0e8" stroke-width="2" fill="#f5f0e8" fill-opacity="0.1"/>
+            <rect x="25" y="40" width="20" height="25" rx="2" stroke="#f5f0e8" stroke-width="1.5" fill="#f5f0e8" fill-opacity="0.08"/>
+            <rect x="55" y="40" width="20" height="25" rx="2" stroke="#f5f0e8" stroke-width="1.5" fill="#f5f0e8" fill-opacity="0.08"/>
+            <line x1="15" y1="50" x2="85" y2="50" stroke="#f5f0e8" stroke-width="1" opacity="0.3"/>
+            <path d="M35 25L50 15L65 25" stroke="#f5f0e8" stroke-width="1.5" fill="none" opacity="0.4"/>
+          </svg>
+          <div class="phase-visual-label">Quality Assurance</div>
+        </div>
+        <div class="phase-content reveal-right">
+          <div class="phase-number">Phase 3</div>
+          <h3>Sorting & Packaging System</h3>
+          <p>
+            Large, fully automatic packaging lines designed to maintain consistent high-quality
+            standards from farm to market, ensuring our produce reaches consumers in perfect condition.
+          </p>
+          <div class="phase-benefits">
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Automated fabrication & cleaning
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Filling, sealing & labeling
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Overwrapping & palletizing
+            </div>
+          </div>
+          <button class="learn-more-btn" data-target="details-3">
+            Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="phase-details" id="details-3">
+            <div class="phase-details-content">
+              <p>
+                Our state-of-the-art sorting and packaging system handles the complete post-harvest
+                process chain: fabrication, cleaning, filling, sealing, labeling, overwrapping, and
+                palletizing. This fully automated operation ensures consistent product quality,
+                extends shelf life, and enables the community to access wider markets with
+                professionally packaged goods that meet international standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="phase-panel" id="phase-4">
+        <div class="phase-visual phase-visual-4 reveal-left">
+          <svg viewBox="0 0 100 100" fill="none">
+            <ellipse cx="50" cy="65" rx="35" ry="15" stroke="#f5f0e8" stroke-width="1.5" fill="#f5f0e8" fill-opacity="0.08"/>
+            <path d="M35 45C35 45 40 30 50 30C60 30 65 45 65 45" stroke="#f5f0e8" stroke-width="2" fill="none" opacity="0.5"/>
+            <circle cx="50" cy="38" r="8" fill="#f5f0e8" opacity="0.2"/>
+            <circle cx="50" cy="36" r="3" fill="#f5f0e8" opacity="0.3"/>
+            <path d="M45 55C45 55 47 48 50 48C53 48 55 55 55 55" stroke="#f5f0e8" stroke-width="1.5" fill="none" opacity="0.3"/>
+            <circle cx="35" cy="60" r="5" fill="#f5f0e8" opacity="0.15"/>
+            <circle cx="65" cy="60" r="5" fill="#f5f0e8" opacity="0.15"/>
+          </svg>
+          <div class="phase-visual-label">Food Security</div>
+        </div>
+        <div class="phase-content reveal-right">
+          <div class="phase-number">Phase 4</div>
+          <h3>Poultry Farm</h3>
+          <p>
+            A large-scale poultry operation providing essential protein and nutrition to the community,
+            with both egg-producing and broiler hen facilities to ensure comprehensive food security.
+          </p>
+          <div class="phase-benefits">
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              80,000 egg-producing hens (2 halls)
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              50,000 broiler hens (2 halls)
+            </div>
+            <div class="phase-benefit">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+              Essential protein & nutrition
+            </div>
+          </div>
+          <button class="learn-more-btn" data-target="details-4">
+            Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="phase-details" id="details-4">
+            <div class="phase-details-content">
+              <p>
+                The poultry farm consists of two distinct operations: egg-producing hens housed in
+                2 halls with capacity for 40,000 birds each (80,000 total), and broiler hens in 2 halls
+                with capacity for 25,000 birds each (50,000 total). Together, these facilities provide
+                a reliable source of protein and nutrition for the community, contributing directly
+                to food security and creating sustainable livelihoods for local farmers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Phases to Team -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,10 1080,40 C1260,50 1380,20 1440,25 L1440,60 L0,60 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- ===== TEAM SECTION ===== -->
+  <section class="team section-padding" id="team">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Our Experts</div>
+        <h2 class="section-title">Leadership Team</h2>
+        <p class="section-subtitle">World-class agricultural scientists and development professionals driving our mission.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar team-avatar-1">EA</div>
+          <h4>Prof. Dr. Elamin A. Ahmed</h4>
+          <div class="team-role">Fruit & Vegetable Production, Packaging & Exporting</div>
+          <div class="team-quals">PhD INRA France &middot; MSc University of Gezira &middot; BSc University of Khartoum</div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar team-avatar-2">MB</div>
+          <h4>Dr. Munir G. Botrus</h4>
+          <div class="team-role">Pesticide Application &middot; 15 Years with FAO/UN</div>
+          <div class="team-quals">PhD University of London &middot; BSc Agricultural Science</div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar team-avatar-3">MK</div>
+          <h4>Dr. Mohammed A.F. Khames</h4>
+          <div class="team-role">Seed Pathology & Technology</div>
+          <div class="team-quals">PhD Glassen University, Germany &middot; MSc Aberdeen, UK &middot; BSc Cairo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Team to Objectives -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#f5f0e8"/>
+    </svg>
+  </div>
+
+  <!-- ===== OBJECTIVES SECTION ===== -->
+  <section class="objectives section-padding" id="objectives">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Our Goals</div>
+        <h2 class="section-title">Key Objectives</h2>
+        <p class="section-subtitle">Six foundational pillars guiding every decision and action we take.</p>
+      </div>
+      <div class="objectives-grid">
+        <div class="objective-card reveal">
+          <div class="objective-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h4>Green Energy</h4>
+          <p>Implementing sustainable, renewable energy solutions through biogas and solar power.</p>
+        </div>
+        <div class="objective-card reveal">
+          <div class="objective-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c0 0-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>Rural Farming</h4>
+          <p>Developing modern agricultural practices adapted to the Nuba Mountain terrain.</p>
+        </div>
+        <div class="objective-card reveal">
+          <div class="objective-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+          </div>
+          <h4>Creating New Jobs</h4>
+          <p>Building agricultural employment opportunities for community members.</p>
+        </div>
+        <div class="objective-card reveal">
+          <div class="objective-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h4>Ending Poverty</h4>
+          <p>Breaking the cycle of poverty through sustainable economic development.</p>
+        </div>
+        <div class="objective-card reveal">
+          <div class="objective-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h4>Education & Training</h4>
+          <p>Empowering community members with agricultural knowledge and modern techniques.</p>
+        </div>
+        <div class="objective-card reveal">
+          <div class="objective-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Food Security</h4>
+          <p>Ensuring reliable access to nutritious food for the entire community year-round.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Objectives to SDGs -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,40 C240,10 720,60 1080,20 C1300,5 1400,30 1440,25 L1440,60 L0,60 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== UN SDGs SECTION ===== -->
+  <section class="sdgs section-padding" id="sdgs">
+    <div class="grain-overlay"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" style="color: var(--sage-light);">Global Alignment</div>
+        <h2 class="section-title light">UN Sustainable Development Goals</h2>
+        <p class="section-subtitle light">Our work directly contributes to four of the United Nations' 17 SDGs.</p>
+      </div>
+      <div class="sdgs-grid">
+        <div class="sdg-card reveal">
+          <div class="sdg-number">#7</div>
+          <h4>Affordable & Clean Energy</h4>
+          <p>Our biogas plant provides renewable energy for the farm and surrounding community, reducing reliance on fossil fuels.</p>
+        </div>
+        <div class="sdg-card reveal">
+          <div class="sdg-number">#9</div>
+          <h4>Industry, Innovation & Infrastructure</h4>
+          <p>Modern greenhouses, automated packaging, and advanced farming infrastructure driving agricultural innovation.</p>
+        </div>
+        <div class="sdg-card reveal">
+          <div class="sdg-number">#10</div>
+          <h4>Reduced Inequalities</h4>
+          <p>Creating equal opportunities for genocide survivors and marginalised communities through agricultural employment.</p>
+        </div>
+        <div class="sdg-card reveal">
+          <div class="sdg-number">#12</div>
+          <h4>Responsible Consumption & Production</h4>
+          <p>Sustainable farming practices, waste-to-energy biogas systems, and responsible resource management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: SDGs to Services -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C360,60 720,10 1080,45 C1260,55 1380,25 1440,35 L1440,0 L0,0 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">How We Work</div>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">End-to-end support from fundraising through to operational management.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <h4>Fundraising & Investment</h4>
+          <p>Connecting compassionate donors and impact investors with transformative agricultural projects in Sudan.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h4>Development & Supervision</h4>
+          <p>Expert oversight of all construction, agricultural development, and infrastructure implementation phases.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h4>Project Operation Management</h4>
+          <p>Day-to-day management of farming operations, ensuring efficiency, quality, and sustainability targets are met.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Services to Stats -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C360,60 720,0 1080,40 C1260,55 1380,20 1440,30 L1440,60 L0,60 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== IMPACT STATS SECTION ===== -->
+  <section class="stats section-padding" id="stats">
+    <div class="grain-overlay"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" style="color: var(--sage-light);">Our Impact</div>
+        <h2 class="section-title light">The Numbers That Drive Us</h2>
+        <p class="section-subtitle light">Every statistic represents real lives waiting to be transformed.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal-scale">
+          <div class="stat-number"><span class="counter" data-target="130">0</span><span class="stat-suffix"> acres</span></div>
+          <div class="stat-label">Of farmland being transformed</div>
+        </div>
+        <div class="stat-card reveal-scale">
+          <div class="stat-number"><span class="counter" data-target="11" data-suffix="x">0</span><span class="stat-suffix">x</span></div>
+          <div class="stat-label">More effective at reducing poverty</div>
+        </div>
+        <div class="stat-card reveal-scale">
+          <div class="stat-number"><span class="counter" data-target="3" data-suffix="B">0</span><span class="stat-suffix">B</span></div>
+          <div class="stat-label">Rural people globally (40% of population)</div>
+        </div>
+        <div class="stat-card reveal-scale">
+          <div class="stat-number"><span class="counter" data-target="1.8" data-decimals="1" data-suffix="B">0</span><span class="stat-suffix">B</span></div>
+          <div class="stat-label">Young people — largest generation ever</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Stats to Contact -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,40 C360,5 720,55 1080,20 C1260,10 1380,45 1440,30 L1440,0 L0,0 Z" fill="#1a3a2a"/>
+    </svg>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Whether you want to donate, volunteer, or learn more, we would love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Grow Together</h3>
+          <p>Reach out to our London office or drop us a message. Every conversation plants a seed for change.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Address</span>
+                <span class="contact-item-value">2 Rosecroft Gardens, London, NW2 6HX</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">info@risemeup.org</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Phone</span>
+                <span class="contact-item-value">+44 786 797 7844</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Website</span>
+                <span class="contact-item-value">www.risemeup.org</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form reveal-right">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="How can we help?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell us about your interest in RiseMeUp..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave: Contact to Footer -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#0f2419"/>
+    </svg>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Rise<span>MeUp</span></h3>
+          <p>
+            A London-based non-profit charity supporting the Nuba Mountain community in Sudan
+            through sustainable farming, green energy, and community development.
+          </p>
+          <div class="footer-slogan">"Committed to grow rural communities"</div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#about">About Us</a>
+          <a href="#vision-mission">Our Vision</a>
+          <a href="#phases">Projects</a>
+          <a href="#team">Our Team</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Projects</h4>
+          <a href="#phases">Biogas Plant</a>
+          <a href="#phases">Greenhouses</a>
+          <a href="#phases">Packaging</a>
+          <a href="#phases">Poultry Farm</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@risemeup.org">info@risemeup.org</a>
+          <a href="tel:+447867977844">+44 786 797 7844</a>
+          <a href="#">2 Rosecroft Gardens</a>
+          <a href="#">London, NW2 6HX</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RiseMeUp Sustainable Farming. All rights reserved.</span>
+        <span>Designed with care for the Nuba Mountain community.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ===== DONATE MODAL ===== -->
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <h3>Make a Donation</h3>
+      <p class="modal-subtitle">Your contribution directly supports farming, energy, and food security for the Nuba Mountain community.</p>
+      <div class="donation-amounts" id="donationAmounts">
+        <div class="donation-amount" data-amount="25">&pound;25</div>
+        <div class="donation-amount" data-amount="50">&pound;50</div>
+        <div class="donation-amount selected" data-amount="100">&pound;100</div>
+        <div class="donation-amount" data-amount="250">&pound;250</div>
+        <div class="donation-amount" data-amount="500">&pound;500</div>
+        <div class="donation-amount" data-amount="1000">&pound;1,000</div>
+      </div>
+      <div class="donation-custom">
+        <input type="text" id="customAmount" placeholder="Or enter a custom amount (&pound;)">
+      </div>
+      <button class="modal-donate-btn" id="modalDonateSubmit">
+        Donate &pound;<span id="donateAmountDisplay">100</span>
+      </button>
+      <p class="modal-note">Secure donation. You will be redirected to our payment partner.</p>
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ============================================
+      // FLOATING LEAF PARTICLES
+      // ============================================
+      function createLeafParticles() {
+        const container = document.getElementById('leafParticles');
+        const leafSVGs = [
+          `<svg viewBox="0 0 40 40" fill="#7c9a6e" width="30" height="30"><path d="M20 2C20 2 8 12 8 24C8 32 13 38 20 38C27 38 32 32 32 24C32 12 20 2 20 2Z"/><line x1="20" y1="8" x2="20" y2="36" stroke="#1a3a2a" stroke-width="0.5" opacity="0.3"/></svg>`,
+          `<svg viewBox="0 0 36 36" fill="#a3bd96" width="24" height="24"><path d="M18 3C18 3 6 12 6 22C6 30 11 33 18 33C25 33 30 30 30 22C30 12 18 3 18 3Z"/></svg>`,
+          `<svg viewBox="0 0 32 32" fill="#c4703f" width="20" height="20" opacity="0.6"><ellipse cx="16" cy="16" rx="12" ry="8" transform="rotate(30 16 16)"/></svg>`
+        ];
+        const leafCount = window.innerWidth < 768 ? 6 : 12;
+
+        for (let i = 0; i < leafCount; i++) {
+          const leaf = document.createElement('div');
+          leaf.className = 'leaf';
+          leaf.innerHTML = leafSVGs[Math.floor(Math.random() * leafSVGs.length)];
+          leaf.style.left = Math.random() * 100 + '%';
+          leaf.style.animationDuration = (12 + Math.random() * 18) + 's';
+          leaf.style.animationDelay = (Math.random() * 20) + 's';
+          container.appendChild(leaf);
+        }
+      }
+
+      // ============================================
+      // NAVBAR
+      // ============================================
+      const navbar = document.getElementById('navbar');
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      // Scroll behavior for navbar
+      let lastScrollY = 0;
+      function handleNavScroll() {
+        const scrollY = window.scrollY;
+        if (scrollY > 60) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        lastScrollY = scrollY;
+      }
+
+      // Hamburger menu
+      hamburger.addEventListener('click', function() {
+        this.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+
+      // Close mobile menu on link click
+      navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+        });
+      });
+
+      // Active nav link highlighting
+      const sections = document.querySelectorAll('section[id]');
+      function highlightActiveNav() {
+        const scrollPos = window.scrollY + 120;
+        sections.forEach(function(section) {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+          const link = navLinks.querySelector('a[data-section="' + id + '"]');
+          if (link) {
+            if (scrollPos >= top && scrollPos < top + height) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          }
+        });
+      }
+
+      // ============================================
+      // SCROLL REVEAL (IntersectionObserver)
+      // ============================================
+      function setupRevealAnimations() {
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(function(el) {
+          observer.observe(el);
+        });
+      }
+
+      // ============================================
+      // COUNTER ANIMATION
+      // ============================================
+      function setupCounters() {
+        const counters = document.querySelectorAll('.counter');
+        let countersAnimated = false;
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting && !countersAnimated) {
+              countersAnimated = true;
+              counters.forEach(function(counter) {
+                animateCounter(counter);
+              });
+            }
+          });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+          observer.observe(statsSection);
+        }
+      }
+
+      function animateCounter(el) {
+        const target = parseFloat(el.getAttribute('data-target'));
+        const decimals = parseInt(el.getAttribute('data-decimals') || '0');
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function easeOutQuart(t) {
+          return 1 - Math.pow(1 - t, 4);
+        }
+
+        function update(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = easeOutQuart(progress);
+          const current = easedProgress * target;
+
+          if (decimals > 0) {
+            el.textContent = current.toFixed(decimals);
+          } else {
+            el.textContent = Math.round(current);
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+
+        requestAnimationFrame(update);
+      }
+
+      // ============================================
+      // PROJECT PHASE TABS
+      // ============================================
+      function setupPhaseTabs() {
+        const tabs = document.querySelectorAll('.phase-tab');
+        const panels = document.querySelectorAll('.phase-panel');
+
+        tabs.forEach(function(tab) {
+          tab.addEventListener('click', function() {
+            const phase = this.getAttribute('data-phase');
+
+            // Update active tab
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            this.classList.add('active');
+
+            // Update active panel
+            panels.forEach(function(p) { p.classList.remove('active'); });
+            const targetPanel = document.getElementById('phase-' + phase);
+            if (targetPanel) {
+              targetPanel.classList.add('active');
+            }
+          });
+        });
+      }
+
+      // ============================================
+      // LEARN MORE EXPANDABLE SECTIONS
+      // ============================================
+      function setupLearnMore() {
+        const buttons = document.querySelectorAll('.learn-more-btn');
+        buttons.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const details = document.getElementById(targetId);
+            if (details) {
+              const isExpanded = details.classList.contains('expanded');
+              details.classList.toggle('expanded');
+              this.classList.toggle('expanded');
+              this.firstChild.textContent = isExpanded ? 'Learn More' : 'Show Less';
+            }
+          });
+        });
+      }
+
+      // ============================================
+      // DONATE MODAL
+      // ============================================
+      function setupDonateModal() {
+        const modal = document.getElementById('donateModal');
+        const closeBtn = document.getElementById('modalClose');
+        const amountDisplay = document.getElementById('donateAmountDisplay');
+        const customInput = document.getElementById('customAmount');
+        const amountButtons = document.querySelectorAll('.donation-amount');
+        const submitBtn = document.getElementById('modalDonateSubmit');
+
+        let selectedAmount = 100;
+
+        // Open triggers
+        document.querySelectorAll('.donate-trigger, #navDonateBtn, #heroDonateBtn').forEach(function(trigger) {
+          trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        // Close modal
+        function closeModal() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+          }
+        });
+
+        // Amount selection
+        amountButtons.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            amountButtons.forEach(function(b) { b.classList.remove('selected'); });
+            this.classList.add('selected');
+            selectedAmount = parseInt(this.getAttribute('data-amount'));
+            amountDisplay.textContent = selectedAmount.toLocaleString();
+            customInput.value = '';
+          });
+        });
+
+        // Custom amount
+        customInput.addEventListener('input', function() {
+          const val = parseInt(this.value.replace(/[^0-9]/g, ''));
+          if (val > 0) {
+            amountButtons.forEach(function(b) { b.classList.remove('selected'); });
+            selectedAmount = val;
+            amountDisplay.textContent = val.toLocaleString();
+          }
+        });
+
+        // Submit
+        submitBtn.addEventListener('click', function() {
+          const btn = this;
+          const originalText = btn.innerHTML;
+          btn.innerHTML = 'Thank you! Redirecting...';
+          btn.style.background = 'var(--sage)';
+          setTimeout(function() {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            closeModal();
+          }, 2000);
+        });
+      }
+
+      // ============================================
+      // BACK TO TOP BUTTON
+      // ============================================
+      function setupBackToTop() {
+        const btn = document.getElementById('backToTop');
+        function toggleBackToTop() {
+          if (window.scrollY > 600) {
+            btn.classList.add('visible');
+          } else {
+            btn.classList.remove('visible');
+          }
+        }
+
+        btn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+      }
+
+      // ============================================
+      // CONTACT FORM
+      // ============================================
+      function setupContactForm() {
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const btn = form.querySelector('.form-submit');
+          const originalText = btn.textContent;
+          btn.textContent = 'Message Sent!';
+          btn.style.background = 'var(--sage)';
+          form.reset();
+          setTimeout(function() {
+            btn.textContent = originalText;
+            btn.style.background = '';
+          }, 2500);
+        });
+      }
+
+      // ============================================
+      // GENTLE PARALLAX ON HERO
+      // ============================================
+      function setupParallax() {
+        const heroDecos = document.querySelectorAll('.hero-deco');
+        window.addEventListener('scroll', function() {
+          const scrollY = window.scrollY;
+          if (scrollY < window.innerHeight) {
+            heroDecos.forEach(function(deco, i) {
+              const speed = 0.15 + (i * 0.05);
+              deco.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
+            });
+          }
+        }, { passive: true });
+      }
+
+      // ============================================
+      // SCROLL EVENT LISTENER
+      // ============================================
+      window.addEventListener('scroll', function() {
+        handleNavScroll();
+        highlightActiveNav();
+      }, { passive: true });
+
+      // ============================================
+      // INITIALIZE EVERYTHING
+      // ============================================
+      document.addEventListener('DOMContentLoaded', function() {
+        createLeafParticles();
+        setupRevealAnimations();
+        setupCounters();
+        setupPhaseTabs();
+        setupLearnMore();
+        setupDonateModal();
+        setupBackToTop();
+        setupContactForm();
+        setupParallax();
+        handleNavScroll();
+        highlightActiveNav();
+      });
+
+    })();
+  </script>
+</body>
+</html>

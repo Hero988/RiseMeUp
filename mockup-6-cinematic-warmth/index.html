@@ -1,0 +1,3644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiseMeUp — Sustainable Farming for the Nuba Mountain Community</title>
+<meta name="description" content="RiseMeUp Sustainable Farming is a non-profit charity supporting the Nuba Mountain community in Sudan through sustainable horticulture, farming, and green energy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS VARIABLES — Cinematic Warmth Palette
+   ============================================ */
+:root {
+  --dark: #131313;
+  --charcoal: #1e1e2a;
+  --terracotta: #c2703a;
+  --terracotta-light: #d4884f;
+  --coral: #e88d67;
+  --coral-light: #f0a585;
+  --olive: #3d5a3e;
+  --olive-light: #4e7350;
+  --olive-dark: #2c422d;
+  --cream: #fefaf3;
+  --sand: #f4e8d1;
+  --gold: #ffb300;
+  --white: #ffffff;
+  --gray: #888888;
+  --warm-shadow: 0 8px 32px rgba(194, 112, 58, 0.15);
+  --warm-shadow-lg: 0 16px 48px rgba(194, 112, 58, 0.18);
+  --warm-glow: 0 0 30px rgba(232, 141, 103, 0.25);
+  --glow-terracotta: 0 0 20px rgba(194, 112, 58, 0.4), 0 0 60px rgba(194, 112, 58, 0.15);
+  --glow-gold: 0 0 20px rgba(255, 179, 0, 0.4), 0 0 60px rgba(255, 179, 0, 0.15);
+  --radius: 20px;
+  --radius-lg: 28px;
+  --radius-sm: 12px;
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --section-pad: clamp(80px, 10vw, 120px);
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terracotta) var(--dark);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--terracotta); border-radius: 4px; }
+
+::selection {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--cream);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-optical-sizing: auto;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img { max-width: 100%; display: block; }
+button { font-family: var(--font-body); cursor: pointer; border: none; }
+ul { list-style: none; }
+
+.container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   NOISE OVERLAY (from M2)
+   ============================================ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ============================================
+   FLOATING BOKEH BACKGROUND (from M4)
+   ============================================ */
+.bokeh-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bokeh-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+  animation: floatBokeh 20s ease-in-out infinite;
+}
+
+.bokeh-circle:nth-child(1) { width: 300px; height: 300px; background: var(--terracotta); top: 10%; left: -5%; animation-delay: 0s; animation-duration: 25s; }
+.bokeh-circle:nth-child(2) { width: 200px; height: 200px; background: var(--coral); top: 30%; right: -3%; animation-delay: -5s; animation-duration: 20s; }
+.bokeh-circle:nth-child(3) { width: 400px; height: 400px; background: var(--olive); bottom: 10%; left: 20%; animation-delay: -10s; animation-duration: 30s; }
+.bokeh-circle:nth-child(4) { width: 150px; height: 150px; background: var(--sand); top: 60%; right: 15%; animation-delay: -3s; animation-duration: 18s; opacity: 0.1; }
+.bokeh-circle:nth-child(5) { width: 250px; height: 250px; background: var(--terracotta); top: 80%; left: 60%; animation-delay: -8s; animation-duration: 22s; }
+.bokeh-circle:nth-child(6) { width: 180px; height: 180px; background: var(--coral); top: 5%; left: 50%; animation-delay: -12s; animation-duration: 28s; }
+
+@keyframes floatBokeh {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -40px) scale(1.05); }
+  50% { transform: translate(-20px, 30px) scale(0.95); }
+  75% { transform: translate(40px, 20px) scale(1.08); }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-center { text-align: center; }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--terracotta);
+}
+
+.dark-section .section-label { color: var(--coral-light); }
+.dark-section .section-label::before { background: var(--coral-light); }
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--charcoal);
+}
+
+.dark-section .section-title { color: var(--white); }
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--gray);
+  max-width: 650px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+
+.dark-section .section-subtitle { color: rgba(255,255,255,0.65); }
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, var(--terracotta), var(--coral));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 6px 24px rgba(194, 112, 58, 0.3);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-terracotta);
+}
+
+.btn-primary:hover::before {
+  transform: translateX(100%);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50px;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  box-shadow: var(--glow-gold);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   REVEAL ANIMATIONS
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered delays */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+#navbar.scrolled {
+  background: rgba(19, 19, 19, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 10px 0;
+  box-shadow: 0 2px 40px rgba(194, 112, 58, 0.08);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 65px;
+  max-width: 220px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+#navbar.scrolled .nav-logo img {
+  height: 50px;
+  max-width: 180px;
+}
+
+.footer-brand .nav-logo img {
+  height: 75px;
+  max-width: 260px;
+  filter: brightness(1.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.7);
+  transition: color var(--transition);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--terracotta);
+  border-radius: 2px;
+  transition: width var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--white);
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-donate {
+  padding: 10px 24px !important;
+  background: linear-gradient(135deg, var(--terracotta), var(--coral)) !important;
+  color: var(--white) !important;
+  font-weight: 700 !important;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(194, 112, 58, 0.3);
+  transition: transform var(--transition), box-shadow var(--transition) !important;
+}
+
+.nav-donate:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-terracotta);
+}
+
+.nav-donate::after { display: none !important; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  padding: 8px;
+  border: none;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2.5px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: var(--transition);
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+/* Mobile Menu — Slide from right (from M4) */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.mobile-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 360px;
+  height: 100vh;
+  background: var(--dark);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+  gap: 24px;
+  transition: right var(--transition);
+  box-shadow: -8px 0 40px rgba(0,0,0,0.3);
+}
+
+.mobile-nav.open { right: 0; }
+
+.mobile-nav a {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  transition: color var(--transition);
+}
+
+.mobile-nav a:hover { color: var(--terracotta); }
+
+.mobile-nav .mobile-donate-link {
+  color: var(--coral-light);
+}
+
+/* ============================================
+   1. HERO — DARK SECTION
+   ============================================ */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  padding: 120px 0 100px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Radial gradient spotlights (from M2) */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(194, 112, 58, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(255, 179, 0, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--dark) 0%, var(--charcoal) 100%);
+}
+
+/* Rotating circle (from M2) */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  border: 1px solid rgba(194, 112, 58, 0.06);
+  animation: hero-circle 20s linear infinite;
+}
+
+@keyframes hero-circle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Grid lines (from M2) */
+.hero-grid-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-grid-lines .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(194, 112, 58, 0.04) 50%, transparent);
+}
+
+/* Hero content — Two-column grid (from M4) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text { max-width: 600px; }
+
+/* Hero badge (from M4) */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(194, 112, 58, 0.12);
+  border: 1px solid rgba(194, 112, 58, 0.25);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--coral-light);
+  margin-bottom: 24px;
+  animation: bounceIn 0.8s var(--bounce) both;
+}
+
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--coral);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* Hero heading with scramble text (from M2) */
+.hero-heading {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero-heading .scramble-text {
+  display: inline;
+  min-width: 10px;
+}
+
+.hero-heading .line-terracotta { color: var(--coral-light); }
+.hero-heading .line-gold { color: var(--gold); }
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 36px;
+  line-height: 1.8;
+  max-width: 520px;
+  opacity: 0;
+  animation: fadeInUp 0.8s 1.2s ease forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 0.8s 1.5s ease forwards;
+}
+
+/* Hero visual — circle graphic + floating cards (from M4) */
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounceIn 1s var(--bounce) 0.4s both;
+}
+
+.hero-graphic {
+  width: 380px;
+  height: 380px;
+  position: relative;
+}
+
+.hero-graphic-main {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--olive), var(--olive-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(61, 90, 62, 0.3);
+}
+
+.hero-graphic-main::before {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,0.15);
+}
+
+.hero-graphic-main svg {
+  width: 160px;
+  height: 160px;
+  opacity: 0.9;
+}
+
+/* Floating stat cards (from M4) */
+.hero-float-card {
+  position: absolute;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  box-shadow: var(--warm-shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: floatCard 6s ease-in-out infinite;
+  z-index: 3;
+}
+
+.hero-float-card:nth-child(2) {
+  top: 8%;
+  right: -10%;
+  animation-delay: -2s;
+}
+
+.hero-float-card:nth-child(3) {
+  bottom: 12%;
+  left: -10%;
+  animation-delay: -4s;
+}
+
+.hero-float-card .card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.hero-float-card .card-icon.green { background: rgba(61, 90, 62, 0.1); color: var(--olive); }
+.hero-float-card .card-icon.orange { background: rgba(194, 112, 58, 0.1); color: var(--terracotta); }
+
+.hero-float-card .card-text strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.hero-float-card .card-text span {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* Hero scroll indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInUp 0.8s 2s ease forwards;
+}
+
+.hero-scroll-indicator span {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(180deg, var(--terracotta), transparent);
+  animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.3; transform: scaleY(0.5); }
+}
+
+/* ============================================
+   2. ABOUT — WARM SECTION
+   ============================================ */
+#about {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--sand), rgba(194, 112, 58, 0.15));
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--warm-shadow-lg);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f4e8d1' width='400' height='300'/%3E%3Ccircle cx='200' cy='100' r='50' fill='%233d5a3e' opacity='0.2'/%3E%3Ccircle cx='140' cy='160' r='35' fill='%23c2703a' opacity='0.15'/%3E%3Ccircle cx='270' cy='140' r='45' fill='%23e88d67' opacity='0.12'/%3E%3Cpath d='M50 300 Q100 200 200 220 Q300 240 350 180 L400 300Z' fill='%233d5a3e' opacity='0.15'/%3E%3Cpath d='M0 300 Q80 230 180 250 Q280 270 400 210 L400 300Z' fill='%23c2703a' opacity='0.1'/%3E%3C/svg%3E") center/cover;
+}
+
+.about-image-badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  box-shadow: var(--warm-shadow-lg);
+  text-align: center;
+}
+
+.about-image-badge .number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--terracotta);
+}
+
+.about-image-badge .label {
+  font-size: 0.78rem;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.about-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 20px;
+  color: var(--charcoal);
+}
+
+.about-content .section-label::before { background: var(--terracotta); }
+
+.about-content p {
+  color: var(--gray);
+  margin-bottom: 16px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.about-content p:first-of-type {
+  color: var(--charcoal);
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+/* About value cards (from M4) */
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.about-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.about-value:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--warm-shadow);
+}
+
+.about-value-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--terracotta), var(--coral));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.about-value strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 2px;
+  color: var(--charcoal);
+}
+
+.about-value span {
+  font-size: 0.78rem;
+  color: var(--gray);
+}
+
+/* ============================================
+   3. VISION/MISSION — WARM-TO-DARK
+   ============================================ */
+#vision-mission {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(180deg, var(--cream), var(--sand));
+  position: relative;
+  z-index: 1;
+}
+
+.heart-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heart-card {
+  padding: 48px 40px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.heart-card:hover {
+  transform: translateY(-6px);
+}
+
+.heart-card.vision {
+  background: linear-gradient(145deg, var(--olive), var(--olive-light));
+  color: var(--white);
+  box-shadow: 0 16px 48px rgba(61, 90, 62, 0.3);
+}
+
+.heart-card.mission {
+  background: linear-gradient(145deg, var(--terracotta), var(--coral));
+  color: var(--white);
+  box-shadow: 0 16px 48px rgba(194, 112, 58, 0.3);
+}
+
+/* Circle decorations (from M4) */
+.heart-card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.heart-card::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.heart-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.heart-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.heart-card p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  opacity: 0.92;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   4. PROJECTS — DARK SECTION (Film Strip)
+   ============================================ */
+#projects {
+  padding: var(--section-pad) 0;
+  background: var(--dark);
+  position: relative;
+  z-index: 1;
+}
+
+#projects .container { margin-bottom: 40px; }
+
+/* Film strip desktop */
+.film-strip-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.film-strip-track {
+  display: flex;
+  gap: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: grab;
+}
+
+.film-strip-track:active { cursor: grabbing; }
+
+.film-strip-border {
+  width: 100%;
+  height: 12px;
+  background: repeating-linear-gradient(90deg, var(--charcoal) 0px, var(--charcoal) 20px, var(--dark) 20px, var(--dark) 24px);
+  position: relative;
+}
+
+.film-strip-border::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(194, 112, 58, 0.2);
+  top: 50%;
+}
+
+.project-card {
+  min-width: 400px;
+  max-width: 400px;
+  background: linear-gradient(180deg, var(--charcoal) 0%, rgba(30,30,42,0.6) 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  margin: 0 14px;
+  padding: 0;
+  position: relative;
+  transition: var(--transition);
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.project-card:hover {
+  border-color: var(--terracotta);
+  box-shadow: 0 8px 40px rgba(194, 112, 58, 0.1);
+  transform: translateY(-4px);
+}
+
+.project-card-header { padding: 28px 28px 0; }
+
+.project-phase {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--coral-light);
+  margin-bottom: 6px;
+}
+
+.project-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+
+.project-card-visual {
+  height: 160px;
+  margin: 0 28px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:nth-child(1) .project-card-visual { background: linear-gradient(135deg, rgba(61,90,62,0.15) 0%, rgba(78,115,80,0.08) 100%); }
+.project-card:nth-child(2) .project-card-visual { background: linear-gradient(135deg, rgba(194,112,58,0.12) 0%, rgba(212,136,79,0.06) 100%); }
+.project-card:nth-child(3) .project-card-visual { background: linear-gradient(135deg, rgba(232,141,103,0.12) 0%, rgba(240,165,133,0.06) 100%); }
+.project-card:nth-child(4) .project-card-visual { background: linear-gradient(135deg, rgba(255,179,0,0.1) 0%, rgba(255,143,0,0.05) 100%); }
+
+.project-card-visual svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card-visual svg {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.project-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card-visual img {
+  transform: scale(1.05);
+}
+
+.project-card-body { padding: 20px 28px 28px; }
+
+.project-card-body p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.project-card-body .benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.benefit-tag {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  background: rgba(194, 112, 58, 0.1);
+  border: 1px solid rgba(194, 112, 58, 0.2);
+  border-radius: 50px;
+  color: var(--coral-light);
+  font-weight: 600;
+}
+
+.film-strip-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.film-strip-nav button {
+  width: 52px;
+  height: 52px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.film-strip-nav button:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  box-shadow: var(--glow-terracotta);
+}
+
+/* Projects mobile accordion */
+.project-accordion { display: none; }
+
+/* ============================================
+   5. TEAM — WARM SECTION (Flip Cards)
+   ============================================ */
+#team {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(180deg, var(--sand), var(--cream));
+  position: relative;
+  z-index: 1;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Flip card (from M4) */
+.team-card {
+  text-align: center;
+  perspective: 1000px;
+}
+
+.team-card-inner {
+  position: relative;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+}
+
+.team-card:hover .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+.team-card-front, .team-card-back {
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  padding: 40px 24px;
+  background: var(--white);
+  box-shadow: var(--warm-shadow);
+}
+
+.team-card-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--olive), var(--olive-light));
+  color: var(--white);
+}
+
+/* Bottom bar animation on team cards (from M2) */
+.team-card-front::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--terracotta), var(--coral));
+  transform: scaleX(0);
+  transition: transform var(--transition);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.team-card-front {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card:hover .team-card-front::after {
+  transform: scaleX(1);
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.team-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 3px solid rgba(194, 112, 58, 0.35);
+  pointer-events: none;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.team-card:hover .team-avatar img {
+  transform: scale(1.05);
+}
+
+.team-avatar.avatar-1 { border: 3px solid var(--terracotta); }
+.team-avatar.avatar-2 { border: 3px solid var(--olive); }
+.team-avatar.avatar-3 { border: 3px solid var(--charcoal); }
+
+.team-card-front h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--charcoal);
+}
+
+.team-card-front .team-role {
+  font-size: 0.83rem;
+  color: var(--terracotta);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.team-card-front .team-hint {
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.team-card-back h4 {
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.team-card-back p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.team-card-back .team-edu {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.team-card-back .team-edu span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  opacity: 0.85;
+}
+
+/* ============================================
+   6. IMPACT STATS — DARK SECTION
+   ============================================ */
+#impact {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(145deg, var(--olive-dark), var(--olive));
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#impact::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+}
+
+#impact::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 36px 16px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-4px);
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--coral-light);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* ============================================
+   7. OBJECTIVES — WARM SECTION
+   ============================================ */
+#objectives {
+  padding: var(--section-pad) 0;
+  background: var(--cream);
+  position: relative;
+  z-index: 1;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.obj-card {
+  padding: 36px 28px;
+  background: var(--white);
+  border: 1px solid rgba(194, 112, 58, 0.06);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left-border grow animation (from M2) */
+.obj-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, var(--terracotta), var(--coral));
+  transition: height 0.5s ease;
+  border-radius: 4px 0 0 4px;
+}
+
+.obj-card:hover::before { height: 100%; }
+
+.obj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--warm-shadow-lg);
+  border-color: rgba(194, 112, 58, 0.12);
+}
+
+.obj-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(194, 112, 58, 0.1), rgba(232, 141, 103, 0.1));
+  transition: var(--transition);
+}
+
+.obj-card:hover .obj-icon {
+  background: linear-gradient(135deg, var(--terracotta), var(--coral));
+}
+
+.obj-icon svg {
+  width: 26px;
+  height: 26px;
+  transition: var(--transition);
+}
+
+.obj-card:hover .obj-icon svg {
+  filter: brightness(0) invert(1);
+}
+
+.obj-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+}
+
+.obj-card p {
+  color: var(--gray);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ============================================
+   8. UN SDGs — WARM SECTION
+   ============================================ */
+#sdgs {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(180deg, var(--cream), var(--sand));
+  position: relative;
+  z-index: 1;
+}
+
+.sdgs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sdg-card {
+  padding: 32px 22px;
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.sdg-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.sdg-card::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+}
+
+.sdg-7  { background: linear-gradient(145deg, #FCC30B, #e0ab00); box-shadow: 0 8px 24px rgba(252, 195, 11, 0.3); }
+.sdg-9  { background: linear-gradient(145deg, #FD6925, #e05a1a); box-shadow: 0 8px 24px rgba(253, 105, 37, 0.3); }
+.sdg-10 { background: linear-gradient(145deg, #DD1367, #c20e58); box-shadow: 0 8px 24px rgba(221, 19, 103, 0.3); }
+.sdg-12 { background: linear-gradient(145deg, #BF8B2E, #a87a28); box-shadow: 0 8px 24px rgba(191, 139, 46, 0.3); }
+
+.sdg-number {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.sdg-card h3 {
+  font-size: 0.95rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.sdg-card p {
+  font-size: 0.82rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ============================================
+   9. SERVICES — DARK SECTION
+   ============================================ */
+#services {
+  padding: var(--section-pad) 0;
+  background: var(--dark);
+  position: relative;
+  z-index: 1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.service-card {
+  padding: 48px 32px;
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+}
+
+/* Gradient border reveal (from M2) */
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--terracotta), var(--gold));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.service-card:hover::before { opacity: 1; }
+
+.service-card:hover {
+  background: var(--charcoal);
+  transform: translateY(-6px);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(194, 112, 58, 0.1);
+  transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.service-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* Services CTA */
+.services-cta {
+  text-align: center;
+  padding: 48px;
+  background: linear-gradient(135deg, rgba(194, 112, 58, 0.08), rgba(255, 179, 0, 0.05));
+  border: 1px solid rgba(194, 112, 58, 0.12);
+  border-radius: var(--radius-lg);
+}
+
+.services-cta h3 {
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.services-cta p {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 24px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   10. CONTACT — WARM SECTION
+   ============================================ */
+#contact {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(180deg, var(--cream), var(--sand));
+  position: relative;
+  z-index: 1;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: var(--charcoal);
+}
+
+.contact-info > p {
+  color: var(--gray);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-detail-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(194, 112, 58, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--terracotta);
+}
+
+.contact-detail strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 2px;
+  color: var(--charcoal);
+}
+
+.contact-detail span, .contact-detail a {
+  font-size: 0.88rem;
+  color: var(--gray);
+}
+
+.contact-detail a {
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Contact slogan (from M4) */
+.contact-slogan {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(61, 90, 62, 0.05), rgba(61, 90, 62, 0.1));
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--olive);
+}
+
+.contact-slogan p {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--olive);
+  line-height: 1.6;
+}
+
+/* Contact form (from M4) */
+.contact-form-wrap {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--warm-shadow-lg);
+}
+
+.contact-form-wrap h3 {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  color: var(--charcoal);
+}
+
+.form-group { margin-bottom: 20px; }
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.86rem;
+  margin-bottom: 6px;
+  color: var(--charcoal);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(194, 112, 58, 0.12);
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(194, 112, 58, 0.08);
+  background: var(--white);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--terracotta), var(--coral));
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(194, 112, 58, 0.25);
+}
+
+.form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(194, 112, 58, 0.35);
+}
+
+/* ============================================
+   11. FOOTER — DARK SECTION
+   ============================================ */
+#footer {
+  padding: 80px 0 0;
+  background: var(--charcoal);
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand .nav-logo { margin-bottom: 16px; }
+
+.footer-brand p {
+  font-size: 0.88rem;
+  opacity: 0.65;
+  line-height: 1.7;
+  max-width: 300px;
+}
+
+#footer h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.footer-links li { margin-bottom: 10px; }
+
+.footer-links a {
+  font-size: 0.86rem;
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--coral-light);
+}
+
+/* Newsletter (from M4) */
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+
+.newsletter-form input:focus {
+  border-color: var(--coral);
+  background: rgba(255,255,255,0.1);
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--terracotta), var(--coral));
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(194, 112, 58, 0.3);
+}
+
+.footer-bottom {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+#back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--terracotta), var(--coral));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(194, 112, 58, 0.3);
+  cursor: pointer;
+  border: none;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-terracotta);
+}
+
+/* ============================================
+   DONATE MODAL (combined M2 dark + M4 warm)
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 24px;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: var(--bounce);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+}
+
+.modal-overlay.open .modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition);
+  color: var(--charcoal);
+}
+
+.modal-close:hover {
+  background: var(--sand);
+  transform: rotate(90deg);
+}
+
+.modal-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+}
+
+.modal-box .modal-heart {
+  display: inline-block;
+  color: var(--terracotta);
+  margin-right: 6px;
+}
+
+.modal-box > p {
+  color: var(--gray);
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+.donate-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.donate-amount {
+  padding: 14px;
+  border: 2px solid rgba(194, 112, 58, 0.15);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+.donate-amount:hover,
+.donate-amount.selected {
+  border-color: var(--terracotta);
+  background: rgba(194, 112, 58, 0.08);
+  color: var(--terracotta);
+}
+
+.donate-custom {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(194, 112, 58, 0.12);
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.donate-custom:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(194, 112, 58, 0.08);
+}
+
+.modal-box .btn-primary {
+  width: 100%;
+  justify-content: center;
+  font-size: 1.05rem;
+  padding: 18px;
+}
+
+.donate-note {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (768-1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; text-align: center; }
+  .hero-text { max-width: 100%; margin: 0 auto; }
+  .hero-visual { display: none; }
+  .hero-buttons { justify-content: center; }
+  .hero-badge { margin-left: auto; margin-right: auto; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image-wrap { max-width: 500px; margin: 0 auto; }
+
+  .heart-cards { grid-template-columns: 1fr; max-width: 600px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (768px and below)
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero-heading { font-size: clamp(2rem, 7vw, 3rem); }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .objectives-grid { grid-template-columns: repeat(2, 1fr); }
+  .sdgs-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Film strip to accordion on mobile */
+  .film-strip-wrapper { display: none; }
+  .film-strip-nav { display: none; }
+  .project-accordion { display: block; }
+
+  .project-card { min-width: 300px; max-width: 300px; }
+}
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
+  .objectives-grid { grid-template-columns: 1fr; }
+  .sdgs-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .about-values { grid-template-columns: 1fr; }
+  .donate-amounts { grid-template-columns: repeat(2, 1fr); }
+  .hero-heading { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .modal-box { padding: 32px 24px; }
+  .services-cta { padding: 32px 20px; }
+}
+
+/* ============================================
+   PROJECT ACCORDION (Mobile) from M4
+   ============================================ */
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.accordion-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: var(--transition);
+}
+
+.accordion-item:hover {
+  box-shadow: 0 4px 20px rgba(194, 112, 58, 0.08);
+}
+
+.accordion-item.active {
+  box-shadow: 0 8px 32px rgba(194, 112, 58, 0.12);
+  border-color: rgba(194, 112, 58, 0.15);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background: rgba(194, 112, 58, 0.03);
+}
+
+.accordion-phase {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.phase-1 { background: linear-gradient(135deg, var(--olive), var(--olive-light)); }
+.phase-2 { background: linear-gradient(135deg, var(--terracotta), var(--terracotta-light)); }
+.phase-3 { background: linear-gradient(135deg, var(--coral), var(--coral-light)); }
+.phase-4 { background: linear-gradient(135deg, var(--charcoal), #3a3a50); }
+
+.accordion-header-text { flex: 1; }
+
+.accordion-header-text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+  color: var(--white);
+}
+
+.accordion-header-text span {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.accordion-chevron {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(194, 112, 58, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+  color: var(--coral-light);
+}
+
+.accordion-item.active .accordion-chevron {
+  transform: rotate(180deg);
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.accordion-body-inner {
+  padding: 0 24px 24px;
+  padding-left: 88px;
+}
+
+.accordion-body-inner p {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 14px;
+  line-height: 1.8;
+  font-size: 0.92rem;
+}
+
+.accordion-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.accordion-benefit-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--coral-light);
+  background: rgba(194, 112, 58, 0.1);
+  border: 1px solid rgba(194, 112, 58, 0.15);
+}
+
+.accordion-benefit-tag::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--coral-light);
+  border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+  .accordion-body-inner { padding-left: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== FLOATING BOKEH (from M4) ========== -->
+<div class="bokeh-bg" aria-hidden="true">
+  <div class="bokeh-circle"></div>
+  <div class="bokeh-circle"></div>
+  <div class="bokeh-circle"></div>
+  <div class="bokeh-circle"></div>
+  <div class="bokeh-circle"></div>
+  <div class="bokeh-circle"></div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav id="navbar" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="RiseMeUp Home">
+      <img src="logo.png" alt="RiseMeUp Sustainability">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#vision-mission">Vision</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#impact">Impact</a>
+      <a href="#objectives">Goals</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="nav-donate" id="nav-donate-btn">Donate</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+<!-- Mobile nav (slide from right, M4 style) -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#vision-mission" class="mobile-link">Vision</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#team" class="mobile-link">Team</a>
+  <a href="#impact" class="mobile-link">Impact</a>
+  <a href="#objectives" class="mobile-link">Goals</a>
+  <a href="#sdgs" class="mobile-link">UN SDGs</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="#" class="mobile-link mobile-donate-link" id="mobile-donate-btn">Donate Now</a>
+</nav>
+
+<!-- ========== 1. HERO — DARK ========== -->
+<section id="hero" class="dark-section">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid-lines">
+      <div class="line" style="left: 10%;"></div>
+      <div class="line" style="left: 25%;"></div>
+      <div class="line" style="left: 50%;"></div>
+      <div class="line" style="left: 75%;"></div>
+      <div class="line" style="left: 90%;"></div>
+    </div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        Non-Profit Charity &middot; London, UK
+      </div>
+      <h1 class="hero-heading">
+        <span class="scramble-text" data-text="Investing in">Investing in</span><br>
+        <span class="scramble-text line-terracotta" data-text="Rural People">Rural People</span><br>
+        <span class="scramble-text line-gold" data-text="is Investing in">is Investing in</span><br>
+        <span class="scramble-text" data-text="a Brighter Future.">a Brighter Future.</span>
+      </h1>
+      <p class="hero-sub">Supporting the Nuba Mountain community in Sudan through sustainable horticulture, farming, and green energy infrastructure across 130 acres.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" id="hero-donate-btn">
+          Donate Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <a href="#projects" class="btn-outline">
+          Our Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero visual with circle + floating cards (from M4) -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-graphic">
+        <div class="hero-graphic-main">
+          <!-- Farm/plant SVG illustration -->
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 180c0-40-20-60-40-80 10 5 25 5 35-5-15-10-20-30-15-50 10 15 25 25 45 25 20 0 35-10 45-25 5 20 0 40-15 50 10 10 25 10 35 5-20 20-40 40-40 80" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+            <circle cx="100" cy="165" r="12" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+            <line x1="100" y1="60" x2="100" y2="150" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
+            <path d="M100 120 L80 95" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+            <path d="M100 100 L120 80" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+          </svg>
+        </div>
+        <!-- Floating stat cards -->
+        <div class="hero-float-card">
+          <div class="card-icon green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="card-text">
+            <strong>130 Acres</strong>
+            <span>Farmland Development</span>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <div class="card-icon orange">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="card-text">
+            <strong>Community First</strong>
+            <span>Nuba Mountains</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ========== 2. ABOUT — WARM ========== -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-image-wrap reveal-left">
+      <div class="about-image"></div>
+      <div class="about-image-badge">
+        <div class="number">130</div>
+        <div class="label">Acres of Farmland</div>
+      </div>
+    </div>
+    <div class="about-content reveal-right">
+      <span class="section-label">Who We Are</span>
+      <h2>Committed to Grow Rural Communities</h2>
+      <p>RiseMeUp Sustainable Farming is a non-profit charity dedicated to supporting the Nuba Mountain community in Sudan, a region that has endured decades of conflict and genocide.</p>
+      <p>Based in London, we work to transform 130 acres of poor-land into productive farmland, creating sustainable livelihoods through horticulture, farming, and green energy infrastructure.</p>
+      <div class="about-values">
+        <div class="about-value">
+          <div class="about-value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22c6-3 10-9 10-15L12 2 2 7c0 6 4 12 10 15z"/></svg>
+          </div>
+          <div>
+            <strong>Sustainable Growth</strong>
+            <span>Long-term solutions</span>
+          </div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <strong>Community Focus</strong>
+            <span>People-centered</span>
+          </div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div>
+            <strong>Global Impact</strong>
+            <span>Think globally, act locally</span>
+          </div>
+        </div>
+        <div class="about-value">
+          <div class="about-value-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <strong>Food Security</strong>
+            <span>Ending hunger</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3. VISION/MISSION — WARM-TO-DARK ========== -->
+<section id="vision-mission">
+  <div class="container text-center">
+    <span class="section-label reveal">Our Heart</span>
+    <h2 class="section-title reveal">Vision &amp; Mission</h2>
+    <p class="section-subtitle reveal">We believe that investing in rural people is investing in a brighter future for all.</p>
+    <div class="heart-cards">
+      <div class="heart-card vision reveal reveal-delay-1">
+        <div class="heart-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        </div>
+        <h3>Our Vision</h3>
+        <p>Taking steps towards sustainable development by developing 130 acres of poor-land into horticulture, farming and implementing Green Energy as the main source of infrastructure for the farm.</p>
+      </div>
+      <div class="heart-card mission reveal reveal-delay-2">
+        <div class="heart-card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Our Mission</h3>
+        <p>Turning 130 acres of non-productive land into productive farmland, creating new agricultural job opportunities to help, support the neediest and excluded within this rural community to end poverty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. PROJECTS — DARK (Film Strip Desktop / Accordion Mobile) ========== -->
+<section id="projects" class="dark-section">
+  <div class="container">
+    <span class="section-label reveal">Our Work</span>
+    <h2 class="section-title reveal" style="max-width: 600px;">Four Phases of Transformation</h2>
+    <p class="section-subtitle reveal" style="margin-left: 0; text-align: left;">Each phase builds on the last, creating a self-sustaining ecosystem that transforms lives in the Nuba Mountains.</p>
+  </div>
+
+  <!-- Film strip (desktop) from M2 -->
+  <div class="film-strip-wrapper">
+    <div class="film-strip-border" aria-hidden="true"></div>
+    <div class="film-strip-track" id="film-strip">
+
+      <!-- Phase 1: Biogas -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-phase">Phase 1</div>
+          <h4>Biogas Plant</h4>
+        </div>
+        <div class="project-card-visual">
+          <img src="biogas-plant.jpeg" alt="Virgin Mary Farm Biogas Plant — Isometric diagram showing numbered components including tanks, silos, and processing facilities">
+        </div>
+        <div class="project-card-body">
+          <p>Generating electricity, gas, and fertilizer from agricultural waste. Reducing dependency on external energy sources.</p>
+          <div class="benefits">
+            <span class="benefit-tag">Electricity</span>
+            <span class="benefit-tag">Gas</span>
+            <span class="benefit-tag">Fertilizer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2: Greenhouses -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-phase">Phase 2</div>
+          <h4>10 Commercial Greenhouses</h4>
+        </div>
+        <div class="project-card-visual">
+          <svg viewBox="0 0 80 80" fill="none" stroke="var(--terracotta)" stroke-width="1.5"><path d="M15 55 L15 30 L40 15 L65 30 L65 55" stroke-width="2"/><path d="M15 55 L65 55" stroke-width="2"/><path d="M40 15 L40 55" stroke-width="1" opacity="0.4"/><path d="M15 38 L65 38" stroke-width="1" opacity="0.4"/><path d="M27 55 L27 42" stroke-width="1.5" opacity="0.5"/><path d="M53 55 L53 42" stroke-width="1.5" opacity="0.5"/><circle cx="27" cy="40" r="3" opacity="0.4"/><circle cx="53" cy="40" r="3" opacity="0.4"/></svg>
+        </div>
+        <div class="project-card-body">
+          <p>Modern greenhouses with drip irrigation systems. Growing off-season crops with climate and pest control capabilities.</p>
+          <div class="benefits">
+            <span class="benefit-tag">Irrigation</span>
+            <span class="benefit-tag">Climate Control</span>
+            <span class="benefit-tag">Off-Season</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3: Packaging -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-phase">Phase 3</div>
+          <h4>Sorting &amp; Packaging</h4>
+        </div>
+        <div class="project-card-visual">
+          <svg viewBox="0 0 80 80" fill="none" stroke="var(--coral)" stroke-width="1.5"><rect x="20" y="25" width="40" height="35" rx="3" stroke-width="2"/><path d="M20 40 L60 40" stroke-width="1.5"/><path d="M35 25 L35 40" stroke-width="1" opacity="0.4"/><path d="M45 25 L45 40" stroke-width="1" opacity="0.4"/><path d="M30 48 L50 48" stroke-width="2"/><path d="M30 53 L45 53" stroke-width="1.5" opacity="0.6"/><path d="M15 35 L20 35" stroke-width="2"/><path d="M60 35 L65 35" stroke-width="2"/></svg>
+        </div>
+        <div class="project-card-body">
+          <p>Automatic packaging lines for fabrication, cleaning, filling, sealing, labeling, and palletizing of agricultural products.</p>
+          <div class="benefits">
+            <span class="benefit-tag">Automation</span>
+            <span class="benefit-tag">Quality</span>
+            <span class="benefit-tag">Export Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 4: Poultry -->
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-phase">Phase 4</div>
+          <h4>Poultry Farm</h4>
+        </div>
+        <div class="project-card-visual">
+          <svg viewBox="0 0 80 80" fill="none" stroke="var(--gold)" stroke-width="1.5"><ellipse cx="40" cy="45" rx="18" ry="15" stroke-width="2"/><circle cx="40" cy="28" r="10" stroke-width="2"/><path d="M34 26 L32 22" stroke-width="2"/><circle cx="37" cy="27" r="1.5" fill="var(--gold)"/><path d="M43 30 Q48 32 43 34" stroke-width="1.5"/><path d="M25 50 L20 58" stroke-width="2"/><path d="M55 50 L60 58" stroke-width="2"/></svg>
+        </div>
+        <div class="project-card-body">
+          <p>Egg hens (2x40,000) and broilers (2x25,000). Providing protein, nutrition, and food security to the community.</p>
+          <div class="benefits">
+            <span class="benefit-tag">130K Birds</span>
+            <span class="benefit-tag">Protein</span>
+            <span class="benefit-tag">Food Security</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="film-strip-border" aria-hidden="true"></div>
+  </div>
+
+  <!-- Film strip navigation -->
+  <div class="film-strip-nav" aria-label="Project navigation">
+    <button id="strip-prev" aria-label="Previous project">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <button id="strip-next" aria-label="Next project">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Accordion (mobile) from M4 -->
+  <div class="project-accordion">
+    <div class="accordion">
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-phase phase-1">P1</div>
+          <div class="accordion-header-text">
+            <h3>Biogas Plant</h3>
+            <span>Phase 1 &mdash; Green Energy</span>
+          </div>
+          <div class="accordion-chevron">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <img src="biogas-plant.jpeg" alt="Biogas Plant Diagram" style="width:100%;border-radius:var(--radius-sm);margin-bottom:16px;box-shadow:var(--warm-shadow);">
+            <p>Generating electricity, gas, and fertilizer from agricultural waste, reducing dependency on external energy sources.</p>
+            <div class="accordion-benefits">
+              <span class="accordion-benefit-tag">Electricity</span>
+              <span class="accordion-benefit-tag">Gas</span>
+              <span class="accordion-benefit-tag">Fertilizer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-phase phase-2">P2</div>
+          <div class="accordion-header-text">
+            <h3>10 Commercial Greenhouses</h3>
+            <span>Phase 2 &mdash; Horticulture</span>
+          </div>
+          <div class="accordion-chevron">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>Modern greenhouses with drip irrigation. Growing off-season crops with full climate and pest control.</p>
+            <div class="accordion-benefits">
+              <span class="accordion-benefit-tag">Irrigation</span>
+              <span class="accordion-benefit-tag">Climate Control</span>
+              <span class="accordion-benefit-tag">Off-Season Crops</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-phase phase-3">P3</div>
+          <div class="accordion-header-text">
+            <h3>Sorting &amp; Packaging</h3>
+            <span>Phase 3 &mdash; Post-Harvest</span>
+          </div>
+          <div class="accordion-chevron">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>Automatic packaging lines: fabrication, cleaning, filling, sealing, labeling, and palletizing.</p>
+            <div class="accordion-benefits">
+              <span class="accordion-benefit-tag">Automation</span>
+              <span class="accordion-benefit-tag">Quality Control</span>
+              <span class="accordion-benefit-tag">Export Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-phase phase-4">P4</div>
+          <div class="accordion-header-text">
+            <h3>Poultry Farm</h3>
+            <span>Phase 4 &mdash; Food Security</span>
+          </div>
+          <div class="accordion-chevron">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="accordion-body">
+          <div class="accordion-body-inner">
+            <p>Egg hens (2x40,000) and broilers (2x25,000). Protein, nutrition, and food security for the community.</p>
+            <div class="accordion-benefits">
+              <span class="accordion-benefit-tag">130K Birds</span>
+              <span class="accordion-benefit-tag">Protein</span>
+              <span class="accordion-benefit-tag">Food Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. TEAM — WARM (Flip Cards) ========== -->
+<section id="team">
+  <div class="container text-center">
+    <span class="section-label reveal">Expert Team</span>
+    <h2 class="section-title reveal">Meet Our Advisors</h2>
+    <p class="section-subtitle reveal">Our team brings decades of international experience in agriculture, sustainability, and rural development.</p>
+    <div class="team-grid">
+      <!-- Prof. Dr. Elamin -->
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-avatar avatar-1"><img src="team-1-elamin.png" alt="Prof. Dr. Elamin A. Ahmed"></div>
+            <h3>Prof. Dr. Elamin A. Ahmed</h3>
+            <div class="team-role">Fruit &amp; Veg Production</div>
+            <div class="team-hint">Hover to see qualifications</div>
+          </div>
+          <div class="team-card-back">
+            <h4>Prof. Dr. Elamin A. Ahmed</h4>
+            <p>Specialist in Fruit &amp; Vegetable Production with extensive academic and field experience.</p>
+            <div class="team-edu">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> PhD INRA, France</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> MSc U of Gezira</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> BSc U of Khartoum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Munir -->
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-avatar avatar-2"><img src="team-2-munir.png" alt="Dr. Munir G. Botrus"></div>
+            <h3>Dr. Munir G. Botrus</h3>
+            <div class="team-role">Pesticide Application</div>
+            <div class="team-hint">Hover to see qualifications</div>
+          </div>
+          <div class="team-card-back">
+            <h4>Dr. Munir G. Botrus</h4>
+            <p>15 years of experience with FAO/UN in pesticide application and agricultural safety.</p>
+            <div class="team-edu">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> PhD U of London</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> BSc Agricultural Science</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg> 15 Years FAO/UN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Mohammed -->
+      <div class="team-card reveal reveal-delay-3">
+        <div class="team-card-inner">
+          <div class="team-card-front">
+            <div class="team-avatar avatar-3"><img src="team-3-mohammed.png" alt="Dr. Mohammed A.F. Khames"></div>
+            <h3>Dr. Mohammed A.F. Khames</h3>
+            <div class="team-role">Seed Pathology</div>
+            <div class="team-hint">Hover to see qualifications</div>
+          </div>
+          <div class="team-card-back">
+            <h4>Dr. Mohammed A.F. Khames</h4>
+            <p>Expert in seed pathology with international research experience across Europe and Africa.</p>
+            <div class="team-edu">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> PhD Giessen U, Germany</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> MSc Aberdeen, UK</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> BSc Cairo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. IMPACT — DARK (Olive) ========== -->
+<section id="impact" class="dark-section">
+  <div class="container text-center">
+    <span class="section-label reveal" style="color: var(--coral-light);">Our Impact</span>
+    <h2 class="section-title reveal">Numbers That Tell Our Story</h2>
+    <p class="section-subtitle reveal" style="margin-bottom: 48px;">Agriculture investment is 11 times more effective at reducing poverty than any other sector.</p>
+    <div class="stats-grid">
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-number" data-target="130" data-suffix=" acres">0</div>
+        <div class="stat-label">Farmland Under Development</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-number" data-target="3" data-suffix="B+">0</div>
+        <div class="stat-label">Rural People Globally (40% of world)</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-number" data-target="11" data-suffix="x">0</div>
+        <div class="stat-label">More Effective at Reducing Poverty</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-4">
+        <div class="stat-number" data-target="1.8" data-suffix="B" data-decimal="true">0</div>
+        <div class="stat-label">Young People — Largest Generation Ever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7. OBJECTIVES — WARM ========== -->
+<section id="objectives">
+  <div class="container text-center">
+    <span class="section-label reveal">Our Goals</span>
+    <h2 class="section-title reveal">Strategic Objectives</h2>
+    <p class="section-subtitle reveal">Six core objectives guiding our mission to transform rural communities through sustainable agriculture.</p>
+    <div class="objectives-grid">
+      <div class="obj-card reveal reveal-delay-1">
+        <div class="obj-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h4>Implementing Green Energy</h4>
+        <p>Building biogas plants and solar infrastructure for sustainable, clean energy powering all farm operations.</p>
+      </div>
+      <div class="obj-card reveal reveal-delay-2">
+        <div class="obj-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round"><path d="M12 22c6-3 10-9 10-15L12 2 2 7c0 6 4 12 10 15z"/></svg>
+        </div>
+        <h4>Develop Rural Farming</h4>
+        <p>Transforming 130 acres of poor-land into productive farmland through modern agricultural practices.</p>
+      </div>
+      <div class="obj-card reveal reveal-delay-3">
+        <div class="obj-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M12 12v4"/></svg>
+        </div>
+        <h4>Creating New Jobs</h4>
+        <p>Generating agricultural employment opportunities for the Nuba Mountain community to build self-sufficiency.</p>
+      </div>
+      <div class="obj-card reveal reveal-delay-4">
+        <div class="obj-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h4>Ending Poverty</h4>
+        <p>Supporting the neediest and most excluded within the rural community through sustainable economic empowerment.</p>
+      </div>
+      <div class="obj-card reveal reveal-delay-5">
+        <div class="obj-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h4>Education &amp; Training</h4>
+        <p>Building capacity through agricultural training programs and educational initiatives for local communities.</p>
+      </div>
+      <div class="obj-card reveal reveal-delay-6">
+        <div class="obj-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h4>Food Security</h4>
+        <p>Ensuring reliable access to sufficient, safe, and nutritious food for all community members year-round.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 8. UN SDGs — WARM ========== -->
+<section id="sdgs">
+  <div class="container text-center">
+    <span class="section-label reveal">Global Alignment</span>
+    <h2 class="section-title reveal">United Nations SDGs</h2>
+    <p class="section-subtitle reveal">Our work directly contributes to four of the UN's 17 Sustainable Development Goals, driving global progress from the ground up.</p>
+    <div class="sdgs-grid">
+      <div class="sdg-card sdg-7 reveal reveal-delay-1">
+        <div class="sdg-number">#7</div>
+        <h3>Affordable &amp; Clean Energy</h3>
+        <p>Our biogas plant provides clean, renewable energy to power farm operations sustainably.</p>
+      </div>
+      <div class="sdg-card sdg-9 reveal reveal-delay-2">
+        <div class="sdg-number">#9</div>
+        <h3>Industry, Innovation &amp; Infrastructure</h3>
+        <p>Building modern agricultural infrastructure with innovative technology and processes.</p>
+      </div>
+      <div class="sdg-card sdg-10 reveal reveal-delay-3">
+        <div class="sdg-number">#10</div>
+        <h3>Reduced Inequalities</h3>
+        <p>Empowering marginalized communities with equal access to economic opportunity.</p>
+      </div>
+      <div class="sdg-card sdg-12 reveal reveal-delay-4">
+        <div class="sdg-number">#12</div>
+        <h3>Responsible Consumption</h3>
+        <p>Sustainable farming practices that respect natural resources and minimize waste.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. SERVICES — DARK ========== -->
+<section id="services" class="dark-section">
+  <div class="container text-center">
+    <span class="section-label reveal">Get Involved</span>
+    <h2 class="section-title reveal">How We Work Together</h2>
+    <p class="section-subtitle reveal">Our comprehensive approach covers every aspect of sustainable development, from initial investment to ongoing operations.</p>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h4>Fundraising &amp; Investment</h4>
+        <p>We connect passionate donors and investors with impactful agricultural projects that create lasting change in rural communities.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h4>Development &amp; Supervision</h4>
+        <p>Expert oversight ensures every phase of our projects meets international standards for quality, sustainability, and impact.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <h4>Project Operation Management</h4>
+        <p>Day-to-day management of all farming operations, ensuring efficiency, productivity, and community benefit.</p>
+      </div>
+    </div>
+    <div class="services-cta reveal">
+      <h3>Ready to Make a Difference?</h3>
+      <p>Your contribution helps us build a sustainable future for the Nuba Mountain community.</p>
+      <button class="btn-primary" id="cta-donate-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        Donate Today
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10. CONTACT — WARM ========== -->
+<section id="contact">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 48px;">
+      <span class="section-label reveal">Get In Touch</span>
+      <h2 class="section-title reveal">We Would Love to Hear From You</h2>
+      <p class="section-subtitle reveal">Whether you want to volunteer, donate, or learn more about our work, we are always here for you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Reach Out to Us</h3>
+        <p>Our team in London is always ready to connect with supporters, partners, and anyone who shares our passion for empowering rural communities.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Our Address</strong>
+            <span>2 Rosecroft Gardens, London, NW2 6HX</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <strong>Email Us</strong>
+            <a href="mailto:info@risemeup.org">info@risemeup.org</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Call Us</strong>
+            <a href="tel:+447867977844">+44 786 797 7844</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div>
+            <strong>Website</strong>
+            <a href="https://www.risemeup.org" target="_blank" rel="noopener">www.risemeup.org</a>
+          </div>
+        </div>
+
+        <div class="contact-slogan">
+          <p>"Think globally, act locally. Investing in rural people is investing in a brighter future."</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="interest">I am interested in</label>
+            <select id="interest">
+              <option value="">Select an option</option>
+              <option value="donate">Making a Donation</option>
+              <option value="volunteer">Volunteering</option>
+              <option value="partner">Partnership Opportunities</option>
+              <option value="learn">Learning More</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Tell us how you would like to help or what you would like to know..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 11. FOOTER — DARK ========== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <img src="logo.png" alt="RiseMeUp Sustainability">
+        </a>
+        <p>Sustainable Farming for the Nuba Mountain community. A London-based non-profit dedicated to transforming lives through agriculture and green energy.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#vision-mission">Vision &amp; Mission</a></li>
+          <li><a href="#projects">Our Projects</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#objectives">Our Goals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <ul class="footer-links">
+          <li><a href="#" id="footer-donate-btn">Donate Now</a></li>
+          <li><a href="#contact">Volunteer</a></li>
+          <li><a href="#contact">Partner With Us</a></li>
+          <li><a href="#sdgs">UN SDGs</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay Connected</h4>
+        <p style="font-size: 0.86rem; opacity: 0.6; margin-bottom: 16px;">Subscribe to our newsletter for updates on our projects and impact.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RiseMeUp Sustainable Farming. All rights reserved.</span>
+      <span>Registered Charity &middot; London, UK</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ========== DONATE MODAL ========== -->
+<div class="modal-overlay" id="donate-modal" role="dialog" aria-modal="true" aria-label="Donate">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close donate modal">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h2><span class="modal-heart" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="var(--terracotta)" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>Make a Donation</h2>
+    <p>Every contribution helps us build a brighter future for the Nuba Mountain community.</p>
+    <div class="donate-amounts">
+      <div class="donate-amount" data-amount="25">&pound;25</div>
+      <div class="donate-amount" data-amount="50">&pound;50</div>
+      <div class="donate-amount selected" data-amount="100">&pound;100</div>
+      <div class="donate-amount" data-amount="250">&pound;250</div>
+      <div class="donate-amount" data-amount="500">&pound;500</div>
+      <div class="donate-amount" data-amount="1000">&pound;1,000</div>
+    </div>
+    <input type="text" class="donate-custom" placeholder="Or enter a custom amount (GBP)" id="customAmount">
+    <button class="btn-primary" id="confirm-donate">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      Donate with Love
+    </button>
+    <p class="donate-note">Your donation is secure and goes directly to supporting our farming projects.</p>
+  </div>
+</div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+(function() {
+  'use strict';
+
+  /* =============================================
+     TEXT SCRAMBLE EFFECT (from M2)
+     ============================================= */
+  class TextScramble {
+    constructor(el) {
+      this.el = el;
+      this.chars = '!<>-_\\/[]{}=+*^?#________';
+      this.update = this.update.bind(this);
+    }
+
+    setText(newText) {
+      const oldText = this.el.innerText;
+      const length = Math.max(oldText.length, newText.length);
+      const promise = new Promise(resolve => this.resolve = resolve);
+      this.queue = [];
+      for (let i = 0; i < length; i++) {
+        const from = oldText[i] || '';
+        const to = newText[i] || '';
+        const start = Math.floor(Math.random() * 40);
+        const end = start + Math.floor(Math.random() * 40);
+        this.queue.push({ from, to, start, end });
+      }
+      cancelAnimationFrame(this.frameRequest);
+      this.frame = 0;
+      this.update();
+      return promise;
+    }
+
+    update() {
+      let output = '';
+      let complete = 0;
+      for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i];
+        if (this.frame >= end) {
+          complete++;
+          output += to;
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.chars[Math.floor(Math.random() * this.chars.length)];
+            this.queue[i].char = char;
+          }
+          output += '<span style="color:var(--gray);opacity:0.5">' + char + '</span>';
+        } else {
+          output += from;
+        }
+      }
+      this.el.innerHTML = output;
+      if (complete === this.queue.length) {
+        this.resolve();
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update);
+        this.frame++;
+      }
+    }
+  }
+
+  // Initialize text scramble on hero
+  const scrambleEls = document.querySelectorAll('.scramble-text');
+  let scrambleStarted = false;
+
+  function startScramble() {
+    if (scrambleStarted) return;
+    scrambleStarted = true;
+    scrambleEls.forEach(function(el, i) {
+      const fx = new TextScramble(el);
+      const text = el.getAttribute('data-text');
+      el.innerText = '';
+      setTimeout(function() {
+        fx.setText(text);
+      }, 300 + i * 400);
+    });
+  }
+
+  setTimeout(startScramble, 600);
+
+  /* =============================================
+     NAVBAR SCROLL & ACTIVE SECTION HIGHLIGHTING
+     ============================================= */
+  const navbar = document.getElementById('navbar');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-donate)');
+  const backToTop = document.getElementById('back-to-top');
+
+  function onScroll() {
+    const scrollY = window.scrollY;
+
+    // Navbar background
+    if (scrollY > 80) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    // Back to top
+    if (scrollY > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+
+    // Active section
+    let current = '';
+    sections.forEach(function(section) {
+      const sectionTop = section.offsetTop - 200;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* =============================================
+     HAMBURGER MENU (Slide from right — M4 style)
+     ============================================= */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+    mobileOverlay.classList.toggle('show');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  mobileOverlay.addEventListener('click', toggleMenu);
+
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (mobileNav.classList.contains('open')) {
+        toggleMenu();
+      }
+    });
+  });
+
+  /* =============================================
+     DONATE MODAL
+     ============================================= */
+  const donateModal = document.getElementById('donate-modal');
+  const modalClose = document.getElementById('modal-close');
+  const customAmountInput = document.getElementById('customAmount');
+  const confirmDonate = document.getElementById('confirm-donate');
+  const donateAmounts = document.querySelectorAll('.donate-amount');
+  let selectedAmount = 100;
+
+  // All buttons that open the donate modal
+  var donateTriggers = [
+    document.getElementById('hero-donate-btn'),
+    document.getElementById('nav-donate-btn'),
+    document.getElementById('mobile-donate-btn'),
+    document.getElementById('cta-donate-btn'),
+    document.getElementById('footer-donate-btn')
+  ];
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    donateModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    donateModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  donateTriggers.forEach(function(btn) {
+    if (btn) btn.addEventListener('click', openModal);
+  });
+
+  modalClose.addEventListener('click', closeModal);
+
+  donateModal.addEventListener('click', function(e) {
+    if (e.target === donateModal) closeModal();
+  });
+
+  // Amount selection
+  donateAmounts.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      donateAmounts.forEach(function(b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      selectedAmount = parseInt(btn.getAttribute('data-amount'));
+      customAmountInput.value = '';
+    });
+  });
+
+  customAmountInput.addEventListener('input', function() {
+    donateAmounts.forEach(function(b) { b.classList.remove('selected'); });
+    selectedAmount = null;
+  });
+
+  confirmDonate.addEventListener('click', function() {
+    var custom = customAmountInput.value;
+    var amount = custom ? custom : selectedAmount;
+    if (!amount) {
+      alert('Please select or enter a donation amount.');
+      return;
+    }
+    var displayAmount = '\u00A3' + amount;
+    alert('Thank you for your generous donation of ' + displayAmount + '! In a production environment, you would be redirected to a secure payment page. Your kindness helps transform lives in the Nuba Mountains.');
+    closeModal();
+  });
+
+  /* =============================================
+     KEYBOARD: Escape to close modal
+     ============================================= */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+      if (mobileNav.classList.contains('open')) {
+        toggleMenu();
+      }
+    }
+  });
+
+  /* =============================================
+     SCROLL REVEAL (IntersectionObserver)
+     ============================================= */
+  var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  /* =============================================
+     ANIMATED STAT COUNTERS (IntersectionObserver)
+     ============================================= */
+  var statNumbers = document.querySelectorAll('.stat-number[data-target]');
+  var statsAnimated = false;
+
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !statsAnimated) {
+        statsAnimated = true;
+        animateCounters();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  var impactSection = document.getElementById('impact');
+  if (impactSection) counterObserver.observe(impactSection);
+
+  function animateCounters() {
+    statNumbers.forEach(function(el) {
+      var target = parseFloat(el.getAttribute('data-target'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var isDecimal = el.getAttribute('data-decimal') === 'true';
+      var duration = 2000;
+      var startTime = null;
+
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      function update(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var eased = easeOutExpo(progress);
+        var current = target * eased;
+
+        if (isDecimal) {
+          el.textContent = current.toFixed(1) + suffix;
+        } else {
+          el.textContent = Math.floor(current) + suffix;
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          if (isDecimal) {
+            el.textContent = target.toFixed(1) + suffix;
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  /* =============================================
+     HORIZONTAL SCROLL — FILM STRIP (from M2)
+     ============================================= */
+  var filmStrip = document.getElementById('film-strip');
+  var prevBtn = document.getElementById('strip-prev');
+  var nextBtn = document.getElementById('strip-next');
+  var stripOffset = 0;
+  var cardWidth = 428; // card width + margin
+
+  function getMaxOffset() {
+    if (!filmStrip) return 0;
+    var containerWidth = filmStrip.parentElement.clientWidth;
+    var totalWidth = filmStrip.scrollWidth;
+    return Math.max(0, totalWidth - containerWidth);
+  }
+
+  function updateStrip() {
+    if (filmStrip) {
+      filmStrip.style.transform = 'translateX(' + (-stripOffset) + 'px)';
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
+      stripOffset = Math.max(0, stripOffset - cardWidth);
+      updateStrip();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
+      stripOffset = Math.min(getMaxOffset(), stripOffset + cardWidth);
+      updateStrip();
+    });
+  }
+
+  // Drag to scroll (mouse)
+  var isDragging = false;
+  var startX = 0;
+  var startOffset = 0;
+
+  if (filmStrip) {
+    filmStrip.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      startX = e.clientX;
+      startOffset = stripOffset;
+      filmStrip.style.transition = 'none';
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', function(e) {
+      if (!isDragging) return;
+      var diff = startX - e.clientX;
+      stripOffset = Math.max(0, Math.min(getMaxOffset(), startOffset + diff));
+      updateStrip();
+    });
+
+    window.addEventListener('mouseup', function() {
+      if (isDragging) {
+        isDragging = false;
+        filmStrip.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+      }
+    });
+
+    // Touch support
+    filmStrip.addEventListener('touchstart', function(e) {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      startOffset = stripOffset;
+      filmStrip.style.transition = 'none';
+    }, { passive: true });
+
+    filmStrip.addEventListener('touchmove', function(e) {
+      if (!isDragging) return;
+      var diff = startX - e.touches[0].clientX;
+      stripOffset = Math.max(0, Math.min(getMaxOffset(), startOffset + diff));
+      updateStrip();
+    }, { passive: true });
+
+    filmStrip.addEventListener('touchend', function() {
+      isDragging = false;
+      filmStrip.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    });
+  }
+
+  /* =============================================
+     ACCORDION (Mobile projects — from M4)
+     ============================================= */
+  window.toggleAccordion = function(header) {
+    var item = header.parentElement;
+    var body = header.nextElementSibling;
+    var isActive = item.classList.contains('active');
+
+    // Close all
+    document.querySelectorAll('.accordion-item').forEach(function(accItem) {
+      accItem.classList.remove('active');
+      var accBody = accItem.querySelector('.accordion-body');
+      if (accBody) accBody.style.maxHeight = '0';
+    });
+
+    // Open clicked if wasn't active
+    if (!isActive) {
+      item.classList.add('active');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  };
+
+  // Initialize first accordion item
+  var firstAccBody = document.querySelector('.accordion-item.active .accordion-body');
+  if (firstAccBody) {
+    firstAccBody.style.maxHeight = firstAccBody.scrollHeight + 'px';
+  }
+
+  /* =============================================
+     PARALLAX ON HERO (from M2)
+     ============================================= */
+  var heroContent = document.querySelector('.hero-content');
+  var heroBg = document.querySelector('.hero-bg');
+
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY;
+    if (scrollY < window.innerHeight) {
+      if (heroContent) {
+        heroContent.style.transform = 'translateY(' + (scrollY * 0.15) + 'px)';
+        heroContent.style.opacity = 1 - (scrollY / (window.innerHeight * 0.9));
+      }
+      if (heroBg) {
+        heroBg.style.transform = 'translateY(' + (scrollY * 0.08) + 'px)';
+      }
+    }
+  }, { passive: true });
+
+  /* =============================================
+     SMOOTH SCROLL for all anchor links
+     ============================================= */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if (target) {
+        var offset = navbar.offsetHeight + 10;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* =============================================
+     CONTACT FORM HANDLER
+     ============================================= */
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var firstName = document.getElementById('firstName').value;
+      alert('Thank you, ' + firstName + '! Your message has been received. Our team will get back to you soon.');
+      contactForm.reset();
+    });
+  }
+
+  /* =============================================
+     NEWSLETTER HANDLER
+     ============================================= */
+  var newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for subscribing! You will receive updates about our projects and impact.');
+      newsletterForm.reset();
+    });
+  }
+
+  /* =============================================
+     STAGGERED REVEAL for grid items
+     ============================================= */
+  var staggerContainers = [
+    { selector: '.objectives-grid .obj-card', delay: 100 },
+    { selector: '.services-grid .service-card', delay: 120 },
+    { selector: '.stats-grid .stat-card', delay: 100 },
+    { selector: '.sdgs-grid .sdg-card', delay: 100 }
+  ];
+
+  staggerContainers.forEach(function(config) {
+    var items = document.querySelectorAll(config.selector);
+    items.forEach(function(item, i) {
+      item.style.transitionDelay = (i * config.delay) + 'ms';
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

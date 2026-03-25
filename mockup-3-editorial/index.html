@@ -1,0 +1,2693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiseMeUp — Sustainable Farming for the Nuba Mountains</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --ivory: #faf8f4;
+  --ink: #1c1917;
+  --olive: #5c6b4f;
+  --sienna: #a0522d;
+  --warm-grey: #9ca3af;
+  --light-grey: #e8e5e0;
+  --paper: #f5f2ec;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Libre Franklin', 'Helvetica Neue', sans-serif;
+  --max-width: 1280px;
+  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--ivory);
+  color: var(--ink);
+  line-height: 1.7;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul, ol { list-style: none; }
+
+/* ===== UTILITY ===== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 300;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--sienna);
+}
+
+/* ===== DROP CAP ===== */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-heading);
+  font-size: 5.5rem;
+  line-height: 0.75;
+  padding-right: 0.6rem;
+  padding-top: 0.15rem;
+  color: var(--sienna);
+  font-weight: 600;
+}
+
+/* ===== HORIZONTAL RULES ===== */
+.editorial-rule {
+  border: none;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.15;
+  margin: 3rem 0;
+}
+
+.editorial-rule--thick {
+  height: 3px;
+  background: var(--ink);
+  opacity: 1;
+  width: 60px;
+  margin: 1.5rem 0;
+}
+
+.editorial-rule--olive {
+  height: 2px;
+  background: var(--olive);
+  opacity: 0.4;
+  width: 80px;
+}
+
+/* ===== PULL QUOTE ===== */
+.pull-quote {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  background: var(--paper);
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.pull-quote__mark {
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  line-height: 0.5;
+  color: var(--sienna);
+  opacity: 0.25;
+  display: block;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.pull-quote__text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.pull-quote__attr {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  margin-top: 1.5rem;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+  padding: 1.2rem 0;
+}
+
+.nav.scrolled {
+  background: rgba(250, 248, 244, 0.97);
+  box-shadow: 0 1px 0 rgba(28, 25, 23, 0.08);
+  padding: 0.7rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.nav__logo span {
+  color: var(--sienna);
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav__link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color var(--transition);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--sienna);
+  transition: width var(--transition);
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  width: 100%;
+}
+
+.nav__link:hover {
+  color: var(--sienna);
+}
+
+.nav__link.active {
+  color: var(--sienna);
+}
+
+.nav__donate-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background: var(--ink);
+  padding: 0.6rem 1.6rem;
+  border: 1px solid var(--ink);
+  transition: all var(--transition);
+}
+
+.nav__donate-btn:hover {
+  background: var(--sienna);
+  border-color: var(--sienna);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  padding: 4px 0;
+  z-index: 1001;
+}
+
+.hamburger__line {
+  height: 2px;
+  width: 100%;
+  background: var(--ink);
+  transition: all var(--transition);
+  transform-origin: center;
+}
+
+.hamburger.open .hamburger__line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .hamburger__line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--ivory);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu__link {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--ink);
+  transition: color var(--transition);
+}
+
+.mobile-menu__link:hover {
+  color: var(--sienna);
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.hero__bg-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  opacity: 0.04;
+  background-image:
+    repeating-linear-gradient(0deg, var(--ink) 0px, var(--ink) 1px, transparent 1px, transparent 30px),
+    repeating-linear-gradient(90deg, var(--ink) 0px, var(--ink) 1px, transparent 1px, transparent 30px);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero__text {
+  max-width: 620px;
+}
+
+.hero__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__label::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--olive);
+}
+
+.hero__title {
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.02;
+  color: var(--ink);
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--sienna);
+  font-weight: 400;
+}
+
+.hero__subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--warm-grey);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  max-width: 460px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background: var(--ink);
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--ink);
+  transition: all var(--transition);
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--sienna);
+  border-color: var(--sienna);
+}
+
+.btn-secondary {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 1rem 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: color var(--transition);
+}
+
+.btn-secondary::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--transition);
+}
+
+.btn-secondary:hover {
+  color: var(--sienna);
+}
+
+.btn-secondary:hover::after {
+  width: 50px;
+}
+
+/* Hero SVG illustration */
+.hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__illustration {
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 2;
+}
+
+.hero__scroll-indicator span {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 50px;
+  background: var(--warm-grey);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sienna);
+  animation: scrollLine 2s ease infinite;
+}
+
+@keyframes scrollLine {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* ===== THE STORY (ABOUT) ===== */
+.story {
+  background: var(--ivory);
+}
+
+.story__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.story__sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.story__body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+  color: #3d3833;
+}
+
+.story__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== SVG ART: Leaf motif ===== */
+.leaf-motif {
+  display: block;
+  margin: 2rem 0;
+}
+
+/* ===== VISION & MISSION ===== */
+.vision-mission {
+  background: var(--paper);
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.vm__grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 3rem;
+}
+
+.vm__divider {
+  background: var(--light-grey);
+  width: 1px;
+}
+
+.vm__block h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.vm__block h3 span {
+  font-style: italic;
+  color: var(--sienna);
+}
+
+.vm__block p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #4a4540;
+}
+
+.vm__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== FOUR PILLARS (TABS) ===== */
+.pillars {
+  background: var(--ivory);
+}
+
+.pillars__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--light-grey);
+  margin-bottom: 3rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pillars__tab {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 400;
+  padding: 1.2rem 2rem;
+  color: var(--warm-grey);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pillars__tab:hover {
+  color: var(--ink);
+}
+
+.pillars__tab.active {
+  color: var(--sienna);
+  border-bottom-color: var(--sienna);
+}
+
+.pillars__panel {
+  display: none;
+  animation: fadePanel 0.5s ease;
+}
+
+.pillars__panel.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@keyframes fadePanel {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pillars__panel-number {
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  font-weight: 300;
+  color: var(--sienna);
+  opacity: 0.15;
+  line-height: 1;
+  margin-bottom: -1rem;
+}
+
+.pillars__panel-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.pillars__panel-text {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #4a4540;
+  margin-bottom: 1.5rem;
+}
+
+.pillars__panel-features {
+  margin-top: 1rem;
+}
+
+.pillars__panel-features li {
+  font-size: 0.95rem;
+  color: #4a4540;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pillars__panel-features li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--olive);
+  flex-shrink: 0;
+}
+
+.pillars__panel-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--light-grey);
+  min-height: 400px;
+  padding: 2rem;
+}
+
+/* ===== TEAM / EXPERTS ===== */
+.team {
+  background: var(--paper);
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.team__card {
+  background: var(--ivory);
+  border: 1px solid var(--light-grey);
+  padding: 2.5rem 2rem;
+  transition: all var(--transition);
+}
+
+.team__card:hover {
+  box-shadow: 0 8px 30px rgba(28, 25, 23, 0.06);
+  transform: translateY(-3px);
+}
+
+.team__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--olive);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ivory);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.team__name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.team__role {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--sienna);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.team__bio-preview {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #6b6560;
+  margin-bottom: 1rem;
+}
+
+.team__expand-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--olive);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--transition);
+}
+
+.team__expand-btn:hover {
+  color: var(--sienna);
+}
+
+.team__expand-btn svg {
+  transition: transform var(--transition);
+}
+
+.team__expand-btn.expanded svg {
+  transform: rotate(180deg);
+}
+
+.team__bio-full {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, margin 0.3s ease;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #6b6560;
+}
+
+.team__bio-full.expanded {
+  max-height: 300px;
+  margin-top: 1rem;
+}
+
+/* ===== UN SDGS ===== */
+.sdgs {
+  background: var(--ivory);
+}
+
+.sdgs__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.sdg__card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--light-grey);
+  transition: all var(--transition);
+  background: var(--ivory);
+}
+
+.sdg__card:hover {
+  border-color: var(--olive);
+  box-shadow: 0 4px 20px rgba(92, 107, 79, 0.08);
+}
+
+.sdg__number {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--sienna);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.sdg__title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.sdg__desc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #6b6560;
+}
+
+/* ===== STATS / BY THE NUMBERS ===== */
+.stats {
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.stats__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.stats__header .section-label {
+  color: var(--warm-grey);
+}
+
+.stats__header .section-title {
+  color: var(--ivory);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat__item {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(250, 248, 244, 0.1);
+}
+
+.stat__item:last-child {
+  border-right: none;
+}
+
+.stat__number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 300;
+  color: var(--sienna);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat__suffix {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 300;
+}
+
+.stat__label {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--warm-grey);
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+/* ===== HOW WE WORK (SERVICES) ===== */
+.services {
+  background: var(--paper);
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.service__card {
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--light-grey);
+  background: var(--ivory);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--olive);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.service__card:hover::before {
+  transform: scaleX(1);
+}
+
+.service__card:hover {
+  box-shadow: 0 8px 30px rgba(28, 25, 23, 0.06);
+}
+
+.service__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.service__title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.service__text {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #6b6560;
+}
+
+/* ===== OBJECTIVES ===== */
+.objectives {
+  background: var(--ivory);
+}
+
+.objectives__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.objective__item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--light-grey);
+  transition: all var(--transition);
+  background: var(--ivory);
+}
+
+.objective__item:hover {
+  border-color: var(--olive);
+  background: var(--paper);
+}
+
+.objective__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.objective__text {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ===== CTA / TAKE ACTION ===== */
+.cta {
+  background: var(--ivory);
+  text-align: center;
+}
+
+.cta__inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.cta__text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6b6560;
+  margin-bottom: 2.5rem;
+}
+
+.cta__buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--ink);
+  transition: all var(--transition);
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 25, 23, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 2rem;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: var(--ivory);
+  max-width: 520px;
+  width: 100%;
+  padding: 3rem;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-overlay.open .modal {
+  transform: translateY(0);
+}
+
+.modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--warm-grey);
+  transition: color var(--transition);
+}
+
+.modal__close:hover {
+  color: var(--ink);
+}
+
+.modal__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.modal__subtitle {
+  font-size: 0.9rem;
+  color: var(--warm-grey);
+  margin-bottom: 2rem;
+}
+
+.modal__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.modal__label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.modal__input,
+.modal__select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--light-grey);
+  background: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  transition: border-color var(--transition);
+  outline: none;
+}
+
+.modal__input:focus,
+.modal__select:focus {
+  border-color: var(--olive);
+}
+
+.modal__amounts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal__amount {
+  padding: 0.7rem;
+  text-align: center;
+  border: 1px solid var(--light-grey);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: all var(--transition);
+  background: var(--ivory);
+}
+
+.modal__amount:hover,
+.modal__amount.selected {
+  border-color: var(--sienna);
+  color: var(--sienna);
+  background: rgba(160, 82, 45, 0.05);
+}
+
+.modal__submit {
+  width: 100%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background: var(--ink);
+  padding: 1rem;
+  border: 1px solid var(--ink);
+  transition: all var(--transition);
+  margin-top: 0.5rem;
+}
+
+.modal__submit:hover {
+  background: var(--sienna);
+  border-color: var(--sienna);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--ink);
+  color: var(--ivory);
+  padding: 5rem 0 2rem;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.footer__logo span {
+  color: var(--sienna);
+}
+
+.footer__desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--warm-grey);
+  max-width: 320px;
+}
+
+.footer__heading {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  margin-bottom: 1.5rem;
+}
+
+.footer__link {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(250, 248, 244, 0.7);
+  padding: 0.35rem 0;
+  transition: color var(--transition);
+}
+
+.footer__link:hover {
+  color: var(--sienna);
+}
+
+.footer__newsletter p {
+  font-size: 0.9rem;
+  color: var(--warm-grey);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.footer__newsletter-form {
+  display: flex;
+  gap: 0;
+}
+
+.footer__newsletter-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(250, 248, 244, 0.15);
+  background: rgba(250, 248, 244, 0.05);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.footer__newsletter-input::placeholder {
+  color: var(--warm-grey);
+}
+
+.footer__newsletter-input:focus {
+  border-color: var(--olive);
+}
+
+.footer__newsletter-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--sienna);
+  color: var(--ivory);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--sienna);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.footer__newsletter-btn:hover {
+  background: var(--olive);
+  border-color: var(--olive);
+}
+
+.footer__newsletter-success {
+  display: none;
+  font-size: 0.85rem;
+  color: var(--olive);
+  margin-top: 0.75rem;
+}
+
+.footer__newsletter-success.show {
+  display: block;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(250, 248, 244, 0.08);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__copy {
+  font-size: 0.8rem;
+  color: var(--warm-grey);
+}
+
+.footer__contact {
+  font-size: 0.8rem;
+  color: var(--warm-grey);
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer__contact a {
+  transition: color var(--transition);
+}
+
+.footer__contact a:hover {
+  color: var(--sienna);
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--ink);
+  color: var(--ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition);
+  border: 1px solid rgba(250, 248, 244, 0.1);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.back-to-top:hover {
+  background: var(--sienna);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero__visual {
+    display: none;
+  }
+  .story__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .story__sidebar {
+    position: static;
+  }
+  .vm__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .vm__divider {
+    display: none;
+  }
+  .pillars__panel.active {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sdgs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat__item {
+    border-right: none;
+    border-bottom: 1px solid rgba(250, 248, 244, 0.1);
+  }
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .objectives__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+  .container {
+    padding: 0 1.25rem;
+  }
+  .nav__links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .hero__content {
+    padding-top: 7rem;
+  }
+  .hero__title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+  .hero__scroll-indicator {
+    display: none;
+  }
+  .pillars__tab {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+  }
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+  .sdgs__grid {
+    grid-template-columns: 1fr;
+  }
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+  .objectives__list {
+    grid-template-columns: 1fr;
+  }
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__contact {
+    justify-content: center;
+  }
+  .pull-quote {
+    padding: 3rem 1.5rem;
+  }
+  .modal {
+    padding: 2rem 1.5rem;
+  }
+  .modal__amounts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo">Rise<span>Me</span>Up</a>
+    <div class="nav__links">
+      <a href="#story" class="nav__link" data-section="story">Our Story</a>
+      <a href="#vision" class="nav__link" data-section="vision">Vision</a>
+      <a href="#pillars" class="nav__link" data-section="pillars">Projects</a>
+      <a href="#team" class="nav__link" data-section="team">Experts</a>
+      <a href="#sdgs" class="nav__link" data-section="sdgs">Goals</a>
+      <a href="#stats" class="nav__link" data-section="stats">Impact</a>
+      <a href="#services" class="nav__link" data-section="services">Services</a>
+      <button class="nav__donate-btn" id="navDonateBtn">Donate</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#story" class="mobile-menu__link" data-mobile-link>Our Story</a>
+  <a href="#vision" class="mobile-menu__link" data-mobile-link>Vision</a>
+  <a href="#pillars" class="mobile-menu__link" data-mobile-link>Projects</a>
+  <a href="#team" class="mobile-menu__link" data-mobile-link>Experts</a>
+  <a href="#sdgs" class="mobile-menu__link" data-mobile-link>Goals</a>
+  <a href="#stats" class="mobile-menu__link" data-mobile-link>Impact</a>
+  <a href="#services" class="mobile-menu__link" data-mobile-link>Services</a>
+  <button class="btn-primary" id="mobileDonateBtn" style="margin-top:1rem;">Donate</button>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero__bg-pattern"></div>
+  <div class="hero__content">
+    <div class="hero__text">
+      <div class="hero__label">A Story of Resilience</div>
+      <h1 class="hero__title fade-in">
+        Cultivating<br><em>Hope</em> from<br>the Ground Up
+      </h1>
+      <p class="hero__subtitle fade-in">
+        In the Nuba Mountains of Sudan, a community of genocide survivors is writing a new chapter &mdash; one seed, one harvest, one life at a time.
+      </p>
+      <div class="hero__actions fade-in">
+        <a href="#pillars" class="btn-primary">Explore Our Work</a>
+        <a href="#story" class="btn-secondary">Read the story</a>
+      </div>
+    </div>
+    <div class="hero__visual fade-in-right">
+      <!-- SVG Illustration: Abstract farm/growth motif -->
+      <svg class="hero__illustration" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="circleClip"><circle cx="240" cy="240" r="220"/></clipPath>
+        </defs>
+        <circle cx="240" cy="240" r="220" fill="#f5f2ec" stroke="#e8e5e0" stroke-width="1"/>
+        <g clip-path="url(#circleClip)">
+          <!-- Rolling hills -->
+          <path d="M20 340 Q120 280 240 320 Q360 360 460 300 L460 480 L20 480Z" fill="#5c6b4f" opacity="0.15"/>
+          <path d="M20 370 Q150 320 260 350 Q370 380 460 340 L460 480 L20 480Z" fill="#5c6b4f" opacity="0.2"/>
+          <path d="M20 400 Q140 360 280 380 Q380 395 460 370 L460 480 L20 480Z" fill="#5c6b4f" opacity="0.3"/>
+          <!-- Sun -->
+          <circle cx="320" cy="140" r="50" fill="#a0522d" opacity="0.12"/>
+          <circle cx="320" cy="140" r="35" fill="#a0522d" opacity="0.15"/>
+          <circle cx="320" cy="140" r="20" fill="#a0522d" opacity="0.2"/>
+          <!-- Plant stems -->
+          <line x1="160" y1="400" x2="160" y2="260" stroke="#5c6b4f" stroke-width="2" opacity="0.5"/>
+          <line x1="200" y1="410" x2="200" y2="240" stroke="#5c6b4f" stroke-width="2" opacity="0.5"/>
+          <line x1="240" y1="395" x2="240" y2="220" stroke="#5c6b4f" stroke-width="2.5" opacity="0.6"/>
+          <line x1="280" y1="405" x2="280" y2="250" stroke="#5c6b4f" stroke-width="2" opacity="0.5"/>
+          <line x1="320" y1="390" x2="320" y2="270" stroke="#5c6b4f" stroke-width="2" opacity="0.5"/>
+          <!-- Leaves -->
+          <ellipse cx="150" cy="290" rx="18" ry="8" fill="#5c6b4f" opacity="0.4" transform="rotate(-30 150 290)"/>
+          <ellipse cx="170" cy="310" rx="16" ry="7" fill="#5c6b4f" opacity="0.35" transform="rotate(25 170 310)"/>
+          <ellipse cx="190" cy="270" rx="20" ry="9" fill="#5c6b4f" opacity="0.4" transform="rotate(-40 190 270)"/>
+          <ellipse cx="215" cy="290" rx="18" ry="8" fill="#5c6b4f" opacity="0.35" transform="rotate(30 215 290)"/>
+          <ellipse cx="230" cy="250" rx="22" ry="10" fill="#5c6b4f" opacity="0.45" transform="rotate(-35 230 250)"/>
+          <ellipse cx="255" cy="265" rx="20" ry="9" fill="#5c6b4f" opacity="0.4" transform="rotate(28 255 265)"/>
+          <ellipse cx="270" cy="280" rx="18" ry="8" fill="#5c6b4f" opacity="0.35" transform="rotate(-25 270 280)"/>
+          <ellipse cx="295" cy="300" rx="16" ry="7" fill="#5c6b4f" opacity="0.35" transform="rotate(35 295 300)"/>
+          <ellipse cx="310" cy="290" rx="19" ry="8" fill="#5c6b4f" opacity="0.4" transform="rotate(-30 310 290)"/>
+          <ellipse cx="330" cy="310" rx="15" ry="7" fill="#5c6b4f" opacity="0.3" transform="rotate(20 330 310)"/>
+          <!-- Birds -->
+          <path d="M120 160 Q130 150 140 158" fill="none" stroke="#1c1917" stroke-width="1.5" opacity="0.25"/>
+          <path d="M150 145 Q160 135 170 143" fill="none" stroke="#1c1917" stroke-width="1.5" opacity="0.2"/>
+          <path d="M100 180 Q108 172 116 179" fill="none" stroke="#1c1917" stroke-width="1.2" opacity="0.15"/>
+          <!-- Decorative dots -->
+          <circle cx="200" cy="230" r="3" fill="#a0522d" opacity="0.3"/>
+          <circle cx="240" cy="210" r="4" fill="#a0522d" opacity="0.25"/>
+          <circle cx="280" cy="240" r="3" fill="#a0522d" opacity="0.3"/>
+        </g>
+        <!-- Outer ring decoration -->
+        <circle cx="240" cy="240" r="235" fill="none" stroke="#a0522d" stroke-width="0.5" opacity="0.2" stroke-dasharray="4 8"/>
+      </svg>
+    </div>
+  </div>
+  <div class="hero__scroll-indicator">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ========== PULL QUOTE 1 ========== -->
+<div class="pull-quote fade-in">
+  <span class="pull-quote__mark">&ldquo;</span>
+  <p class="pull-quote__text">Think globally, act locally. Investing in rural people is investing in a brighter future.</p>
+  <p class="pull-quote__attr">&mdash; RiseMeUp Sustainable Farming</p>
+</div>
+
+<!-- ========== THE STORY (ABOUT) ========== -->
+<section class="story section-padding" id="story">
+  <div class="container">
+    <div class="story__grid">
+      <div class="story__sidebar fade-in-left">
+        <span class="section-label">Chapter One</span>
+        <h2 class="section-title">The <em>Story</em></h2>
+        <hr class="editorial-rule--thick">
+        <!-- SVG leaf motif -->
+        <svg class="leaf-motif" width="120" height="160" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 150 Q60 80 30 40 Q50 60 60 30 Q70 60 90 40 Q60 80 60 150Z" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.4"/>
+          <line x1="60" y1="150" x2="60" y2="30" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <path d="M60 120 Q40 100 25 105" fill="none" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <path d="M60 100 Q80 80 95 85" fill="none" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <path d="M60 80 Q40 60 28 68" fill="none" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="story__body fade-in-right">
+        <p class="drop-cap">
+          In the heart of Sudan's Nuba Mountains, where the echoes of genocide still linger in the valleys
+          and the scars of conflict mark both land and people, a remarkable transformation is taking root.
+          RiseMeUp Sustainable Farming was born from an unwavering conviction: that the very soil which
+          witnessed unimaginable suffering could become the foundation for renewal, dignity, and lasting hope.
+        </p>
+        <p>
+          We are a London-based non-profit charity with a singular, ambitious mission &mdash; to transform
+          130 acres of degraded, unproductive land into a thriving agricultural enterprise that serves
+          as both an economic engine and a beacon of possibility for an entire community. Our work is not
+          merely about farming. It is about restoring agency to people who have been systematically
+          excluded, about proving that sustainable development and human dignity are inseparable.
+        </p>
+        <hr class="editorial-rule">
+        <p>
+          The Nuba Mountain community represents some of the most resilient people on earth. Genocide
+          survivors who refused to let their story end in tragedy. Today, they stand ready to write
+          a new chapter &mdash; one defined not by what was taken from them, but by what they are building
+          together. RiseMeUp exists to ensure they have the tools, infrastructure, and support to succeed.
+        </p>
+        <p>
+          Through a carefully designed four-phase approach &mdash; from biogas energy production to
+          commercial greenhouses, from automated packaging to poultry farming &mdash; we are constructing
+          a complete, self-sustaining agricultural ecosystem. This is development as it should be: comprehensive,
+          community-driven, and built to endure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VISION & MISSION ========== -->
+<section class="vision-mission section-padding" id="vision">
+  <div class="container">
+    <div class="text-center fade-in" style="text-align:center; margin-bottom:3rem;">
+      <span class="section-label">Our Purpose</span>
+      <h2 class="section-title">Vision <em>&</em> Mission</h2>
+    </div>
+    <div class="vm__grid">
+      <div class="vm__block fade-in-left">
+        <svg class="vm__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="22" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="24" cy="24" r="14" fill="none" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <circle cx="24" cy="24" r="6" fill="#5c6b4f" opacity="0.3"/>
+          <line x1="24" y1="2" x2="24" y2="10" stroke="#a0522d" stroke-width="1" opacity="0.5"/>
+          <line x1="24" y1="38" x2="24" y2="46" stroke="#a0522d" stroke-width="1" opacity="0.5"/>
+          <line x1="2" y1="24" x2="10" y2="24" stroke="#a0522d" stroke-width="1" opacity="0.5"/>
+          <line x1="38" y1="24" x2="46" y2="24" stroke="#a0522d" stroke-width="1" opacity="0.5"/>
+        </svg>
+        <h3>Our <span>Vision</span></h3>
+        <p>
+          Taking decisive steps towards sustainable development by transforming 130 acres of impoverished
+          land into a flourishing centre of horticulture, farming, and green energy &mdash; creating
+          an infrastructure that serves as both a model and a lifeline for the Nuba Mountain community
+          and rural communities worldwide.
+        </p>
+      </div>
+      <div class="vm__divider"></div>
+      <div class="vm__block fade-in-right">
+        <svg class="vm__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 40 L24 8 L40 40Z" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.5"/>
+          <line x1="24" y1="8" x2="24" y2="32" stroke="#a0522d" stroke-width="1" opacity="0.5"/>
+          <circle cx="24" cy="35" r="3" fill="#a0522d" opacity="0.3"/>
+          <line x1="14" y1="32" x2="34" y2="32" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <h3>Our <span>Mission</span></h3>
+        <p>
+          Turning 130 acres of non-productive, degraded land into thriving, productive farmland.
+          Creating new agricultural employment opportunities to help, support, and uplift the neediest
+          and most excluded members of this rural community &mdash; ultimately working to end the cycle
+          of poverty that has persisted for generations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PULL QUOTE 2 ========== -->
+<div class="pull-quote fade-in">
+  <span class="pull-quote__mark">&ldquo;</span>
+  <p class="pull-quote__text">Committed to grow rural communities &mdash; because every seed planted is a promise kept.</p>
+  <p class="pull-quote__attr">&mdash; RiseMeUp Foundation</p>
+</div>
+
+<!-- ========== THE FOUR PILLARS (TABS) ========== -->
+<section class="pillars section-padding" id="pillars">
+  <div class="container">
+    <span class="section-label fade-in">The Blueprint</span>
+    <h2 class="section-title fade-in">Four Pillars of <em>Transformation</em></h2>
+    <hr class="editorial-rule--thick">
+    <p class="fade-in" style="max-width:640px; font-size:1.05rem; line-height:1.8; color:#6b6560; margin-bottom:2.5rem;">
+      Our comprehensive development plan unfolds in four carefully sequenced phases, each building upon
+      the last to create a self-sustaining agricultural ecosystem.
+    </p>
+
+    <div class="pillars__tabs" role="tablist">
+      <button class="pillars__tab active" role="tab" data-tab="biogas" aria-selected="true">I. Biogas Plant</button>
+      <button class="pillars__tab" role="tab" data-tab="greenhouses" aria-selected="false">II. Greenhouses</button>
+      <button class="pillars__tab" role="tab" data-tab="packaging" aria-selected="false">III. Sorting & Packaging</button>
+      <button class="pillars__tab" role="tab" data-tab="poultry" aria-selected="false">IV. Poultry Farm</button>
+    </div>
+
+    <!-- Panel 1: Biogas -->
+    <div class="pillars__panel active" id="panel-biogas" role="tabpanel">
+      <div>
+        <span class="pillars__panel-number">01</span>
+        <h3 class="pillars__panel-title">Biogas Plant</h3>
+        <p class="pillars__panel-text">
+          The foundation of our energy independence. A decentralised biogas plant that transforms
+          agricultural raw materials and residual waste into clean electricity, gas, and high-nutrient
+          organic fertilizer &mdash; dramatically reducing dependency on external resources while
+          strengthening the economic viability of rural farming.
+        </p>
+        <ul class="pillars__panel-features">
+          <li>Processes all types of agricultural raw and residual materials</li>
+          <li>Generates clean electricity and biogas for the community</li>
+          <li>Produces high-nutrient organic fertilizer from fermentation</li>
+          <li>Reduces dependency on costly external energy sources</li>
+          <li>Decentralised model strengthens local economic value</li>
+          <li>Fully fermented product with reduced odour impact</li>
+        </ul>
+      </div>
+      <div class="pillars__panel-visual">
+        <svg viewBox="0 0 320 320" width="280" xmlns="http://www.w3.org/2000/svg">
+          <!-- Biogas tank -->
+          <ellipse cx="160" cy="220" rx="100" ry="30" fill="#5c6b4f" opacity="0.15"/>
+          <rect x="110" y="120" width="100" height="100" rx="8" fill="none" stroke="#5c6b4f" stroke-width="2" opacity="0.5"/>
+          <ellipse cx="160" cy="120" rx="50" ry="15" fill="none" stroke="#5c6b4f" stroke-width="2" opacity="0.5"/>
+          <!-- Dome -->
+          <path d="M110 120 Q110 80 160 70 Q210 80 210 120" fill="none" stroke="#a0522d" stroke-width="2" opacity="0.5"/>
+          <!-- Pipes -->
+          <line x1="210" y1="150" x2="270" y2="150" stroke="#5c6b4f" stroke-width="2" opacity="0.4"/>
+          <line x1="270" y1="150" x2="270" y2="200" stroke="#5c6b4f" stroke-width="2" opacity="0.4"/>
+          <line x1="110" y1="170" x2="50" y2="170" stroke="#5c6b4f" stroke-width="2" opacity="0.4"/>
+          <line x1="50" y1="170" x2="50" y2="200" stroke="#5c6b4f" stroke-width="2" opacity="0.4"/>
+          <!-- Energy symbols -->
+          <circle cx="270" cy="210" r="15" fill="#a0522d" opacity="0.15"/>
+          <text x="270" y="215" text-anchor="middle" font-size="14" fill="#a0522d" opacity="0.6">&#9889;</text>
+          <circle cx="50" cy="210" r="15" fill="#5c6b4f" opacity="0.15"/>
+          <text x="50" y="215" text-anchor="middle" font-size="12" fill="#5c6b4f" opacity="0.6">&#127793;</text>
+          <!-- Bubbles -->
+          <circle cx="145" cy="160" r="4" fill="#5c6b4f" opacity="0.2"/>
+          <circle cx="165" cy="150" r="3" fill="#5c6b4f" opacity="0.15"/>
+          <circle cx="175" cy="170" r="5" fill="#5c6b4f" opacity="0.2"/>
+          <circle cx="155" cy="180" r="3" fill="#5c6b4f" opacity="0.15"/>
+          <!-- Label -->
+          <text x="160" y="270" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14" fill="#1c1917" opacity="0.4" font-style="italic">Phase One &mdash; Energy Independence</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 2: Greenhouses -->
+    <div class="pillars__panel" id="panel-greenhouses" role="tabpanel">
+      <div>
+        <span class="pillars__panel-number">02</span>
+        <h3 class="pillars__panel-title">10 Commercial Greenhouses</h3>
+        <p class="pillars__panel-text">
+          Modern, technologically advanced greenhouse structures equipped with state-of-the-art
+          irrigation systems for year-round intensive agriculture. These climate-controlled environments
+          enable off-season crop production, superior quality yields, and efficient resource management &mdash;
+          while opening entirely new employment opportunities for the community.
+        </p>
+        <ul class="pillars__panel-features">
+          <li>Ten modern, fully equipped commercial greenhouse structures</li>
+          <li>Advanced irrigation and climate control systems</li>
+          <li>Year-round cultivation including off-season crops</li>
+          <li>Superior crop quality through controlled growing conditions</li>
+          <li>Integrated pest management reduces chemical dependency</li>
+          <li>Creates significant new agricultural employment</li>
+        </ul>
+      </div>
+      <div class="pillars__panel-visual">
+        <svg viewBox="0 0 320 320" width="280" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ground -->
+          <path d="M20 260 L300 260" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <!-- Greenhouse structure -->
+          <path d="M60 260 L60 170 Q160 100 260 170 L260 260Z" fill="#5c6b4f" opacity="0.06" stroke="#5c6b4f" stroke-width="1.5" opacity="0.4"/>
+          <!-- Internal frame -->
+          <line x1="110" y1="260" x2="110" y2="155" stroke="#5c6b4f" stroke-width="1" opacity="0.2"/>
+          <line x1="160" y1="260" x2="160" y2="135" stroke="#5c6b4f" stroke-width="1" opacity="0.2"/>
+          <line x1="210" y1="260" x2="210" y2="155" stroke="#5c6b4f" stroke-width="1" opacity="0.2"/>
+          <!-- Plants inside -->
+          <rect x="80" y="230" width="15" height="30" rx="2" fill="#5c6b4f" opacity="0.25"/>
+          <rect x="105" y="225" width="15" height="35" rx="2" fill="#5c6b4f" opacity="0.3"/>
+          <rect x="130" y="220" width="15" height="40" rx="2" fill="#5c6b4f" opacity="0.25"/>
+          <rect x="155" y="215" width="15" height="45" rx="2" fill="#a0522d" opacity="0.2"/>
+          <rect x="180" y="220" width="15" height="40" rx="2" fill="#5c6b4f" opacity="0.25"/>
+          <rect x="205" y="225" width="15" height="35" rx="2" fill="#5c6b4f" opacity="0.3"/>
+          <rect x="230" y="230" width="15" height="30" rx="2" fill="#5c6b4f" opacity="0.25"/>
+          <!-- Sun -->
+          <circle cx="280" cy="80" r="25" fill="#a0522d" opacity="0.1"/>
+          <circle cx="280" cy="80" r="15" fill="#a0522d" opacity="0.15"/>
+          <!-- Water drops -->
+          <circle cx="120" cy="200" r="2" fill="#5c6b4f" opacity="0.3"/>
+          <circle cx="160" cy="195" r="2" fill="#5c6b4f" opacity="0.3"/>
+          <circle cx="200" cy="200" r="2" fill="#5c6b4f" opacity="0.3"/>
+          <text x="160" y="295" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14" fill="#1c1917" opacity="0.4" font-style="italic">Phase Two &mdash; Year-Round Growth</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 3: Packaging -->
+    <div class="pillars__panel" id="panel-packaging" role="tabpanel">
+      <div>
+        <span class="pillars__panel-number">03</span>
+        <h3 class="pillars__panel-title">Sorting & Packaging System</h3>
+        <p class="pillars__panel-text">
+          A fully automated, large-scale packaging operation designed to prepare products for both
+          local and international markets. From fabrication and cleaning through filling, sealing,
+          labelling, and palletising &mdash; this system ensures consistent, high-quality output
+          that can compete on the global stage.
+        </p>
+        <ul class="pillars__panel-features">
+          <li>Large fully automatic packaging production lines</li>
+          <li>Complete process: fabrication through palletising</li>
+          <li>Cleaning, filling, sealing, and labelling systems</li>
+          <li>Designed to meet international market standards</li>
+          <li>Ensures consistent, premium-quality product output</li>
+          <li>Overwrapping and palletising for export readiness</li>
+        </ul>
+      </div>
+      <div class="pillars__panel-visual">
+        <svg viewBox="0 0 320 320" width="280" xmlns="http://www.w3.org/2000/svg">
+          <!-- Conveyor belt -->
+          <line x1="40" y1="200" x2="280" y2="200" stroke="#5c6b4f" stroke-width="2" opacity="0.4"/>
+          <circle cx="60" cy="205" r="8" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.3"/>
+          <circle cx="260" cy="205" r="8" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.3"/>
+          <!-- Boxes on conveyor -->
+          <rect x="80" y="170" width="30" height="30" fill="#a0522d" opacity="0.15" stroke="#a0522d" stroke-width="1" opacity="0.3"/>
+          <rect x="130" y="170" width="30" height="30" fill="#a0522d" opacity="0.2" stroke="#a0522d" stroke-width="1" opacity="0.3"/>
+          <rect x="180" y="170" width="30" height="30" fill="#5c6b4f" opacity="0.15" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <rect x="230" y="170" width="30" height="30" fill="#5c6b4f" opacity="0.2" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <!-- Machine frame -->
+          <rect x="120" y="100" width="80" height="70" rx="4" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.35"/>
+          <line x1="120" y1="130" x2="200" y2="130" stroke="#5c6b4f" stroke-width="1" opacity="0.2"/>
+          <!-- Arrows showing flow -->
+          <path d="M90 150 L90 165" stroke="#a0522d" stroke-width="1" opacity="0.4" marker-end="url(#arrow)"/>
+          <path d="M160 100 L160 90 L250 90 L250 165" stroke="#5c6b4f" stroke-width="1" opacity="0.3" fill="none" stroke-dasharray="4 4"/>
+          <!-- Stacked boxes -->
+          <rect x="40" y="230" width="25" height="25" fill="#5c6b4f" opacity="0.15" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <rect x="40" y="255" width="25" height="25" fill="#5c6b4f" opacity="0.15" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <rect x="65" y="255" width="25" height="25" fill="#5c6b4f" opacity="0.1" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <text x="160" y="295" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14" fill="#1c1917" opacity="0.4" font-style="italic">Phase Three &mdash; Market Ready</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 4: Poultry -->
+    <div class="pillars__panel" id="panel-poultry" role="tabpanel">
+      <div>
+        <span class="pillars__panel-number">04</span>
+        <h3 class="pillars__panel-title">Poultry Farm</h3>
+        <p class="pillars__panel-text">
+          A dual-purpose poultry operation comprising egg-producing layers and broiler production.
+          With capacity for 80,000 laying hens and 50,000 broilers across four purpose-built halls,
+          this phase directly addresses protein deficiency, nutritional security, and food sovereignty
+          for the community.
+        </p>
+        <ul class="pillars__panel-features">
+          <li>Two halls housing 40,000 egg-producing hens each (80,000 total)</li>
+          <li>Two halls housing 25,000 broiler hens each (50,000 total)</li>
+          <li>Addresses critical protein and nutritional needs</li>
+          <li>Short production cycles for rapid, reliable output</li>
+          <li>Converts agricultural by-products into meat and eggs</li>
+          <li>Strengthens community food security and sovereignty</li>
+        </ul>
+      </div>
+      <div class="pillars__panel-visual">
+        <svg viewBox="0 0 320 320" width="280" xmlns="http://www.w3.org/2000/svg">
+          <!-- Barn structures -->
+          <rect x="40" y="160" width="100" height="80" fill="#5c6b4f" opacity="0.08" stroke="#5c6b4f" stroke-width="1.5" opacity="0.35"/>
+          <path d="M40 160 L90 120 L140 160" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.35"/>
+          <rect x="180" y="160" width="100" height="80" fill="#a0522d" opacity="0.06" stroke="#a0522d" stroke-width="1.5" opacity="0.3"/>
+          <path d="M180 160 L230 120 L280 160" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.3"/>
+          <!-- Doors -->
+          <rect x="75" y="210" width="30" height="30" fill="#5c6b4f" opacity="0.1"/>
+          <rect x="215" y="210" width="30" height="30" fill="#a0522d" opacity="0.08"/>
+          <!-- Chicken symbols (simplified) -->
+          <circle cx="70" cy="190" r="6" fill="#5c6b4f" opacity="0.2"/>
+          <circle cx="85" cy="195" r="5" fill="#5c6b4f" opacity="0.15"/>
+          <circle cx="110" cy="190" r="6" fill="#5c6b4f" opacity="0.2"/>
+          <circle cx="210" cy="190" r="6" fill="#a0522d" opacity="0.15"/>
+          <circle cx="240" cy="195" r="5" fill="#a0522d" opacity="0.12"/>
+          <circle cx="260" cy="190" r="6" fill="#a0522d" opacity="0.15"/>
+          <!-- Egg symbols -->
+          <ellipse cx="55" cy="270" rx="8" ry="10" fill="#a0522d" opacity="0.12" stroke="#a0522d" stroke-width="1" opacity="0.2"/>
+          <ellipse cx="75" cy="268" rx="8" ry="10" fill="#a0522d" opacity="0.1" stroke="#a0522d" stroke-width="1" opacity="0.2"/>
+          <ellipse cx="95" cy="270" rx="8" ry="10" fill="#a0522d" opacity="0.12" stroke="#a0522d" stroke-width="1" opacity="0.2"/>
+          <!-- Ground -->
+          <line x1="20" y1="240" x2="300" y2="240" stroke="#5c6b4f" stroke-width="1" opacity="0.2"/>
+          <!-- Labels -->
+          <text x="90" y="260" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="9" fill="#5c6b4f" opacity="0.5" font-weight="500">LAYERS</text>
+          <text x="230" y="260" text-anchor="middle" font-family="Libre Franklin, sans-serif" font-size="9" fill="#a0522d" opacity="0.5" font-weight="500">BROILERS</text>
+          <text x="160" y="300" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14" fill="#1c1917" opacity="0.4" font-style="italic">Phase Four &mdash; Food Security</text>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== TEAM / EXPERTS ========== -->
+<section class="team section-padding" id="team">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1rem;" class="fade-in">
+      <span class="section-label">The Architects</span>
+      <h2 class="section-title">Our <em>Experts</em></h2>
+      <p style="max-width:580px; margin:0 auto; font-size:1rem; line-height:1.75; color:#6b6560;">
+        A distinguished team of agricultural scientists and development specialists, bringing decades of
+        international experience to the Nuba Mountains.
+      </p>
+    </div>
+
+    <div class="team__grid">
+      <!-- Prof. Dr. Elamin -->
+      <div class="team__card fade-in">
+        <div class="team__avatar">EA</div>
+        <h3 class="team__name">Prof. Dr. Elamin A. Ahmed</h3>
+        <p class="team__role">Fruit & Vegetable Production, Packaging & Exporting</p>
+        <p class="team__bio-preview">
+          A distinguished professor specialising in horticulture and agricultural export systems,
+          with extensive experience in fruit and vegetable production at scale.
+        </p>
+        <div class="team__bio-full" id="bio-elamin">
+          <hr class="editorial-rule" style="margin:0 0 1rem 0;">
+          <p><strong>Education:</strong> PhD from INRA, France &bull; MSc from University of Gezira, Sudan &bull; BSc from University of Khartoum, Sudan</p>
+          <p style="margin-top:0.75rem;">Professor Ahmed brings deep expertise in the full agricultural value chain &mdash; from cultivation through to packaging and international export logistics. His research at INRA France provides cutting-edge knowledge in modern horticultural practices.</p>
+        </div>
+        <button class="team__expand-btn" data-bio="bio-elamin">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Dr. Munir -->
+      <div class="team__card fade-in">
+        <div class="team__avatar" style="background:var(--sienna);">MB</div>
+        <h3 class="team__name">Dr. Munir G. Botrus</h3>
+        <p class="team__role">Pesticide Application & Environmental Safety</p>
+        <p class="team__bio-preview">
+          An internationally recognised expert in pesticide application and agricultural safety,
+          with 15 years of service with the Food and Agriculture Organization of the United Nations.
+        </p>
+        <div class="team__bio-full" id="bio-munir">
+          <hr class="editorial-rule" style="margin:0 0 1rem 0;">
+          <p><strong>Education:</strong> PhD from University of London, UK &bull; BSc in Agricultural Science</p>
+          <p style="margin-top:0.75rem;"><strong>Experience:</strong> 15 years with FAO/United Nations, specialising in pesticide regulation, safe application practices, and environmental protection in agricultural contexts. His UN experience provides invaluable insight into sustainable farming at scale.</p>
+        </div>
+        <button class="team__expand-btn" data-bio="bio-munir">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Dr. Mohammed -->
+      <div class="team__card fade-in">
+        <div class="team__avatar" style="background:var(--ink);">MK</div>
+        <h3 class="team__name">Dr. Mohammed A.F. Khames</h3>
+        <p class="team__role">Seed Pathology & Agricultural Technology</p>
+        <p class="team__bio-preview">
+          A leading authority in seed pathology and agricultural technology, combining rigorous
+          academic research with practical field expertise across multiple continents.
+        </p>
+        <div class="team__bio-full" id="bio-mohammed">
+          <hr class="editorial-rule" style="margin:0 0 1rem 0;">
+          <p><strong>Education:</strong> PhD from University of Glassen, Germany &bull; MSc from University of Aberdeen, UK &bull; BSc from Cairo University, Egypt</p>
+          <p style="margin-top:0.75rem;">Dr. Khames's multi-continental training in seed science provides critical expertise in ensuring crop health, disease prevention, and the implementation of modern agricultural technologies adapted to challenging growing conditions.</p>
+        </div>
+        <button class="team__expand-btn" data-bio="bio-mohammed">
+          Read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PULL QUOTE 3 ========== -->
+<div class="pull-quote fade-in">
+  <span class="pull-quote__mark">&ldquo;</span>
+  <p class="pull-quote__text">Agriculture investment is eleven times more effective at reducing poverty than any other sector.</p>
+  <p class="pull-quote__attr">&mdash; World Bank Research</p>
+</div>
+
+<!-- ========== UN SDGs ========== -->
+<section class="sdgs section-padding" id="sdgs">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1rem;" class="fade-in">
+      <span class="section-label">Global Alignment</span>
+      <h2 class="section-title">United Nations <em>Sustainable</em> Development Goals</h2>
+      <p style="max-width:620px; margin:0 auto; font-size:1rem; line-height:1.75; color:#6b6560;">
+        Our work directly advances four of the United Nations' Sustainable Development Goals,
+        ensuring our impact resonates far beyond the Nuba Mountains.
+      </p>
+    </div>
+
+    <div class="sdgs__grid">
+      <div class="sdg__card fade-in">
+        <div class="sdg__number">#7</div>
+        <h3 class="sdg__title">Affordable & Clean Energy</h3>
+        <p class="sdg__desc">
+          Our biogas plant provides renewable, locally produced energy &mdash; reducing fossil fuel
+          dependency and ensuring affordable power for agricultural operations and community needs.
+        </p>
+      </div>
+      <div class="sdg__card fade-in">
+        <div class="sdg__number">#9</div>
+        <h3 class="sdg__title">Industry, Innovation & Infrastructure</h3>
+        <p class="sdg__desc">
+          From automated packaging systems to modern greenhouses, we build resilient infrastructure
+          and foster innovation that enables sustainable industrialisation in rural contexts.
+        </p>
+      </div>
+      <div class="sdg__card fade-in">
+        <div class="sdg__number">#10</div>
+        <h3 class="sdg__title">Reduced Inequalities</h3>
+        <p class="sdg__desc">
+          By creating economic opportunity for genocide survivors and excluded communities, we work
+          to close the inequality gap and ensure no one is left behind in development progress.
+        </p>
+      </div>
+      <div class="sdg__card fade-in">
+        <div class="sdg__number">#12</div>
+        <h3 class="sdg__title">Responsible Consumption & Production</h3>
+        <p class="sdg__desc">
+          Our closed-loop system &mdash; from biogas waste conversion to sustainable farming &mdash;
+          exemplifies responsible production that minimises waste and maximises resource efficiency.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS / BY THE NUMBERS ========== -->
+<section class="stats section-padding" id="stats">
+  <div class="container">
+    <div class="stats__header fade-in">
+      <span class="section-label">By The Numbers</span>
+      <h2 class="section-title">The Scale of <em>Possibility</em></h2>
+    </div>
+    <div class="stats__grid">
+      <div class="stat__item fade-in">
+        <div class="stat__number">
+          <span class="counter" data-target="130">0</span><span class="stat__suffix"> acres</span>
+        </div>
+        <p class="stat__label">Of degraded land being transformed into productive farmland</p>
+      </div>
+      <div class="stat__item fade-in">
+        <div class="stat__number">
+          <span class="counter" data-target="3">0</span><span class="stat__suffix"> billion</span>
+        </div>
+        <p class="stat__label">Rural people globally &mdash; 40% of the world's population</p>
+      </div>
+      <div class="stat__item fade-in">
+        <div class="stat__number">
+          <span class="counter" data-target="11">0</span><span class="stat__suffix">x</span>
+        </div>
+        <p class="stat__label">More effective at reducing poverty than other sector investments</p>
+      </div>
+      <div class="stat__item fade-in">
+        <div class="stat__number">
+          <span class="counter" data-target="1.8">0</span><span class="stat__suffix"> billion</span>
+        </div>
+        <p class="stat__label">Young people alive today &mdash; the largest generation in history</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW WE WORK (SERVICES) ========== -->
+<section class="services section-padding" id="services">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1rem;" class="fade-in">
+      <span class="section-label">Our Approach</span>
+      <h2 class="section-title">How We <em>Work</em></h2>
+      <p style="max-width:580px; margin:0 auto; font-size:1rem; line-height:1.75; color:#6b6560;">
+        Three integrated service areas that together form a complete development framework &mdash;
+        from securing resources to managing operations on the ground.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      <div class="service__card fade-in">
+        <svg class="service__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="20" r="12" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="24" cy="20" r="6" fill="#a0522d" opacity="0.15"/>
+          <line x1="24" y1="32" x2="24" y2="44" stroke="#a0522d" stroke-width="1.5" opacity="0.5"/>
+          <line x1="16" y1="44" x2="32" y2="44" stroke="#a0522d" stroke-width="1.5" opacity="0.5"/>
+          <path d="M18 20 L24 14 L30 20" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+        <h3 class="service__title">Fundraising & Investment</h3>
+        <p class="service__text">
+          Strategic fundraising and investment partnerships that secure the capital needed to bring
+          each project phase to life &mdash; connecting global donors with tangible, measurable outcomes
+          in the Nuba Mountains.
+        </p>
+      </div>
+      <div class="service__card fade-in">
+        <svg class="service__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="12" width="32" height="28" rx="2" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.5"/>
+          <line x1="8" y1="20" x2="40" y2="20" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <line x1="24" y1="20" x2="24" y2="40" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <circle cx="16" cy="30" r="4" fill="#5c6b4f" opacity="0.15"/>
+          <circle cx="32" cy="30" r="4" fill="#a0522d" opacity="0.15"/>
+          <rect x="14" y="8" width="20" height="4" rx="1" fill="none" stroke="#5c6b4f" stroke-width="1" opacity="0.4"/>
+        </svg>
+        <h3 class="service__title">Development & Supervision</h3>
+        <p class="service__text">
+          Rigorous project development and on-site supervision ensuring every phase meets international
+          standards for quality, sustainability, and community benefit &mdash; guided by our team
+          of agricultural scientists.
+        </p>
+      </div>
+      <div class="service__card fade-in">
+        <svg class="service__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="18" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.4"/>
+          <path d="M24 10 L24 24 L34 30" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="24" cy="24" r="3" fill="#a0522d" opacity="0.2"/>
+          <circle cx="24" cy="8" r="2" fill="#5c6b4f" opacity="0.3"/>
+          <circle cx="40" cy="24" r="2" fill="#5c6b4f" opacity="0.3"/>
+          <circle cx="24" cy="40" r="2" fill="#5c6b4f" opacity="0.3"/>
+          <circle cx="8" cy="24" r="2" fill="#5c6b4f" opacity="0.3"/>
+        </svg>
+        <h3 class="service__title">Project Operation Management</h3>
+        <p class="service__text">
+          End-to-end operational management that ensures long-term sustainability. From daily farm
+          operations to market distribution, we build systems designed to run independently and grow
+          organically over time.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OBJECTIVES ========== -->
+<section class="objectives section-padding" id="objectives">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1rem;" class="fade-in">
+      <span class="section-label">Strategic Goals</span>
+      <h2 class="section-title">Our <em>Objectives</em></h2>
+    </div>
+    <div class="objectives__list">
+      <div class="objective__item fade-in">
+        <svg class="objective__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#5c6b4f" opacity="0.1"/>
+          <path d="M14 20 Q20 10 26 20 Q20 30 14 20Z" fill="#5c6b4f" opacity="0.3"/>
+          <line x1="20" y1="8" x2="20" y2="32" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="objective__text">Implementing Green Energy</span>
+      </div>
+      <div class="objective__item fade-in">
+        <svg class="objective__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#a0522d" opacity="0.1"/>
+          <path d="M12 28 L20 12 L28 28Z" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.4"/>
+          <line x1="15" y1="24" x2="25" y2="24" stroke="#a0522d" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="objective__text">Develop Rural Farming</span>
+      </div>
+      <div class="objective__item fade-in">
+        <svg class="objective__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#5c6b4f" opacity="0.1"/>
+          <circle cx="15" cy="18" r="5" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="25" cy="18" r="5" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.4"/>
+          <path d="M12 28 Q20 32 28 28" fill="none" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="objective__text">Creating New Jobs</span>
+      </div>
+      <div class="objective__item fade-in">
+        <svg class="objective__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#a0522d" opacity="0.1"/>
+          <path d="M12 26 L20 14 L28 26" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.4"/>
+          <line x1="20" y1="14" x2="20" y2="30" stroke="#a0522d" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="objective__text">Ending Poverty</span>
+      </div>
+      <div class="objective__item fade-in">
+        <svg class="objective__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#5c6b4f" opacity="0.1"/>
+          <rect x="12" y="14" width="16" height="12" rx="1" fill="none" stroke="#5c6b4f" stroke-width="1.5" opacity="0.4"/>
+          <line x1="12" y1="20" x2="28" y2="20" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+          <line x1="20" y1="14" x2="20" y2="26" stroke="#5c6b4f" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="objective__text">Education & Training</span>
+      </div>
+      <div class="objective__item fade-in">
+        <svg class="objective__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#a0522d" opacity="0.1"/>
+          <ellipse cx="20" cy="22" rx="10" ry="7" fill="none" stroke="#a0522d" stroke-width="1.5" opacity="0.4"/>
+          <line x1="20" y1="12" x2="20" y2="15" stroke="#a0522d" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="20" cy="22" r="3" fill="#a0522d" opacity="0.15"/>
+        </svg>
+        <span class="objective__text">Food Security</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA / TAKE ACTION ========== -->
+<section class="cta section-padding" id="cta">
+  <div class="container">
+    <div class="cta__inner fade-in">
+      <span class="section-label">Take Action</span>
+      <h2 class="cta__title">Be Part of<br>This <em style="font-style:italic; color:var(--sienna);">Story</em></h2>
+      <p class="cta__text">
+        Every contribution, no matter the size, helps transform degraded land into thriving farmland,
+        creates jobs for genocide survivors, and builds a future where the Nuba Mountain community
+        can sustain itself with dignity and pride.
+      </p>
+      <div class="cta__buttons">
+        <button class="btn-primary" id="ctaDonateBtn">Make a Donation</button>
+        <a href="mailto:info@risemeup.org" class="btn-outline">Get Involved</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">Rise<span>Me</span>Up</div>
+        <p class="footer__desc">
+          Sustainable Farming for the Nuba Mountains. A London-based non-profit charity committed
+          to growing rural communities and ending poverty through agricultural innovation.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Navigate</h4>
+        <a href="#story" class="footer__link">Our Story</a>
+        <a href="#vision" class="footer__link">Vision & Mission</a>
+        <a href="#pillars" class="footer__link">Projects</a>
+        <a href="#team" class="footer__link">Our Experts</a>
+        <a href="#sdgs" class="footer__link">UN SDGs</a>
+        <a href="#stats" class="footer__link">Impact</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Connect</h4>
+        <a href="https://www.risemeup.org" class="footer__link" target="_blank" rel="noopener">www.risemeup.org</a>
+        <a href="mailto:info@risemeup.org" class="footer__link">info@risemeup.org</a>
+        <a href="tel:+447867977844" class="footer__link">+44 786 797 7844</a>
+        <p class="footer__link" style="cursor:default; margin-top:0.5rem; color:rgba(250,248,244,0.5); font-size:0.82rem; line-height:1.5;">
+          2 Rosecroft Gardens<br>London, NW2 6HX<br>United Kingdom
+        </p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Newsletter</h4>
+        <p class="footer__newsletter" style="font-size:0.9rem; color:var(--warm-grey); margin-bottom:1rem; line-height:1.6;">
+          Stay informed about our progress and impact. Join our mailing list.
+        </p>
+        <form class="footer__newsletter-form" id="newsletterForm">
+          <input type="email" class="footer__newsletter-input" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" class="footer__newsletter-btn">Join</button>
+        </form>
+        <p class="footer__newsletter-success" id="newsletterSuccess">Thank you for subscribing.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 RiseMeUp Sustainable Farming. All rights reserved.</p>
+      <div class="footer__contact">
+        <a href="mailto:info@risemeup.org">info@risemeup.org</a>
+        <a href="tel:+447867977844">+44 786 797 7844</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== DONATE MODAL ========== -->
+<div class="modal-overlay" id="donateModal">
+  <div class="modal">
+    <button class="modal__close" id="modalClose" aria-label="Close modal">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <h3 class="modal__title">Support Our <em style="font-style:italic; color:var(--sienna);">Mission</em></h3>
+    <p class="modal__subtitle">Every contribution helps transform lives in the Nuba Mountains.</p>
+
+    <div class="modal__amounts">
+      <button class="modal__amount" data-amount="25">&pound;25</button>
+      <button class="modal__amount selected" data-amount="50">&pound;50</button>
+      <button class="modal__amount" data-amount="100">&pound;100</button>
+      <button class="modal__amount" data-amount="250">&pound;250</button>
+    </div>
+
+    <form id="donateForm">
+      <div class="modal__form-group">
+        <label class="modal__label" for="donorName">Full Name</label>
+        <input type="text" class="modal__input" id="donorName" placeholder="Your full name" required>
+      </div>
+      <div class="modal__form-group">
+        <label class="modal__label" for="donorEmail">Email Address</label>
+        <input type="email" class="modal__input" id="donorEmail" placeholder="you@example.com" required>
+      </div>
+      <div class="modal__form-group">
+        <label class="modal__label" for="donorMessage">Message (Optional)</label>
+        <input type="text" class="modal__input" id="donorMessage" placeholder="A note of encouragement...">
+      </div>
+      <button type="submit" class="modal__submit">Complete Donation</button>
+    </form>
+  </div>
+</div>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 11L9 5L15 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ===== NAVIGATION: Scroll Tracking ===== */
+  const nav = document.getElementById('nav');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__link[data-section]');
+
+  function onScroll() {
+    const scrollY = window.scrollY;
+
+    // Nav background
+    if (scrollY > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+
+    // Active section tracking
+    let current = '';
+    sections.forEach(function(section) {
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('data-section') === current) {
+        link.classList.add('active');
+      }
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    if (scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ===== BACK TO TOP ===== */
+  document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ===== HAMBURGER MENU ===== */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileLinks = document.querySelectorAll('[data-mobile-link]');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ===== TAB SYSTEM ===== */
+  const tabs = document.querySelectorAll('.pillars__tab');
+  const panels = document.querySelectorAll('.pillars__panel');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      const target = this.getAttribute('data-tab');
+
+      tabs.forEach(function(t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-selected', 'true');
+
+      panels.forEach(function(panel) {
+        panel.classList.remove('active');
+      });
+      document.getElementById('panel-' + target).classList.add('active');
+    });
+  });
+
+  /* ===== EXPANDABLE TEAM BIOS ===== */
+  const expandBtns = document.querySelectorAll('.team__expand-btn');
+
+  expandBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const bioId = this.getAttribute('data-bio');
+      const bioEl = document.getElementById(bioId);
+      const isExpanded = bioEl.classList.contains('expanded');
+
+      bioEl.classList.toggle('expanded');
+      this.classList.toggle('expanded');
+      this.firstChild.textContent = isExpanded ? 'Read more' : 'Read less';
+    });
+  });
+
+  /* ===== DONATE MODAL ===== */
+  const modal = document.getElementById('donateModal');
+  const modalClose = document.getElementById('modalClose');
+  const donateBtns = [
+    document.getElementById('navDonateBtn'),
+    document.getElementById('mobileDonateBtn'),
+    document.getElementById('ctaDonateBtn')
+  ];
+
+  function openModal() {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  donateBtns.forEach(function(btn) {
+    if (btn) btn.addEventListener('click', openModal);
+  });
+
+  modalClose.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  // Donation amount selection
+  const amountBtns = document.querySelectorAll('.modal__amount');
+  amountBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      amountBtns.forEach(function(b) { b.classList.remove('selected'); });
+      this.classList.add('selected');
+    });
+  });
+
+  // Donate form submit
+  document.getElementById('donateForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var selectedAmount = document.querySelector('.modal__amount.selected');
+    var amount = selectedAmount ? selectedAmount.getAttribute('data-amount') : '50';
+    alert('Thank you for your generous donation of \u00A3' + amount + '! In a production environment, you would be redirected to a secure payment processor.');
+    closeModal();
+    this.reset();
+  });
+
+  /* ===== NEWSLETTER FORM ===== */
+  document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('newsletterSuccess').classList.add('show');
+    this.reset();
+    setTimeout(function() {
+      document.getElementById('newsletterSuccess').classList.remove('show');
+    }, 4000);
+  });
+
+  /* ===== MOBILE DONATE BUTTON CLOSE MENU ===== */
+  document.getElementById('mobileDonateBtn').addEventListener('click', function() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = 'hidden'; // Keep hidden for modal
+  });
+
+  /* ===== FADE-IN ON SCROLL (Intersection Observer) ===== */
+  var fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+  if ('IntersectionObserver' in window) {
+    var fadeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    fadeElements.forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+  } else {
+    // Fallback: make everything visible
+    fadeElements.forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ===== ANIMATED COUNTERS ===== */
+  var counters = document.querySelectorAll('.counter');
+  var countersAnimated = false;
+
+  function animateCounters() {
+    if (countersAnimated) return;
+
+    counters.forEach(function(counter) {
+      var target = parseFloat(counter.getAttribute('data-target'));
+      var duration = 2000;
+      var startTime = null;
+      var isFloat = target % 1 !== 0;
+
+      function updateCounter(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+
+        // Ease out cubic
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = eased * target;
+
+        if (isFloat) {
+          counter.textContent = current.toFixed(1);
+        } else {
+          counter.textContent = Math.floor(current).toLocaleString();
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          if (isFloat) {
+            counter.textContent = target.toFixed(1);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    });
+
+    countersAnimated = true;
+  }
+
+  if ('IntersectionObserver' in window) {
+    var statsSection = document.getElementById('stats');
+    var statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateCounters();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statsObserver.observe(statsSection);
+  } else {
+    // Fallback
+    window.addEventListener('load', function() {
+      setTimeout(animateCounters, 1000);
+    });
+  }
+
+  /* ===== SMOOTH SCROLL for anchor links (fallback for browsers without css scroll-behavior) ===== */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        var offset = 80;
+        var targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
