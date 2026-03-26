@@ -45,3 +45,38 @@ export const addKhalidAndGreenhouseImage = mutation({
     return "Migration applied";
   },
 });
+
+export const reorderTeamMembers = mutation({
+  args: {},
+  handler: async (ctx) => {
+    // Check if already applied
+    const existing = await ctx.db
+      .query("siteConfig")
+      .withIndex("by_key", (q) => q.eq("key", "migration_reorder_team"))
+      .first();
+    if (existing) return "Already applied";
+
+    // Desired order: Elamin=1, Khalid=2, Munir=3, Mohammed=4
+    const orderMap: Record<string, number> = {
+      "Prof. Dr. Elamin A. Ahmed": 1,
+      "Dr. Engr. Khalid Salih": 2,
+      "Dr. Munir G. Botrus": 3,
+      "Dr. Mohammed A.F. Khames": 4,
+    };
+
+    const members = await ctx.db.query("teamMembers").collect();
+    for (const member of members) {
+      const newOrder = orderMap[member.name];
+      if (newOrder !== undefined && member.order !== newOrder) {
+        await ctx.db.patch(member._id, { order: newOrder });
+      }
+    }
+
+    await ctx.db.insert("siteConfig", {
+      key: "migration_reorder_team",
+      value: "true",
+    });
+
+    return "Migration applied";
+  },
+});

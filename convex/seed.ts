@@ -45,6 +45,18 @@ export const seedAll = mutation({
       order: 1,
     });
     await ctx.db.insert("teamMembers", {
+      name: "Dr. Engr. Khalid Salih",
+      role: "Renewable Energy & Infrastructure",
+      image: "/team-4-khalid.jpeg",
+      bio: "Renewable energy and infrastructure expert and founder of Xplines International. Focuses on integrated, sustainable solutions across energy, agriculture, and healthcare.",
+      education: [
+        { icon: "graduation", text: "PhD Engineering" },
+        { icon: "clock", text: "Founder, Xplines International" },
+        { icon: "graduation", text: "Decentralized Development" },
+      ],
+      order: 2,
+    });
+    await ctx.db.insert("teamMembers", {
       name: "Dr. Munir G. Botrus",
       role: "Pesticide Application",
       image: "/team-2-munir.png",
@@ -54,7 +66,7 @@ export const seedAll = mutation({
         { icon: "graduation", text: "BSc Agricultural Science" },
         { icon: "clock", text: "15 Years FAO/UN" },
       ],
-      order: 2,
+      order: 3,
     });
     await ctx.db.insert("teamMembers", {
       name: "Dr. Mohammed A.F. Khames",
@@ -65,18 +77,6 @@ export const seedAll = mutation({
         { icon: "graduation", text: "PhD Giessen U, Germany" },
         { icon: "graduation", text: "MSc Aberdeen, UK" },
         { icon: "graduation", text: "BSc Cairo" },
-      ],
-      order: 3,
-    });
-    await ctx.db.insert("teamMembers", {
-      name: "Dr. Engr. Khalid Salih",
-      role: "Renewable Energy & Infrastructure",
-      image: "/team-4-khalid.jpeg",
-      bio: "Renewable energy and infrastructure expert and founder of Xplines International. Focuses on integrated, sustainable solutions across energy, agriculture, and healthcare.",
-      education: [
-        { icon: "graduation", text: "PhD Engineering" },
-        { icon: "clock", text: "Founder, Xplines International" },
-        { icon: "graduation", text: "Decentralized Development" },
       ],
       order: 4,
     });
