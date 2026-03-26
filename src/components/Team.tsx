@@ -60,6 +60,9 @@ export default function Team() {
             </div>
           ))}
         </div>
+        <blockquote className="team-slogan reveal">
+          Together we can make it happen to support the Nuba-Mountain people who have been genocide and from their homeland displaced.
+        </blockquote>
       </div>
     </section>
   );
