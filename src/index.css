@@ -1060,7 +1060,8 @@ body::after {
 
 .project-card-header {
   padding: 20px 20px 0;
-  min-height: 90px;
+  height: 90px;
+  overflow: hidden;
 }
 
 .project-phase {
