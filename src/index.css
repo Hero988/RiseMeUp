@@ -994,13 +994,13 @@ body::after {
    4. PROJECTS — DARK SECTION (Film Strip)
    ============================================ */
 #projects {
-  padding: var(--section-pad) 0;
+  padding: clamp(40px, 5vw, 60px) 0;
   background: var(--dark);
   position: relative;
   z-index: 1;
 }
 
-#projects .container { margin-bottom: 40px; }
+#projects .container { margin-bottom: 24px; }
 
 /* Film strip desktop */
 .film-strip-wrapper {
@@ -1153,7 +1153,7 @@ body::after {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .film-strip-nav button {
