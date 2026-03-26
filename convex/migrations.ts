@@ -87,18 +87,29 @@ export const addObjectiveImages = mutation({
   handler: async (ctx) => {
     const existing = await ctx.db
       .query("siteConfig")
-      .withIndex("by_key", (q) => q.eq("key", "migration_objective_images"))
+      .withIndex("by_key", (q) => q.eq("key", "migration_objective_images_v2"))
       .first();
     if (existing) return "Already applied";
 
+    const imageMap: Record<string, string> = {
+      "Implementing Green Energy": "/obj-green-energy.jpeg",
+      "Develop Rural Farming": "/obj-rural-farming.jpeg",
+      "Creating New Jobs": "/obj-new-jobs.jpeg",
+      "Ending Poverty": "/obj-ending-poverty.jpeg",
+      "Education & Training": "/obj-education.jpeg",
+      "Food Security": "/obj-food-security.jpeg",
+    };
+
     const objectives = await ctx.db.query("objectives").collect();
-    const greenEnergy = objectives.find((o) => o.title === "Implementing Green Energy");
-    if (greenEnergy) {
-      await ctx.db.patch(greenEnergy._id, { image: "/obj-green-energy.jpeg" });
+    for (const obj of objectives) {
+      const image = imageMap[obj.title];
+      if (image) {
+        await ctx.db.patch(obj._id, { image });
+      }
     }
 
     await ctx.db.insert("siteConfig", {
-      key: "migration_objective_images",
+      key: "migration_objective_images_v2",
       value: "true",
     });
 

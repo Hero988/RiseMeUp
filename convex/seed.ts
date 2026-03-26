@@ -138,6 +138,7 @@ export const seedAll = mutation({
         description:
           "Transforming 130 acres of poor-land into productive farmland through modern agricultural practices.",
         iconName: "shield",
+        image: "/obj-rural-farming.jpeg",
         order: 2,
       },
       {
@@ -145,6 +146,7 @@ export const seedAll = mutation({
         description:
           "Generating agricultural employment opportunities for the Nuba Mountain community to build self-sufficiency.",
         iconName: "briefcase",
+        image: "/obj-new-jobs.jpeg",
         order: 3,
       },
       {
@@ -152,6 +154,7 @@ export const seedAll = mutation({
         description:
           "Supporting the neediest and most excluded within the rural community through sustainable economic empowerment.",
         iconName: "heart",
+        image: "/obj-ending-poverty.jpeg",
         order: 4,
       },
       {
@@ -159,6 +162,7 @@ export const seedAll = mutation({
         description:
           "Building capacity through agricultural training programs and educational initiatives for local communities.",
         iconName: "book",
+        image: "/obj-education.jpeg",
         order: 5,
       },
       {
@@ -166,6 +170,7 @@ export const seedAll = mutation({
         description:
           "Ensuring reliable access to sufficient, safe, and nutritious food for all community members year-round.",
         iconName: "layers",
+        image: "/obj-food-security.jpeg",
         order: 6,
       },
     ];
