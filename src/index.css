@@ -1036,8 +1036,8 @@ body::after {
 }
 
 .project-card {
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 320px;
+  max-width: 320px;
   background: linear-gradient(180deg, var(--charcoal) 0%, rgba(30,30,42,0.6) 100%);
   border: 1px solid rgba(255,255,255,0.06);
   margin: 0 14px;
@@ -1055,7 +1055,7 @@ body::after {
   transform: translateY(-4px);
 }
 
-.project-card-header { padding: 28px 28px 0; }
+.project-card-header { padding: 20px 20px 0; }
 
 .project-phase {
   font-family: var(--font-body);
@@ -1069,15 +1069,15 @@ body::after {
 
 .project-card h4 {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 14px;
   color: var(--white);
 }
 
 .project-card-visual {
-  height: 160px;
-  margin: 0 28px;
+  height: 140px;
+  margin: 0 20px;
   border-radius: var(--radius-sm);
   position: relative;
   overflow: hidden;
@@ -1115,7 +1115,7 @@ body::after {
   transform: scale(1.05);
 }
 
-.project-card-body { padding: 20px 28px 28px; }
+.project-card-body { padding: 16px 20px 20px; }
 
 .project-card-body p {
   color: rgba(255,255,255,0.6);
@@ -1285,6 +1285,7 @@ body::after {
 .team-avatar.avatar-1 { border: 3px solid var(--terracotta); }
 .team-avatar.avatar-2 { border: 3px solid var(--olive); }
 .team-avatar.avatar-3 { border: 3px solid var(--charcoal); }
+.team-avatar.avatar-3 img { transform: scale(1.35); }
 .team-avatar.avatar-4 { border: 3px solid var(--coral); }
 
 .team-card-front h3 {
@@ -2227,7 +2228,7 @@ body::after {
   .film-strip-nav { display: none; }
   .project-accordion { display: block; }
 
-  .project-card { min-width: 300px; max-width: 300px; }
+  .project-card { min-width: 260px; max-width: 260px; }
 }
 
 /* ============================================

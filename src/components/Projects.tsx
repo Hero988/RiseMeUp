@@ -52,7 +52,7 @@ export default function Projects() {
   // Film strip
   const trackRef = useRef<HTMLDivElement>(null);
   const [stripOffset, setStripOffset] = useState(0);
-  const cardWidth = 428;
+  const cardWidth = 348;
   const isDragging = useRef(false);
   const startX = useRef(0);
   const startOffset = useRef(0);
