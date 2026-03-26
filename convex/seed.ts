@@ -130,6 +130,7 @@ export const seedAll = mutation({
         description:
           "Building biogas plants and solar infrastructure for sustainable, clean energy powering all farm operations.",
         iconName: "zap",
+        image: "/obj-green-energy.jpeg",
         order: 1,
       },
       {

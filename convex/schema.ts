@@ -32,6 +32,7 @@ export default defineSchema({
     title: v.string(),
     description: v.string(),
     iconName: v.string(),
+    image: v.optional(v.string()),
     order: v.number(),
   }),
 

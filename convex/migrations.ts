@@ -82,6 +82,30 @@ export const updateProjectImages = mutation({
   },
 });
 
+export const addObjectiveImages = mutation({
+  args: {},
+  handler: async (ctx) => {
+    const existing = await ctx.db
+      .query("siteConfig")
+      .withIndex("by_key", (q) => q.eq("key", "migration_objective_images"))
+      .first();
+    if (existing) return "Already applied";
+
+    const objectives = await ctx.db.query("objectives").collect();
+    const greenEnergy = objectives.find((o) => o.title === "Implementing Green Energy");
+    if (greenEnergy) {
+      await ctx.db.patch(greenEnergy._id, { image: "/obj-green-energy.jpeg" });
+    }
+
+    await ctx.db.insert("siteConfig", {
+      key: "migration_objective_images",
+      value: "true",
+    });
+
+    return "Migration applied";
+  },
+});
+
 export const reorderTeamMembers = mutation({
   args: {},
   handler: async (ctx) => {
