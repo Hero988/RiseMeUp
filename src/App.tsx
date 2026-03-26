@@ -22,10 +22,11 @@ export default function App() {
   const seed = useMutation(api.seed.seedAll);
   const migrate = useMutation(api.migrations.addKhalidAndGreenhouseImage);
   const reorder = useMutation(api.migrations.reorderTeamMembers);
+  const projectImages = useMutation(api.migrations.updateProjectImages);
 
   useEffect(() => {
-    seed().then(() => migrate()).then(() => reorder()).catch(() => {});
-  }, [seed, migrate, reorder]);
+    seed().then(() => migrate()).then(() => reorder()).then(() => projectImages()).catch(() => {});
+  }, [seed, migrate, reorder, projectImages]);
 
   const openDonate = useCallback(() => setDonateOpen(true), []);
   const closeDonate = useCallback(() => setDonateOpen(false), []);

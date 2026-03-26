@@ -108,8 +108,8 @@ export const seedAll = mutation({
       description:
         "Automatic packaging lines for fabrication, cleaning, filling, sealing, labeling, and palletizing of agricultural products.",
       benefits: ["Automation", "Quality", "Export Ready"],
-      imageType: "svg",
-      imageSrc: "packaging",
+      imageType: "img",
+      imageSrc: "/packaging.jpg",
       order: 3,
     });
     await ctx.db.insert("projects", {
@@ -118,8 +118,8 @@ export const seedAll = mutation({
       description:
         "Egg hens (2x40,000) and broilers (2x25,000). Providing protein, nutrition, and food security to the community.",
       benefits: ["130K Birds", "Protein", "Food Security"],
-      imageType: "svg",
-      imageSrc: "poultry",
+      imageType: "img",
+      imageSrc: "/poultry.jpg",
       order: 4,
     });
 

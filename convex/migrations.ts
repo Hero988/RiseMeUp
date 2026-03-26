@@ -46,6 +46,42 @@ export const addKhalidAndGreenhouseImage = mutation({
   },
 });
 
+export const updateProjectImages = mutation({
+  args: {},
+  handler: async (ctx) => {
+    const existing = await ctx.db
+      .query("siteConfig")
+      .withIndex("by_key", (q) => q.eq("key", "migration_project_images"))
+      .first();
+    if (existing) return "Already applied";
+
+    const projects = await ctx.db.query("projects").collect();
+
+    const packaging = projects.find((p) => p.imageSrc === "packaging");
+    if (packaging) {
+      await ctx.db.patch(packaging._id, {
+        imageType: "img",
+        imageSrc: "/packaging.jpg",
+      });
+    }
+
+    const poultry = projects.find((p) => p.imageSrc === "poultry");
+    if (poultry) {
+      await ctx.db.patch(poultry._id, {
+        imageType: "img",
+        imageSrc: "/poultry.jpg",
+      });
+    }
+
+    await ctx.db.insert("siteConfig", {
+      key: "migration_project_images",
+      value: "true",
+    });
+
+    return "Migration applied";
+  },
+});
+
 export const reorderTeamMembers = mutation({
   args: {},
   handler: async (ctx) => {
