@@ -87,6 +87,9 @@ export default function Objectives() {
             </div>
           ))}
         </div>
+        <blockquote className="section-slogan reveal">
+          Committed to grow rural communities.
+        </blockquote>
       </div>
     </section>
   );

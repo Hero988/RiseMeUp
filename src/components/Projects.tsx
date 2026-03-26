@@ -241,6 +241,10 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      <blockquote className="section-slogan section-slogan-light reveal">
+        Together we can transform lives.
+      </blockquote>
     </section>
   );
 }

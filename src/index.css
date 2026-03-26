@@ -1341,7 +1341,7 @@ body::after {
   opacity: 0.85;
 }
 
-.team-slogan {
+.team-slogan, .section-slogan {
   margin: 48px auto 0;
   max-width: 700px;
   font-family: var(--font-heading);
@@ -1353,6 +1353,11 @@ body::after {
   border-left: 4px solid var(--terracotta);
   padding-left: 24px;
   text-align: left;
+}
+
+.section-slogan-light {
+  color: var(--cream);
+  border-left-color: var(--coral);
 }
 
 /* ============================================
