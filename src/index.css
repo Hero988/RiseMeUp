@@ -668,12 +668,13 @@ body::after {
   inset: 14px;
   border-radius: 50%;
   border: 2px dashed rgba(255,255,255,0.15);
+  z-index: 1;
 }
 
-.hero-graphic-main svg {
-  width: 160px;
-  height: 160px;
-  opacity: 0.9;
+.hero-satellite-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Floating stat cards (from M4) */
@@ -1413,7 +1414,7 @@ body::after {
    ============================================ */
 #objectives {
   padding: var(--section-pad) 0;
-  background: var(--cream);
+  background: linear-gradient(rgba(254, 250, 243, 0.85), rgba(254, 250, 243, 0.85)), url('/wheat-field.png') center / cover no-repeat;
   position: relative;
   z-index: 1;
 }
