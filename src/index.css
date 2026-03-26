@@ -668,13 +668,12 @@ body::after {
   inset: 14px;
   border-radius: 50%;
   border: 2px dashed rgba(255,255,255,0.15);
-  z-index: 1;
 }
 
-.hero-satellite-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-graphic-main svg {
+  width: 160px;
+  height: 160px;
+  opacity: 0.9;
 }
 
 /* Floating stat cards (from M4) */
@@ -793,7 +792,7 @@ body::after {
   width: 100%;
   aspect-ratio: 4/3;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--sand), rgba(194, 112, 58, 0.15));
+  background: url('/farmland-satellite.png') center / cover no-repeat;
   position: relative;
   overflow: hidden;
   box-shadow: var(--warm-shadow-lg);

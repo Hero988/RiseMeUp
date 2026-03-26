@@ -174,7 +174,13 @@ export default function Hero({ onDonate }: HeroProps) {
         <div className="hero-visual" aria-hidden="true">
           <div className="hero-graphic">
             <div className="hero-graphic-main">
-              <img src="/farmland-satellite.png" alt="130 acres farmland satellite view" className="hero-satellite-img" />
+              <svg viewBox="0 0 200 200" fill="none">
+                <path d="M100 180c0-40-20-60-40-80 10 5 25 5 35-5-15-10-20-30-15-50 10 15 25 25 45 25 20 0 35-10 45-25 5 20 0 40-15 50 10 10 25 10 35 5-20 20-40 40-40 80" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.6)" strokeWidth="2" />
+                <circle cx="100" cy="165" r="12" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" strokeWidth="2" />
+                <line x1="100" y1="60" x2="100" y2="150" stroke="rgba(255,255,255,0.4)" strokeWidth="2.5" />
+                <path d="M100 120 L80 95" stroke="rgba(255,255,255,0.35)" strokeWidth="2" />
+                <path d="M100 100 L120 80" stroke="rgba(255,255,255,0.35)" strokeWidth="2" />
+              </svg>
             </div>
             <div className="hero-float-card">
               <div className="card-icon green">
