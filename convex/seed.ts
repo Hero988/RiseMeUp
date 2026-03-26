@@ -68,6 +68,18 @@ export const seedAll = mutation({
       ],
       order: 3,
     });
+    await ctx.db.insert("teamMembers", {
+      name: "Dr. Engr. Khalid Salih",
+      role: "Renewable Energy & Infrastructure",
+      image: "/team-4-khalid.jpeg",
+      bio: "Renewable energy and infrastructure expert and founder of Xplines International. Focuses on integrated, sustainable solutions across energy, agriculture, and healthcare.",
+      education: [
+        { icon: "graduation", text: "PhD Engineering" },
+        { icon: "clock", text: "Founder, Xplines International" },
+        { icon: "graduation", text: "Decentralized Development" },
+      ],
+      order: 4,
+    });
 
     // Projects
     await ctx.db.insert("projects", {

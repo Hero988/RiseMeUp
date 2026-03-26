@@ -20,10 +20,11 @@ import DonateModal from "./components/DonateModal";
 export default function App() {
   const [donateOpen, setDonateOpen] = useState(false);
   const seed = useMutation(api.seed.seedAll);
+  const migrate = useMutation(api.migrations.addKhalidAndGreenhouseImage);
 
   useEffect(() => {
-    seed().catch(() => {});
-  }, [seed]);
+    seed().then(() => migrate()).catch(() => {});
+  }, [seed, migrate]);
 
   const openDonate = useCallback(() => setDonateOpen(true), []);
   const closeDonate = useCallback(() => setDonateOpen(false), []);
