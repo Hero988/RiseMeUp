@@ -66,6 +66,9 @@ export default function About() {
             </div>
           </div>
         </div>
+        <blockquote className="section-slogan reveal">
+          Investing in rural people is investing in a brighter future.
+        </blockquote>
       </div>
     </section>
   );

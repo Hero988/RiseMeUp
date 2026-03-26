@@ -204,6 +204,10 @@ export default function Hero({ onDonate }: HeroProps) {
         </div>
       </div>
 
+      <blockquote className="section-slogan section-slogan-light reveal" style={{ maxWidth: 600, margin: '0 auto', paddingBottom: 32 }}>
+        Think globally, act locally.
+      </blockquote>
+
       <div className="hero-scroll-indicator" aria-hidden="true">
         <span>Scroll</span>
         <div className="scroll-line" />
