@@ -1012,9 +1012,9 @@ body::after {
 .film-strip-track {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   gap: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: grab;
 }
 
 .film-strip-track:active { cursor: grabbing; }
