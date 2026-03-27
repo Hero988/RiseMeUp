@@ -50,7 +50,7 @@ export const seedAll = mutation({
       image: "/team-4-khalid.jpeg",
       bio: "Renewable energy and infrastructure expert and founder of Xplines International. Focuses on integrated, sustainable solutions across energy, agriculture, and healthcare.",
       education: [
-        { icon: "graduation", text: "PhD Engineering" },
+        { icon: "graduation", text: "PhD Control Engineering" },
         { icon: "clock", text: "Founder, Xplines International" },
         { icon: "graduation", text: "Decentralized Development" },
       ],
