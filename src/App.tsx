@@ -16,9 +16,11 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import DonateModal from "./components/DonateModal";
+import SudanCrisis from "./components/SudanCrisis";
 
 export default function App() {
   const [donateOpen, setDonateOpen] = useState(false);
+  const [sudanCrisisOpen, setSudanCrisisOpen] = useState(false);
   const seed = useMutation(api.seed.seedAll);
   const migrate = useMutation(api.migrations.addKhalidAndGreenhouseImage);
   const reorder = useMutation(api.migrations.reorderTeamMembers);
@@ -31,15 +33,17 @@ export default function App() {
 
   const openDonate = useCallback(() => setDonateOpen(true), []);
   const closeDonate = useCallback(() => setDonateOpen(false), []);
+  const openSudanCrisis = useCallback(() => setSudanCrisisOpen(true), []);
+  const closeSudanCrisis = useCallback(() => setSudanCrisisOpen(false), []);
 
   // Close on escape
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeDonate();
+      if (e.key === "Escape") { closeDonate(); closeSudanCrisis(); }
     };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
-  }, [closeDonate]);
+  }, [closeDonate, closeSudanCrisis]);
 
   // Global scroll-reveal observer — watches ALL .reveal elements in the DOM
   // (including dynamically rendered ones from Convex queries).
@@ -84,7 +88,7 @@ export default function App() {
   return (
     <>
       <BokehBackground />
-      <Navbar onDonate={openDonate} />
+      <Navbar onDonate={openDonate} onSudanCrisis={openSudanCrisis} />
       <Hero onDonate={openDonate} />
       <About />
       <VisionMission />
@@ -98,6 +102,7 @@ export default function App() {
       <Footer onDonate={openDonate} />
       <BackToTop />
       <DonateModal isOpen={donateOpen} onClose={closeDonate} />
+      <SudanCrisis isOpen={sudanCrisisOpen} onClose={closeSudanCrisis} onDonate={openDonate} />
     </>
   );
 }

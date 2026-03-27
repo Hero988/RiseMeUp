@@ -2,9 +2,10 @@ import { useState, useEffect, useCallback } from "react";
 
 interface NavbarProps {
   onDonate: () => void;
+  onSudanCrisis: () => void;
 }
 
-export default function Navbar({ onDonate }: NavbarProps) {
+export default function Navbar({ onDonate, onSudanCrisis }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,6 +64,12 @@ export default function Navbar({ onDonate }: NavbarProps) {
     onDonate();
   };
 
+  const handleSudanCrisisClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    closeMenu();
+    onSudanCrisis();
+  };
+
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#vision-mission", label: "Vision" },
@@ -102,6 +109,13 @@ export default function Navbar({ onDonate }: NavbarProps) {
                 {item.label}
               </a>
             ))}
+            <a
+              href="#"
+              className="nav-donate"
+              onClick={handleSudanCrisisClick}
+            >
+              Sudan Crisis
+            </a>
             <a
               href="#"
               className="nav-donate"
@@ -150,6 +164,13 @@ export default function Navbar({ onDonate }: NavbarProps) {
           onClick={(e) => handleNavClick(e, "#sdgs")}
         >
           UN SDGs
+        </a>
+        <a
+          href="#"
+          className="mobile-link mobile-donate-link"
+          onClick={handleSudanCrisisClick}
+        >
+          Sudan Crisis
         </a>
         <a
           href="#"
