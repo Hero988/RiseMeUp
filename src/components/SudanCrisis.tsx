@@ -6,6 +6,18 @@ interface SudanCrisisProps {
   onDonate: () => void;
 }
 
+const images = [
+  { src: "/sudan-crisis-1.jpeg", alt: "Food distribution to families in need" },
+  { src: "/sudan-crisis-2.jpeg", alt: "Essential supplies being prepared" },
+  { src: "/sudan-crisis-3.jpeg", alt: "Community support effort" },
+  { src: "/sudan-crisis-4.jpeg", alt: "Families receiving aid packages" },
+  { src: "/sudan-crisis-5.jpeg", alt: "Relief supplies for displaced families" },
+  { src: "/sudan-crisis-6.jpeg", alt: "Ongoing food support programme" },
+  { src: "/sudan-crisis-7.jpeg", alt: "Volunteers distributing essentials" },
+  { src: "/sudan-crisis-8.jpeg", alt: "Helping families in crisis" },
+  { src: "/sudan-crisis-9.jpeg", alt: "Real support for real families" },
+];
+
 export default function SudanCrisis({ isOpen, onClose, onDonate }: SudanCrisisProps) {
   useEffect(() => {
     if (isOpen) {
@@ -57,6 +69,34 @@ export default function SudanCrisis({ isOpen, onClose, onDonate }: SudanCrisisPr
           <p>
             Our aim is to stand with vulnerable families, bring practical relief, and help restore dignity and hope to those affected by war.
           </p>
+        </section>
+
+        <section className="sudan-section sudan-feeding">
+          <h2 className="sudan-heading">Feeding Families Today</h2>
+          <p>
+            Right now, families in our community are struggling to put food on the table — and we are here to help.
+          </p>
+          <p>
+            Every day, we provide essential food and support to those who need it most. Thanks to your support, we are reaching more families and making a real difference where it matters.
+          </p>
+          <p><strong>No one should go hungry — together, we are feeding families today.</strong></p>
+        </section>
+
+        <section className="sudan-section">
+          <h2 className="sudan-heading">What We Are Doing</h2>
+          <p>
+            These images show part of our ongoing effort to provide food and essential supplies to families in need. Every package represents support, care, and hope for someone in our community.
+          </p>
+          <blockquote className="sudan-quote">
+            Real support for real families — happening right now.
+          </blockquote>
+          <div className="sudan-gallery">
+            {images.map((img) => (
+              <div key={img.src} className="sudan-gallery-item">
+                <img src={img.src} alt={img.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="sudan-section">
