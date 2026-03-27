@@ -109,7 +109,7 @@ export default function Navbar({ onDonate, onSudanCrisis }: NavbarProps) {
             ))}
             <a
               href="#"
-              className="nav-donate"
+              className="nav-donate nav-sudan-crisis"
               onClick={handleSudanCrisisClick}
             >
               Sudan Crisis

@@ -420,6 +420,18 @@ body::after {
 
 .nav-donate::after { display: none !important; }
 
+.nav-sudan-crisis {
+  padding: 12px 30px !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.3px;
+  animation: sudanPulse 2s ease-in-out infinite;
+}
+
+@keyframes sudanPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(194, 112, 58, 0.3); }
+  50% { box-shadow: 0 4px 24px rgba(194, 112, 58, 0.6), 0 0 40px rgba(232, 141, 103, 0.25); }
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
