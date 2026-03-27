@@ -36,7 +36,7 @@ export default function VisionMission() {
           </div>
         </div>
         <blockquote className="section-slogan reveal">
-          From barren land to abundant life — one seed, one community, one future at a time.
+          Risemeup — Where hope grows again.
         </blockquote>
       </div>
     </section>
