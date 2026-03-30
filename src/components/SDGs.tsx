@@ -38,7 +38,7 @@ export default function SDGs() {
           ))}
         </div>
         <p className="sdgs-closing reveal" ref={closingRef}>
-          Together, these efforts demonstrate how local action, when strategically aligned, can contribute meaningfully to global progress.
+          <strong>Together, these efforts demonstrate how local action, when strategically aligned, can contribute meaningfully to global progress.</strong>
         </p>
       </div>
     </section>
