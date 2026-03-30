@@ -67,7 +67,7 @@ export default function About() {
           </div>
         </div>
         <blockquote className="section-slogan reveal">
-          Investing in rural people is investing in a brighter future.
+          From fragile land to thriving livelihoods.
         </blockquote>
       </div>
     </section>

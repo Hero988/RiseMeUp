@@ -108,7 +108,7 @@ export default function Contact() {
 
             <div className="contact-slogan">
               <p>
-                "Think globally, act locally. Investing in rural people is investing in a brighter future."
+                "Think globally, act locally. From fragile land to thriving livelihoods."
               </p>
             </div>
           </div>

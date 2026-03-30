@@ -6,18 +6,24 @@ export default function SDGs() {
   const sdgs = useQuery(api.queries.getSDGs);
   const labelRef = useScrollReveal<HTMLSpanElement>();
   const titleRef = useScrollReveal<HTMLHeadingElement>();
-  const subRef = useScrollReveal<HTMLParagraphElement>();
+  const subRef = useScrollReveal<HTMLDivElement>();
+  const closingRef = useScrollReveal<HTMLParagraphElement>();
 
   if (!sdgs) return null;
 
   return (
     <section id="sdgs">
       <div className="container text-center">
-        <span className="section-label reveal" ref={labelRef}>Global Alignment</span>
-        <h2 className="section-title reveal" ref={titleRef}>United Nations SDGs</h2>
-        <p className="section-subtitle reveal" ref={subRef}>
-          Our work directly contributes to four of the UN's 17 Sustainable Development Goals, driving global progress from the ground up.
-        </p>
+        <span className="section-label reveal" ref={labelRef}>Turning global commitments into measurable change.</span>
+        <h2 className="section-title reveal" ref={titleRef}>Global Alignment with the United Nations Sustainable Development Goals</h2>
+        <div className="section-subtitle reveal" ref={subRef}>
+          <p>
+            Our work is directly aligned with the United Nations Sustainable Development Goals (SDGs), contributing to a more sustainable, equitable, and resilient future.
+          </p>
+          <p>
+            Through targeted, community-driven initiatives, we translate global commitments into tangible outcomes—delivering measurable impact where it is needed most.
+          </p>
+        </div>
         <div className="sdgs-grid">
           {sdgs.map((sdg, i) => (
             <div
@@ -31,6 +37,9 @@ export default function SDGs() {
             </div>
           ))}
         </div>
+        <p className="sdgs-closing reveal" ref={closingRef}>
+          Together, these efforts demonstrate how local action, when strategically aligned, can contribute meaningfully to global progress.
+        </p>
       </div>
     </section>
   );
