@@ -52,7 +52,6 @@ export default function Projects() {
   // Film strip
   const trackRef = useRef<HTMLDivElement>(null);
   const [stripOffset, setStripOffset] = useState(0);
-  const cardWidth = 348;
   const isDragging = useRef(false);
   const startX = useRef(0);
   const startOffset = useRef(0);
@@ -62,14 +61,6 @@ export default function Projects() {
     const containerWidth = trackRef.current.parentElement?.clientWidth ?? 0;
     return Math.max(0, trackRef.current.scrollWidth - containerWidth);
   }, []);
-
-  const prev = useCallback(() => {
-    setStripOffset((o) => Math.max(0, o - cardWidth));
-  }, []);
-
-  const next = useCallback(() => {
-    setStripOffset((o) => Math.min(getMaxOffset(), o + cardWidth));
-  }, [getMaxOffset]);
 
   // Mouse drag
   useEffect(() => {
@@ -160,7 +151,6 @@ export default function Projects() {
 
       {/* Film strip (desktop) */}
       <div className="film-strip-wrapper">
-        <div className="film-strip-border" aria-hidden="true" />
         <div
           className="film-strip-track"
           ref={trackRef}
@@ -190,16 +180,6 @@ export default function Projects() {
             </div>
           ))}
         </div>
-        <div className="film-strip-border" aria-hidden="true" />
-      </div>
-
-      <div className="film-strip-nav">
-        <button onClick={prev} aria-label="Previous project">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
-        </button>
-        <button onClick={next} aria-label="Next project">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-        </button>
       </div>
 
       {/* Accordion (mobile) */}
