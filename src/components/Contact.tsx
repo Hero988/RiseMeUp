@@ -75,7 +75,7 @@ export default function Contact() {
               </div>
               <div>
                 <strong>Email Us</strong>
-                <a href="mailto:info@risemeup.org">info@risemeup.org</a>
+                <a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org</a>
               </div>
             </div>
 
