@@ -75,6 +75,7 @@ export default function Navbar({ onDonate, onSudanCrisis }: NavbarProps) {
     { href: "#vision-mission", label: "Vision" },
     { href: "#projects", label: "Projects" },
     { href: "#team", label: "Team" },
+    { href: "#founder", label: "Founder" },
     { href: "#contact", label: "Contact" },
   ];
 

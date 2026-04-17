@@ -8,6 +8,7 @@ import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Projects from "./components/Projects";
 import Team from "./components/Team";
+import Founder from "./components/Founder";
 import Impact from "./components/Impact";
 import Objectives from "./components/Objectives";
 import SDGs from "./components/SDGs";
@@ -94,6 +95,7 @@ export default function App() {
       <VisionMission />
       <Projects />
       <Team />
+      <Founder />
       <Impact />
       <Objectives />
       <SDGs />
