@@ -24,7 +24,7 @@ export default function Founder() {
           <h2>Driven by People, Rooted in Service</h2>
           <p className="founder-lead">
             I am passionate about non-profit work — not as a profession, but as a
-            way of life. Long before RiseMeUp had a name, I was already stepping
+            way of life. Long before Risemeup had a name, I was already stepping
             in where I saw suffering.
           </p>
           <p>
@@ -38,7 +38,11 @@ export default function Founder() {
             Today my focus is the war zone. I continue to support vulnerable
             communities in London, and I work alongside trusted partners on the
             ground in Sudan — reaching displaced families in the Nuba Mountains,
-            Khartoum and beyond. RiseMeUp is the long-term shape of that work:
+            Khartoum and beyond. I also run an open kitchen inside Sudan,
+            cooking and serving hot meals every day to families trapped by the
+            conflict — because when the markets are gone and the shops are
+            shuttered, a warm plate is the difference between despair and
+            another day of hope. Risemeup is the long-term shape of that work:
             turning emergency aid into sustainable livelihoods, and turning
             130 acres of fragile land into a future the next generation can
             inherit.
