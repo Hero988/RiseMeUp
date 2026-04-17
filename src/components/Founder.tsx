@@ -10,11 +10,11 @@ export default function Founder() {
       <div className="container founder-grid">
         <div className="founder-portrait-wrap reveal-left" ref={leftRef}>
           <div className="founder-portrait">
-            <img src="/founder-suliman.jpg" alt="Suliman — Founder of RiseMeUp Sustainability" />
+            <img src="/founder-iman-tadros.jpg" alt="Iman Tadros — Founder of RiseMeUp Sustainability" />
           </div>
           <div className="founder-portrait-badge">
             <div className="tag">Founder</div>
-            <div className="name">Suliman</div>
+            <div className="name">Iman Tadros</div>
             <div className="place">London &middot; Sudan</div>
           </div>
         </div>
