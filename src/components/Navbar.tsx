@@ -109,7 +109,7 @@ export default function Navbar({ onDonate, onSudanCrisis }: NavbarProps) {
               </a>
             ))}
             <a
-              href="/mango-project.html"
+              href="/mango-project"
               className="nav-donate nav-mango-project"
               target="_blank"
               rel="noopener noreferrer"
@@ -174,7 +174,7 @@ export default function Navbar({ onDonate, onSudanCrisis }: NavbarProps) {
           UN SDGs
         </a>
         <a
-          href="/mango-project.html"
+          href="/mango-project"
           className="mobile-link mobile-donate-link mobile-mango-project"
           target="_blank"
           rel="noopener noreferrer"
