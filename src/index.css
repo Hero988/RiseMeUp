@@ -432,6 +432,21 @@ body::after {
   50% { box-shadow: 0 4px 24px rgba(194, 112, 58, 0.6), 0 0 40px rgba(232, 141, 103, 0.25); }
 }
 
+.nav-mango-project {
+  background: linear-gradient(135deg, #e39225, #c97416) !important;
+  box-shadow: 0 4px 16px rgba(227, 146, 37, 0.35) !important;
+  padding: 12px 26px !important;
+  font-size: 0.95rem !important;
+}
+
+.nav-mango-project:hover {
+  box-shadow: 0 6px 24px rgba(227, 146, 37, 0.55), 0 0 30px rgba(243, 196, 68, 0.25) !important;
+}
+
+.mobile-mango-project {
+  background: linear-gradient(135deg, #e39225, #c97416) !important;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
