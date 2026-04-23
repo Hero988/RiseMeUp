@@ -2836,3 +2836,685 @@ body::after {
 @media (max-width: 480px) {
   .accordion-body-inner { padding-left: 24px; }
 }
+
+/* ============================================
+   NUBA STORY — documentary/editorial section
+   ============================================ */
+#nuba-story {
+  padding: var(--section-pad) 0 calc(var(--section-pad) + 20px);
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(194, 112, 58, 0.22), transparent 60%),
+    radial-gradient(80% 60% at 90% 110%, rgba(61, 90, 62, 0.35), transparent 60%),
+    linear-gradient(180deg, #0f0d0b 0%, #16130f 35%, #121318 100%);
+  color: var(--cream);
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+}
+
+.nuba-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.7 0 0 0 0 0.55 0 0 0 0 0.4 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+  z-index: 0;
+}
+
+.nuba-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);
+  z-index: 0;
+}
+
+#nuba-story > .container { position: relative; z-index: 2; }
+
+/* Intro slate ----------------------- */
+.nuba-intro {
+  max-width: 920px;
+  margin: 0 auto 68px;
+  text-align: center;
+}
+
+.nuba-slate {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 18px;
+  margin-bottom: 28px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--coral-light);
+  background: rgba(232, 141, 103, 0.06);
+  border: 1px solid rgba(232, 141, 103, 0.22);
+  border-radius: 4px;
+  backdrop-filter: blur(6px);
+}
+
+.nuba-slate-mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(194, 112, 58, 0.25);
+  animation: nubaPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes nubaPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(194,112,58,0.15); }
+  50% { box-shadow: 0 0 0 8px rgba(194,112,58,0.05); }
+}
+
+.nuba-slate-timecode {
+  color: rgba(254, 250, 243, 0.45);
+  letter-spacing: 2px;
+}
+
+.nuba-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.2vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 30px;
+}
+
+.nuba-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--coral-light);
+  background: linear-gradient(120deg, var(--coral-light), var(--terracotta-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nuba-lede {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(254, 250, 243, 0.82);
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+
+.nuba-lede-soft {
+  color: rgba(254, 250, 243, 0.58);
+  font-size: 1rem;
+}
+
+/* Map chapter ----------------------- */
+.nuba-map-block {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin: 0 auto 80px;
+  max-width: 1180px;
+}
+
+.nuba-map-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(232, 141, 103, 0.15);
+  background: #0a0a0a;
+}
+
+.nuba-map-frame img {
+  width: 100%;
+  display: block;
+  filter: saturate(0.85) contrast(1.05) brightness(0.92);
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.nuba-map-frame:hover img {
+  transform: scale(1.025);
+  filter: saturate(1) contrast(1.08) brightness(0.95);
+}
+
+.nuba-map-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.45));
+}
+
+.nuba-map-pin {
+  position: absolute;
+  top: 18%;
+  left: 60%;
+  width: 14px;
+  height: 14px;
+  z-index: 2;
+}
+
+.nuba-pin-dot {
+  position: absolute;
+  inset: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 14px rgba(255, 179, 0, 0.8);
+}
+
+.nuba-pin-ring {
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(255, 179, 0, 0.55);
+  border-radius: 50%;
+  animation: nubaRing 2.4s ease-out infinite;
+}
+
+@keyframes nubaRing {
+  0% { transform: scale(0.7); opacity: 0.9; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.nuba-pin-label {
+  position: absolute;
+  left: 22px;
+  top: -6px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+  background: rgba(15, 13, 11, 0.85);
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 179, 0, 0.3);
+}
+
+.nuba-map-caption .nuba-chapter {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--terracotta-light);
+}
+
+.nuba-map-caption h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.nuba-map-caption p {
+  color: rgba(254, 250, 243, 0.72);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 26px;
+  max-width: 440px;
+}
+
+.nuba-place-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(232, 141, 103, 0.12);
+  border: 1px solid rgba(232, 141, 103, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 460px;
+}
+
+.nuba-place-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 18px;
+  background: rgba(15, 13, 11, 0.85);
+}
+
+.nuba-place-list li span {
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(254, 250, 243, 0.45);
+}
+
+.nuba-place-list li strong {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cream);
+  letter-spacing: 0;
+}
+
+/* Testimony frames ------------------ */
+.nuba-frames {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin: 0 auto 90px;
+  max-width: 1240px;
+}
+
+.nuba-frame {
+  grid-column: span 2;
+  position: relative;
+  background: #0a0a0a;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.5),
+    inset 0 0 0 1px rgba(232, 141, 103, 0.1);
+  transition: transform 0.55s var(--transition), box-shadow 0.55s ease;
+}
+
+.nuba-frame--wide { grid-column: span 4; }
+.nuba-frame--tall { grid-column: span 2; grid-row: span 2; }
+.nuba-frame--regular { grid-column: span 2; }
+
+.nuba-frame:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.65),
+    inset 0 0 0 1px rgba(232, 141, 103, 0.25);
+}
+
+.nuba-frame-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.nuba-frame--tall .nuba-frame-media {
+  aspect-ratio: 3 / 4.2;
+  height: 100%;
+}
+
+.nuba-frame--wide .nuba-frame-media {
+  aspect-ratio: 21 / 9;
+}
+
+.nuba-frame-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.75) contrast(1.08) brightness(0.88);
+  transition: transform 0.9s ease, filter 0.7s ease;
+}
+
+.nuba-frame:hover .nuba-frame-media img {
+  transform: scale(1.05);
+  filter: saturate(1) contrast(1.05) brightness(0.96);
+}
+
+.nuba-frame-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 8, 6, 0.75) 100%);
+  pointer-events: none;
+}
+
+.nuba-frame-number {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  z-index: 3;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: rgba(254, 250, 243, 0.82);
+  padding: 4px 10px;
+  background: rgba(15, 13, 11, 0.55);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(254, 250, 243, 0.12);
+  border-radius: 2px;
+}
+
+.nuba-frame-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 22px 22px 24px;
+  z-index: 2;
+}
+
+.nuba-frame-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.nuba-frame-caption h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--cream);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.nuba-frame-caption p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(254, 250, 243, 0.78);
+  max-width: 56ch;
+}
+
+.nuba-frame--tall .nuba-frame-caption h4 { font-size: 1.1rem; }
+.nuba-frame--tall .nuba-frame-caption p { font-size: 0.82rem; }
+
+/* Quote -------------------------- */
+.nuba-quote {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto 90px;
+  padding: 60px 48px 48px;
+  text-align: center;
+  border-top: 1px solid rgba(232, 141, 103, 0.25);
+  border-bottom: 1px solid rgba(232, 141, 103, 0.25);
+}
+
+.nuba-quote-mark {
+  width: 44px;
+  height: 44px;
+  fill: var(--terracotta);
+  opacity: 0.7;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.nuba-quote blockquote {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.35;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+
+.nuba-quote blockquote em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--coral-light);
+}
+
+.nuba-quote cite {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  font-family: var(--font-body);
+}
+
+.nuba-quote cite strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+}
+
+.nuba-quote cite span {
+  font-size: 0.8rem;
+  color: rgba(254, 250, 243, 0.55);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Facts ---------------------------- */
+.nuba-facts {
+  max-width: 1180px;
+  margin: 0 auto 84px;
+  text-align: center;
+}
+
+.nuba-facts-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--cream);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.nuba-facts-sub {
+  font-size: 0.95rem;
+  color: rgba(254, 250, 243, 0.55);
+  max-width: 680px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+}
+
+.nuba-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.nuba-fact-card {
+  text-align: left;
+  padding: 28px 24px 26px;
+  background: linear-gradient(180deg, rgba(232, 141, 103, 0.04), rgba(232, 141, 103, 0.015));
+  border: 1px solid rgba(232, 141, 103, 0.14);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.35s ease, transform 0.4s ease;
+}
+
+.nuba-fact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--terracotta), var(--coral));
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.nuba-fact-card:hover {
+  border-color: rgba(232, 141, 103, 0.4);
+  transform: translateY(-4px);
+}
+
+.nuba-fact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.nuba-fact-value {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  color: var(--coral-light);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.nuba-fact-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.nuba-fact-note {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(254, 250, 243, 0.7);
+}
+
+/* Closing ------------------------- */
+.nuba-closing {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 54px 48px 50px;
+  position: relative;
+  background:
+    radial-gradient(100% 60% at 50% 0%, rgba(194, 112, 58, 0.18), transparent 60%),
+    linear-gradient(180deg, rgba(20, 17, 14, 0.8), rgba(15, 13, 11, 0.92));
+  border: 1px solid rgba(232, 141, 103, 0.22);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  overflow: hidden;
+}
+
+.nuba-closing::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 179, 0, 0.25), transparent 40%, rgba(194, 112, 58, 0.25));
+  mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  mask-composite: exclude;
+  padding: 1px;
+  border-radius: inherit;
+  opacity: 0.6;
+}
+
+.nuba-chapter--warm { color: var(--gold); }
+
+.nuba-closing h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  line-height: 1.2;
+  color: var(--cream);
+  margin: 12px auto 22px;
+  max-width: 720px;
+  letter-spacing: -0.01em;
+}
+
+.nuba-closing h3 em {
+  font-style: italic;
+  color: var(--coral-light);
+}
+
+.nuba-closing p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: rgba(254, 250, 243, 0.75);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.nuba-closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.nuba-donate-cta {
+  box-shadow: 0 10px 30px rgba(194, 112, 58, 0.35), 0 0 0 1px rgba(255, 179, 0, 0.2);
+}
+
+.nuba-learn-link {
+  color: var(--coral-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(232, 141, 103, 0.35);
+  transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.nuba-learn-link span {
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-left: 6px;
+}
+
+.nuba-learn-link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.nuba-learn-link:hover span {
+  transform: translateX(4px);
+}
+
+.nuba-signoff {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: rgba(254, 250, 243, 0.5);
+  letter-spacing: 0.5px;
+  margin-top: 8px !important;
+}
+
+/* Responsive ------------------------ */
+@media (max-width: 1024px) {
+  .nuba-map-block { grid-template-columns: 1fr; gap: 36px; }
+  .nuba-frames { grid-template-columns: repeat(4, 1fr); }
+  .nuba-frame,
+  .nuba-frame--regular { grid-column: span 2; }
+  .nuba-frame--wide { grid-column: span 4; }
+  .nuba-frame--tall { grid-column: span 2; grid-row: span 1; }
+  .nuba-frame--tall .nuba-frame-media { aspect-ratio: 16 / 10; }
+  .nuba-facts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  #nuba-story { padding: 80px 0; }
+  .nuba-intro { margin-bottom: 48px; }
+  .nuba-slate { gap: 10px; padding: 7px 14px; font-size: 0.66rem; letter-spacing: 2px; }
+  .nuba-slate-timecode { display: none; }
+  .nuba-lede { font-size: 1rem; }
+  .nuba-map-frame img { filter: saturate(0.9) contrast(1.05) brightness(0.9); }
+  .nuba-place-list { grid-template-columns: 1fr; }
+  .nuba-frames { grid-template-columns: 1fr; gap: 18px; }
+  .nuba-frame,
+  .nuba-frame--wide,
+  .nuba-frame--tall,
+  .nuba-frame--regular { grid-column: span 1; grid-row: span 1; }
+  .nuba-frame--tall .nuba-frame-media,
+  .nuba-frame--wide .nuba-frame-media { aspect-ratio: 16 / 10; }
+  .nuba-frame-caption { padding: 18px 18px 20px; }
+  .nuba-frame-caption h4 { font-size: 1.05rem; }
+  .nuba-frame-caption p { font-size: 0.84rem; }
+  .nuba-quote { padding: 44px 24px 36px; margin-bottom: 60px; }
+  .nuba-facts-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .nuba-fact-card { padding: 22px 18px 20px; }
+  .nuba-closing { padding: 40px 24px 38px; }
+  .nuba-closing-actions { flex-direction: column; gap: 18px; }
+}
+
+@media (max-width: 480px) {
+  .nuba-facts-grid { grid-template-columns: 1fr; }
+  .nuba-title { font-size: 2.1rem; }
+  .nuba-map-caption h3 { font-size: 1.55rem; }
+  .nuba-quote blockquote { font-size: 1.2rem; }
+  .nuba-closing h3 { font-size: 1.5rem; }
+}

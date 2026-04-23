@@ -18,6 +18,7 @@ import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import DonateModal from "./components/DonateModal";
 import SudanCrisis from "./components/SudanCrisis";
+import NubaStory from "./components/NubaStory";
 
 export default function App() {
   const [donateOpen, setDonateOpen] = useState(false);
@@ -92,6 +93,7 @@ export default function App() {
       <Navbar onDonate={openDonate} onSudanCrisis={openSudanCrisis} />
       <Hero onDonate={openDonate} />
       <About />
+      <NubaStory onDonate={openDonate} />
       <VisionMission />
       <Projects />
       <Team />
