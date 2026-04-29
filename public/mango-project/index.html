@@ -330,11 +330,10 @@ section.block{padding:120px 40px;position:relative}
 .solution .step .title{font-family:"Fraunces",serif;font-size:1.05rem;color:var(--forest-deep);text-align:center;margin-bottom:6px;line-height:1.2}
 .solution .step .desc{font-size:.8rem;color:var(--ink-soft);text-align:center;line-height:1.4}
 
-.solution .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,180px);gap:12px;margin-top:60px}
+.solution .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:220px 440px;gap:12px;margin-top:60px}
 .solution .gallery > *{border-radius:6px;overflow:hidden}
 .solution .gallery img{width:100%;height:100%;object-fit:cover}
-.solution .gallery .a{grid-row:span 2}
-.solution .gallery .d{grid-column:span 2}
+.solution .gallery .d{grid-column:1/-1}
 
 /* facility flow */
 .flow{background:var(--cream-2)}
@@ -410,8 +409,8 @@ footer .fine{grid-column:1/-1;margin-top:40px;padding-top:26px;border-top:1px so
   .hero .stats{grid-template-columns:1fr 1fr}
   .hero h1 .mango-word::after{display:none}
   .ticker span{font-size:1.3rem}
-  .solution .gallery{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
-  .solution .gallery .a,.solution .gallery .d{grid-row:auto;grid-column:auto}
+  .solution .gallery{grid-template-columns:1fr;grid-template-rows:repeat(4,220px)}
+  .solution .gallery .d{grid-column:auto}
   .context .panel,.problem .panel{padding:50px 24px}
 }
 
@@ -765,7 +764,7 @@ footer .fine{grid-column:1/-1;margin-top:40px;padding-top:26px;border-top:1px so
     <div class="gallery">
       <div class="a"><img src="/mango-gallery-1.jpg" alt="Mangoes ripening on the branch"/></div>
       <div class="b"><img src="/mango-gallery-2.jpg" alt="A heavy cluster of mangoes on the tree"/></div>
-      <div class="c"><img src="/mango-gallery-3.jpg" alt="Sun-ripe mangoes among the leaves"/></div>
+      <div class="c"><img src="/mango-gallery-3.jpg" alt="A mango tree heavy with fruit in the orchard"/></div>
       <div class="d"><img src="/mango-gallery-4.jpg" alt="Harvested mangoes resting in a basket"/></div>
     </div>
   </div>
