@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+  <defs>
+    <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5c272"/>
+      <stop offset="50%" stop-color="#e88d67"/>
+      <stop offset="100%" stop-color="#c2703a"/>
+    </linearGradient>
+    <radialGradient id="hsun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff2c8"/>
+      <stop offset="60%" stop-color="#ffd166" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffb300" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hmango" cx="32%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffe28a"/>
+      <stop offset="45%" stop-color="#ef9b3a"/>
+      <stop offset="100%" stop-color="#7a2e0e"/>
+    </radialGradient>
+    <linearGradient id="hground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d5a3e"/>
+      <stop offset="100%" stop-color="#1a2c1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#hsky)"/>
+  <circle cx="1180" cy="360" r="320" fill="url(#hsun)"/>
+  <circle cx="1180" cy="360" r="100" fill="#fff5d6" opacity="0.9"/>
+  <path d="M0 620 L 240 545 L 470 600 L 680 530 L 920 590 L 1180 525 L 1410 580 L 1600 540 L 1600 720 L 0 720 Z" fill="#6b3c2a" opacity="0.45"/>
+  <path d="M0 680 L 280 630 L 540 670 L 820 620 L 1100 660 L 1380 615 L 1600 650 L 1600 730 L 0 730 Z" fill="#3d2415" opacity="0.55"/>
+  <rect y="720" width="1600" height="180" fill="url(#hground)"/>
+  <path d="M310 720 Q 310 500 340 380 Q 360 330 350 280" stroke="#3d2415" stroke-width="44" fill="none" stroke-linecap="round"/>
+  <path d="M340 380 L 240 320" stroke="#3d2415" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <path d="M340 380 L 460 300" stroke="#3d2415" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <ellipse cx="350" cy="270" rx="260" ry="200" fill="#1a2c1c"/>
+  <ellipse cx="290" cy="290" rx="200" ry="155" fill="#2c422d"/>
+  <ellipse cx="420" cy="240" rx="180" ry="140" fill="#3d5a3e"/>
+  <ellipse cx="360" cy="220" rx="140" ry="100" fill="#4e7350"/>
+  <ellipse cx="240" cy="400" rx="32" ry="42" fill="url(#hmango)"/>
+  <ellipse cx="350" cy="450" rx="36" ry="46" fill="url(#hmango)"/>
+  <ellipse cx="450" cy="395" rx="30" ry="40" fill="url(#hmango)"/>
+  <ellipse cx="540" cy="335" rx="28" ry="36" fill="url(#hmango)"/>
+  <ellipse cx="200" cy="320" rx="22" ry="28" fill="url(#hmango)"/>
+  <ellipse cx="525" cy="240" rx="20" ry="26" fill="url(#hmango)"/>
+  <path d="M960 720 Q 960 640 970 590" stroke="#3d2415" stroke-width="16" fill="none"/>
+  <ellipse cx="960" cy="600" rx="110" ry="85" fill="#2c422d"/>
+  <ellipse cx="980" cy="585" rx="80" ry="60" fill="#3d5a3e"/>
+  <ellipse cx="930" cy="650" rx="11" ry="14" fill="#ef9b3a"/>
+  <ellipse cx="990" cy="640" rx="11" ry="14" fill="#ef9b3a"/>
+  <path d="M1380 720 Q 1380 660 1388 625" stroke="#3d2415" stroke-width="12" fill="none"/>
+  <ellipse cx="1380" cy="640" rx="80" ry="62" fill="#2c422d" opacity="0.85"/>
+  <ellipse cx="1390" cy="630" rx="60" ry="45" fill="#3d5a3e" opacity="0.85"/>
+</svg>

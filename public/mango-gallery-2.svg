@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block">
+  <defs>
+    <linearGradient id="g2bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3da"/>
+      <stop offset="100%" stop-color="#f0a585"/>
+    </linearGradient>
+    <radialGradient id="g2m" cx="32%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffe28a"/>
+      <stop offset="50%" stop-color="#ef9b3a"/>
+      <stop offset="100%" stop-color="#7a2e0e"/>
+    </radialGradient>
+    <radialGradient id="g2m2" cx="35%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffd97a"/>
+      <stop offset="55%" stop-color="#e88d3a"/>
+      <stop offset="100%" stop-color="#6b2d10"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#g2bg)"/>
+  <ellipse cx="200" cy="210" rx="160" ry="14" fill="#3d2415" opacity="0.18"/>
+  <ellipse cx="305" cy="155" rx="55" ry="70" fill="url(#g2m)"/>
+  <path d="M295 95 Q 308 80 320 88" stroke="#5a3a20" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M295 95 Q 275 78 256 90 Q 270 100 295 96 Z" fill="#3d5a3e"/>
+  <ellipse cx="120" cy="170" rx="70" ry="88" fill="url(#g2m2)"/>
+  <path d="M110 90 Q 125 72 140 78" stroke="#5a3a20" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M110 90 Q 80 70 60 84 Q 78 98 108 92 Z" fill="#4e7350"/>
+  <path d="M110 90 Q 138 76 160 90 Q 142 100 116 96 Z" fill="#3d5a3e"/>
+  <ellipse cx="220" cy="195" rx="44" ry="35" fill="url(#g2m)"/>
+  <ellipse cx="100" cy="145" rx="20" ry="28" fill="#fff5d6" opacity="0.35"/>
+  <ellipse cx="290" cy="135" rx="16" ry="22" fill="#fff5d6" opacity="0.4"/>
+</svg>
