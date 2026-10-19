@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import FarmPlan from "./components/FarmPlan";
 import SDGs from "./components/SDGs";
+import TeamFlipCard from "./components/TeamFlipCard";
 import ContactForm from "./components/ContactForm";
 
 const email = "i.tradros@risemeup.org";
@@ -564,28 +565,10 @@ export default function App({
                 renewable energy informs the farm’s development vision.
               </p>
             </div>
+            <p className="team-flip-instructions">Select a portrait to turn the card and read the profile.</p>
             <div className="team-grid">
               {team.map((person) => (
-                <article className="team-card" key={person.name}>
-                  <div className="team-photo">
-                    <img
-                      src={person.image}
-                      alt={person.name}
-                      width="400"
-                      height="460"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="eyebrow">{person.role}</p>
-                  <h3>{person.name}</h3>
-                  <p>{person.bio}</p>
-                  <p className="qualifications">{person.qualifications}</p>
-                  {person.website && (
-                    <a className="text-link" href={person.website}>
-                      Xplines International <Arrow />
-                    </a>
-                  )}
-                </article>
+                <TeamFlipCard person={person} key={person.name} />
               ))}
             </div>
             <div id="founder" className="founder">
