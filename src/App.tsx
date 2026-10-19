@@ -72,21 +72,7 @@ function Arrow() {
 function Brand() {
   return (
     <a className="brand" href="/#hero" aria-label="Risemeup home">
-      <svg viewBox="0 0 40 44" fill="none" aria-hidden="true">
-        <path
-          d="M20 39V16M20 27C8 28 4 18 5 12c10 0 15 5 15 15ZM20 20C19 9 26 3 35 3c0 11-6 17-15 17Z"
-          stroke="currentColor"
-          strokeWidth="2.5"
-        />
-        <path
-          d="M4 39c10-6 22-6 32 0"
-          stroke="currentColor"
-          strokeWidth="2.5"
-        />
-      </svg>
-      <span>
-        Risemeup<small>People. Land. Food. Opportunity.</small>
-      </span>
+      <img src="/logo.png" alt="Risemeup Sustainability" width="300" height="106" />
     </a>
   );
 }

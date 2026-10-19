@@ -1351,3 +1351,18 @@ footer {
     animation: none !important;
   }
 }
+
+/* Preserve the original Risemeup Sustainability logo and its colours. */
+.brand img {
+  width: 210px;
+  height: auto;
+  display: block;
+}
+footer .brand {
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 3px;
+}
+@media (max-width: 760px) {
+  .brand img { width: 180px; }
+}
