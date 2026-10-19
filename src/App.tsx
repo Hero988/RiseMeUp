@@ -98,6 +98,15 @@ export default function App({
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   useEffect(() => {
+    // Deep links may arrive before React has rendered their target section.
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(hash)?.scrollIntoView({ behavior: "instant" });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  useEffect(() => {
     const close = (event: KeyboardEvent) => {
       if (menuOpen && event.key === "Escape") {
         setMenuOpen(false);
