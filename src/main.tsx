@@ -2,16 +2,17 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ConvexProvider, ConvexReactClient } from "convex/react";
 import App from "./App";
-import "./index.css";
 
-const convex = new ConvexReactClient(
-  import.meta.env.VITE_CONVEX_URL as string
-);
-
+const convexUrl = import.meta.env.VITE_CONVEX_URL;
+const convex = convexUrl ? new ConvexReactClient(convexUrl) : null;
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ConvexProvider client={convex}>
+    {convex ? (
+      <ConvexProvider client={convex}>
+        <App hasContactBackend />
+      </ConvexProvider>
+    ) : (
       <App />
-    </ConvexProvider>
-  </StrictMode>
+    )}
+  </StrictMode>,
 );
