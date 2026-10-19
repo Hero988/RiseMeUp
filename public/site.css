@@ -1364,5 +1364,222 @@ footer .brand {
   border-radius: 3px;
 }
 @media (max-width: 760px) {
-  .brand img { width: 180px; }
+  .brand img {
+    width: 180px;
+  }
+}
+
+.farm-plan {
+  padding-top: 18px;
+}
+.farm-plan > .section-head h3 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+.farm-plan > .section-head > p {
+  color: #d8e0d5;
+}
+.plan-status {
+  padding: 16px 20px;
+  margin: 0 0 28px;
+  border-left: 3px solid #d6dbaa;
+  background: #ffffff0a;
+  color: #e8ecdf;
+  font-size: 0.85rem;
+}
+.farm-plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.farm-plan-card {
+  background: #fffefa;
+  color: var(--green);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.farm-plan-card figure {
+  background: #e8ebdd;
+}
+.farm-plan-card figure img,
+.greenhouse-concept {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.farm-plan-card:first-child figure img {
+  object-fit: contain;
+  background: #679db6;
+}
+.farm-plan-card:last-child figure img {
+  object-position: 50% 38%;
+}
+.farm-plan-card figcaption {
+  font-size: 0.66rem;
+  padding: 9px 30px;
+  color: #4d604a;
+  background: #eceddf;
+}
+.farm-plan-body {
+  padding: 30px;
+}
+.farm-plan-body .eyebrow {
+  color: #6a5740;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+.farm-plan-body h4 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+.farm-plan-body .plan-output {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 22px;
+}
+.farm-plan-body > p:not(.eyebrow):not(.plan-output) {
+  color: #4a5d50;
+  font-size: 0.93rem;
+}
+.farm-plan-body ul {
+  padding-left: 20px;
+  margin: 20px 0 24px;
+  color: #4a5d50;
+  font-size: 0.9rem;
+}
+.farm-plan-body li {
+  padding-left: 4px;
+  margin-bottom: 12px;
+}
+.farm-plan-body li::marker {
+  color: var(--orange);
+}
+.farm-plan-body .plan-purpose {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  font-size: 0.86rem !important;
+}
+.poultry-capacity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 22px 0 15px;
+}
+.poultry-capacity > div {
+  padding: 16px;
+  background: #edf0e4;
+}
+.poultry-capacity dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.poultry-capacity dd {
+  margin: 0;
+}
+.poultry-capacity strong {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 6px 0;
+  line-height: 1.2;
+}
+.poultry-capacity span {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+.farm-plan-body .capacity-note {
+  font-size: 0.73rem !important;
+  line-height: 1.6;
+}
+.farm-connections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-top: 1px solid #ffffff35;
+  padding-top: 35px;
+  margin-top: 40px;
+}
+.farm-connections > div {
+  max-width: 790px;
+}
+.farm-connections .eyebrow {
+  margin-bottom: 12px;
+}
+.farm-connections h4 {
+  font-size: 2rem;
+}
+.farm-connections p:last-child {
+  color: #d8e0d5;
+  font-size: 0.95rem;
+}
+.farm-connections .button {
+  flex-shrink: 0;
+}
+.land-framework {
+  margin-top: 35px;
+  border-block: 1px solid #ffffff35;
+  padding: 0 0 2px;
+}
+.land-framework > summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 22px 0;
+}
+.land-framework > .section-head {
+  margin-top: 20px;
+}
+.land-framework[open] {
+  padding-bottom: 25px;
+}
+@media (max-width: 1000px) {
+  .farm-plan-body {
+    padding: 24px;
+  }
+  .farm-plan-body h4 {
+    font-size: 1.7rem;
+  }
+  .poultry-capacity {
+    grid-template-columns: 1fr;
+  }
+  .farm-connections {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .farm-plan-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .farm-plan-card figure img,
+  .greenhouse-concept {
+    height: auto;
+    aspect-ratio: 2 / 1;
+  }
+  .farm-plan-card:first-child figure img {
+    aspect-ratio: 1024 / 658;
+  }
+  .farm-plan-body h4 {
+    font-size: 1.9rem;
+  }
+  .farm-plan-body .eyebrow {
+    font-size: 0.68rem;
+  }
+  .poultry-capacity {
+    grid-template-columns: 1fr 1fr;
+  }
+  .poultry-capacity strong {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 380px) {
+  .poultry-capacity {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import FarmPlan from "./components/FarmPlan";
 import ContactForm from "./components/ContactForm";
 
 const email = "i.tradros@risemeup.org";
@@ -34,45 +35,18 @@ const team = [
     qualifications: "PhD, Giessen University · MSc, Aberdeen · BSc, Cairo",
   },
 ];
-const pillars = [
-  [
-    "01",
-    "Grow food",
-    "Greenhouses, open-field crops, nurseries and demonstration plots to rebuild food production.",
-  ],
-  [
-    "02",
-    "Power recovery",
-    "Solar energy, irrigation and water infrastructure to support reliable farm operations.",
-  ],
-  [
-    "03",
-    "Keep more value locally",
-    "Storage, washing, grading, packing and processing to reduce losses and support livelihoods.",
-  ],
-  [
-    "04",
-    "Build skills",
-    "Practical agricultural training, with opportunities for young people and women.",
-  ],
-  [
-    "05",
-    "Use resources wisely",
-    "Composting and biogas proposals to turn agricultural waste into useful inputs.",
-  ],
-  [
-    "06",
-    "Create livelihoods",
-    "A staged route towards employment, local enterprise and a farm that can sustain its work.",
-  ],
-];
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 function Brand() {
   return (
     <a className="brand" href="/#hero" aria-label="Risemeup home">
-      <img src="/logo.png" alt="Risemeup Sustainability" width="300" height="106" />
+      <img
+        src="/logo.png"
+        alt="Risemeup Sustainability"
+        width="300"
+        height="106"
+      />
     </a>
   );
 }
@@ -363,34 +337,35 @@ export default function App({
                   and practical training.
                 </p>
                 <p>
-                  The latest concept proposes a{" "}
-                  <strong>50-hectare development in three phases</strong>. It is
-                  a plan for recovery, requiring partners, site assessment,
-                  resources and conditions that allow work to proceed safely.
+                  The latest land-development concept proposes a{" "}
+                  <strong>50-hectare site</strong> for this integrated farming
+                  project. The facilities below set out what we plan to build,
+                  with partners supporting assessment, resources and rebuilding.
                 </p>
-                <a className="button light" href="#partnership">
-                  Help rebuild Virgin Mary Farm <Arrow />
-                </a>
+                <div className="actions">
+                  <a className="button light" href="#farm-plan">
+                    See what we plan to build ↓
+                  </a>
+                  <a className="text-link" href="#partnership">
+                    Partner with the farm <Arrow />
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="pillar-grid">
-              {pillars.map(([number, title, text]) => (
-                <article key={number}>
-                  <span>{number}</span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-            <div className="roadmap" id="objectives">
+            <FarmPlan />
+            <details className="roadmap land-framework" id="objectives">
+              <summary>
+                How the newer land-development concept supports the farm plan
+              </summary>
               <div className="section-head">
                 <div>
                   <p className="eyebrow">The development pathway</p>
-                  <h3>One farm. Three stages.</h3>
+                  <h3>The land-development framework.</h3>
                 </div>
                 <p>
-                  Indicative sequencing from the latest project concept. Timing
-                  depends on feasibility, security and funding.
+                  The newer 50-hectare concept proposes three stages of land
+                  development. This is a separate planning framework from the
+                  four facility phases in the original proposal.
                 </p>
               </div>
               <div className="phase-grid">
@@ -433,7 +408,7 @@ export default function App({
                 promise of future returns. Costs, outputs and operating
                 assumptions need review with technical and development partners.
               </p>
-            </div>
+            </details>
             <a className="mango-callout" href="/mango-project/">
               <img
                 src="/mango-hero.jpg"
@@ -455,17 +430,6 @@ export default function App({
                 </p>
               </div>
             </a>
-            <details className="archive-detail">
-              <summary>How the original farm vision informs this plan</summary>
-              <p>
-                The original proposal brought together greenhouses, biogas,
-                sorting and packaging, poultry, agricultural jobs and training.
-                The updated three-phase concept keeps food production, energy
-                and skills at its centre. Poultry remains an option for future
-                technical review; earlier capacity figures are not current
-                operations or confirmed targets.
-              </p>
-            </details>
           </div>
         </section>
         <section id="about" className="section cream">
