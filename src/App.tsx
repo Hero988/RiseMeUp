@@ -4,6 +4,7 @@ import ClassicHero from "./components/ClassicHero";
 import SDGs from "./components/SDGs";
 import TeamFlipCard from "./components/TeamFlipCard";
 import ContactForm from "./components/ContactForm";
+import { ClassicAbout, ClassicVision, ClassicObjectives, ClassicFounder, ClassicCommunityHistory } from "./components/ClassicSections";
 
 const email = "i.tradros@risemeup.org";
 const team = [
@@ -60,6 +61,7 @@ export default function App({
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const donationDialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     // Deep links may arrive before React has rendered their target section.
     const hash = window.location.hash.slice(1);
@@ -109,19 +111,20 @@ export default function App({
             className={menuOpen ? "is-open" : ""}
             onClick={() => setMenuOpen(false)}
           >
-            <a href="#about">About</a>
+            <a href="#hero">Home</a>
+            <a href="#about">About us</a>
             <a href="#communities">Our communities</a>
-            <a href="#virgin-mary-farm">Virgin Mary Farm</a>
+            <a href="#virgin-mary-farm">Our projects</a>
             <a href="#team">Our team</a>
-            <a href="#contact">Partner with us</a>
-            <a href="#donate" className="button small">
-              Support our work <Arrow />
-            </a>
+            <a href="#partnership">Partner with us</a>
+            <a href="#contact">Contact</a>
+            <button className="button small" onClick={() => donationDialog.current?.showModal()}>Donate</button>
           </nav>
         </div>
       </header>
       <main id="main">
         <ClassicHero />
+        <ClassicAbout />
         <section id="sudan-crisis" className="section crisis">
           <div className="container two-col">
             <div>
@@ -171,9 +174,7 @@ export default function App({
               <div>
                 <p className="eyebrow">Our communities</p>
                 <h2>
-                  Two communities.
-                  <br />
-                  <em>One shared commitment.</em>
+                  Two communities. Equal commitment.
                 </h2>
               </div>
               <p>
@@ -184,7 +185,7 @@ export default function App({
             </div>
             <div className="community-grid">
               <article className="community-card">
-                <span className="card-number">01 / Belonging</span>
+                <span className="card-number">Sudan · Coptic Orthodox</span>
                 <h3>The Coptic Orthodox community</h3>
                 <p>
                   Sudan’s Coptic Orthodox families are part of the country’s
@@ -202,7 +203,7 @@ export default function App({
                 </a>
               </article>
               <article className="community-card">
-                <span className="card-number">02 / Resilience</span>
+                <span className="card-number">Sudan · Nuba Mountains</span>
                 <h3>The Nuba Mountains communities</h3>
                 <p>
                   The Nuba Mountains in South Kordofan are home to diverse
@@ -215,13 +216,14 @@ export default function App({
                   communities: helping people rebuild through food security,
                   training and opportunities to earn a living.
                 </p>
-                <a className="text-link" href="#virgin-mary-farm">
-                  A pathway towards recovery →
+                <a className="text-link" href="#nuba-story">
+                  Read our community history →
                 </a>
               </article>
             </div>
           </div>
         </section>
+        <ClassicVision />
         <section id="relief" className="section">
           <div className="container relief-grid">
             <figure className="photo">
@@ -265,50 +267,20 @@ export default function App({
           <span className="anchor" id="projects" />
           <div className="container">
             <div className="farm-intro">
-              <div>
-                <p className="eyebrow">
-                  Our main project · Omdurman, Khartoum, Sudan
-                </p>
-                <h2>Virgin Mary Farm</h2>
-                <p className="farm-subtitle">From recovery to resilience.</p>
-              </div>
-              <div className="status">
-                <span className="status-dot" /> Rebuilding proposal
-                <br />
-                <small>The farm is not currently operational.</small>
-              </div>
+              <p className="eyebrow">Our long-term project · Our main project</p>
+              <h2>Virgin Mary Farm</h2>
+              <p className="farm-subtitle">Rebuilding through agriculture, clean energy and education.</p>
             </div>
-            <div className="two-col farm-story">
-              <p className="lead">
-                War destroyed the farm.
-                <br />
-                It did not destroy the vision.
-              </p>
-              <div>
-                <p>
-                  Virgin Mary Farm is the heart of Risemeup’s long-term work.
-                  The land remains, and our aim is to rebuild an integrated farm
-                  that brings together food production, clean energy, processing
-                  and sustainable farming education and practical training.
-                </p>
-                <p>
-                  The latest land-development concept proposes a{" "}
-                  <strong>50-hectare site</strong> for this integrated farming
-                  project. The facilities below set out what we plan to build,
-                  with partners supporting assessment, resources and rebuilding.
-                </p>
-                <div className="actions">
-                  <a className="button light" href="#farm-plan">
-                    See what we plan to build ↓
-                  </a>
-                  <a className="text-link" href="#partnership">
-                    Partner with the farm <Arrow />
-                  </a>
-                </div>
-              </div>
+            <div className="classic-farm-status"><strong><span className="status-dot" /> Rebuilding planned</strong><span>The farm is not operational due to the war. The land remains.</span></div>
+            <div className="classic-farm-pillars">
+              <article><span>01</span><h3>Sustainable agriculture</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
+              <article><span>02</span><h3>Clean energy for farming</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
+              <article><span>03</span><h3>Education &amp; training</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
             </div>
+            <div className="actions"><a className="button" href="#partnership">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
+            <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The latest land-development concept proposes a 50-hectare site. The original proposal sets out the four connected facilities below.</p>
             <FarmPlan />
-            <details className="roadmap land-framework" id="objectives">
+            <details className="roadmap land-framework" id="land-framework">
               <summary>
                 How the newer land-development concept supports the farm plan
               </summary>
@@ -387,69 +359,8 @@ export default function App({
             </a>
           </div>
         </section>
+        <ClassicObjectives />
         <SDGs />
-        <section id="about" className="section cream">
-          <div className="container">
-            <div className="two-col">
-              <div>
-                <p className="eyebrow">About Risemeup</p>
-                <h2>
-                  Rooted in community.
-                  <br />
-                  <em>Built around people.</em>
-                </h2>
-              </div>
-              <div className="prose">
-                <p className="lead">
-                  Risemeup is a London-based community initiative connecting
-                  immediate food assistance with a longer-term vision for
-                  recovery in Sudan.
-                </p>
-                <p>
-                  Our focus is the Coptic Orthodox and Nuba Mountains
-                  communities. We bring together personal commitment and
-                  agricultural expertise to help families meet urgent needs and
-                  rebuild the foundations of a more secure future.
-                </p>
-              </div>
-            </div>
-            <div className="classic-vision-heading" id="vision-mission">
-              <p className="eyebrow">Our heart</p>
-              <h2>Vision &amp; Mission</h2>
-              <p>Two Communities. One Vision. A Future of Hope.</p>
-            </div>
-            <div className="vision-grid">
-              <article id="vision">
-                <p className="eyebrow">Our vision</p>
-                <h3>A future people can grow.</h3>
-                <p>
-                  Communities affected by war able to live with dignity, access
-                  nutritious food and build secure livelihoods on productive
-                  land.
-                </p>
-              </article>
-              <article id="mission">
-                <p className="eyebrow">Our mission</p>
-                <h3>Support today. Rebuild for tomorrow.</h3>
-                <p>
-                  Provide practical food assistance and work with partners to
-                  rebuild Virgin Mary Farm through sustainable agriculture,
-                  clean energy, education, practical training and community
-                  opportunity.
-                </p>
-              </article>
-            </div>
-            <div className="sdg-line" id="development-priorities">
-              <strong>Our development priorities</strong>
-              <span>Food security</span>
-              <span>Clean energy</span>
-              <span>Education & training</span>
-              <span>Decent work</span>
-              <span>Responsible production</span>
-              <span>Reduced inequalities</span>
-            </div>
-          </div>
-        </section>
         <section id="partnership" className="section">
           <div className="container">
             <div className="section-head">
@@ -528,39 +439,10 @@ export default function App({
                 <TeamFlipCard person={person} key={person.name} />
               ))}
             </div>
-            <div id="founder" className="founder">
-              <img
-                src="/founder-iman-tadros.jpg"
-                alt="Iman Tadros, founder of Risemeup"
-                width="400"
-                height="480"
-                loading="lazy"
-              />
-              <div>
-                <p className="eyebrow">Our founder · Iman Tadros</p>
-                <h3>
-                  A personal commitment
-                  <br />
-                  to people and place.
-                </h3>
-                <p>
-                  Iman’s work began with responding to need: supporting a food
-                  bank and homeless shelter in London during the pandemic, and
-                  coordinating food assistance for families in Sudan.
-                </p>
-                <p>
-                  As a member of Sudan’s Coptic Orthodox community, she brings a
-                  personal understanding of the loss caused by war. Risemeup
-                  carries that commitment forward through support for both
-                  communities and the ambition to rebuild Virgin Mary Farm.
-                </p>
-                <a className="text-link" href="#contact">
-                  Connect with Iman →
-                </a>
-              </div>
-            </div>
           </div>
         </section>
+        <ClassicFounder />
+        <ClassicCommunityHistory />
         <section id="donate" className="section support">
           <div className="container">
             <p className="eyebrow">Support Risemeup</p>
@@ -578,12 +460,9 @@ export default function App({
                   Ask about contributing towards food and essential supplies for
                   families affected by Sudan’s war.
                 </p>
-                <a
-                  className="button"
-                  href={`mailto:${email}?subject=Food%20assistance%20support`}
-                >
+                <button className="button" onClick={() => donationDialog.current?.showModal()}>
                   Enquire about a donation <Arrow />
-                </a>
+                </button>
               </article>
               <article>
                 <span>02 / Virgin Mary Farm</span>
@@ -608,28 +487,19 @@ export default function App({
           </div>
         </section>
         <section id="contact" className="section">
-          <div className="container contact-grid">
-            <div>
-              <p className="eyebrow">Let’s talk</p>
-              <h2>
-                A conversation can
-                <br />
-                <em>start something lasting.</em>
-              </h2>
-              <p>
-                Tell us about your organisation, your interests, or how you
-                would like to help.
-              </p>
-              <address>
-                <a href={`mailto:${email}`}>{email}</a>
-                <a href="tel:+447867977844">+44 786 797 7844</a>
-                <span>
-                  2 Rosecroft Gardens
-                  <br />
-                  London, NW2 6HX, United Kingdom
-                </span>
-              </address>
-            </div>
+          <div className="container">
+            <div className="section-head"><p className="eyebrow">Get in touch</p><h2>Let’s put your support to work.</h2><p>Whether you can help with food assistance, equipment, expertise or a development partnership, we would like to hear from you.</p></div>
+            <div className="contact-grid">
+              <div className="classic-contact-copy">
+                <h3>A conversation is a good place to start.</h3>
+                <p>Tell us about your organisation, your interests, or how you would like to help.</p>
+                <address className="classic-contact-details">
+                  <div><span aria-hidden="true">⌖</span><div><strong>Our address</strong><span>2 Rosecroft Gardens<br />London, NW2 6HX, United Kingdom</span></div></div>
+                  <div><span aria-hidden="true">✉</span><div><strong>Email us</strong><a href={`mailto:${email}`}>{email}</a></div></div>
+                  <div><span aria-hidden="true">☎</span><div><strong>Call us</strong><a href="tel:+447867977844">+44 786 797 7844</a></div></div>
+                </address>
+                <div className="classic-contact-note"><p className="eyebrow">Two ways to help</p><p>Support food assistance now, or work with us on the long-term rebuilding of Virgin Mary Farm.</p></div>
+              </div>
             <div className="contact-panel">
               {hasContactBackend ? (
                 <ContactForm />
@@ -653,6 +523,7 @@ export default function App({
                   </p>
                 </>
               )}
+            </div>
             </div>
           </div>
         </section>
@@ -688,6 +559,16 @@ export default function App({
           <a href="#hero">Back to top ↑</a>
         </div>
       </footer>
+      <a className="classic-back-top" href="#hero" aria-label="Back to top">↑</a>
+      <dialog ref={donationDialog} className="classic-donation-dialog" aria-labelledby="donation-title" onClick={event => { if (event.target === event.currentTarget) donationDialog.current?.close(); }}>
+        <button className="dialog-close" aria-label="Close donation information" onClick={() => donationDialog.current?.close()}>×</button>
+        <p className="eyebrow">Food assistance</p><h2 id="donation-title">Support families today.</h2>
+        <p>Your support can help families in Sudan’s Coptic Orthodox and Nuba Mountains communities access food and essential supplies.</p>
+        <hr /><h3>Arrange a donation with the team.</h3><p>Please contact us to discuss the purpose of your support and the available arrangements. This website does not take payments.</p>
+        <a className="button" href={`mailto:${email}?subject=Food%20assistance%20support`}>Email about a donation →</a>
+        <div className="dialog-contact"><a href={`mailto:${email}`}>{email}</a><a href="tel:+447867977844">+44 786 797 7844</a><a href="#contact" onClick={() => donationDialog.current?.close()}>Use our contact form →</a></div>
+        <p className="dialog-farm-link">Interested in longer-term recovery? <a href="#partnership" onClick={() => donationDialog.current?.close()}>Explore farm partnerships →</a></p>
+      </dialog>
     </>
   );
 }
