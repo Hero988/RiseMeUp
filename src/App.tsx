@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import FarmPlan from "./components/FarmPlan";
+import ClassicHero from "./components/ClassicHero";
 import SDGs from "./components/SDGs";
 import TeamFlipCard from "./components/TeamFlipCard";
 import ContactForm from "./components/ContactForm";
@@ -120,56 +121,7 @@ export default function App({
         </div>
       </header>
       <main id="main">
-        <section className="hero" id="hero">
-          <div className="container hero-grid">
-            <div className="hero-copy">
-              <p className="eyebrow">
-                Sudan · Relief today. Recovery for tomorrow.
-              </p>
-              <h1>
-                Forgotten by the world.
-                <br />
-                <em>Not by us.</em>
-              </h1>
-              <p className="brand-slogan">Think globally, act locally.</p>
-              <p className="lead">
-                Standing with Sudan’s Coptic Orthodox and Nuba Mountains
-                communities through war, displacement and the work of
-                rebuilding.
-              </p>
-              <p>
-                We help families access food today. Through our main project,
-                Virgin Mary Farm, we are working towards a future of productive
-                land, practical skills and lasting livelihoods.
-              </p>
-              <div className="actions">
-                <a className="button" href="#virgin-mary-farm">
-                  Explore Virgin Mary Farm <Arrow />
-                </a>
-                <a className="text-link" href="#donate">
-                  Support families today →
-                </a>
-              </div>
-            </div>
-            <figure className="hero-photo">
-              <img
-                src="/sudan-crisis-8.jpeg"
-                alt="Bowls of prepared food arranged for community food assistance"
-                width="960"
-                height="1280"
-                fetchPriority="high"
-              />
-              <figcaption>
-                <span>From our food assistance archive</span>
-                <strong>Care begins with a meal.</strong>
-              </figcaption>
-            </figure>
-          </div>
-          <div className="container hero-bottom">
-            <span>Community rooted. London based. Sudan focused.</span>
-            <a href="#sudan-crisis">Understand the need ↓</a>
-          </div>
-        </section>
+        <ClassicHero />
         <section id="sudan-crisis" className="section crisis">
           <div className="container two-col">
             <div>
@@ -461,7 +413,12 @@ export default function App({
                 </p>
               </div>
             </div>
-            <div className="vision-grid" id="vision-mission">
+            <div className="classic-vision-heading" id="vision-mission">
+              <p className="eyebrow">Our heart</p>
+              <h2>Vision &amp; Mission</h2>
+              <p>Two Communities. One Vision. A Future of Hope.</p>
+            </div>
+            <div className="vision-grid">
               <article id="vision">
                 <p className="eyebrow">Our vision</p>
                 <h3>A future people can grow.</h3>
