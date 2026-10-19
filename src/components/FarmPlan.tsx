@@ -1,47 +1,3 @@
-function GreenhouseConcept() {
-  return (
-    <svg
-      className="greenhouse-concept"
-      viewBox="0 0 600 260"
-      role="img"
-      aria-labelledby="greenhouse-title"
-    >
-      <title id="greenhouse-title">
-        Concept illustration of ten planned greenhouses, arranged as two rows of
-        five
-      </title>
-      <rect width="600" height="260" fill="#e6ecd9" />
-      <path d="M0 190C120 155 300 225 600 177V260H0Z" fill="#d2ddbc" />
-      {Array.from({ length: 10 }, (_, index) => {
-        const x = 42 + (index % 5) * 107;
-        const y = 32 + Math.floor(index / 5) * 108;
-        return (
-          <g key={index} transform={`translate(${x} ${y})`}>
-            <path
-              d="M0 35Q0 0 40 0T80 35V73H0Z"
-              fill="#fffefa"
-              stroke="#527558"
-              strokeWidth="2"
-            />
-            <path
-              d="M20 73V28Q20 7 40 0M60 73V28Q60 7 40 0M0 35H80M40 0V73"
-              fill="none"
-              stroke="#96ae8b"
-              strokeWidth="1.5"
-            />
-            <path d="M10 62H70" stroke="#b64a2b" strokeWidth="4" />
-            <path
-              d="M13 59V49M27 59V46M53 59V46M67 59V49"
-              stroke="#527558"
-              strokeWidth="3"
-            />
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
-
 export default function FarmPlan() {
   return (
     <div className="farm-plan" id="farm-plan">
@@ -106,14 +62,24 @@ export default function FarmPlan() {
         </article>
         <article className="farm-plan-card" id="commercial-greenhouses">
           <figure>
-            <GreenhouseConcept />
-            <figcaption>Concept illustration · not a site layout</figcaption>
+            <img
+              src="/greenhouse-tomatoes.jpg"
+              alt="Rows of young tomato plants inside a commercial greenhouse"
+              width="1280"
+              height="960"
+              loading="lazy"
+            />
+            <figcaption>
+              Example greenhouse · planned facilities, not the current farm.
+              {" "}Photo: <a href="https://commons.wikimedia.org/wiki/File:TomateJungpflanzenAnzuchtNiederlande.jpg">Goldlocki</a>
+              {" · "}<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+            </figcaption>
           </figure>
           <div className="farm-plan-body">
             <p className="eyebrow">
               Phase 2 in the original proposal · Horticulture
             </p>
-            <h4>10 commercial greenhouses</h4>
+            <h4>10 greenhouses to be built</h4>
             <p className="plan-output">
               Protected growing · Irrigation · Practical skills
             </p>
