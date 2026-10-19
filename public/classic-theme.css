@@ -381,9 +381,11 @@ footer .brand-slogan { color: #e3ac80; }
 .community-story .text-link { align-self: flex-start; margin-top: auto; padding: 10px 0 5px; border: 0; border-bottom: 1px solid #8b967d; color: #3d5a3e; font-size: .86rem; font-weight: 600; text-decoration: none; }
 .community-story:last-child .text-link { color: #9b542e; border-bottom-color: #c79874; }
 .community-story .text-link:hover { border-bottom-width: 2px; padding-bottom: 4px; }
-.community-connection { position: relative; display: flex; justify-content: center; align-items: flex-start; padding-top: 82px; }
-.community-connection::before { content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, transparent, #c7b99b 18%, #c7b99b 80%, transparent); }
-.community-connection > span { position: relative; display: grid; place-items: center; width: 65px; height: 80px; background: #fcf7ed; color: #b28c5e; font: italic 3rem/1 "Fraunces", Georgia, serif; }
+.community-connection { display: flex; flex-direction: column; align-items: center; }
+.community-connection::before, .community-connection::after { content: ""; width: 1px; }
+.community-connection::before { flex: 0 0 82px; background: linear-gradient(180deg, transparent, #c7b99b); }
+.community-connection::after { flex: 1; background: linear-gradient(180deg, #c7b99b, transparent); }
+.community-connection > span { display: grid; place-items: center; flex-shrink: 0; width: 65px; height: 80px; color: #b28c5e; font: italic 3rem/1 "Fraunces", Georgia, serif; }
 @media (max-width: 1000px) {
   .community-stories { grid-template-columns: minmax(0, 1fr) 60px minmax(0, 1fr); }
   .community-story { padding: 0 5px; }
@@ -396,7 +398,9 @@ footer .brand-slogan { color: #e3ac80; }
   .community-story h3 { font-size: clamp(2rem, 7.2vw, 2.6rem); margin-bottom: 24px; }
   .community-story h3 > span { font-size: .72em; }
   .community-story p { font-size: .98rem; }
-  .community-connection { align-items: center; height: 95px; padding: 0; margin: 12px 0; }
-  .community-connection::before { top: 50%; bottom: auto; height: 1px; width: 100%; background: linear-gradient(90deg, transparent, #c7b99b 18%, #c7b99b 80%, transparent); }
-  .community-connection > span { width: 75px; height: 65px; background: #f9f1e3; font-size: 2.7rem; }
+  .community-connection { flex-direction: row; height: 95px; margin: 12px 0; }
+  .community-connection::before, .community-connection::after { flex: 1; height: 1px; width: auto; }
+  .community-connection::before { background: linear-gradient(90deg, transparent, #c7b99b); }
+  .community-connection::after { background: linear-gradient(90deg, #c7b99b, transparent); }
+  .community-connection > span { width: 75px; height: 65px; font-size: 2.7rem; }
 }
