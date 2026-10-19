@@ -1,45 +1,59 @@
-import { useQuery } from "convex/react";
-import { api } from "../../convex/_generated/api";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+const goals = [
+  {
+    number: 7,
+    title: "Affordable and Clean Energy",
+    description:
+      "The planned biogas plant and solar energy systems would supply renewable energy for farm operations, supporting more reliable energy access and reducing dependence on purchased fuel.",
+  },
+  {
+    number: 9,
+    title: "Industry, Innovation and Infrastructure",
+    description:
+      "Modern greenhouses, irrigation, renewable energy and sorting and packaging facilities would build the infrastructure for productive farming and local agricultural enterprise.",
+  },
+  {
+    number: 10,
+    title: "Reduced Inequalities",
+    description:
+      "Education, practical training and opportunities to earn a living would help the Coptic Orthodox and Nuba Mountains communities rebuild after exclusion, conflict and displacement.",
+  },
+  {
+    number: 12,
+    title: "Responsible Consumption and Production",
+    description:
+      "Efficient use of water and farm resources, turning organic by-products into energy and fertiliser, and better produce handling would support responsible production and reduce waste.",
+  },
+];
 
 export default function SDGs() {
-  const sdgs = useQuery(api.queries.getSDGs);
-  const labelRef = useScrollReveal<HTMLSpanElement>();
-  const titleRef = useScrollReveal<HTMLHeadingElement>();
-  const subRef = useScrollReveal<HTMLDivElement>();
-  const closingRef = useScrollReveal<HTMLParagraphElement>();
-
-  if (!sdgs) return null;
-
   return (
-    <section id="sdgs">
-      <div className="container text-center">
-        <span className="section-label reveal" ref={labelRef}>Turning global commitments into measurable change.</span>
-        <h2 className="section-title reveal" ref={titleRef}>Global Alignment with the United Nations Sustainable Development Goals</h2>
-        <div className="section-subtitle reveal" ref={subRef}>
+    <section id="sdgs" className="section farm-sdgs" aria-labelledby="sdgs-title">
+      <div className="container">
+        <div className="section-head">
+          <div>
+            <p className="eyebrow">Virgin Mary Farm &amp; the UN Sustainable Development Goals</p>
+            <h2 id="sdgs-title">Local action.<br /><em>Global goals.</em></h2>
+          </div>
           <p>
-            Our work is directly aligned with the United Nations Sustainable Development Goals (SDGs), contributing to a more sustainable, equitable, and resilient future.
-          </p>
-          <p>
-            Through targeted, community-driven initiatives, we translate global commitments into tangible outcomes—delivering measurable impact where it is needed most.
+            Virgin Mary Farm’s development plans are aligned with four United
+            Nations Sustainable Development Goals identified in our original
+            proposal. Together, they connect renewable energy, agricultural
+            infrastructure, community opportunity and responsible farming.
           </p>
         </div>
-        <div className="sdgs-grid">
-          {sdgs.map((sdg, i) => (
-            <div
-              className={`sdg-card ${sdg.colorClass} reveal reveal-delay-${i + 1}`}
-              key={sdg._id}
-              style={{ transitionDelay: `${i * 100}ms` }}
-            >
-              <div className="sdg-number">#{sdg.number}</div>
-              <h3>{sdg.title}</h3>
-              <p>{sdg.description}</p>
-            </div>
+        <div className="farm-sdg-grid">
+          {goals.map((goal) => (
+            <article className={`farm-sdg-card goal-${goal.number}`} key={goal.number}>
+              <p className="farm-sdg-number"><span>Goal</span> {goal.number}</p>
+              <h3>{goal.title}</h3>
+              <p>{goal.description}</p>
+              <a href={`https://sdgs.un.org/goals/goal${goal.number}`}>
+                Explore UN Goal {goal.number} <span aria-hidden="true">↗</span>
+              </a>
+            </article>
           ))}
         </div>
-        <p className="sdgs-closing reveal" ref={closingRef}>
-          <strong>Together, these efforts demonstrate how local action, when strategically aligned, can contribute meaningfully to global progress.</strong>
-        </p>
+        <p className="farm-sdg-closing">Think globally, act locally.</p>
       </div>
     </section>
   );

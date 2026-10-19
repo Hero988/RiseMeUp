@@ -1664,3 +1664,67 @@ footer .brand {
     grid-template-columns: 1fr;
   }
 }
+
+.farm-sdgs {
+  background: #fffefa;
+}
+.farm-sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+.farm-sdg-card {
+  --goal-colour: #fcc30b;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--goal-colour);
+  background: #f7f5ec;
+}
+.farm-sdg-card.goal-9 { --goal-colour: #fd6925; }
+.farm-sdg-card.goal-10 { --goal-colour: #dd1367; }
+.farm-sdg-card.goal-12 { --goal-colour: #bf8b2e; }
+.farm-sdg-number {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.farm-sdg-number span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.farm-sdg-card h3 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+.farm-sdg-card > p:not(.farm-sdg-number) {
+  color: #4a5d50;
+  font-size: 0.87rem;
+}
+.farm-sdg-card > a {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+.farm-sdg-closing {
+  margin: 28px 0 0;
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+}
+@media (max-width: 1000px) {
+  .farm-sdg-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .farm-sdg-grid { grid-template-columns: 1fr; }
+}

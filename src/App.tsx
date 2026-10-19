@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import FarmPlan from "./components/FarmPlan";
+import SDGs from "./components/SDGs";
 import ContactForm from "./components/ContactForm";
 
 const email = "i.tradros@risemeup.org";
@@ -433,6 +434,7 @@ export default function App({
             </a>
           </div>
         </section>
+        <SDGs />
         <section id="about" className="section cream">
           <div className="container">
             <div className="two-col">
@@ -479,7 +481,7 @@ export default function App({
                 </p>
               </article>
             </div>
-            <div className="sdg-line" id="sdgs">
+            <div className="sdg-line" id="development-priorities">
               <strong>Our development priorities</strong>
               <span>Food security</span>
               <span>Clean energy</span>
@@ -730,6 +732,7 @@ export default function App({
             <a href="#vision-mission">Vision & mission</a>
             <a href="#communities">Our communities</a>
             <a href="#virgin-mary-farm">Virgin Mary Farm</a>
+            <a href="#sdgs">UN Sustainable Development Goals</a>
             <a href="/mango-project/">Mango subproject</a>
           </nav>
           <nav aria-label="Get involved">
