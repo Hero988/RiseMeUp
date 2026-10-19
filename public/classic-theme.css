@@ -265,6 +265,7 @@ footer .brand-slogan { color: #e3ac80; }
 .classic-founder-values span { color: #817567; font-size: .76rem; margin-top: 5px; }
 .classic-history { background: radial-gradient(ellipse at 50% 0, #342a1e, #131313 60%); color: #fff; }
 .classic-history .section-head { max-width: 1000px; }
+.classic-history .section-head > .classic-badge { color: #efb184; }
 .classic-history .section-head h2 { font-size: clamp(2.4rem, 4.5vw, 3.8rem); }
 .classic-history .section-head h2 em { color: #e5a37b; font-style: italic; }
 .classic-history .section-head > p:last-child { color: #c0bbb4; }
