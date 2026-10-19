@@ -183,10 +183,10 @@ export default function App({
                 rebuild.
               </p>
             </div>
-            <div className="community-grid">
-              <article className="community-card">
-                <span className="card-number">Sudan · Coptic Orthodox</span>
-                <h3>The Coptic Orthodox community</h3>
+            <div className="community-stories">
+              <article className="community-story">
+                <span className="community-location">Belonging · Sudan</span>
+                <h3>Coptic Orthodox<span>community</span></h3>
                 <p>
                   Sudan’s Coptic Orthodox families are part of the country’s
                   social and spiritual life. War has separated families,
@@ -202,9 +202,10 @@ export default function App({
                   Supporting families now →
                 </a>
               </article>
-              <article className="community-card">
-                <span className="card-number">Sudan · Nuba Mountains</span>
-                <h3>The Nuba Mountains communities</h3>
+              <div className="community-connection" aria-hidden="true"><span>&amp;</span></div>
+              <article className="community-story">
+                <span className="community-location">Resilience · Sudan</span>
+                <h3>Nuba Mountains<span>communities</span></h3>
                 <p>
                   The Nuba Mountains in South Kordofan are home to diverse
                   communities with deep ties to land and farming. Decades of
