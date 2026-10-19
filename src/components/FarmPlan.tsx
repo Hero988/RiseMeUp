@@ -65,6 +65,7 @@ export default function FarmPlan() {
             <img
               src="/greenhouse-tomatoes.jpg"
               alt="Rows of young tomato plants inside a commercial greenhouse"
+              style={{ objectPosition: "center top" }}
               width="1280"
               height="960"
               loading="lazy"
