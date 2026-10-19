@@ -186,3 +186,5 @@ footer .brand-slogan { color: #e3ac80; }
 .founder p:not(.eyebrow) { color: #dedbd3; }
 .contact-panel { border-radius: 28px; background: #fff; box-shadow: 0 12px 40px #c2703a18; }
 .static-menu > summary { color: #fff; border-color: #ffffff55; }
+.mango-hero .proposal-label { color: #3d5a3e; background: #f4e8d1; border-radius: 30px; }
+.mango-hero .fine-print { color: #c8c2b6; }
