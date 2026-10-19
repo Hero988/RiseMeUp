@@ -14,7 +14,7 @@ export default function ClassicHero() {
             <a className="button outline" href="#communities">Meet our communities</a>
           </div>
           <a className="classic-farm-link" href="#virgin-mary-farm">Virgin Mary Farm: rebuilding planned <span aria-hidden="true">↗</span></a>
-          <p className="classic-slogan">Think globally, act locally.</p>
+          <p className="classic-slogan">Committed to grow rural communities.</p>
         </div>
         <aside className="classic-community-panel" aria-label="The two communities we support">
           <p className="eyebrow">No community forgotten</p>
