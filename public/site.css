@@ -1730,18 +1730,27 @@ footer .brand {
 }
 
 .team-flip-instructions {
-  margin: -10px 0 24px;
+  margin: -10px 0 32px;
   color: var(--muted);
   font-size: 0.9rem;
 }
+.team-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 70px;
+  max-width: 990px;
+  margin-inline: auto;
+}
 .team-flip-card {
   min-width: 0;
+  width: 100%;
+  max-width: 440px;
+  justify-self: center;
   perspective: 1200px;
 }
 .team-flip-inner {
-  display: grid;
-  height: 100%;
-  min-height: 490px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
 }
@@ -1750,115 +1759,146 @@ footer .brand {
 }
 .team-flip-front,
 .team-flip-back {
-  grid-area: 1 / 1;
-  min-width: 0;
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
   background: #fffefa;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 .team-flip-open {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: block;
   width: 100%;
   height: 100%;
   border: 0;
   padding: 0;
   background: transparent;
   color: var(--green);
-  text-align: left;
   font: inherit;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .team-flip-open img {
   display: block;
   width: 100%;
-  height: 285px;
+  height: 100%;
   object-fit: cover;
   object-position: center 25%;
-  border-radius: 4px 4px 0 0;
+  border-radius: 50%;
+  transform: scale(1.025);
 }
 .team-flip-caption {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 22px;
+  padding: 22px 8px 0;
+  text-align: center;
 }
 .team-flip-role {
-  display: block;
   font-family: "DM Sans", sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   line-height: 1.6;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 12px;
+  margin: 0;
+  color: #526258;
 }
-.team-flip-name,
-.team-flip-back h3 {
-  display: block;
+.team-flip-caption h3 {
   font-family: "Fraunces", serif;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 400;
   line-height: 1.25;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .team-flip-hint {
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: auto;
-  padding-top: 12px;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  white-space: nowrap;
+  background: #fffefa;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--orange);
+  color: var(--green);
+  box-shadow: 0 2px 14px #173f3130;
 }
 .team-flip-back {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
   transform: rotateY(180deg);
-  padding: 26px 22px;
   background: var(--green);
   color: #fffefa;
 }
-.team-flip-back > p:not(.team-flip-role) {
+.team-flip-profile {
+  width: 70%;
+  max-height: 60%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #bdcbb5 transparent;
+  text-align: center;
+  padding: 3px;
+}
+.team-flip-profile p {
   color: #e0e6d9;
-  font-size: 0.88rem;
+  font-size: clamp(0.8rem, 1.15vw, 0.95rem);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.team-flip-profile p:last-child {
+  margin-bottom: 0;
 }
 .team-flip-qualifications {
   border-top: 1px solid #ffffff40;
-  padding-top: 18px;
+  padding-top: 16px;
 }
 .team-flip-back .text-link {
   color: #fffefa;
   font-size: 0.8rem;
-  margin-bottom: 20px;
 }
 .team-flip-close {
-  align-self: flex-start;
-  margin-top: auto;
-  padding: 12px 0;
-  border: 0;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  border: 1px solid #ffffff60;
+  border-radius: 30px;
   background: transparent;
   color: #fffefa;
   font: inherit;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  white-space: nowrap;
 }
 .team-flip-open:focus-visible {
   outline: 3px solid var(--orange);
-  outline-offset: 5px;
+  outline-offset: -7px;
 }
 .team-flip-back :focus-visible {
   outline: 2px solid #fffefa;
-  outline-offset: 5px;
+  outline-offset: -2px;
 }
-@media (max-width: 1000px) {
-  .team-flip-open img { height: 330px; }
+@media (max-width: 760px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .team-flip-card { max-width: 400px; }
+  .team-flip-profile p { font-size: 0.85rem; line-height: 1.55; }
+}
+@media (max-width: 380px) {
+  .team-flip-profile p { font-size: 0.8rem; margin-bottom: 10px; }
+  .team-flip-qualifications { padding-top: 10px; }
+  .team-flip-close { font-size: 0.72rem; padding: 8px 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .team-flip-inner { transition: none; }

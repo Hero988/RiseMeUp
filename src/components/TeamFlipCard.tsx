@@ -45,23 +45,19 @@ export default function TeamFlipCard({ person }: { person: TeamMember }) {
             aria-controls={profileId}
           >
             <img src={person.image} alt="" width="400" height="460" loading="lazy" />
-            <span className="team-flip-caption">
-              <span className="team-flip-role">{person.role}</span>
-              <span className="team-flip-name">{person.name}</span>
-              <span className="team-flip-hint">View profile <span aria-hidden="true">↻</span></span>
-            </span>
+            <span className="team-flip-hint">View profile <span aria-hidden="true">↻</span></span>
           </button>
         </div>
         <div className="team-flip-back" id={profileId} aria-hidden={!flipped} inert={!flipped}>
-          <p className="team-flip-role">{person.role}</p>
-          <h3>{person.name}</h3>
-          <p>{person.bio}</p>
-          <p className="team-flip-qualifications">{person.qualifications}</p>
-          {person.website && (
-            <a className="text-link" href={person.website}>
-              Xplines International <span aria-hidden="true">↗</span>
-            </a>
-          )}
+          <div className="team-flip-profile" tabIndex={flipped ? 0 : -1} aria-label={`Profile of ${person.name}`}>
+            <p>{person.bio}</p>
+            <p className="team-flip-qualifications">{person.qualifications}</p>
+            {person.website && (
+              <a className="text-link" href={person.website}>
+                Xplines International <span aria-hidden="true">↗</span>
+              </a>
+            )}
+          </div>
           <button
             type="button"
             className="team-flip-close"
@@ -72,6 +68,10 @@ export default function TeamFlipCard({ person }: { person: TeamMember }) {
             <span aria-hidden="true">↶</span> Back to portrait
           </button>
         </div>
+      </div>
+      <div className="team-flip-caption">
+        <h3>{person.name}</h3>
+        <p className="team-flip-role">{person.role}</p>
       </div>
     </article>
   );
