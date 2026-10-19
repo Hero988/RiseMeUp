@@ -129,6 +129,7 @@ export default function App({
                 <br />
                 <em>Not by us.</em>
               </h1>
+              <p className="brand-slogan">Think globally, act locally.</p>
               <p className="lead">
                 Standing with Sudan’s Coptic Orthodox and Nuba Mountains
                 communities through war, displacement and the work of
@@ -718,6 +719,7 @@ export default function App({
         <div className="container footer-grid">
           <div>
             <Brand />
+            <p className="brand-slogan">Think globally, act locally.</p>
             <p>
               Standing with forgotten communities.
               <br />

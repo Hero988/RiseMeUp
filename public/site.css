@@ -1353,6 +1353,18 @@ footer {
 }
 
 /* Preserve the original Risemeup Sustainability logo and its colours. */
+.brand-slogan {
+  font-family: "Fraunces", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--green);
+}
+footer .brand-slogan {
+  color: #eceddf;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
 .brand img {
   width: 210px;
   height: auto;
