@@ -334,7 +334,7 @@ export default function App({
                   Virgin Mary Farm is the heart of Risemeup’s long-term work.
                   The land remains, and our aim is to rebuild an integrated farm
                   that brings together food production, clean energy, processing
-                  and practical training.
+                  and sustainable farming education and practical training.
                 </p>
                 <p>
                   The latest land-development concept proposes a{" "}
@@ -473,7 +473,8 @@ export default function App({
                 <p>
                   Provide practical food assistance and work with partners to
                   rebuild Virgin Mary Farm through sustainable agriculture,
-                  clean energy, skills and community opportunity.
+                  clean energy, education, practical training and community
+                  opportunity.
                 </p>
               </article>
             </div>
@@ -481,6 +482,7 @@ export default function App({
               <strong>Our development priorities</strong>
               <span>Food security</span>
               <span>Clean energy</span>
+              <span>Education & training</span>
               <span>Decent work</span>
               <span>Responsible production</span>
               <span>Reduced inequalities</span>
@@ -520,11 +522,15 @@ export default function App({
                 </p>
               </article>
               <article>
-                <h3>Technical partnership</h3>
+                <h3>Education & technical partnership</h3>
                 <p>
-                  Help assess the site, refine the farm plan, develop training
-                  and establish realistic delivery milestones.
+                  Help shape sustainable farming education and practical
+                  training, assess the site and refine the farm plan with
+                  realistic delivery milestones.
                 </p>
+                <a className="text-link" href="#farming-education">
+                  Explore education & training <Arrow />
+                </a>
               </article>
             </div>
             <div className="partner-note">

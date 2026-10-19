@@ -1495,6 +1495,64 @@ footer .brand {
   font-size: 0.73rem !important;
   line-height: 1.6;
 }
+.farm-education {
+  margin-top: 30px;
+  padding: 40px;
+  background: #eceddf;
+  color: var(--green);
+  border-radius: 3px;
+}
+.education-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.farm-education .eyebrow,
+.education-label {
+  color: #6a5740;
+}
+.farm-education h4 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.education-intro > p,
+.education-topics p,
+.education-partnership p {
+  color: #4a5d50;
+  font-size: 0.93rem;
+}
+.education-label {
+  margin: 24px 0 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.education-topics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.education-topics > div {
+  border-top: 2px solid #b4c19e;
+  padding-top: 20px;
+}
+.education-topics h5 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+.education-partnership {
+  border-top: 1px solid #b4c19e;
+  margin-top: 20px;
+  padding-top: 24px;
+}
+.education-partnership p {
+  max-width: 900px;
+}
+.education-partnership .button {
+  margin-top: 4px;
+}
 .farm-connections {
   display: flex;
   justify-content: space-between;
@@ -1553,6 +1611,17 @@ footer .brand {
   }
 }
 @media (max-width: 760px) {
+  .farm-education {
+    padding: 28px 24px;
+  }
+  .education-intro,
+  .education-topics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .education-label {
+    margin-top: 10px;
+  }
   .farm-plan-grid {
     grid-template-columns: 1fr;
     gap: 24px;

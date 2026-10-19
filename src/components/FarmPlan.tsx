@@ -52,8 +52,8 @@ export default function FarmPlan() {
         </div>
         <p>
           Four connected parts of one farm: renewable energy, food production,
-          produce handling and poultry. Each is designed to create practical
-          work and training opportunities.
+          produce handling and poultry, supported by sustainable farming
+          education and practical training across the whole project.
         </p>
       </div>
       <p className="plan-status">
@@ -236,6 +236,63 @@ export default function FarmPlan() {
           </div>
         </article>
       </div>
+      <section
+        className="farm-education"
+        id="farming-education"
+        aria-labelledby="farming-education-title"
+      >
+        <div className="education-intro">
+          <div>
+            <p className="eyebrow">Learning across the whole farm</p>
+            <h4 id="farming-education-title">
+              Sustainable farming education &amp; training
+            </h4>
+          </div>
+          <p>
+            We plan to make Virgin Mary Farm a place to learn as well as produce
+            food. Sustainable farming education and hands-on training will help
+            members of the Coptic Orthodox and Nuba Mountains communities build
+            skills for employment, food security and lasting livelihoods.
+          </p>
+        </div>
+        <p className="education-label">Planned learning areas</p>
+        <div className="education-topics">
+          <div>
+            <h5>Growing sustainably</h5>
+            <p>
+              Soil care, crop rotation, greenhouse growing and water-efficient
+              irrigation, connecting sustainable farming principles with
+              practical work on the land.
+            </p>
+          </div>
+          <div>
+            <h5>Using resources responsibly</h5>
+            <p>
+              Renewable energy, biogas and the productive use of organic farm
+              by-products, helping learners understand how food production,
+              energy and soil fertility work together.
+            </p>
+          </div>
+          <div>
+            <h5>Building farm livelihoods</h5>
+            <p>
+              Poultry care, harvesting, sorting and packaging, alongside basic
+              farm management skills that support work and income opportunities.
+            </p>
+          </div>
+        </div>
+        <div className="education-partnership">
+          <p>
+            We welcome agricultural educators, training institutions and
+            development partners to help shape and deliver practical
+            demonstrations, workshops and supervised learning. The programme
+            will be developed with the communities as the farm is rebuilt.
+          </p>
+          <a className="button" href="#contact">
+            Partner on education &amp; training <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
       <div className="farm-connections">
         <div>
           <p className="eyebrow">One integrated farming project</p>
