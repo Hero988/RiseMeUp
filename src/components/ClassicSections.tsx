@@ -53,7 +53,7 @@ export function ClassicObjectives() {
 
 export function ClassicFounder() {
   return <section id="founder" className="section classic-founder"><div className="container classic-founder-grid">
-    <figure className="classic-image-wrap"><img src="/founder-iman-tadros.jpg" alt="Iman Tadros, founder of Risemeup" width="400" height="480" loading="lazy" /><figcaption className="classic-image-badge"><span>Our founder</span><strong>Iman Tadros</strong></figcaption></figure>
+    <figure className="classic-image-wrap"><img src="/founder-iman-tadros.jpg" alt="Iman Tadros, founder of Risemeup" width="2016" height="3024" loading="lazy" /><figcaption className="classic-image-badge"><span>Our founder</span><strong>Iman Tadros</strong></figcaption></figure>
     <div><p className="eyebrow">The person behind the purpose</p><h2>A commitment that starts with people.</h2><p className="lead">Iman Tadros founded Risemeup with a personal commitment to communities whose needs are too often overlooked.</p>
       <p>Her work began with responding to need: supporting a food bank and homeless shelter in London during the pandemic, and coordinating food assistance for families in Sudan.</p>
       <p>As a member of Sudan’s Coptic Orthodox community, she brings a personal understanding of the loss caused by war. Risemeup carries that commitment forward through support for both the Coptic Orthodox and Nuba Mountains communities.</p>

@@ -313,7 +313,9 @@ footer .brand-slogan { color: #e3ac80; }
 .classic-objectives-grid p { font-size: .92rem; color: #6d675f; }
 .classic-section-slogan { margin: 44px 0 0; text-align: center; font: italic 1.4rem "Fraunces", serif; color: #a65c30; }
 .classic-founder { background: #fefaf3; }
-.classic-founder .classic-image-wrap > img { height: 650px; object-position: center; }
+.classic-founder .classic-image-wrap { width: min(100%, 434px); margin: 0; justify-self: center; }
+.classic-founder .classic-image-wrap > img { display: block; width: 100%; height: auto; min-height: 0; max-height: none; aspect-ratio: 2 / 3; object-fit: contain; }
+.classic-founder .classic-image-badge { position: static; width: fit-content; margin: 18px auto 0; }
 .classic-founder .classic-image-badge strong { font-size: 1.45rem; }
 .classic-founder-values { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
 .classic-founder-values > div { padding: 18px; background: #fff; border: 1px solid #e9dfce; border-radius: 14px; }
@@ -405,7 +407,6 @@ footer .brand-slogan { color: #e3ac80; }
   .classic-objectives-grid { gap: 18px; }
   .classic-objectives-grid img { height: 170px; }
   .classic-objectives-grid article > div { padding: 20px; }
-  .classic-founder .classic-image-wrap > img { height: auto; max-height: 650px; }
   .classic-founder-values { grid-template-columns: 1fr 1fr; }
   .classic-history-map { margin: 45px 0; }
   .classic-history-map img { height: auto; }

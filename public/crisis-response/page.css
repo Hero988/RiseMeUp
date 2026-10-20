@@ -9,8 +9,8 @@
 .response-intro { color: #e2dfd8; font-size: 1.05rem; line-height: 1.85; max-width: 650px; }
 .response-hero-note { color: #c2baa9; font-size: .88rem; line-height: 1.8; margin: 22px 0 28px; max-width: 480px; }
 .response-hero .button { font-size: .85rem; }
-.response-portrait { margin: 0; max-width: 405px; justify-self: end; padding: 12px; border: 1px solid #d9b67c55; border-radius: 180px 180px 24px 24px; background: #293023; }
-.response-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; border-radius: 170px 170px 12px 12px; }
+.response-portrait { margin: 0; width: 100%; max-width: 350px; justify-self: end; padding: 12px; border: 1px solid #d9b67c55; border-radius: 24px; background: #293023; }
+.response-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: contain; border-radius: 12px; }
 .response-portrait figcaption { padding: 23px 12px 18px; text-align: center; }
 .response-portrait figcaption span { display: block; color: #d1c8b6; font-size: .73rem; }
 .response-portrait figcaption strong { display: block; font: 1.65rem "Fraunces", serif; margin: 7px 0; color: #f9eedc; }
