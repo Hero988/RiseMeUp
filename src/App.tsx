@@ -263,6 +263,10 @@ export default function App({
               </a>
             </div>
           </div>
+          <aside className="container crisis-history-link" aria-labelledby="crisis-history-title">
+            <div><p className="eyebrow">Our coronavirus response</p><h3 id="crisis-history-title">When there is a crisis, Risemeup steps up to help.</h3><p>Discover Iman’s pandemic work supporting a food bank and homeless shelter in London, alongside food aid for families in Sudan.</p></div>
+            <a className="text-link" href="/crisis-response/">Read our coronavirus story <Arrow /></a>
+          </aside>
         </section>
         <section id="virgin-mary-farm" className="section farm">
           <span className="anchor" id="projects" />
@@ -545,6 +549,7 @@ export default function App({
             <a href="#communities">Our communities</a>
             <a href="#virgin-mary-farm">Virgin Mary Farm</a>
             <a href="#sdgs">UN Sustainable Development Goals</a>
+            <a href="/crisis-response/">Our coronavirus response</a>
             <a href="/mango-project/">Mango subproject</a>
           </nav>
           <nav aria-label="Get involved">

@@ -170,6 +170,12 @@ em { font-style: normal; }
 .sdg-partner-invitation .button { max-width: 300px; font-size: .8rem; text-align: center; }
 .sdg-alignment-note { max-width: 920px; margin: 24px auto 0; color: #acbca8; text-align: center; font-size: .7rem; line-height: 1.8; }
 .sdg-feature-slogan { margin: 28px 0 0; text-align: center; color: #e8c18d; font: italic 1.4rem "Fraunces", serif; }
+.crisis-history-link { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 40px; margin-top: 65px; padding-top: 35px; border-top: 1px solid #d8c9ae; }
+.crisis-history-link .eyebrow { font-size: .68rem; }
+.crisis-history-link h3 { max-width: 700px; margin: 13px 0; font-size: 1.8rem; color: #3d5a3e; line-height: 1.3; }
+.crisis-history-link p:last-child { max-width: 740px; margin: 0; color: #625f55; font-size: .9rem; line-height: 1.8; }
+.crisis-history-link > a { max-width: 230px; color: #9b542e; font-size: .87rem; }
+@media (max-width: 760px) { .crisis-history-link { grid-template-columns: 1fr; gap: 22px; margin-top: 40px; } }
 @media (max-width: 1100px) {
   .sdg-goals-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
   .sdg-goal-banner { min-height: 210px; }
