@@ -520,3 +520,12 @@ footer .brand-slogan { color: #e3ac80; }
  .growth-phase-area { padding-left: 3rem; }
  .growth-phase-detail { grid-column: auto; }
 }
+
+.growth-illustration { margin: 2rem auto 1rem; max-width: 1024px; }
+.growth-illustration > a { display: block; border-radius: 18px; overflow: hidden; background: #fefaf3; }
+.growth-illustration img { display: block; width: 100%; height: auto; object-fit: contain; }
+.growth-illustration figcaption { margin-top: 1rem; color: #c5cabc; font-size: .85rem; line-height: 1.7; }
+.growth-view-image { margin-bottom: 1.5rem; }
+.growth-details { margin: .5rem 0 2rem; border-top: 1px solid #ffffff40; border-bottom: 1px solid #ffffff40; }
+.growth-details > summary { padding: 1.4rem .2rem; color: #f4e8d1; cursor: pointer; font-weight: 600; }
+.growth-details[open] { padding-bottom: 1rem; }

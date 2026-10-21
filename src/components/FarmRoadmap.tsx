@@ -45,10 +45,19 @@ export default function FarmRoadmap() {
           <h3 id="farm-growth-title">Start growing.<br /><em>Build a lasting future.</em></h3>
         </div>
         <div className="growth-intro">
-          <p>Across a 130-hectare farm, our ambition is to help families rebuild through food, farming skills and opportunities to earn a living. Women affected by war are at the heart of this plan, with both communities helping to shape its development.</p>
+          <p>Explore our vision for the 130-hectare farm in pictures. Women affected by war are at the heart of the plan, with both communities helping to shape its development.</p>
           <p className="growth-family-target"><strong>300+ families</strong><span>Proposed long-term reach · participant numbers and selection to be agreed with communities.</span></p>
         </div>
       </div>
+      <figure className="growth-illustration">
+        <a href="/virgin-mary-five-phase-plan.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated five-phase farm plan at full size in a new tab">
+          <img src="/virgin-mary-five-phase-plan.jpeg" width="1024" height="1536" loading="lazy" alt="Proposed Virgin Mary Farm recovery roadmap: start production, expand farming, build commercial capacity, add value and develop the full 130-hectare farm, with income intended to support gradual reinvestment." />
+        </a>
+        <figcaption>Your supplied planning illustration. The pictures show a future vision, not existing farm facilities. Areas, 300+ families and income allocations are illustrative targets; costs, financial shares and the potential for self-financing still need assessment and agreement.</figcaption>
+      </figure>
+      <a className="button growth-view-image" href="/virgin-mary-five-phase-plan.jpeg" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
+      <details className="growth-details">
+      <summary>Read the five phases and funding approach</summary>
       <p className="growth-start-note"><strong>Water comes first.</strong> The technically assessed first growing area may be smaller than the indicative Phase 1 target. Safe access, water availability, secure storage, an agreed budget and trained operators must be established before production starts.</p>
       <ol className="growth-phases">
         {phases.map((phase, i) => (
@@ -64,6 +73,7 @@ export default function FarmRoadmap() {
         <ol aria-label="Proposed farm income sequence"><li>Record harvest sales</li><li>Cover actual operating costs</li><li>Agree farmer income and maintenance reserves</li><li>Reinvest available surplus in the farm and community</li></ol>
       </div>
       <p className="growth-note">Based on the supplied five-phase planning illustration. All phase areas are indicative cumulative targets, not additional areas or current cultivation. The 130 hectares is the total site; a survey must establish cultivable land and space for buildings, access and water infrastructure. No delivery dates, returns or fixed income-allocation percentages are agreed. This recovery roadmap complements the four facility components of the original 2018 proposal.</p>
+      </details>
       <a className="button" href="/development-partners/#first-stage">Help develop the first fundable stage →</a>
     </section>
   );
