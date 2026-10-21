@@ -129,9 +129,41 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.home-page footer {
+  background: #f9f5eb;
+  color: #263e2c;
+  border-top: 1px solid #d4ddc7;
+}
+.home-page footer .brand {
+  width: min(240px, 100%);
+  background: transparent;
+  padding: 0;
+}
+.home-page footer .brand img {
+  width: 100%;
+  height: auto;
+}
+.home-page .footer-grid p {
+  color: #4b5b48;
+}
+.home-page footer .brand-slogan {
+  color: #815328;
+}
+.home-page .footer-grid nav a {
+  color: #1d542d;
+}
+.home-page .footer-grid nav a:hover,
+.home-page .footer-bottom a:hover {
+  color: #9e431e;
+}
+.home-page .footer-bottom {
+  color: #52634a;
+  border-color: #d4ddc7;
+}
 .home-page .site-header a:focus-visible,
 .home-page .site-header button:focus-visible,
-.home-page .classic-hero a:focus-visible {
+.home-page .classic-hero a:focus-visible,
+.home-page footer a:focus-visible {
   outline: 3px solid #a44420;
   outline-offset: 5px;
 }
@@ -170,6 +202,17 @@
   }
   .home-page .classic-community-panel {
     border-radius: 150px 150px 12px 12px;
+  }
+  .home-page .footer-grid {
+    gap: 28px 24px;
+  }
+  .home-page .footer-grid nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .home-page .footer-bottom {
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 360px) {
