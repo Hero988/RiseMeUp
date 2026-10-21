@@ -222,6 +222,11 @@ export default function FarmPlan() {
             skills for employment, food security and lasting livelihoods.
           </p>
         </div>
+        <div className="education-partnership" id="training-for-everyone">
+          <h5>Training for everyone who works at the farm</h5>
+          <p>Our commitment is that everyone working at Virgin Mary Farm will receive training appropriate to their role. The planned programme will cover sustainable farming, water management, safe equipment use, maintenance and practical skills for earning a living, with induction and continued learning as the farm develops.</p>
+          <p>Dr. Eng. Khalid Salih brings university teaching experience from Berlin and expertise in renewable energy and workforce development. Our training plan will draw on his experience and the practical learning approach of the <a href="https://www.diesalihs.com/#academy">DIESALIHS Grand Renaissance Academy</a>, alongside agricultural specialists and equipment suppliers. Course content, instructors and delivery arrangements will be developed as the farm is rebuilt.</p>
+        </div>
         <p className="education-label">Planned learning areas</p>
         <div className="education-topics">
           <div>

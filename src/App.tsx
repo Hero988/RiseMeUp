@@ -19,12 +19,13 @@ const team = [
       "PhD, INRA, France · MSc, University of Gezira · BSc, University of Khartoum",
   },
   {
-    name: "Dr. Engr. Khalid Salih",
-    role: "Renewable energy & infrastructure",
+    name: "Dr. Eng. Khalid Salih",
+    role: "Renewable energy & training",
     image: "/team-4-khalid.jpeg",
-    bio: "Founder of Xplines International, bringing expertise in energy and integrated infrastructure.",
+    bio: "Former university lecturer in Berlin, Xplines International founder and DIESALIHS chairman.",
     qualifications: "PhD in Control Engineering",
     website: "https://www.xplines.org/",
+    trainingWebsite: "https://www.diesalihs.com/#academy",
   },
   {
     name: "Dr. Munir G. Botrus",
@@ -282,10 +283,11 @@ export default function App() {
             </div>
             <div className="actions"><a className="button" href="/development-partners/">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
             <section className="farm-women" aria-labelledby="farm-women-title">
-              <p className="eyebrow">Women at the heart of Virgin Mary Farm</p>
+              <p className="eyebrow">Women and girls at the heart of Virgin Mary Farm</p>
               <h3 id="farm-women-title">A place to rebuild lives.<br />A future to grow together.</h3>
               <p>Our main purpose is to help women affected by Sudan’s war rebuild their lives — including survivors of sexual violence, women whose husbands have been killed, and mothers raising children alone.</p>
-              <p>We envision a farm where sustainable farming education, opportunities to earn an income and a supportive community can nurture confidence, independence and hope. For Iman, this is a vision of healing: women recognised for their strength, making decisions about their own futures and providing for their children.</p>
+              <p>Every woman and girl deserves to live with dignity, feel valued and have opportunities to learn. We envision a farm where sustainable farming education, practical training and opportunities to earn an income help women rebuild confidence and independence, support their families and shape their own futures. For Iman, this is a vision of healing, connection and renewed hope.</p>
+              <p>For girls and young women, we plan education and skills opportunities that build confidence and widen future choices. Girls’ learning will be age-appropriate, supervised and designed to support their safety and continued schooling.</p>
               <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from both communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
               <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
             </section>

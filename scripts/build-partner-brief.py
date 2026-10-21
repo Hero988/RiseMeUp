@@ -14,7 +14,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'public/development-partners/equipment.json').read_text())
-OUT = ROOT / 'public/downloads/risemeup-partner-brief-2026-10-21-v7.pdf'
+OUT = ROOT / 'public/downloads/risemeup-partner-brief-2026-10-21-v8.pdf'
 INK = colors.HexColor('#1e1e2a')
 GREEN = colors.HexColor('#3d5a3e')
 RUST = colors.HexColor('#a65c30')
@@ -38,7 +38,7 @@ def header(c,doc):
  c.setFillColor(RUST);c.setFont('Helvetica-Bold',8)
  c.drawRightString(W-42,H-40,'VIRGIN MARY FARM | PARTNER BRIEF')
  c.setFillColor(MUTED);c.setFont('Helvetica',8)
- c.drawRightString(W-42,H-55,'21 October 2026 | Version 7')
+ c.drawRightString(W-42,H-55,'21 October 2026 | Version 8')
  c.setStrokeColor(colors.HexColor('#d9cdb7'));c.line(42,H-81,W-42,H-81)
  c.line(42,38,W-42,38)
  c.setFont('Helvetica',7.4);c.drawString(42,25,'Risemeup | Committed to grow rural communities.')
@@ -50,7 +50,7 @@ def table(rows,widths,header_row=False):
  if header_row:style += [('BACKGROUND',(0,0),(-1,0),SAND)]
  t.setStyle(TableStyle(style));return t
 story=[]
-story += [p('Rebuilding starts with water.','title'),p('A proposed farm centred on women affected by war: survivors of sexual violence, widows and mothers raising children alone, across Sudan\'s Coptic Orthodox and Nuba Mountains communities. Farming, skills and livelihoods offer a vision of independence, connection and renewed hope.'),p('<b>Current stage:</b> planning and assessment. The farm is not operational and is not yet ready for equipment delivery. Technical specifications and costs are pending.','small')]
+story += [p('Rebuilding starts with water.','title'),p('Women and girls are at the heart of Virgin Mary Farm, across Sudan\'s Coptic Orthodox and Nuba Mountains communities. We aim to help women affected by war rebuild confidence and independence through education, practical training and opportunities to earn an income and support their families. Girls\' learning will be age-appropriate, supervised and support continued schooling.'),p('<b>Current stage:</b> planning and assessment. The farm is not operational and is not yet ready for equipment delivery. Technical specifications and costs are pending.','small')]
 story += [p('Farm status and readiness','h2')]
 status=[
  ('Land and rights','Iman confirms a total area of 130 hectares (approximately 321 acres), owned by the Coptic Orthodox Church in Sudan, Khartoum-Omdurman, and permission to use the land. Ownership evidence, surveyed boundaries and written use terms still need review. Cultivable and infrastructure areas await assessment.'),
@@ -67,6 +67,7 @@ steps=[
 ]
 story += [p(x) for x in steps]
 story += [p('The full vision remains Virgin Mary Farm','h2'),p('Ten planned greenhouses, biogas, poultry, produce handling and sustainable farming education remain the wider ambition. The Mango Project is a supporting subproject. The 19 November 2018 proposal is historical background, not the immediate post-war delivery sequence or a current budget.','small')]
+story += [p('Training for everyone who works at the farm','h2'),p('Everyone working at the farm will receive training appropriate to their role. The planned programme will draw on Dr. Eng. Khalid Salih\'s university teaching experience in Berlin and the practical training approach of the <link href="https://www.diesalihs.com/#academy" color="#3d5a3e">DIESALIHS Grand Renaissance Academy</link>, alongside agricultural specialists and suppliers. Course content, instructors and delivery arrangements will be developed as the farm is rebuilt.','small')]
 story += [PageBreak(),p('A defined contribution. A shared plan.','title')]
 story += [p('Equipment priorities and budget status','h2')]
 short_specs=[

@@ -7,6 +7,7 @@ type TeamMember = {
   bio: string;
   qualifications: string;
   website?: string;
+  trainingWebsite?: string;
 };
 
 export default function TeamFlipCard({ person }: { person: TeamMember }) {
@@ -55,6 +56,11 @@ export default function TeamFlipCard({ person }: { person: TeamMember }) {
             {person.website && (
               <a className="text-link" href={person.website}>
                 Xplines International <span aria-hidden="true">↗</span>
+              </a>
+            )}
+            {person.trainingWebsite && (
+              <a className="text-link" href={person.trainingWebsite}>
+                DIESALIHS Academy <span aria-hidden="true">↗</span>
               </a>
             )}
           </div>
