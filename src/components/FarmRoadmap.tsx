@@ -50,12 +50,12 @@ export default function FarmRoadmap() {
         </div>
       </div>
       <figure className="growth-illustration">
-        <a href="/virgin-mary-five-phase-plan.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated five-phase farm plan at full size in a new tab">
-          <img src="/virgin-mary-five-phase-plan.jpeg" width="1024" height="1536" loading="lazy" alt="Proposed Virgin Mary Farm recovery roadmap: start production, expand farming, build commercial capacity, add value and develop the full 130-hectare farm, with income intended to support gradual reinvestment." />
+        <a href="/virgin-mary-five-phase-plan-original-logo.png" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated five-phase farm plan at full size in a new tab">
+          <img src="/virgin-mary-five-phase-plan-original-logo.png" width="1024" height="1536" loading="lazy" alt="Proposed Virgin Mary Farm recovery roadmap: start production, expand farming, build commercial capacity, add value and develop the full 130-hectare farm, with income intended to support gradual reinvestment." />
         </a>
         <figcaption>Your supplied planning illustration. The pictures show a future vision, not existing farm facilities. Areas, 300+ families and income allocations are illustrative targets; costs, financial shares and the potential for self-financing still need assessment and agreement.</figcaption>
       </figure>
-      <a className="button growth-view-image" href="/virgin-mary-five-phase-plan.jpeg" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
+      <a className="button growth-view-image" href="/virgin-mary-five-phase-plan-original-logo.png" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
       <details className="growth-details">
       <summary>Read the five phases and funding approach</summary>
       <p className="growth-start-note"><strong>Water comes first.</strong> The technically assessed first growing area may be smaller than the indicative Phase 1 target. Safe access, water availability, secure storage, an agreed budget and trained operators must be established before production starts.</p>
