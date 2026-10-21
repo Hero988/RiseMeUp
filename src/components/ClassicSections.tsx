@@ -9,6 +9,10 @@ export function ClassicAbout() {
     <div className="container classic-about-grid">
       <figure className="classic-image-wrap">
         <img src="/farmland-satellite.png" alt="Satellite view of the land identified for Virgin Mary Farm" loading="lazy" />
+        <div className="classic-map-measurements" aria-label="Map measurements">
+          <span>Perimeter</span><strong>2,234.92 m</strong>
+          <span>Area</span><strong>296,258.95 m²</strong>
+        </div>
         <figcaption className="classic-image-badge"><strong>One</strong><span>Shared commitment</span></figcaption>
       </figure>
       <div>

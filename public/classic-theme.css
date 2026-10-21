@@ -258,6 +258,11 @@ footer .brand-slogan { color: #e3ac80; }
 .classic-about-grid > * { min-width: 0; }
 .classic-image-wrap { position: relative; }
 .classic-image-wrap > img { width: 100%; min-height: 430px; object-fit: cover; border-radius: 26px; }
+.classic-map-measurements { position: absolute; top: 24px; right: 0; z-index: 1; width: 184px; padding: 15px 17px; background: #fff; border: 1px solid #d8cbb8; border-right: 0; border-radius: 14px 0 0 14px; box-shadow: 0 10px 28px #251c1930; color: #171923; }
+.classic-map-measurements span, .classic-map-measurements strong { display: block; }
+.classic-map-measurements span { margin-top: 10px; color: #675e54; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.classic-map-measurements span:first-child { margin-top: 0; }
+.classic-map-measurements strong { margin-top: 2px; font-size: 1rem; font-variant-numeric: tabular-nums; line-height: 1.25; white-space: nowrap; }
 .classic-image-badge { position: absolute; right: -18px; bottom: -22px; padding: 20px 28px; background: #fff; border: 1px solid #d8cbb8; box-shadow: 0 12px 32px #251c1924; border-radius: 20px; text-align: center; color: #173c27; }
 .classic-image-badge strong { display: block; font: 700 2.2rem/1.15 "Fraunces", Georgia, serif; letter-spacing: -.01em; color: #173c27; }
 .classic-image-badge span { display: block; margin-top: 5px; font-size: .84rem; font-weight: 600; color: #4b4842; }
