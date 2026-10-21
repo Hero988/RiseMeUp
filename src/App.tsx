@@ -56,11 +56,7 @@ function Brand() {
     </a>
   );
 }
-export default function App({
-  hasContactBackend = false,
-}: {
-  hasContactBackend?: boolean;
-}) {
+export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const donationDialog = useRef<HTMLDialogElement>(null);
@@ -463,28 +459,7 @@ export default function App({
                 <div className="classic-contact-note"><p className="eyebrow">Two ways to help</p><p>Support food assistance now, or work with us on the long-term rebuilding of Virgin Mary Farm.</p></div>
               </div>
             <div className="contact-panel">
-              {hasContactBackend ? (
-                <ContactForm />
-              ) : (
-                <>
-                  <h3>Contact the team</h3>
-                  <p>
-                    Email Iman to discuss food assistance, Virgin Mary Farm or a
-                    partnership. Please include your name, organisation and area
-                    of interest.
-                  </p>
-                  <a
-                    className="button"
-                    href={`mailto:${email}?subject=Risemeup%20enquiry`}
-                  >
-                    Open your email app <Arrow />
-                  </a>
-                  <p className="fine-print">
-                    You can also copy the email address or call us using the
-                    details alongside.
-                  </p>
-                </>
-              )}
+              <ContactForm />
             </div>
             </div>
           </div>
@@ -529,7 +504,7 @@ export default function App({
         <p>Your support can help families in Sudan’s Coptic Orthodox and Nuba Mountains communities access food and essential supplies.</p>
         <hr /><h3>Arrange a donation with the team.</h3><p>Please contact us to discuss the purpose of your support and the available arrangements. This website does not take payments.</p>
         <a className="button" href={`mailto:${email}?subject=Food%20assistance%20support`}>Email about a donation →</a>
-        <div className="dialog-contact"><a href={`mailto:${email}`}>{email}</a><a href="tel:+447867977844">+44 786 797 7844</a><a href="#contact" onClick={() => donationDialog.current?.close()}>Use our contact form →</a></div>
+        <div className="dialog-contact"><a href={`mailto:${email}`}>{email}</a><a href="tel:+447867977844">+44 786 797 7844</a><a href="#contact" onClick={() => donationDialog.current?.close()}>Prepare an email enquiry →</a></div>
         <p className="dialog-farm-link">Interested in longer-term recovery? <a href="#partnership" onClick={() => donationDialog.current?.close()}>Explore farm partnerships →</a></p>
       </dialog>
     </>

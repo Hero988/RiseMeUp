@@ -1,41 +1,37 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { useMutation } from "convex/react";
-import { api } from "../../convex/_generated/api";
+import { buildEnquiryMailto } from "../lib/enquiry";
 
 export default function ContactForm() {
-  const submitMessage = useMutation(api.mutations.submitContactMessage);
-  const [status, setStatus] = useState<
-    "idle" | "sending" | "success" | "error"
-  >("idle");
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState<"idle" | "prepared" | "error">("idle");
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (status === "sending") return;
     const form = event.currentTarget;
     const data = new FormData(form);
     const value = (key: string) => String(data.get(key) ?? "").trim();
-    if (!value("firstName") || !value("lastName") || !value("message")) {
+    if (!form.reportValidity() || !value("firstName") || !value("lastName") || !value("message")) {
       setStatus("error");
       return;
     }
-    setStatus("sending");
     try {
-      await submitMessage({
+      const mailto = buildEnquiryMailto({
         firstName: value("firstName"),
         lastName: value("lastName"),
         email: value("email"),
         interest: value("interest"),
         message: value("message"),
+        organisation: value("organisation"),
       });
-      setStatus("success");
-      form.reset();
+      window.location.href = mailto;
+      setStatus("prepared");
     } catch {
       setStatus("error");
     }
   }
   return (
     <>
-      <h3>Send an enquiry</h3>
+      <h3>Prepare an email enquiry</h3>
+      <p className="enquiry-intro">Complete the details below to prepare an email to Iman. Your email app will open so you can review and send it. Nothing is sent or stored by this form.</p>
       <form onSubmit={handleSubmit}>
         <div className="form-row">
           <label>
@@ -57,6 +53,10 @@ export default function ContactForm() {
             />
           </label>
         </div>
+        <label>
+          Organisation <span className="optional-label">(optional)</span>
+          <input name="organisation" autoComplete="organization" maxLength={150} />
+        </label>
         <label>
           Email address
           <input
@@ -84,29 +84,27 @@ export default function ContactForm() {
         </label>
         <label>
           Your message
-          <textarea name="message" rows={5} required maxLength={5000} />
+          <textarea name="message" rows={5} required maxLength={1500} />
         </label>
         <p className="fine-print">
-          We use the information you provide to respond to your enquiry. Please
-          do not include sensitive personal details about families or
-          beneficiaries.
+          Please do not include sensitive personal details about families or beneficiaries.
         </p>
         <button
           className="button"
           type="submit"
-          disabled={status === "sending"}
         >
-          {status === "sending" ? "Sending…" : "Send enquiry ↗"}
+          Open email to send ↗
         </button>
+        <p className="fine-print enquiry-fallback">No email app? Write directly to <a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org</a> or call <a href="tel:+447867977844">+44 786 797 7844</a>.</p>
         <div role="status" aria-live="polite">
-          {status === "success" && (
+          {status === "prepared" && (
             <p className="form-success">
-              Thank you. Your enquiry has been received.
+              Your email app should open with your enquiry. Please press Send there to deliver it. If nothing opens, use the email address above; your details remain in this form.
             </p>
           )}
           {status === "error" && (
             <p className="form-error">
-              Your enquiry could not be sent. Check the fields and try again, or
+              Your email could not be prepared. Check the fields and try again, or
               email{" "}
               <a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org</a>
               .

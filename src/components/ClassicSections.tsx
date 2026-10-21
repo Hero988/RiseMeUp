@@ -7,14 +7,17 @@ export function ClassicAbout() {
   ];
   return <section id="about" className="section classic-about">
     <div className="container classic-about-grid">
-      <figure className="classic-image-wrap">
-        <img src="/farmland-satellite.png" alt="Satellite view of the land identified for Virgin Mary Farm" loading="lazy" />
-        <div className="classic-map-measurements" aria-label="Map measurements">
-          <span>Perimeter</span><strong>2,234.92 m</strong>
-          <span>Area</span><strong>296,258.95 m²</strong>
-        </div>
-        <figcaption className="classic-image-badge"><strong>One</strong><span>Shared commitment</span></figcaption>
-      </figure>
+      <div className="classic-about-visual">
+        <figure className="classic-image-wrap" aria-describedby="map-survey-note">
+          <img src="/farmland-satellite.png" alt="Supplied satellite image with an outlined plot associated with Virgin Mary Farm" width="772" height="421" loading="lazy" decoding="async" />
+          <div className="classic-map-measurements" aria-label="Original map annotations, not a verified whole-farm survey">
+            <span>Marked perimeter</span><strong>2,234.92 m</strong>
+            <span>Marked plot area</span><strong>296,258.95 m²</strong>
+          </div>
+          <figcaption className="classic-image-badge"><strong>One</strong><span>Shared commitment</span></figcaption>
+        </figure>
+        <p className="classic-map-note" id="map-survey-note">Supplied map image; the marked plot and measurements await survey confirmation. The farm’s reported total area is 130 hectares. The image is not a verified survey of the full site.</p>
+      </div>
       <div>
         <p className="eyebrow">Who we are</p>
         <h2>No community should be <span className="classic-about-emphasis">forgotten.</span></h2>

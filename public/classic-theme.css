@@ -30,9 +30,9 @@ em { font-style: normal; }
   padding: 16px 25px;
   background: linear-gradient(135deg, #c2703a, #e88d67);
   box-shadow: 0 5px 22px #c2703a30;
-  color: #fff;
+  color: #171923;
 }
-.button:hover { background: linear-gradient(135deg, #ac5b2b, #cc744b); }
+.button:hover { background: linear-gradient(135deg, #c2703a, #da805b); }
 .button.light { background: #fefaf3; color: #3d5a3e; }
 .button.outline { border: 2px solid #ffffff65; box-shadow: none; background: transparent; color: #fff; }
 .button.outline:hover { background: #ffffff10; }
@@ -115,6 +115,7 @@ em { font-style: normal; }
 .vision-grid { max-width: 1000px; margin: 0 auto; gap: 36px; padding: 0; border: 0; }
 .vision-grid article { position: relative; overflow: hidden; padding: 45px 38px; border-radius: 28px; text-align: center; background: linear-gradient(145deg, #3d5a3e, #4e7350); color: #fff; box-shadow: 0 16px 48px #3d5a3e30; }
 .vision-grid article:nth-child(2) { background: linear-gradient(145deg, #c2703a, #e88d67); box-shadow: 0 16px 48px #c2703a30; }
+.vision-grid article:nth-child(2), .vision-grid article:nth-child(2) p:last-child { color: #171923; }
 .vision-grid article::before { content: ""; position: absolute; top: -50px; right: -50px; width: 160px; height: 160px; border-radius: 50%; background: #ffffff12; }
 .vision-grid .eyebrow { color: #fff; }
 .vision-grid h3 { font-size: 1.9rem; }
@@ -263,6 +264,7 @@ footer .brand-slogan { color: #e3ac80; }
 .classic-map-measurements span { margin-top: 10px; color: #675e54; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .classic-map-measurements span:first-child { margin-top: 0; }
 .classic-map-measurements strong { margin-top: 2px; font-size: 1rem; font-variant-numeric: tabular-nums; line-height: 1.25; white-space: nowrap; }
+.classic-map-note { margin: 46px 0 0; font-size: .8rem; line-height: 1.7; color: #625c50; max-width: 65ch; }
 .classic-image-badge { position: absolute; right: -18px; bottom: -22px; padding: 20px 28px; background: #fff; border: 1px solid #d8cbb8; box-shadow: 0 12px 32px #251c1924; border-radius: 20px; text-align: center; color: #173c27; }
 .classic-image-badge strong { display: block; font: 700 2.2rem/1.15 "Fraunces", Georgia, serif; letter-spacing: -.01em; color: #173c27; }
 .classic-image-badge span { display: block; margin-top: 5px; font-size: .84rem; font-weight: 600; color: #4b4842; }
@@ -485,7 +487,9 @@ footer .brand-slogan { color: #e3ac80; }
 @media (max-width: 760px) { .farm-readiness { padding: 27px 24px; } .farm-readiness dl { grid-template-columns: 1fr; gap: 20px; } }
 
 /* The farm's central community purpose, kept readable across screen sizes. */
-.farm-women { margin: 3rem 0; padding: clamp(1.5rem, 4vw, 3rem); border-left: 5px solid #c2703a; background: #f4e8d1; border-radius: 0 28px 28px 0; }
+.farm-women { margin: 3rem 0; padding: clamp(1.5rem, 4vw, 3rem); border-left: 5px solid #c2703a; background: #f4e8d1; color: #383b32; border-radius: 0 28px 28px 0; }
+.farm .farm-women .eyebrow { color: #8c4826; }
+.farm-women .text-link { color: #29482f; }
 .farm-women h3 { color: #3d5a3e; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.15; margin: .7rem 0 1.3rem; }
 .farm-women p { max-width: 78ch; line-height: 1.75; }
 .farm-women .women-plan-note { font-size: .95rem; margin-top: 1.3rem; }
@@ -542,3 +546,33 @@ footer .brand-slogan { color: #e3ac80; }
 .growth-phase-one > p:not(.eyebrow) { max-width: 75ch; }
 .growth-phase-one .actions { gap: 1rem 2rem; }
 .growth-phase-one .text-link { color: #edc89a; }
+
+/* Readability and responsive safeguards; retain the original identity. */
+.enquiry-intro { font-size: .92rem; color: #625c50; }
+.optional-label { font-size: .78rem; font-weight: 400; }
+.enquiry-fallback a, .classic-contact-details a { overflow-wrap: anywhere; }
+.classic-contact-details, .classic-contact-details > div > div { min-width: 0; }
+.classic-contact-details { font-style: normal; }
+.dialog-close, .classic-back-top { min-width: 44px; min-height: 44px; }
+.classic-back-top { color: #171923; }
+.classic-donation-dialog { overflow-y: auto; }
+.classic-donation-dialog a { overflow-wrap: anywhere; }
+.classic-about-grid, .classic-founder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  .site-header #main-nav { gap: 0; }
+  .site-header #main-nav > a { min-height: 44px; }
+  .menu-button { min-height: 44px; }
+}
+@media (max-width: 760px) {
+  .classic-about-grid, .classic-founder-grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-panel { min-width: 0; }
+  .button { max-width: 100%; text-align: center; }
+  .classic-map-measurements { width: 184px; top: 16px; }
+}
+@media (max-width: 430px) {
+  .classic-values { grid-template-columns: minmax(0, 1fr); }
+  .classic-donation-dialog { padding: 28px 24px; }
+  .classic-donation-dialog h2 { font-size: 2rem; }
+  .dialog-close { margin: -12px -8px 8px 10px; }
+  .classic-back-top { width: 44px; height: 44px; bottom: 16px; right: 16px; }
+}
