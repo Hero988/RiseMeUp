@@ -14,7 +14,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'public/development-partners/equipment.json').read_text())
-OUT = ROOT / 'public/downloads/risemeup-partner-brief-2026-10-21.pdf'
+OUT = ROOT / 'public/downloads/risemeup-partner-brief-2026-10-21-v6.pdf'
 INK = colors.HexColor('#1e1e2a')
 GREEN = colors.HexColor('#3d5a3e')
 RUST = colors.HexColor('#a65c30')

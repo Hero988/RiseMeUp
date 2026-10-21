@@ -88,12 +88,13 @@ for (const [name,foreground,background] of [['primary button','171923','c2703a']
   check((a+.05)/(b+.05) >= 4.5, `${name}: normal-text contrast`);
 }
 check(read('public/robots.txt').includes('https://www.risemeup.org/sitemap.xml'), 'Sitemap is discoverable');
-check(statSync(path.join(root,'public/downloads/risemeup-partner-brief-2026-10-21.pdf')).size > 1000, 'Partner brief is present');
+check(statSync(path.join(root,'public/downloads/risemeup-partner-brief-2026-10-21-v6.pdf')).size > 1000, 'Current partner brief is present');
 const partnerPage = read('public/development-partners/index.html');
 const equipment = JSON.parse(read('public/development-partners/equipment.json'));
 check(partnerPage.includes('id="equipment-ownership"'), 'Intended ownership has a directly linkable explanation');
 check(partnerPage.includes('Virgin Mary Farm together with Risemeup'), 'Partner page reflects intended equipment ownership');
 check(equipment.ownership.intendedArrangement.includes('Virgin Mary Farm together with Risemeup'), 'Equipment data reflects the same intended arrangement');
 check(equipment.ownership.documentation.includes('written agreements'), 'Ownership documentation remains explicitly pending');
+check(partnerPage.includes('/downloads/risemeup-partner-brief-2026-10-21-v6.pdf'), 'Download link identifies the current brief version');
 console.log(`PASS: ${assertions} assertions; ${links} local resource/anchor references; ${cssFiles.length} stylesheets parsed; enquiry encoding and responsive CSS rules checked.`);
 console.log('Scope: static/build verification only. This is not a mobile-browser rendering or delivered-email test.');
