@@ -112,6 +112,11 @@
 .evidence-layout p { color: #625f55; }
 .private-records { background: #f4e8d1; border-radius: 22px; padding: 35px; }
 .private-records h3 { font-size: 1.7rem; }
+.partners-budget .private-records { color: #383b32; }
+.partners-budget .private-records h3 { color: #173c27; }
+.partners-budget .private-records p { color: #383b32; }
+.partners-budget .private-records .eyebrow { color: #874622; }
+.partners-budget .private-records .partners-note { color: #625c50; }
 .private-records li { margin-bottom: 10px; font-size: .91rem; color: #625c50; }
 .private-records ul { padding-left: 20px; }
 .partners-contact { background: linear-gradient(130deg, #3d5a3e, #2c422d); color: #fff; }

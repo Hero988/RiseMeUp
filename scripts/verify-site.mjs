@@ -104,5 +104,6 @@ for (const content of [partnerPage, roadmap]) {
 }
 check(!existsSync(path.join(root,'public/virgin-mary-phase-one-equipment.jpeg')), 'Unverified price poster is not served as a public asset');
 check(partnerPage.includes('What we publish and what we keep private'), 'Public/private information approach is explained');
+check(read('public/development-partners/page.css').includes('.partners-budget .private-records p { color: #383b32; }'), 'Cream information panel uses dark text despite the surrounding dark section');
 console.log(`PASS: ${assertions} assertions; ${links} local resource/anchor references; ${cssFiles.length} stylesheets parsed; enquiry encoding and responsive CSS rules checked.`);
 console.log('Scope: static/build verification only. This is not a mobile-browser rendering or delivered-email test.');
