@@ -17,7 +17,7 @@ const icons = [
 const cards = [
   ['Restore water', 'Assess wells, pumping and power'],
   ['Store and irrigate', 'New storage, filtration and pipes'],
-  ['Tractor or hire', 'Match capacity to the growing area'],
+  ['Agricultural tractor', 'Match capacity to the growing area'],
   ['Prepare the land', 'Assess cultivation implements'],
   ['Plant suitable crops', 'Select planting tools after design'],
   ['Move the harvest', 'Assess a trailer and transport'],

@@ -64,7 +64,7 @@ export default function FarmRoadmap() {
           <a href="/virgin-mary-phase-one-machinery.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the proposed equipment needs illustration at full size in a new tab">
             <img src="/virgin-mary-phase-one-machinery.jpg" width="1024" height="1270" loading="lazy" alt="Virgin Mary Farm Phase 1 planning illustration with the original Risemeup logo and eight proposed equipment categories: tractor, disc harrow, ripper or bed former, seed drill or planter, trailer, sprayer, irrigation system, and basic tools and safety equipment. No estimated prices are shown." />
           </a>
-          <figcaption>Proposed equipment, not existing assets or confirmed purchases. Water restoration comes first. Machinery purchase or hire, specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</figcaption>
+          <figcaption>Proposed equipment, not existing assets or confirmed purchases. Water restoration comes first. Machinery specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</figcaption>
         </figure>
         <div className="actions"><a className="button" href="/virgin-mary-phase-one-machinery.jpg" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="text-link" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
       </section>
