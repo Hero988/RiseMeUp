@@ -1,0 +1,57 @@
+{
+  "updated": "21 October 2026",
+  "status": "Proposed scope; technical assessment and quotations pending",
+  "items": [
+    {
+      "id": "pumping", "name": "Well pump and lifting equipment", "quantity": "1 initial well system, subject to a suitable well being confirmed",
+      "purpose": "Restore water supply for an initial cultivation and training area.",
+      "specification": "Pump type, flow, total head and power to be selected after well inspection and test pumping. Include rising main, cables, protection, fittings and a water meter; sizes to be confirmed.",
+      "operation": "Proposed: a trained local pump operator, with installation and servicing by a qualified supplier. Operator and maintenance provider not yet appointed.",
+      "cost": "Awaiting assessment and supplier quotation"
+    },
+    {
+      "id": "solar", "name": "Solar power and pump controls", "quantity": "1 matched power package for the initial pump",
+      "purpose": "Provide power for the restored water-pumping system, subject to technical suitability.",
+      "specification": "Panel capacity and controller matched to the selected pump and site conditions; secure mounting, cabling, earthing and electrical protection. No power rating specified before design.",
+      "operation": "Proposed: the trained pump operator for routine checks and a qualified solar technician for servicing. Appointments and service arrangements pending.",
+      "cost": "Awaiting assessment and supplier quotation"
+    },
+    {
+      "id": "storage", "name": "Water storage and filtration", "quantity": "1 integrated system; tank count and capacity to be determined",
+      "purpose": "Store irrigation water and protect the irrigation system from blockage.",
+      "specification": "Storage volume, tank supports, filters, valves and pipe sizes to follow water testing, daily demand and the site layout. Irrigation use; drinking-water suitability is not established.",
+      "operation": "Proposed: a trained irrigation caretaker with supplier support and a cleaning schedule. Named responsibility and maintenance budget pending.",
+      "cost": "Awaiting assessment and supplier quotation"
+    },
+    {
+      "id": "irrigation", "name": "Pilot-area irrigation network", "quantity": "1 initial growing area; hectares and network length to be confirmed",
+      "purpose": "Deliver measured water to crops and support practical irrigation training.",
+      "specification": "Mainlines, distribution pipes, valves and drip equipment sized to the assessed water supply, crop plan and soil. Include fittings, meters and essential spares.",
+      "operation": "Proposed: a local growing team and irrigation caretaker, supported by an agronomist. Names and servicing arrangements pending.",
+      "cost": "Awaiting assessment and supplier quotation"
+    },
+    {
+      "id": "tools", "name": "Growing and training tools", "quantity": "1 starter package; individual tool quantities depend on the training plan",
+      "purpose": "Enable initial cultivation and supervised sustainable farming education.",
+      "specification": "Hand tools, appropriate protective equipment, basic soil and irrigation monitoring tools and teaching materials. Inventory to be agreed with the local trainer and community representatives.",
+      "operation": "Proposed: a designated trainer and tool custodian, using a sign-out and maintenance register. Appointments pending.",
+      "cost": "Awaiting training plan and supplier quotation"
+    },
+    {
+      "id": "security", "name": "Secure storage and equipment protection", "quantity": "1 site protection package; scope to follow the access and security assessment",
+      "purpose": "Protect replacement equipment and provide accountable storage for tools and spares.",
+      "specification": "Assess lockable storage, secure installations, asset identification and practical local custody arrangements. Detailed locations and security measures to remain private.",
+      "operation": "Proposed: a Church-agreed site custodian under an approved asset-management arrangement. Custodian and upkeep responsibility pending.",
+      "cost": "Awaiting site assessment and supplier quotation"
+    }
+  ],
+  "budget": [
+    ["Site and seven-well assessment", "Condition survey, test pumping, water testing and design", "Awaiting quotation"],
+    ["Pump and solar power", "Initial well package, controls and electrical protection", "Awaiting quotation"],
+    ["Storage and irrigation", "Tanks, filters, distribution and initial growing-area network", "Awaiting quotation"],
+    ["Installation and delivery", "Transport, applicable charges, installation and commissioning", "Awaiting quotation"],
+    ["Security and asset custody", "Secure storage, mounting and locally agreed protection", "Awaiting quotation"],
+    ["Training and first-season inputs", "Operator training, tools, seeds, teaching and supervision", "Awaiting quotation"],
+    ["Maintenance and contingency", "Spares, servicing and an agreed contingency allowance", "Awaiting costed plan"]
+  ]
+}

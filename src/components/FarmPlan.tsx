@@ -3,7 +3,7 @@ export default function FarmPlan() {
     <div className="farm-plan" id="farm-plan">
       <div className="section-head">
         <div>
-          <p className="eyebrow">The plan from our original proposal</p>
+          <p className="eyebrow">Our full vision · Original 2018 proposal</p>
           <h3>What we plan to build.</h3>
         </div>
         <p>
@@ -13,9 +13,9 @@ export default function FarmPlan() {
         </p>
       </div>
       <p className="plan-status">
-        Planned development · The farm is not currently operational. The
-        facilities and capacities below describe the proposal we are seeking
-        partners to help deliver.
+        Historical proposal · The farm is not currently operational. These
+        facilities describe our long-term vision, not the immediate rebuilding
+        sequence. Our <a href="/development-partners/#first-stage">current proposed first stage</a> focuses on assessment and restoring water access.
       </p>
       <div className="farm-plan-grid">
         <article className="farm-plan-card" id="biogas-plant">

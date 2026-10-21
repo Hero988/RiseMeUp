@@ -462,3 +462,16 @@ footer .brand-slogan { color: #e3ac80; }
   .community-connection::after { background: linear-gradient(90deg, #c7b99b, transparent); }
   .community-connection > span { width: 75px; height: 65px; font-size: 2.7rem; }
 }
+
+/* Current rebuilding status, distinct from the historical full-farm vision. */
+.farm-readiness { margin: 50px 0; padding: 36px 40px; background: #fefaf3; color: #1e1e2a; border-radius: 24px; border-top: 4px solid #c2703a; }
+.farm .farm-readiness .eyebrow { color: #a65c30; }
+.farm-readiness h3 { font-size: 2rem; margin-bottom: 20px; }
+.farm-readiness p { color: #625c50; }
+.farm-readiness dl { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin: 28px 0; }
+.farm-readiness dl > div { border-top: 1px solid #d9cdb7; padding-top: 18px; }
+.farm-readiness dt { font-weight: 600; color: #3d5a3e; margin-bottom: 10px; }
+.farm-readiness dd { margin: 0; color: #625c50; font-size: .86rem; }
+.farm .farm-readiness .text-link { color: #3d5a3e; }
+.farm-readiness .readiness-note { font-size: .76rem; margin-top: 22px; }
+@media (max-width: 760px) { .farm-readiness { padding: 27px 24px; } .farm-readiness dl { grid-template-columns: 1fr; gap: 20px; } }

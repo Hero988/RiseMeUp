@@ -90,7 +90,7 @@ export default function SDGs() {
         </div>
         <div className="sdg-partner-invitation">
           <div><p className="eyebrow">For charities &amp; development partners</p><h3>Help turn shared goals into local progress.</h3><p>We welcome partners to refine the plan, agree realistic milestones and develop a transparent approach to measuring progress. The farm is awaiting rebuilding; the activities above are planned.</p></div>
-          <a className="button light" href="#contact">Discuss an SDG-aligned partnership <span aria-hidden="true">→</span></a>
+          <a className="button light" href="/development-partners/#planned-outcomes">View planned outcomes <span aria-hidden="true">→</span></a>
         </div>
         <p className="sdg-alignment-note">This is Risemeup’s own assessment of its planned contribution to the SDGs. It does not imply United Nations endorsement. Suggested measures are for project planning, not reported results or official UN indicators.</p>
         <p className="sdg-feature-slogan">Think globally, act locally.</p>

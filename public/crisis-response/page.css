@@ -95,3 +95,11 @@
   .response-hero .classic-badge { font-size: .72rem; }
   .response-hero h1 { font-size: 2.35rem; }
 }
+
+.photo-record { display: block; margin-top: 10px; color: #756b5d; font-size: .72rem; line-height: 1.7; }
+.response-records { background: #f4e8d1; }
+.response-records h2 { max-width: 780px; margin-bottom: 35px; }
+.response-records-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.response-records-grid h3 { font-size: 1.5rem; }
+.response-records-grid p { color: #625f55; }
+@media (max-width: 760px) { .response-records-grid { grid-template-columns: 1fr; gap: 30px; } }

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import FarmPlan from "./components/FarmPlan";
+import FarmReadiness from "./components/FarmReadiness";
 import ClassicHero from "./components/ClassicHero";
 import SDGs from "./components/SDGs";
 import TeamFlipCard from "./components/TeamFlipCard";
@@ -116,7 +117,7 @@ export default function App({
             <a href="#communities">Our communities</a>
             <a href="#virgin-mary-farm">Our projects</a>
             <a href="#team">Our team</a>
-            <a href="#partnership">Partner with us</a>
+            <a href="/development-partners/">Partner with us</a>
             <a href="#contact">Contact</a>
             <button className="button small" onClick={() => donationDialog.current?.showModal()}>Donate</button>
           </nav>
@@ -235,7 +236,7 @@ export default function App({
                 height="1280"
                 loading="lazy"
               />
-              <figcaption>Food assistance archive · Risemeup</figcaption>
+              <figcaption>Sudan food assistance archive · Risemeup · Photograph date unconfirmed. <a href="/crisis-response/#photo-records">About our records</a></figcaption>
             </figure>
             <div>
               <p className="eyebrow">What we are doing now</p>
@@ -282,7 +283,8 @@ export default function App({
               <article><span>02</span><h3>Clean energy for farming</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
               <article><span>03</span><h3>Education &amp; training</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
             </div>
-            <div className="actions"><a className="button" href="#partnership">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
+            <div className="actions"><a className="button" href="/development-partners/">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
+            <FarmReadiness />
             <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The latest land-development concept proposes a 50-hectare site. The original proposal sets out the four connected facilities below.</p>
             <FarmPlan />
             <details className="roadmap land-framework" id="land-framework">
@@ -412,12 +414,12 @@ export default function App({
             </div>
             <div className="partner-note">
               <p>
-                <strong>Start with a conversation.</strong> Discuss a specific
-                component, its requirements and how progress would be documented
-                before committing support.
+                <strong>A clear starting point for partners.</strong> Read the
+                current farm status, proposed first stage, equipment needs and
+                budget status, or download our dated two-page rebuilding brief.
               </p>
-              <a className="button" href="#contact">
-                Discuss a partnership <Arrow />
+              <a className="button" href="/development-partners/">
+                View partner information <Arrow />
               </a>
             </div>
           </div>
@@ -487,7 +489,8 @@ export default function App({
             <p className="support-disclosure">
               Donation enquiries are handled directly by the team. This website
               does not take payments. Please contact us to discuss the purpose
-              of your support and the available arrangements.
+              of your support and the available arrangements. Risemeup is not
+              currently registered in the UK. <a href="/development-partners/#accountability">Read our organisation and accountability status.</a>
             </p>
           </div>
         </section>
@@ -554,7 +557,7 @@ export default function App({
           </nav>
           <nav aria-label="Get involved">
             <a href="#team">Our team</a>
-            <a href="#partnership">Partnerships</a>
+            <a href="/development-partners/">For development partners</a>
             <a href="#donate">Donation enquiries</a>
             <a href="#contact">Contact</a>
           </nav>
