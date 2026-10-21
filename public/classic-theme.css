@@ -481,3 +481,42 @@ footer .brand-slogan { color: #e3ac80; }
 .farm-women h3 { color: #3d5a3e; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.15; margin: .7rem 0 1.3rem; }
 .farm-women p { max-width: 78ch; line-height: 1.75; }
 .farm-women .women-plan-note { font-size: .95rem; margin-top: 1.3rem; }
+
+/* Five-phase recovery roadmap: cumulative planning targets, not reported results. */
+.farm-growth { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #d9cdb7; scroll-margin-top: 115px; }
+.growth-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+.growth-heading h3 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.12; margin: .6rem 0 1.5rem; }
+.growth-heading h3 em { color: #c2703a; font-style: normal; }
+.growth-intro p, .growth-start-note, .growth-phase-detail p, .growth-income p { line-height: 1.75; }
+.growth-family-target { display: flex; gap: 1.2rem; align-items: center; border-top: 1px solid #d9cdb7; padding-top: 1rem; }
+.growth-family-target strong { font-size: 1.6rem; color: #3d5a3e; flex-shrink: 0; }
+.growth-family-target span { font-size: .85rem; }
+.growth-start-note { background: #f4e8d1; border-left: 4px solid #c2703a; padding: 1.3rem 1.6rem; margin: 1.5rem 0 0; border-radius: 0 16px 16px 0; }
+.growth-phases { list-style: none; margin: 1.5rem 0 2rem; padding: 0; }
+.growth-phases > li { display: grid; grid-template-columns: 1.1fr .8fr 1.7fr; gap: 1.8rem; border-bottom: 1px solid #d9cdb7; padding: 2rem 0; }
+.growth-phase-title { display: flex; gap: 1rem; align-items: flex-start; }
+.growth-number { color: #c2703a; font-size: 2rem; line-height: 1.2; font-family: Georgia, serif; }
+.growth-phase-title .eyebrow { margin: 0 0 .55rem; }
+.growth-phase-title h4, .growth-income h4 { color: #3d5a3e; font-size: 1.45rem; line-height: 1.2; margin: 0; }
+.growth-phase-area strong { display: block; color: #3d5a3e; font-size: 1.35rem; line-height: 1.3; }
+.growth-phase-area span { display: block; font-size: .8rem; line-height: 1.5; margin-top: .5rem; }
+.growth-phase-detail p { margin: 0; font-size: .95rem; }
+.growth-phase-detail .growth-outcome { margin-top: .8rem; color: #3d5a3e; font-size: .87rem; }
+.growth-income { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; background: #3d5a3e; color: #fefaf3; padding: clamp(1.4rem, 3vw, 2.5rem); border-radius: 24px; }
+.growth-income .eyebrow, .growth-income h4 { color: #f4e8d1; }
+.growth-income h4 { font-size: 2rem; }
+.growth-income ol { margin: 0; padding-left: 1.6rem; align-self: center; }
+.growth-income li { padding: .6rem 0 .6rem .5rem; line-height: 1.6; border-bottom: 1px solid #ffffff30; }
+.growth-note { font-size: .82rem; line-height: 1.7; color: #625c50; margin: 1.5rem 0; max-width: 100ch; }
+@media (max-width: 900px) {
+ .growth-heading { grid-template-columns: 1fr; gap: .5rem; }
+ .growth-phases > li { grid-template-columns: 1.2fr 1fr; gap: 1.2rem; }
+ .growth-phase-detail { grid-column: 1 / -1; }
+ .growth-income { grid-template-columns: 1fr; gap: 1rem; }
+}
+@media (max-width: 480px) {
+ .growth-family-target { flex-direction: column; align-items: flex-start; gap: .4rem; }
+ .growth-phases > li { grid-template-columns: 1fr; }
+ .growth-phase-area { padding-left: 3rem; }
+ .growth-phase-detail { grid-column: auto; }
+}

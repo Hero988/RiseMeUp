@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import FarmPlan from "./components/FarmPlan";
 import FarmReadiness from "./components/FarmReadiness";
+import FarmRoadmap from "./components/FarmRoadmap";
 import ClassicHero from "./components/ClassicHero";
 import SDGs from "./components/SDGs";
 import TeamFlipCard from "./components/TeamFlipCard";
@@ -295,65 +296,7 @@ export default function App({
             <FarmReadiness />
             <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The farm covers 130 hectares (approximately 321 acres), as confirmed by founder Iman Tadros. The original proposal sets out the four connected facilities below.</p>
             <FarmPlan />
-            <details className="roadmap land-framework" id="land-framework">
-              <summary>
-                How the newer land-development concept supports the farm plan
-              </summary>
-              <div className="section-head">
-                <div>
-                  <p className="eyebrow">The development pathway</p>
-                  <h3>The land-development framework.</h3>
-                </div>
-                <p>
-                  The farm totals 130 hectares (approximately 321 acres).
-                  The earlier concept below illustrates 50 hectares of staged
-                  development within that total. Final areas must be checked by
-                  survey and allow for buildings, access, water infrastructure
-                  and other site needs. It is a separate planning framework from
-                  the four facility phases in the original proposal.
-                </p>
-              </div>
-              <div className="phase-grid">
-                <article>
-                  <span className="phase-number">01</span>
-                  <h4>Foundation</h4>
-                  <p className="phase-meta">15 hectares · Proposed years 1–2</p>
-                  <p>
-                    Prepare land and infrastructure; establish greenhouses,
-                    open-field crops, a nursery, solar power, irrigation and
-                    basic storage.
-                  </p>
-                </article>
-                <article>
-                  <span className="phase-number">02</span>
-                  <h4>Expansion</h4>
-                  <p className="phase-meta">
-                    20 additional hectares · Proposed years 3–4
-                  </p>
-                  <p>
-                    Expand production and water systems; add energy storage,
-                    washing, grading, packing and cold storage.
-                  </p>
-                </article>
-                <article>
-                  <span className="phase-number">03</span>
-                  <h4>Consolidation</h4>
-                  <p className="phase-meta">
-                    15 additional hectares · Proposed years 5–6
-                  </p>
-                  <p>
-                    Diversify crops, improve processing, develop compost and
-                    biogas capacity, and establish a training and innovation
-                    centre.
-                  </p>
-                </article>
-              </div>
-              <p className="fine-print">
-                These are proposed activities, not completed infrastructure or a
-                promise of future returns. Costs, outputs and operating
-                assumptions need review with technical and development partners.
-              </p>
-            </details>
+            <FarmRoadmap />
             <a className="mango-callout" href="/mango-project/">
               <img
                 src="/mango-hero.jpg"
