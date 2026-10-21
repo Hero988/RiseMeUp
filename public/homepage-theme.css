@@ -1,0 +1,182 @@
+/* The approved warm cream homepage, with the original Risemeup logo. */
+.home-page .announcement {
+  background: #1d542d;
+  color: #fffefa;
+}
+.home-page .site-header {
+  background: #fffefa;
+  border-color: #dadfce;
+  color: #263e2c;
+}
+.home-page .header-inner {
+  min-height: 100px;
+  gap: 24px;
+}
+.home-page .site-header .brand img {
+  width: 210px;
+  height: auto;
+}
+.home-page .site-header nav {
+  gap: 20px;
+  color: #263e2c;
+}
+.home-page .site-header nav > a:hover {
+  color: #9e431e;
+}
+.home-page .site-header .button,
+.home-page .classic-hero .button:not(.outline) {
+  background: #1d542d;
+  color: #fffefa;
+  border: 1px solid #1d542d;
+  border-radius: 6px;
+  box-shadow: none;
+}
+.home-page .site-header .button:hover,
+.home-page .classic-hero .button:not(.outline):hover {
+  background: #153f22;
+  border-color: #153f22;
+}
+.home-page .menu-button {
+  color: #1d542d;
+  border-color: #a9b69c;
+  border-radius: 6px;
+}
+.home-page .classic-hero {
+  color: #263e2c;
+  background: #f9f5eb;
+  padding: 56px 0 64px;
+}
+.home-page .classic-hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 80px);
+}
+.home-page .classic-hero-grid > * {
+  min-width: 0;
+}
+.home-page .classic-hero .classic-badge {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  color: #52634a;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.home-page .classic-hero .classic-badge::before {
+  background: #ca5727;
+}
+.home-page .classic-hero h1 {
+  color: #263e2c;
+}
+.home-page .classic-hero h1 em {
+  color: #b54d22;
+}
+.home-page .classic-hero-copy > p:not(.classic-badge):not(.classic-slogan) {
+  color: #4b5b48;
+}
+.home-page .classic-hero-lead strong {
+  color: #263e2c;
+  font-weight: 600;
+}
+.home-page .classic-hero .button.outline {
+  color: #1d542d;
+  border: 1px solid #8c9e80;
+  border-radius: 6px;
+  background: transparent;
+  box-shadow: none;
+}
+.home-page .classic-hero .button.outline:hover {
+  background: #e7edda;
+}
+.home-page .classic-farm-link {
+  color: #395338;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.home-page .classic-farm-link::before {
+  background: #b54d22;
+}
+.home-page .classic-hero .classic-slogan {
+  color: #815328;
+}
+.home-page .classic-community-panel {
+  background: #e7edda;
+  border-color: #d4ddc7;
+  border-radius: 190px 190px 12px 12px;
+}
+.home-page .classic-community-panel .eyebrow {
+  color: #52634a;
+}
+.home-page .classic-community-panel h2 {
+  color: #263e2c;
+}
+.home-page .classic-panel-label {
+  color: #4e634a;
+}
+.home-page .classic-ampersand {
+  color: #9f5524;
+}
+.home-page .classic-panel-message::before {
+  background: #a3b18f;
+}
+.home-page .classic-panel-message p {
+  color: #3d5337;
+}
+.home-page .classic-panel-message a {
+  color: #8d431f;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.home-page .site-header a:focus-visible,
+.home-page .site-header button:focus-visible,
+.home-page .classic-hero a:focus-visible {
+  outline: 3px solid #a44420;
+  outline-offset: 5px;
+}
+@media (max-width: 1160px) {
+  .home-page .site-header .brand img {
+    width: 190px;
+  }
+  .home-page .site-header nav {
+    gap: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .home-page .header-inner {
+    min-height: 90px;
+  }
+  .home-page .site-header nav {
+    background: #fffefa;
+    border-color: #dadfce;
+    gap: 0;
+    max-height: calc(100dvh - 90px);
+  }
+  .home-page .classic-hero-grid {
+    gap: 40px;
+  }
+}
+@media (max-width: 760px) {
+  .home-page .site-header .brand img {
+    width: 185px;
+  }
+  .home-page .classic-hero {
+    padding: 40px 0 48px;
+  }
+  .home-page .classic-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+  }
+  .home-page .classic-community-panel {
+    border-radius: 150px 150px 12px 12px;
+  }
+}
+@media (max-width: 360px) {
+  .home-page .header-inner {
+    gap: 14px;
+  }
+  .home-page .site-header .brand img {
+    width: 170px;
+  }
+}
