@@ -1,0 +1,138 @@
+/* Shared header and footer colours for every Risemeup page. */
+.warm-brand .site-header,
+.warm-brand .masthead {
+  background: #fffefa;
+  color: #263e2c;
+  border-color: #dadfce;
+}
+.warm-brand .header-inner {
+  min-height: 100px;
+}
+.warm-brand .site-header .brand img,
+.warm-brand .masthead .mark img {
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+}
+.warm-brand .site-header nav,
+.warm-brand .masthead nav,
+.warm-brand .masthead .right {
+  color: #263e2c;
+}
+.warm-brand .masthead nav a,
+.warm-brand .masthead .right {
+  opacity: 1;
+}
+.warm-brand .site-header nav > a:hover,
+.warm-brand .masthead nav a:hover {
+  color: #9e431e;
+}
+.warm-brand .site-header .button {
+  background: #1d542d;
+  color: #fffefa;
+  border: 1px solid #1d542d;
+  border-radius: 6px;
+  box-shadow: none;
+}
+.warm-brand .site-header .button:hover {
+  background: #153f22;
+  border-color: #153f22;
+}
+.warm-brand .menu-button,
+.warm-brand .mobile-menu summary {
+  color: #1d542d;
+  border-color: #a9b69c;
+  border-radius: 6px;
+}
+.warm-brand .mobile-menu > div {
+  background: #fffefa;
+  color: #263e2c;
+  border-color: #dadfce;
+}
+.warm-brand footer,
+.warm-brand .response-footer,
+.warm-brand .partners-footer {
+  background: #f9f5eb;
+  color: #263e2c;
+  border-top: 1px solid #d4ddc7;
+}
+.warm-brand footer .brand {
+  display: inline-flex;
+  width: min(240px, 100%);
+  background: transparent;
+  padding: 0;
+}
+.warm-brand footer .brand img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.warm-brand footer p {
+  color: #4b5b48;
+}
+.warm-brand footer .brand-slogan,
+.warm-brand footer .tag,
+.warm-brand .response-footer p,
+.warm-brand .partners-footer p {
+  color: #815328;
+}
+.warm-brand footer a,
+.warm-brand footer nav,
+.warm-brand footer h5 {
+  color: #1d542d;
+}
+.warm-brand footer a:hover {
+  color: #9e431e;
+  text-decoration: underline;
+}
+.warm-brand footer .fine,
+.warm-brand .footer-bottom {
+  color: #52634a;
+  border-color: #d4ddc7;
+}
+.warm-brand .site-header a:focus-visible,
+.warm-brand .site-header button:focus-visible,
+.warm-brand .masthead a:focus-visible,
+.warm-brand .mobile-menu summary:focus-visible,
+.warm-brand footer a:focus-visible {
+  outline: 3px solid #a44420;
+  outline-offset: 5px;
+}
+@media (max-width: 1160px) {
+  .warm-brand .site-header .brand img,
+  .warm-brand .masthead .mark img {
+    width: 190px;
+  }
+}
+@media (max-width: 1000px) {
+  .warm-brand .header-inner {
+    min-height: 90px;
+  }
+  .warm-brand .site-header nav {
+    background: #fffefa;
+    color: #263e2c;
+    border-color: #dadfce;
+  }
+}
+@media (max-width: 760px) {
+  .warm-brand .site-header .brand img,
+  .warm-brand .masthead .mark img {
+    width: 185px;
+  }
+  .warm-brand .response-footer nav,
+  .warm-brand .partners-footer nav {
+    justify-content: center;
+  }
+  .warm-brand footer nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+@media (max-width: 360px) {
+  .warm-brand .site-header .brand img,
+  .warm-brand .masthead .mark img {
+    width: 170px;
+  }
+}
