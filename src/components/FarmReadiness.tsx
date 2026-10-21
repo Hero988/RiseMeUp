@@ -13,7 +13,7 @@ export default function FarmReadiness() {
         <div><dt>First proposed stage</dt><dd>Assess the seven destroyed wells; establish a viable initial water source through rehabilitation or replacement as advised; build new water storage and an initial growing and education area. Specifications and costs await assessment and quotations.</dd></div>
       </dl>
       <div className="actions"><a className="button" href="/development-partners/">For development partners →</a><a className="text-link" href="/development-partners/#equipment">View equipment needs →</a></div>
-      <p className="readiness-note">This is a planning update, not a site inspection. The latest post-war assessment date and current safe access have not yet been confirmed.</p>
+      <p className="readiness-note">Latest visit: approximately mid-October 2026, according to Iman’s update on 21 October; the exact date is unconfirmed. A dated technical assessment is still needed. With the war ongoing, safe access must be checked before each visit or delivery.</p>
     </section>
   );
 }

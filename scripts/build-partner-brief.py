@@ -38,7 +38,7 @@ def header(c,doc):
  c.setFillColor(RUST);c.setFont('Helvetica-Bold',8)
  c.drawRightString(W-42,H-40,'VIRGIN MARY FARM | PARTNER BRIEF')
  c.setFillColor(MUTED);c.setFont('Helvetica',8)
- c.drawRightString(W-42,H-55,'21 October 2026 | Version 2')
+ c.drawRightString(W-42,H-55,'21 October 2026 | Version 3')
  c.setStrokeColor(colors.HexColor('#d9cdb7'));c.line(42,H-81,W-42,H-81)
  c.line(42,38,W-42,38)
  c.setFont('Helvetica',7.4);c.drawString(42,25,'Risemeup | Committed to grow rural communities.')
@@ -55,7 +55,7 @@ story += [p('Farm status and readiness','h2')]
 status=[
  ('Land and rights','Iman Tadros identifies the landowner as the Coptic Orthodox Church in Sudan, Khartoum-Omdurman, and confirms permission to use the land. Ownership evidence and written project-use terms, including the legal recipient and duration, still need review.'),
  ('Water and damage','The farm was destroyed during the war. Iman reports all seven wells destroyed and all pumping equipment stolen. New water storage must be built. A technical assessment must establish rehabilitation or replacement needs and water availability; no operational supply is confirmed.'),
- ('Assessment and access','No dated post-war technical assessment is available for publication. Current safe access, delivery routes and secure equipment storage are unconfirmed. This brief\'s date is not a site-inspection date.'),
+ ('Visit and access','On 21 October, Iman reported a visit last week: approximately mid-October 2026; exact date unconfirmed. This is not a confirmed technical assessment. A dated technical report is still needed. With the war ongoing, safe access must be checked before each visit or delivery. Secure equipment storage remains unconfirmed.'),
  ('Management and status','Iman identifies Bishop Sarabon and farm manager Jhone Wadeea as the local contacts responsible for the farm. Detailed rebuilding, custody and maintenance roles need documentation. Risemeup is not registered in the UK; Iman is the partner contact.')]
 story += [table([[p(a,'label'),p(b,'cell')] for a,b in status],[99,W-84-99])]
 story += [p('A proposed first stage, with clear decision points','h2')]
