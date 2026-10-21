@@ -9,6 +9,7 @@ export default function FarmReadiness() {
       <dl>
         <div><dt>Land &amp; permission</dt><dd>The farm belongs to the Coptic Orthodox Church in Sudan, Khartoum–Omdurman, according to founder Iman Tadros. She confirms permission to use the land; the written project-use terms still need review.</dd></div>
         <div><dt>Project coordination</dt><dd>Iman Tadros coordinates partner enquiries and machinery-donation paperwork. Bishop Sarabon and farm manager Jhone Wadeea are the founder-identified local contacts in Sudan.</dd></div>
+        <div><dt>Intended equipment ownership</dt><dd>Donated machinery and project equipment are intended to belong to Virgin Mary Farm together with Risemeup, for the farm’s community purpose. Legal title and responsibilities will be recorded in written agreements with the Church and donors.</dd></div>
         <div><dt>Before equipment delivery</dt><dd>A dated technical assessment, safe access, secure equipment storage and an agreed maintenance plan must be established.</dd></div>
         <div><dt>First proposed stage</dt><dd>Assess the seven destroyed wells; establish a viable initial water source through rehabilitation or replacement as advised; build new water storage and an initial growing and education area. Specifications and costs await assessment and quotations.</dd></div>
       </dl>

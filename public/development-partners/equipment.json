@@ -1,6 +1,11 @@
 {
   "updated": "21 October 2026",
   "status": "Proposed scope; technical assessment and quotations pending",
+  "ownership": {
+    "intendedArrangement": "Donated machinery and project equipment are intended to belong to Virgin Mary Farm together with Risemeup, for the farm's community purpose, according to founder Iman Tadros.",
+    "documentation": "Legal recipient and title, donor conditions, custody, maintenance and transfer or disposal rules require written agreements with the Church and donors before acceptance or delivery.",
+    "land": "This intended equipment arrangement does not change the identified Church ownership of the land."
+  },
   "items": [
     {
       "id": "pumping",
