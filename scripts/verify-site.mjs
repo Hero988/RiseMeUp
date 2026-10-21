@@ -100,7 +100,7 @@ const roadmap = read('src/components/FarmRoadmap.tsx');
 for (const content of [partnerPage, roadmap]) {
   check(!/100,000|177,000|35,000|55,000/.test(content), 'Public pages do not present unverified machinery prices');
   check(!content.includes('/virgin-mary-phase-one-equipment.jpeg'), 'Price-bearing poster is not linked');
-  check(content.includes('/virgin-mary-equipment-needs.svg'), 'Public equipment visual remains available');
+  check(content.includes('/virgin-mary-phase-one-machinery.jpg'), 'Restored price-free machinery picture is available');
 }
 check(!existsSync(path.join(root,'public/virgin-mary-phase-one-equipment.jpeg')), 'Unverified price poster is not served as a public asset');
 check(partnerPage.includes('What we publish and what we keep private'), 'Public/private information approach is explained');
