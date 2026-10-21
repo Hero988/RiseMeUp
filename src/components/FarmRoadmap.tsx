@@ -56,6 +56,18 @@ export default function FarmRoadmap() {
         <figcaption>Your supplied planning illustration. The pictures show a future vision, not existing farm facilities. Areas, 300+ families and income allocations are illustrative targets; costs, financial shares and the potential for self-financing still need assessment and agreement.</figcaption>
       </figure>
       <a className="button growth-view-image" href="/virgin-mary-five-phase-plan-original-logo.png" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
+      <section className="growth-phase-one" id="phase-one-equipment" aria-labelledby="phase-one-equipment-title">
+        <p className="eyebrow">A closer look at Phase 1</p>
+        <h4 id="phase-one-equipment-title">The tools to start growing.</h4>
+        <p>Our proposed first production block brings together machinery, irrigation and practical training. The illustration explores a 20–30 hectare starting area; the area and equipment will depend on the water assessment and agreed funding.</p>
+        <figure className="growth-illustration">
+          <a href="/virgin-mary-phase-one-equipment.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the Phase 1 equipment and preliminary budget picture at full size in a new tab">
+            <img src="/virgin-mary-phase-one-equipment.jpeg" width="1024" height="1536" loading="lazy" alt="Virgin Mary Farm proposed Phase 1: a tractor, cultivation and planting implements, trailer, sprayer, irrigation equipment, tools and safety equipment for an indicative 20–30 hectare production block. Preliminary concept estimate: 100,000 to 177,000 US dollars, awaiting quotations." />
+          </a>
+          <figcaption>Supplied planning illustration, not existing or purchased equipment. The US$100,000–177,000 range is a preliminary concept estimate, not a supplier quotation or a complete rebuilding budget. The illustration excludes land purchase, buildings and major power infrastructure; well works, new water storage and delivery requirements still need assessment and costing.</figcaption>
+        </figure>
+        <div className="actions"><a className="button" href="/virgin-mary-phase-one-equipment.jpeg" target="_blank" rel="noopener noreferrer">Open the Phase 1 picture ↗</a><a className="text-link" href="/development-partners/#phase-one-concept">Explore equipment and budget details →</a></div>
+      </section>
       <details className="growth-details">
       <summary>Read the five phases and funding approach</summary>
       <p className="growth-start-note"><strong>Water comes first.</strong> The technically assessed first growing area may be smaller than the indicative Phase 1 target. Safe access, water availability, secure storage, an agreed budget and trained operators must be established before production starts.</p>

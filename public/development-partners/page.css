@@ -170,6 +170,16 @@
  .organisation-note, .private-records { padding: 24px; }
  .budget-table th, .budget-table td { padding-right: 4px; font-size: .8rem; }
 }
+.phase-one-concept { margin: 35px 0; padding-bottom: 10px; scroll-margin-top: 120px; }
+.phase-one-concept h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: #202b21; }
+.phase-one-concept > p { max-width: 85ch; }
+.phase-one-picture { margin: 28px auto 22px; max-width: 1024px; }
+.phase-one-picture > a { display: block; border-radius: 18px; overflow: hidden; background: #fefaf3; }
+.phase-one-picture img { display: block; width: 100%; height: auto; object-fit: contain; }
+.phase-one-picture figcaption { margin-top: 14px; color: #625f55; font-size: .85rem; line-height: 1.7; }
+.phase-one-costs { margin: 24px 0; padding: 0 0 16px; border-top: 1px solid #dfd4be; border-bottom: 1px solid #dfd4be; }
+.phase-one-costs > summary { padding: 20px 0 4px; color: #243e2c; font-weight: 600; cursor: pointer; }
+.phase-one-costs .budget-table { margin-top: 20px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
  .site-header, .partners-jump, .partners-footer, .skip-link { display: none; }
