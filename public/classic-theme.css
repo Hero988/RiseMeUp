@@ -254,14 +254,17 @@ footer .brand-slogan { color: #e3ac80; }
 .section-head > .eyebrow { max-width: none; color: #a65c30; margin-top: 0; }
 .section-head > .eyebrow::before, .classic-about .eyebrow::before { content: ""; display: inline-block; width: 25px; height: 1px; background: currentColor; vertical-align: middle; margin-right: 12px; }
 #about.classic-about { background: #fff; }
-.classic-about-grid, .classic-founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.classic-about-grid, .classic-founder-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.classic-about-grid > * { min-width: 0; }
 .classic-image-wrap { position: relative; }
 .classic-image-wrap > img { width: 100%; min-height: 430px; object-fit: cover; border-radius: 26px; }
-.classic-image-badge { position: absolute; right: -18px; bottom: -22px; padding: 20px 28px; background: #fff; box-shadow: 0 10px 32px #251c1917; border-radius: 20px; text-align: center; color: #3d5a3e; }
-.classic-image-badge strong { display: block; font: 600 2rem/1.3 "Fraunces", Georgia, serif; }
-.classic-image-badge span { display: block; font-size: .82rem; color: #6d675f; }
+.classic-image-badge { position: absolute; right: -18px; bottom: -22px; padding: 20px 28px; background: #fff; border: 1px solid #d8cbb8; box-shadow: 0 12px 32px #251c1924; border-radius: 20px; text-align: center; color: #173c27; }
+.classic-image-badge strong { display: block; font: 700 2.2rem/1.15 "Fraunces", Georgia, serif; letter-spacing: -.01em; color: #173c27; }
+.classic-image-badge span { display: block; margin-top: 5px; font-size: .84rem; font-weight: 600; color: #4b4842; }
 .classic-about .lead, .classic-founder .lead { font-size: 1.05rem; font-weight: 600; }
 .classic-about h2, .classic-founder h2 { font-size: clamp(2.2rem, 3.2vw, 3rem); }
+.classic-about h2 { color: #171923; font-weight: 700; line-height: 1.1; overflow-wrap: break-word; }
+.classic-about-emphasis { display: block; color: #171923; font-weight: 700; font-variant-ligatures: none; letter-spacing: -.015em; }
 .classic-about-slogan { margin: 28px 0 0; font: italic 1.4rem/1.5 "Fraunces", serif; color: #a65c30; }
 .classic-values { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
 .classic-values > div { display: flex; align-items: center; gap: 12px; padding: 16px; background: #fefaf3; border: 1px solid #eee5d7; border-radius: 14px; }
