@@ -11,7 +11,7 @@ export default function About() {
           <div className="about-image" />
           <div className="about-image-badge">
             <div className="number">130</div>
-            <div className="label">Acres of Farmland</div>
+            <div className="label">Hectares of Farmland</div>
           </div>
         </div>
         <div className="about-content reveal-right" ref={rightRef}>
@@ -23,7 +23,7 @@ export default function About() {
             endured decades of conflict and genocide.
           </p>
           <p>
-            Based in London, we work to transform 130 acres of poor-land into
+            Based in London, we work to transform 130 hectares of poor-land into
             productive farmland, creating sustainable livelihoods through
             horticulture, farming, and green energy infrastructure.
           </p>

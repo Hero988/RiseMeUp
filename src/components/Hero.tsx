@@ -156,8 +156,7 @@ export default function Hero({ onDonate }: HeroProps) {
           </h1>
           <p className="hero-sub">
             Supporting the Nuba Mountain community in Sudan through sustainable
-            horticulture, farming, and green energy infrastructure across 130
-            acres.
+            horticulture, farming, and green energy infrastructure across 130 hectares.
           </p>
           <div className="hero-buttons">
             <button className="btn-primary" onClick={onDonate}>
@@ -187,7 +186,7 @@ export default function Hero({ onDonate }: HeroProps) {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
               <div className="card-text">
-                <strong>130 Acres</strong>
+                <strong>130 hectares</strong>
                 <span>Farmland Development</span>
               </div>
             </div>

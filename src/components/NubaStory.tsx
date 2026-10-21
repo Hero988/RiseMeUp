@@ -236,7 +236,7 @@ export default function NubaStory({ onDonate }: NubaStoryProps) {
               <em>We refuse to let silence take the rest.</em>
             </h3>
             <p>
-              RiseMeUp is not a photograph, and it is not a headline. It is 130 acres of dry land in
+              RiseMeUp is not a photograph, and it is not a headline. It is 130 hectares of dry land in
               the Nuba Mountains being turned — slowly, deliberately, by the community itself — into
               farms, orchards, and greenhouses. Food instead of fear. Work instead of waiting.
               Dignity in place of disappearance.

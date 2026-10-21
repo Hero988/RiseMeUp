@@ -22,7 +22,7 @@ export default function VisionMission() {
             </div>
             <h3>Our Vision</h3>
             <p>
-              Taking steps towards sustainable development by developing 130 acres of poor-land into horticulture, farming and implementing Green Energy as the main source of infrastructure for the farm.
+              Taking steps towards sustainable development by developing 130 hectares of poor-land into horticulture, farming and implementing Green Energy as the main source of infrastructure for the farm.
             </p>
           </div>
           <div className="heart-card mission reveal reveal-delay-2" ref={missionRef}>
@@ -31,7 +31,7 @@ export default function VisionMission() {
             </div>
             <h3>Our Mission</h3>
             <p>
-              Turning 130 acres of non-productive land into productive farmland, creating new agricultural job opportunities to help, support the neediest and excluded within this rural community to end poverty.
+              Turning 130 hectares of non-productive land into productive farmland, creating new agricultural job opportunities to help, support the neediest and excluded within this rural community to end poverty.
             </p>
           </div>
         </div>

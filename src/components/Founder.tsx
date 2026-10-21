@@ -44,7 +44,7 @@ export default function Founder() {
             shuttered, a warm plate is the difference between despair and
             another day of hope. Risemeup is the long-term shape of that work:
             turning emergency aid into sustainable livelihoods, and turning
-            130 acres of fragile land into a future the next generation can
+            130 hectares of fragile land into a future the next generation can
             inherit.
           </p>
 

@@ -293,7 +293,7 @@ export default function App({
               <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
             </section>
             <FarmReadiness />
-            <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The latest land-development concept proposes a 50-hectare site. The original proposal sets out the four connected facilities below.</p>
+            <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The farm covers 130 hectares (approximately 321 acres), as confirmed by founder Iman Tadros. The original proposal sets out the four connected facilities below.</p>
             <FarmPlan />
             <details className="roadmap land-framework" id="land-framework">
               <summary>
@@ -305,9 +305,12 @@ export default function App({
                   <h3>The land-development framework.</h3>
                 </div>
                 <p>
-                  The newer 50-hectare concept proposes three stages of land
-                  development. This is a separate planning framework from the
-                  four facility phases in the original proposal.
+                  The farm totals 130 hectares (approximately 321 acres).
+                  The earlier concept below illustrates 50 hectares of staged
+                  development within that total. Final areas must be checked by
+                  survey and allow for buildings, access, water infrastructure
+                  and other site needs. It is a separate planning framework from
+                  the four facility phases in the original proposal.
                 </p>
               </div>
               <div className="phase-grid">
