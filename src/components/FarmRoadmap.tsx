@@ -50,12 +50,12 @@ export default function FarmRoadmap() {
         </div>
       </div>
       <figure className="growth-illustration">
-        <a href="/virgin-mary-five-phase-plan-original-logo.png" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated five-phase farm plan at full size in a new tab">
-          <img src="/virgin-mary-five-phase-plan-original-logo.png" width="1024" height="1536" loading="lazy" alt="Proposed Virgin Mary Farm recovery roadmap: start production, expand farming, build commercial capacity, add value and develop the full 130-hectare farm, with income intended to support gradual reinvestment." />
+        <a href="/virgin-mary-five-phase-roadmap.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated five-phase farm plan at full size in a new tab">
+          <img src="/virgin-mary-five-phase-roadmap.jpeg" width="1024" height="1536" loading="lazy" alt="Proposed Virgin Mary Farm recovery roadmap: start production, expand farming, build commercial capacity, add value and develop the full 130-hectare farm, with income intended to support gradual reinvestment." />
         </a>
         <figcaption>Your supplied planning illustration. The pictures show a future vision, not existing farm facilities. Areas, 300+ families and income allocations are illustrative targets; costs, financial shares and the potential for self-financing still need assessment and agreement.</figcaption>
       </figure>
-      <a className="button growth-view-image" href="/virgin-mary-five-phase-plan-original-logo.png" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
+      <a className="button growth-view-image" href="/virgin-mary-five-phase-roadmap.jpeg" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
       <section className="growth-phase-one" id="phase-one-equipment" aria-labelledby="phase-one-equipment-title">
         <p className="eyebrow">A closer look at Phase 1</p>
         <h4 id="phase-one-equipment-title">The tools to start growing.</h4>
