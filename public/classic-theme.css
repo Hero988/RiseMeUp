@@ -468,7 +468,7 @@ footer .brand-slogan { color: #e3ac80; }
 .farm .farm-readiness .eyebrow { color: #a65c30; }
 .farm-readiness h3 { font-size: 2rem; margin-bottom: 20px; }
 .farm-readiness p { color: #625c50; }
-.farm-readiness dl { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin: 28px 0; }
+.farm-readiness dl { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 28px 0; }
 .farm-readiness dl > div { border-top: 1px solid #d9cdb7; padding-top: 18px; }
 .farm-readiness dt { font-weight: 600; color: #3d5a3e; margin-bottom: 10px; }
 .farm-readiness dd { margin: 0; color: #625c50; font-size: .86rem; }

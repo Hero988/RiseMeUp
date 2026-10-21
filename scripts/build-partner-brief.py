@@ -38,7 +38,7 @@ def header(c,doc):
  c.setFillColor(RUST);c.setFont('Helvetica-Bold',8)
  c.drawRightString(W-42,H-40,'VIRGIN MARY FARM | PARTNER BRIEF')
  c.setFillColor(MUTED);c.setFont('Helvetica',8)
- c.drawRightString(W-42,H-55,'21 October 2026 | Version 1')
+ c.drawRightString(W-42,H-55,'21 October 2026 | Version 2')
  c.setStrokeColor(colors.HexColor('#d9cdb7'));c.line(42,H-81,W-42,H-81)
  c.line(42,38,W-42,38)
  c.setFont('Helvetica',7.4);c.drawString(42,25,'Risemeup | Committed to grow rural communities.')
@@ -53,15 +53,15 @@ story=[]
 story += [p('Rebuilding starts with water.','title'),p('A proposed first step towards food, livelihoods and sustainable farming education for Sudan\'s Coptic Orthodox and Nuba Mountains communities.'),p('<b>Current stage:</b> planning and assessment. The farm is not operational and is not yet ready for equipment delivery. Technical specifications and costs are pending.','small')]
 story += [p('Farm status and readiness','h2')]
 status=[
- ('Land and rights','Founder Iman Tadros reports that the Coptic Church owns the farm in Omdurman, Khartoum, and has given her full access. Ownership evidence and written project-use terms, including the legal recipient and duration, need confirmation.'),
- ('Water and damage','The farm was destroyed during the war. Iman reports seven existing wells and that all pumping equipment was stolen. Well condition, yield and water quality require assessment; no operational supply is confirmed.'),
+ ('Land and rights','Iman Tadros identifies the landowner as the Coptic Orthodox Church in Sudan, Khartoum-Omdurman, and confirms permission to use the land. Ownership evidence and written project-use terms, including the legal recipient and duration, still need review.'),
+ ('Water and damage','The farm was destroyed during the war. Iman reports all seven wells destroyed and all pumping equipment stolen. New water storage must be built. A technical assessment must establish rehabilitation or replacement needs and water availability; no operational supply is confirmed.'),
  ('Assessment and access','No dated post-war technical assessment is available for publication. Current safe access, delivery routes and secure equipment storage are unconfirmed. This brief\'s date is not a site-inspection date.'),
- ('Management and status','The rebuilding stage\'s Sudan site manager, custodian and maintenance provider are not yet confirmed. Risemeup is not currently registered in the UK. Iman is the named partner contact.')]
+ ('Management and status','Iman identifies Bishop Sarabon and farm manager Jhone Wadeea as the local contacts responsible for the farm. Detailed rebuilding, custody and maintenance roles need documentation. Risemeup is not registered in the UK; Iman is the partner contact.')]
 story += [table([[p(a,'label'),p(b,'cell')] for a,b in status],[99,W-84-99])]
 story += [p('A proposed first stage, with clear decision points','h2')]
 steps=[
- '<b>1. Assess and agree:</b> confirm land-use terms, local responsibilities and safe access; assess all seven wells, including water testing and test pumping.',
- '<b>2. Design and cost:</b> select one suitable well if viable; define the initial growing area and training plan; obtain quotations and agree the budget, asset ownership and funding arrangements.',
+ '<b>1. Assess and agree:</b> confirm land-use terms, local responsibilities and safe access; assess all seven destroyed wells and the feasibility of rehabilitation or replacement, including water availability and quality.',
+ '<b>2. Design and cost:</b> plan an initial viable water source and new water storage; define the growing and training area; obtain quotations and agree the budget, asset ownership and funding arrangements.',
  '<b>3. Install and hand over:</b> establish secure custody, deliver compatible equipment, commission the system and train named operators with a maintenance schedule.',
  '<b>4. Grow and review:</b> run a supervised growing and training cycle, record water use, participation, costs and crop performance, then review expansion with communities and partners.'
 ]
@@ -70,19 +70,19 @@ story += [p('The full vision remains Virgin Mary Farm','h2'),p('Ten planned gree
 story += [PageBreak(),p('A defined contribution. A shared plan.','title')]
 story += [p('Equipment priorities and budget status','h2')]
 short_specs=[
- 'Pump, pipes, cables and protection. Size after well tests.',
+ 'Well works as assessed; pump, pipes, cables and protection.',
  'Panels, mounting and controls matched to the pump.',
- 'Tanks, filters and valves. Capacity follows water demand.',
+ 'New tanks, supports, filters and valves; size after assessment.',
  'Pipes and drip network sized to the initial growing area.',
  'Hand tools, protective equipment and teaching materials.',
  'Secure storage, mounting and asset-custody arrangements.'
 ]
-short_qty=['1 initial well system, if viable','1 matched power package','1 system; tank count / size pending','1 area; hectares / length pending','1 package; tool counts pending','1 site package; scope pending']
+short_qty=['1 initial water-source system, if viable','1 matched power package','1 system; tank count / size pending','1 area; hectares / length pending','1 package; tool counts pending','1 site package; scope pending']
 rows=[[p('Equipment / purpose','label'),p('Provisional quantity and specification','label')]]
 for i,item in enumerate(DATA['items']):
  rows.append([p(f"<b>{escape(item['name'])}</b>",'cell'),p(escape(short_qty[i])+'. '+escape(short_specs[i]),'cell')])
 story += [table(rows,[192,W-84-192],True),Spacer(1,7),p('<b>Every item: cost awaiting quotation.</b> Proposed operators include a local pump operator, irrigation caretaker, trainer and site custodian, supported by qualified suppliers. Names, service agreements and maintenance budgets are not yet confirmed. Detailed purposes, specifications and responsibilities are listed on the partner webpage.','small')]
-story += [p('Budget summary: no total funding request set','h2'),p('Cost areas awaiting quotations: site and seven-well assessment; pump and solar power; storage and irrigation; installation and delivery; security and custody; training, tools and first-season inputs. Maintenance and contingency await a costed plan. Unknown costs are not zero. Quotations must include currency, date, applicable charges, installation and warranty.','small')]
+story += [p('Budget summary: no total funding request set','h2'),p('Cost areas awaiting quotations: site and seven-well assessment; well rehabilitation or replacement, pump and solar power; new storage and irrigation; installation and delivery; security and custody; training, tools and first-season inputs. Maintenance and contingency await a costed plan. Unknown costs are not zero. Quotations must include currency, date, applicable charges, installation and warranty.','small')]
 story += [p('Community benefit and accountability','h2'),p('Proposed arrangements include transparent, needs-based participation; consultation with both communities, including women, young people and displaced families; agreed asset ownership and custody; and farm income supporting operations, maintenance, education and community benefit. Separate project records, documented approvals, receipts and an asset register are proposed. Formal safeguarding, complaints and financial policies are not yet published and must be adopted and used before implementation.','small')]
 story += [p('Measure progress, protect evidence','h2'),p('<b>SDGs 7, 9, 10 and 12:</b> proposed measures include renewable energy generated, wells commissioned, water delivered, hectares irrigated, training participation and completion, and organic material reused. Targets and baselines await assessment. Alignment is not UN approval, certification or endorsement.','small'),p('Food-support photographs and the founder\'s account are available online; exact photograph dates and distribution totals remain unverified. References require records and permission. Land documents, well records, quotations and other sensitive supporting evidence can be discussed privately, subject to availability.','small')]
 story += [p('Contact Iman Tadros | Founder, Risemeup','h2'),p('<link href="mailto:i.tradros@risemeup.org" color="#3d5a3e">i.tradros@risemeup.org</link> | +44 786 797 7844<br/><link href="https://www.risemeup.org/development-partners/" color="#3d5a3e">www.risemeup.org/development-partners/</link>','body')]
