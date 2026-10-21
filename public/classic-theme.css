@@ -489,25 +489,25 @@ footer .brand-slogan { color: #e3ac80; }
 .growth-heading h3 em { color: #c2703a; font-style: normal; }
 .growth-intro p, .growth-start-note, .growth-phase-detail p, .growth-income p { line-height: 1.75; }
 .growth-family-target { display: flex; gap: 1.2rem; align-items: center; border-top: 1px solid #d9cdb7; padding-top: 1rem; }
-.growth-family-target strong { font-size: 1.6rem; color: #3d5a3e; flex-shrink: 0; }
+.growth-family-target strong { font-size: 1.6rem; color: #f4e8d1; flex-shrink: 0; }
 .growth-family-target span { font-size: .85rem; }
-.growth-start-note { background: #f4e8d1; border-left: 4px solid #c2703a; padding: 1.3rem 1.6rem; margin: 1.5rem 0 0; border-radius: 0 16px 16px 0; }
+.growth-start-note { background: #f4e8d1; color: #202b21; border-left: 4px solid #c2703a; padding: 1.3rem 1.6rem; margin: 1.5rem 0 0; border-radius: 0 16px 16px 0; }
 .growth-phases { list-style: none; margin: 1.5rem 0 2rem; padding: 0; }
 .growth-phases > li { display: grid; grid-template-columns: 1.1fr .8fr 1.7fr; gap: 1.8rem; border-bottom: 1px solid #d9cdb7; padding: 2rem 0; }
 .growth-phase-title { display: flex; gap: 1rem; align-items: flex-start; }
 .growth-number { color: #c2703a; font-size: 2rem; line-height: 1.2; font-family: Georgia, serif; }
 .growth-phase-title .eyebrow { margin: 0 0 .55rem; }
-.growth-phase-title h4, .growth-income h4 { color: #3d5a3e; font-size: 1.45rem; line-height: 1.2; margin: 0; }
-.growth-phase-area strong { display: block; color: #3d5a3e; font-size: 1.35rem; line-height: 1.3; }
+.growth-phase-title h4, .growth-income h4 { color: #f4e8d1; font-size: 1.45rem; line-height: 1.2; margin: 0; }
+.growth-phase-area strong { display: block; color: #f4e8d1; font-size: 1.35rem; line-height: 1.3; }
 .growth-phase-area span { display: block; font-size: .8rem; line-height: 1.5; margin-top: .5rem; }
 .growth-phase-detail p { margin: 0; font-size: .95rem; }
-.growth-phase-detail .growth-outcome { margin-top: .8rem; color: #3d5a3e; font-size: .87rem; }
+.growth-phase-detail .growth-outcome { margin-top: .8rem; color: #c5d7bf; font-size: .87rem; }
 .growth-income { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; background: #3d5a3e; color: #fefaf3; padding: clamp(1.4rem, 3vw, 2.5rem); border-radius: 24px; }
 .growth-income .eyebrow, .growth-income h4 { color: #f4e8d1; }
 .growth-income h4 { font-size: 2rem; }
 .growth-income ol { margin: 0; padding-left: 1.6rem; align-self: center; }
 .growth-income li { padding: .6rem 0 .6rem .5rem; line-height: 1.6; border-bottom: 1px solid #ffffff30; }
-.growth-note { font-size: .82rem; line-height: 1.7; color: #625c50; margin: 1.5rem 0; max-width: 100ch; }
+.growth-note { font-size: .82rem; line-height: 1.7; color: #c5cabc; margin: 1.5rem 0; max-width: 100ch; }
 @media (max-width: 900px) {
  .growth-heading { grid-template-columns: 1fr; gap: .5rem; }
  .growth-phases > li { grid-template-columns: 1.2fr 1fr; gap: 1.2rem; }
