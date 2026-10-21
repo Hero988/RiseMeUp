@@ -21,7 +21,7 @@ const goals = [
     number: 10,
     title: "Reduced Inequalities",
     action: "Create opportunity together.",
-    description: "Sustainable farming education, practical training and livelihood opportunities would support communities affected by exclusion and displacement.",
+    description: "Sustainable farming education and livelihood opportunities would prioritise women affected by war, including widows and mothers raising children alone, across both communities.",
     target: "10.2",
     targetLabel: "Social and economic inclusion",
     measure: "Participation in training, completion of courses, and access to livelihood opportunities for the communities we support.",

@@ -38,7 +38,7 @@ def header(c,doc):
  c.setFillColor(RUST);c.setFont('Helvetica-Bold',8)
  c.drawRightString(W-42,H-40,'VIRGIN MARY FARM | PARTNER BRIEF')
  c.setFillColor(MUTED);c.setFont('Helvetica',8)
- c.drawRightString(W-42,H-55,'21 October 2026 | Version 3')
+ c.drawRightString(W-42,H-55,'21 October 2026 | Version 4')
  c.setStrokeColor(colors.HexColor('#d9cdb7'));c.line(42,H-81,W-42,H-81)
  c.line(42,38,W-42,38)
  c.setFont('Helvetica',7.4);c.drawString(42,25,'Risemeup | Committed to grow rural communities.')
@@ -50,7 +50,7 @@ def table(rows,widths,header_row=False):
  if header_row:style += [('BACKGROUND',(0,0),(-1,0),SAND)]
  t.setStyle(TableStyle(style));return t
 story=[]
-story += [p('Rebuilding starts with water.','title'),p('A proposed first step towards food, livelihoods and sustainable farming education for Sudan\'s Coptic Orthodox and Nuba Mountains communities.'),p('<b>Current stage:</b> planning and assessment. The farm is not operational and is not yet ready for equipment delivery. Technical specifications and costs are pending.','small')]
+story += [p('Rebuilding starts with water.','title'),p('A proposed farm centred on women affected by war: survivors of sexual violence, widows and mothers raising children alone, across Sudan\'s Coptic Orthodox and Nuba Mountains communities. Farming, skills and livelihoods offer a vision of independence, connection and renewed hope.'),p('<b>Current stage:</b> planning and assessment. The farm is not operational and is not yet ready for equipment delivery. Technical specifications and costs are pending.','small')]
 story += [p('Farm status and readiness','h2')]
 status=[
  ('Land and rights','Iman Tadros identifies the landowner as the Coptic Orthodox Church in Sudan, Khartoum-Omdurman, and confirms permission to use the land. Ownership evidence and written project-use terms, including the legal recipient and duration, still need review.'),
@@ -83,7 +83,7 @@ for i,item in enumerate(DATA['items']):
  rows.append([p(f"<b>{escape(item['name'])}</b>",'cell'),p(escape(short_qty[i])+'. '+escape(short_specs[i]),'cell')])
 story += [table(rows,[192,W-84-192],True),Spacer(1,7),p('<b>Every item: cost awaiting quotation.</b> Proposed operators include a local pump operator, irrigation caretaker, trainer and site custodian, supported by qualified suppliers. Names, service agreements and maintenance budgets are not yet confirmed. Detailed purposes, specifications and responsibilities are listed on the partner webpage.','small')]
 story += [p('Budget summary: no total funding request set','h2'),p('Cost areas awaiting quotations: site and seven-well assessment; well rehabilitation or replacement, pump and solar power; new storage and irrigation; installation and delivery; security and custody; training, tools and first-season inputs. Maintenance and contingency await a costed plan. Unknown costs are not zero. Quotations must include currency, date, applicable charges, installation and warranty.','small')]
-story += [p('Community benefit and accountability','h2'),p('Proposed arrangements include transparent, needs-based participation; consultation with both communities, including women, young people and displaced families; agreed asset ownership and custody; and farm income supporting operations, maintenance, education and community benefit. Separate project records, documented approvals, receipts and an asset register are proposed. Formal safeguarding, complaints and financial policies are not yet published and must be adopted and used before implementation.','small')]
+story += [p('Community benefit and accountability','h2'),p('Women would help shape training and access, without having to disclose violence or trauma. We seek women’s organisations and qualified partners to develop support and referrals; farming does not replace specialist care. Proposed controls include agreed asset ownership, community use of farm income, separate records, approvals and receipts. Safeguarding, complaints and financial policies must be adopted and used before activities begin.','small')]
 story += [p('Measure progress, protect evidence','h2'),p('<b>SDGs 7, 9, 10 and 12:</b> proposed measures include renewable energy generated, wells commissioned, water delivered, hectares irrigated, training participation and completion, and organic material reused. Targets and baselines await assessment. Alignment is not UN approval, certification or endorsement.','small'),p('Food-support photographs and the founder\'s account are available online; exact photograph dates and distribution totals remain unverified. References require records and permission. Land documents, well records, quotations and other sensitive supporting evidence can be discussed privately, subject to availability.','small')]
 story += [p('Contact Iman Tadros | Founder, Risemeup','h2'),p('<link href="mailto:i.tradros@risemeup.org" color="#3d5a3e">i.tradros@risemeup.org</link> | +44 786 797 7844<br/><link href="https://www.risemeup.org/development-partners/" color="#3d5a3e">www.risemeup.org/development-partners/</link>','body')]
 OUT.parent.mkdir(parents=True,exist_ok=True)

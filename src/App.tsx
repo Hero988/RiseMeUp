@@ -284,6 +284,14 @@ export default function App({
               <article><span>03</span><h3>Education &amp; training</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
             </div>
             <div className="actions"><a className="button" href="/development-partners/">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
+            <section className="farm-women" aria-labelledby="farm-women-title">
+              <p className="eyebrow">Women at the heart of Virgin Mary Farm</p>
+              <h3 id="farm-women-title">A place to rebuild lives.<br />A future to grow together.</h3>
+              <p>Our main purpose is to help women affected by Sudan’s war rebuild their lives — including survivors of sexual violence, women whose husbands have been killed, and mothers raising children alone.</p>
+              <p>We envision a farm where sustainable farming education, opportunities to earn an income and a supportive community can nurture confidence, independence and hope. For Iman, this is a vision of healing: women recognised for their strength, making decisions about their own futures and providing for their children.</p>
+              <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from both communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
+              <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
+            </section>
             <FarmReadiness />
             <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The latest land-development concept proposes a 50-hectare site. The original proposal sets out the four connected facilities below.</p>
             <FarmPlan />
