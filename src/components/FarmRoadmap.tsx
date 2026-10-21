@@ -61,12 +61,12 @@ export default function FarmRoadmap() {
         <h4 id="phase-one-equipment-title">The tools to start growing.</h4>
         <p>Our proposed first production block brings together machinery, irrigation and practical training. The illustration explores a 20–30 hectare starting area; the area and equipment will depend on the water assessment and agreed funding.</p>
         <figure className="growth-illustration">
-          <a href="/virgin-mary-phase-one-equipment.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the Phase 1 equipment and preliminary budget picture at full size in a new tab">
-            <img src="/virgin-mary-phase-one-equipment.jpeg" width="1024" height="1536" loading="lazy" alt="Virgin Mary Farm proposed Phase 1: a tractor, cultivation and planting implements, trailer, sprayer, irrigation equipment, tools and safety equipment for an indicative 20–30 hectare production block. Preliminary concept estimate: 100,000 to 177,000 US dollars, awaiting quotations." />
+          <a href="/virgin-mary-equipment-needs.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the proposed equipment needs illustration at full size in a new tab">
+            <img src="/virgin-mary-equipment-needs.svg" width="1000" height="1120" loading="lazy" alt="Proposed equipment needs: restore water and storage first, then assess a tractor, cultivation and planting implements, transport, crop-care tools and safety equipment. Sustainable farming training supports each stage. Specifications, quantities and budget remain subject to assessment." />
           </a>
-          <figcaption>Supplied planning illustration, not existing or purchased equipment. The US$100,000–177,000 range is a preliminary concept estimate, not a supplier quotation or a complete rebuilding budget. The illustration excludes land purchase, buildings and major power infrastructure; well works, new water storage and delivery requirements still need assessment and costing.</figcaption>
+          <figcaption>Proposed equipment, not existing assets or confirmed purchases. Water restoration comes first. Machinery purchase or hire, specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</figcaption>
         </figure>
-        <div className="actions"><a className="button" href="/virgin-mary-phase-one-equipment.jpeg" target="_blank" rel="noopener noreferrer">Open the Phase 1 picture ↗</a><a className="text-link" href="/development-partners/#phase-one-concept">Explore equipment and budget details →</a></div>
+        <div className="actions"><a className="button" href="/virgin-mary-equipment-needs.svg" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="text-link" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
       </section>
       <details className="growth-details">
       <summary>Read the five phases and funding approach</summary>

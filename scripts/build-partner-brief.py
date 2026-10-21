@@ -14,7 +14,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'public/development-partners/equipment.json').read_text())
-OUT = ROOT / 'public/downloads/risemeup-partner-brief-2026-10-21-v6.pdf'
+OUT = ROOT / 'public/downloads/risemeup-partner-brief-2026-10-21-v7.pdf'
 INK = colors.HexColor('#1e1e2a')
 GREEN = colors.HexColor('#3d5a3e')
 RUST = colors.HexColor('#a65c30')
@@ -38,7 +38,7 @@ def header(c,doc):
  c.setFillColor(RUST);c.setFont('Helvetica-Bold',8)
  c.drawRightString(W-42,H-40,'VIRGIN MARY FARM | PARTNER BRIEF')
  c.setFillColor(MUTED);c.setFont('Helvetica',8)
- c.drawRightString(W-42,H-55,'21 October 2026 | Version 6')
+ c.drawRightString(W-42,H-55,'21 October 2026 | Version 7')
  c.setStrokeColor(colors.HexColor('#d9cdb7'));c.line(42,H-81,W-42,H-81)
  c.line(42,38,W-42,38)
  c.setFont('Helvetica',7.4);c.drawString(42,25,'Risemeup | Committed to grow rural communities.')
@@ -82,7 +82,7 @@ rows=[[p('Equipment / purpose','label'),p('Provisional quantity and specificatio
 for i,item in enumerate(DATA['items']):
  rows.append([p(f"<b>{escape(item['name'])}</b>",'cell'),p(escape(short_qty[i])+'. '+escape(short_specs[i]),'cell')])
 story += [table(rows,[192,W-84-192],True),Spacer(1,7),p('<b>Every item: cost awaiting quotation.</b> Proposed operators include a local pump operator, irrigation caretaker, trainer and site custodian, supported by qualified suppliers. Names, service agreements and maintenance budgets are not yet confirmed. Detailed purposes, specifications and responsibilities are listed on the partner webpage.','small')]
-story += [p('Budget summary: no total funding request set','h2'),p('Cost areas awaiting quotations: site and seven-well assessment; well rehabilitation or replacement, pump and solar power; new storage and irrigation; installation and delivery; security and custody; training, tools and first-season inputs. Maintenance and contingency await a costed plan. Unknown costs are not zero. Quotations must include currency, date, applicable charges, installation and warranty.','small')]
+story += [p('Budget approach: assess first, agree costs together','h2'),p('The first-stage budget is being developed; no quotation-backed funding total is set. It will cover assessment, water restoration, new storage and irrigation, delivery, training, maintenance and contingency. A summary will be published once the scope and costs are validated. Supplier quotations and detailed cost schedules will be reviewed privately with prospective partners, subject to availability and appropriate redaction.','small')]
 story += [p('Community benefit and accountability','h2'),p('Iman confirms that donated machinery and project equipment are intended to belong to <b>Virgin Mary Farm together with Risemeup</b>, for community benefit. Land ownership remains with the Church. Legal title, donor conditions, custody, maintenance and disposal rules require written agreements with the Church and donors before acceptance or delivery. Women would help shape training without disclosing trauma; farming does not replace specialist care. Income use, financial controls, safeguarding and complaints arrangements require agreement and adoption before activities begin.','small')]
 story += [p('Measure progress, protect evidence','h2'),p('<b>SDGs 7, 9, 10 and 12:</b> proposed measures include renewable energy generated, wells commissioned, water delivered, hectares irrigated, training participation and completion, and organic material reused. Targets and baselines await assessment. Alignment is not UN approval, certification or endorsement.','small'),p('Food-support photographs and the founder\'s account are available online; exact photograph dates and distribution totals remain unverified. References require records and permission. Land documents, well records, quotations and other sensitive supporting evidence can be discussed privately, subject to availability.','small')]
 story += [p('Contact Iman Tadros | Founder, Risemeup','h2'),p('<link href="mailto:i.tradros@risemeup.org" color="#3d5a3e">i.tradros@risemeup.org</link> | +44 786 797 7844<br/><link href="https://www.risemeup.org/development-partners/" color="#3d5a3e">www.risemeup.org/development-partners/</link>','body')]
