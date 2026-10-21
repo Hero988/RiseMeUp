@@ -159,6 +159,7 @@
 .home-page .footer-bottom {
   color: #52634a;
   border-color: #d4ddc7;
+  padding-inline-end: 64px;
 }
 .home-page .site-header a:focus-visible,
 .home-page .site-header button:focus-visible,
@@ -213,6 +214,7 @@
   }
   .home-page .footer-bottom {
     padding-bottom: 80px;
+    padding-inline-end: 0;
   }
 }
 @media (max-width: 360px) {
