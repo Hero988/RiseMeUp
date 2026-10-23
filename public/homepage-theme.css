@@ -234,3 +234,8 @@
 /* Position the about-section slogan above the map, aligned to the left. */
 .home-page #about .classic-about-slogan{margin:0 0 30px;text-align:left}
 @media(max-width:600px){.home-page #about .classic-about-slogan{margin-bottom:24px}}
+
+/* Refined typography for the about heading only. */
+.home-page #about h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(44px,4.5vw,64px);font-weight:500;line-height:1.05;letter-spacing:-.025em;color:#244334}
+.home-page #about h2 .classic-about-emphasis{font-family:inherit;font-weight:inherit;color:inherit}
+@media(max-width:600px){.home-page #about h2{font-size:clamp(39px,10vw,50px)}}
