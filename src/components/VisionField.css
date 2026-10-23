@@ -50,3 +50,13 @@
  .home-page #vision-mission.rm-field-vision .vision-grid article > p:not(.chapter){max-width:none}
  .home-page #vision-mission.rm-field-vision .vision-grid article > p:last-child{font-size:19px;margin-top:23px}
 }
+
+/* Larger introductory labels above the vision and mission headings. */
+.home-page #vision-mission.rm-field-vision .chapter {
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.12em;
+}
+@media(max-width:650px) {
+  .home-page #vision-mission.rm-field-vision .chapter {font-size:12px}
+}
