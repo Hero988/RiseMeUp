@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Manrope:wght@400;500;600&display=swap');
 
 /* The Garden Estate treatment is limited to the farm introduction. */
 .home-page #virgin-mary-farm.farm-estate-intro{padding-top:0}
@@ -115,3 +115,6 @@
 @media(max-width:600px) {
   #virgin-mary-farm .rm-estate-status > strong {font-size:24px}
 }
+
+/* Bold headings across the three farm introduction columns. */
+.home-page #virgin-mary-farm .rm-estate-pillars h3 {font-weight:700}
