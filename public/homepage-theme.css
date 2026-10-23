@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 /* The approved warm cream homepage, with the original Risemeup logo. */
 .home-page .announcement {
@@ -249,3 +250,30 @@
 .home-page #communities .section-head{max-width:1120px}
 .home-page #communities .section-head h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,4.1vw,58px);font-weight:500;line-height:1.16;letter-spacing:-.035em;color:#b45c2f}
 @media(max-width:650px){.home-page #communities .section-head h2{font-size:42px}}
+
+/* Approved Lora and deep green treatment for the homepage coronavirus story. */
+.home-page #relief .crisis-history-link {
+  display:grid;grid-template-columns:minmax(0,1fr) 215px;gap:45px;align-items:center;
+  background:#fffdf6;border:1px solid #dddcca;border-radius:0;
+  padding:34px 40px;margin-top:48px;box-shadow:none;
+}
+.home-page #relief .crisis-history-link .eyebrow {
+  font:600 12px/1.8 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  margin:0 0 14px;color:#92704a;
+}
+.home-page #relief .crisis-history-link h3 {
+  font:500 36px/1.25 'Lora',Georgia,serif;letter-spacing:-.025em;
+  color:#24583d;margin:0 0 18px;max-width:800px;
+}
+.home-page #relief .crisis-history-link > div > p:not(.eyebrow) {
+  font:400 14px/1.85 'DM Sans',sans-serif;color:#596753;margin:0;max-width:750px;
+}
+.home-page #relief .crisis-history-link > .text-link {
+  font:500 13px/1.8 'DM Sans',sans-serif;color:#24583d;text-decoration:none;
+  border-bottom:1px solid #b4bca7;padding-bottom:8px;justify-self:start;
+}
+@media(max-width:700px) {
+  .home-page #relief .crisis-history-link {display:block;padding:26px}
+  .home-page #relief .crisis-history-link h3 {font-size:29px}
+  .home-page #relief .crisis-history-link > .text-link {display:inline-block;margin-top:24px}
+}
