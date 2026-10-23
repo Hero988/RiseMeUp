@@ -576,3 +576,13 @@ footer .brand-slogan { color: #e3ac80; }
   .dialog-close { margin: -12px -8px 8px 10px; }
   .classic-back-top { width: 44px; height: 44px; bottom: 16px; right: 16px; }
 }
+
+/* Keep the approved About heading on exactly two lines at narrow widths. */
+.home-page #about h2 { container-type:inline-size; }
+.home-page #about h2 > .classic-about-first-line,
+.home-page #about h2 > .classic-about-emphasis {
+  display:block;
+  white-space:nowrap;
+  font-size:min(1em,9.2cqi);
+  line-height:1.13;
+}
