@@ -111,3 +111,11 @@
 @media (max-width: 760px) {
  .response-page .site-header nav { flex-direction: row; align-items: center; }
 }
+
+/* Approved green and orange crisis heading on warm ivory. */
+.response-page .response-hero {background:#faf7ef}
+.response-page .response-hero::before,.response-page .response-hero::after {display:none}
+.response-page .response-hero .response-intro {color:#354b3d}
+.response-page .response-hero .response-hero-note,.response-page .response-hero .response-back {color:#61705e}
+.response-page #response-title {color:#24583d}
+.response-page #response-title em {color:#b45c2f}
