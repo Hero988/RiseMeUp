@@ -1,3 +1,5 @@
+import './SDGsEditorial.css';
+
 const goals = [
   {
     number: 7,
@@ -61,39 +63,31 @@ function GoalIllustration({ number }: { number: number }) {
 
 export default function SDGs() {
   return (
-    <section id="sdgs" className="section sdg-feature" aria-labelledby="sdgs-title">
+    <section id="sdgs" className="section rm-sdg-editorial" aria-labelledby="sdgs-title">
       <div className="container">
-        <div className="sdg-feature-heading">
-          <p className="eyebrow">United Nations Sustainable Development Goals</p>
-          <h2 id="sdgs-title">One farm.<br /><em>Four global goals.</em></h2>
-          <p className="sdg-feature-intro">Risemeup is committed to using the UN Sustainable Development Goals as a framework for rebuilding Virgin Mary Farm. These four goals connect our original proposal with practical action for communities in Sudan.</p>
-          <p className="sdg-plan-label"><span aria-hidden="true" />Our planned contribution · Virgin Mary Farm</p>
+        <div className="rm-sdg-overline"><span>Risemeup · Virgin Mary Farm</span><span>Our planned contribution</span></div>
+        <div className="rm-sdg-heading">
+          <div><p className="rm-sdg-kicker">A local vision. A global commitment.</p><h2 id="sdgs-title">One farm.<br /><em>Four global goals.</em></h2></div>
+          <div className="rm-sdg-intro"><p>Risemeup is committed to using the UN Sustainable Development Goals as a framework for rebuilding Virgin Mary Farm. These four goals connect our original proposal with practical action for communities in Sudan.</p><span>United Nations Sustainable Development Goals</span></div>
         </div>
-        <div className="sdg-goals-grid">
-          {goals.map((goal) => (
-            <article className={`sdg-goal sdg-goal-${goal.number}`} key={goal.number} aria-labelledby={`sdg-goal-${goal.number}-title`}>
-              <div className="sdg-goal-banner">
-                <div className="sdg-goal-mark"><p><span>Goal</span><strong>{goal.number}</strong></p><GoalIllustration number={goal.number} /></div>
-                <h3 id={`sdg-goal-${goal.number}-title`}>{goal.title}</h3>
-              </div>
-              <div className="sdg-goal-content">
-                <h4>{goal.action}</h4>
-                <p>{goal.description}</p>
-                <a className="sdg-target-link" href={`https://sdgs.un.org/goals/goal${goal.number}`}><span>UN target {goal.target}</span>{goal.targetLabel} <span aria-hidden="true">↗</span></a>
-                <details className="sdg-measure">
-                  <summary>How progress could be measured</summary>
-                  <p>{goal.measure}</p>
-                </details>
-              </div>
+        <div className="rm-sdg-grid">
+          {goals.map(goal => (
+            <article className="rm-sdg-goal" key={goal.number} aria-labelledby={`sdg-goal-${goal.number}-title`}>
+              <div className="rm-sdg-mark"><span aria-label={`Goal ${goal.number}`}>{String(goal.number).padStart(2, '0')}</span><GoalIllustration number={goal.number} /></div>
+              <h3 id={`sdg-goal-${goal.number}-title`}>{goal.title}</h3>
+              <h4>{goal.action}</h4>
+              <p>{goal.description}</p>
+              <a className="rm-sdg-target" href={`https://sdgs.un.org/goals/goal${goal.number}`}><span>UN target {goal.target}</span>{goal.targetLabel} <span aria-hidden="true">↗</span></a>
+              <details className="rm-sdg-measure"><summary>How progress could be measured</summary><p>{goal.measure}</p></details>
             </article>
           ))}
         </div>
-        <div className="sdg-partner-invitation">
-          <div><p className="eyebrow">For charities &amp; development partners</p><h3>Help turn shared goals into local progress.</h3><p>We welcome partners to refine the plan, agree realistic milestones and develop a transparent approach to measuring progress. The farm is awaiting rebuilding; the activities above are planned.</p></div>
-          <a className="button light" href="/development-partners/#planned-outcomes">View planned outcomes <span aria-hidden="true">→</span></a>
+        <div className="rm-sdg-bottom"><p>Think globally, <em>act locally.</em></p><span>Our planned contribution · Virgin Mary Farm</span></div>
+        <div className="rm-sdg-partners">
+          <div><p className="rm-sdg-kicker">For charities &amp; development partners</p><h3>Help turn shared goals<br />into <em>local progress.</em></h3><p>We welcome partners to refine the plan, agree realistic milestones and develop a transparent approach to measuring progress. The farm is awaiting rebuilding; the activities above are planned.</p></div>
+          <a href="/development-partners/#planned-outcomes">View planned outcomes <span aria-hidden="true">↗</span></a>
         </div>
-        <p className="sdg-alignment-note">This is Risemeup’s own assessment of its planned contribution to the SDGs. It does not imply United Nations endorsement. Suggested measures are for project planning, not reported results or official UN indicators.</p>
-        <p className="sdg-feature-slogan">Think globally, act locally.</p>
+        <p className="rm-sdg-note">This is Risemeup’s own assessment of its planned contribution to the SDGs. It does not imply United Nations endorsement. Suggested measures are for project planning, not reported results or official UN indicators.</p>
       </div>
     </section>
   );
