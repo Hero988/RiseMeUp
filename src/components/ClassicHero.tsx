@@ -1,34 +1,25 @@
+import './OpeningHero.css';
+
 export default function ClassicHero() {
   return (
-    <section id="hero" className="classic-hero">
-      <div className="container classic-hero-grid">
-        <div className="classic-hero-copy">
-          <p className="classic-badge">London rooted. Sudan focused.</p>
-          <h1>Two Communities.<br /><em>One Mission.</em><br />A Future of Hope.</h1>
-          <p className="classic-hero-lead">
-            Standing with Sudan’s <strong>Coptic Orthodox</strong> and <strong>Nuba Mountains</strong> communities through war, displacement and the work of rebuilding.
-          </p>
-          <p>Food assistance today. Sustainable farming, education and lasting livelihoods through our main project, Virgin Mary Farm.</p>
-          <div className="actions">
-            <a className="button" href="#donate">Support families today <span aria-hidden="true">→</span></a>
-            <a className="button outline" href="#communities">Meet our communities</a>
-          </div>
-          <a className="classic-farm-link" href="#virgin-mary-farm">Virgin Mary Farm: rebuilding planned <span aria-hidden="true">↗</span></a>
-          <p className="classic-slogan">Committed to grow rural communities.</p>
+    <section id="hero" className="rm-opening" aria-labelledby="rm-opening-title">
+      <img className="rm-opening-photo" src="/wheat-field.png" alt="Golden wheat illustrating the possibility of a future harvest" fetchPriority="high" />
+      <div className="rm-opening-shade" />
+      <div className="rm-opening-inner">
+        <div className="rm-opening-copy">
+          <p className="rm-opening-eyebrow"><span />For people. For dignity. For tomorrow.</p>
+          <h1 id="rm-opening-title">Where hope<br />takes <em>root.</em></h1>
+          <p className="rm-opening-description">Standing with Sudan’s forgotten communities.<br />Nourishing lives today. Growing a future, together.</p>
+          <a className="rm-opening-button" href="#donate">Help a family today <span aria-hidden="true">↗</span></a>
+          <p className="rm-opening-slogan">Committed to grow rural communities.</p>
         </div>
-        <aside className="classic-community-panel" aria-label="The two communities we support">
-          <p className="eyebrow">No community forgotten</p>
-          <h2>Coptic Orthodox</h2>
-          <p className="classic-panel-label">Community in Sudan</p>
-          <span className="classic-ampersand" aria-hidden="true">&amp;</span>
-          <h2>Nuba Mountains</h2>
-          <p className="classic-panel-label">Communities in Sudan</p>
-          <div className="classic-panel-message">
-            <p>Food assistance today.<br />A shared commitment to rebuild.</p>
-            <a href="#relief">See our work today <span aria-hidden="true">→</span></a>
-          </div>
+        <aside className="rm-opening-card" aria-label="Our shared commitment">
+          <svg viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M60 153V58M60 110C14 108 7 77 11 52c35-2 49 21 49 58Zm0-30c43-4 50-35 45-60-31 2-45 23-45 60Z" stroke="currentColor" strokeWidth="1.1" /><path d="m60 109-34-39m34 9 30-41" stroke="currentColor" strokeWidth="1.1" /></svg>
+          <p>Two communities.<br /><em>One shared future.</em></p>
+          <span>Coptic Orthodox &amp; Nuba Mountains</span>
         </aside>
       </div>
+      <div className="rm-opening-foot"><span>Rooted in London. Connected to Sudan.</span><span>Illustrative harvest photograph</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
     </section>
   );
 }
