@@ -19,7 +19,7 @@ export default function ClassicHero() {
           <span>Coptic Orthodox &amp; Nuba Mountains</span>
         </aside>
       </div>
-      <div className="rm-opening-foot"><span>Rooted in London. Connected to Sudan.</span><span>Illustrative harvest photograph</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+      <div className="rm-opening-foot"><span>Rooted in London. Connected to Sudan.</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
     </section>
   );
 }
