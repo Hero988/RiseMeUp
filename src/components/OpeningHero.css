@@ -1,32 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap');
 
-/* All new styles are confined to the opening screen. Original sections keep their original styles. */
-.home-page .rm-opening{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 140px);min-height:680px;max-height:950px;padding:0;background:#173d30;color:#faf8f2;font-family:'Manrope',sans-serif}
-.rm-opening .rm-opening-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 60%;animation:rm-photo-arrive 2s ease-out both}
-.rm-opening .rm-opening-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0d241ce0 0%,#10251bb8 38%,#12271b21 80%),linear-gradient(0deg,#0c1d14b8,transparent 40%)}
-.rm-opening .rm-opening-inner{position:relative;width:calc(100% - 128px);max-width:1320px;height:calc(100% - 65px);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:10px 0 30px}
-.rm-opening .rm-opening-eyebrow{margin:0;display:flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-size:9px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:#e4d6b4;line-height:1.8}
-.rm-opening .rm-opening-eyebrow>span{height:1px;width:25px;background:#ddbb78}
-.home-page .rm-opening h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(86px,9.4vw,142px);font-weight:400;letter-spacing:-.045em;line-height:.89;margin:29px 0 0;color:#faf8f2;max-width:none;text-transform:none}
-.home-page .rm-opening h1 em{font-family:inherit;color:#e5c487;font-weight:400;font-style:italic}
-.rm-opening .rm-opening-description{font-size:13px;font-weight:400;line-height:1.9;color:#e0e6da;margin:30px 0 0}
-.rm-opening .rm-opening-button{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;padding:17px 23px;min-height:52px;font-size:11px;font-weight:600;background:#ddbb78;color:#16382b;margin-top:33px;border:1px solid transparent;border-radius:0;text-decoration:none;transition:transform .25s,background .25s}
-.rm-opening .rm-opening-button>span{font-size:18px;font-weight:400;line-height:1}
-.rm-opening .rm-opening-button:hover{background:#e9cd98;transform:translateY(-3px)}
-.rm-opening a:focus-visible{outline:3px solid #f3dcab;outline-offset:5px}
-.rm-opening .rm-opening-slogan{font:italic 30px/1.35 'Cormorant Garamond',Georgia,serif;letter-spacing:.01em;margin:26px 0 0;color:#f0d69f;background:linear-gradient(110deg,#d9b46e 0%,#f5dda7 30%,#fff5d8 43%,#ddba73 56%,#f1d69e 75%,#d9b46e 100%);background-size:230% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:rm-slogan-shimmer 6s linear infinite;filter:drop-shadow(0 1px 7px #d8b36d35)}
-.rm-opening .rm-opening-card{align-self:flex-end;border:1px solid #f0e8cd40;background:#1b352b44;backdrop-filter:blur(12px);padding:28px 30px;min-width:240px;max-width:300px;margin:0 0 33px;position:relative}
-.rm-opening .rm-opening-card>svg{width:44px;height:60px;color:#ddbb78;position:absolute;right:25px;top:23px}
-.rm-opening .rm-opening-card p{font-family:'Cormorant Garamond',Georgia,serif;font-size:31px;line-height:1.08;margin:50px 0 0;letter-spacing:-.02em;color:#faf8f2}
-.rm-opening .rm-opening-card p em{color:#ddbb78}
-.rm-opening .rm-opening-card>span{display:block;font-size:7px;letter-spacing:.12em;margin-top:21px;color:#c7d1c1;text-transform:uppercase}
-.rm-opening .rm-opening-foot{position:relative;width:calc(100% - 128px);max-width:1320px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f2ecd836;height:65px;font-size:7px;letter-spacing:.14em;color:#c5cdbb;text-transform:uppercase}
-.rm-opening .rm-opening-foot>span:nth-child(2){font-size:8px;letter-spacing:.02em;text-transform:none;color:#d0d6c6}
-.rm-opening .rm-opening-foot a{display:flex;align-items:center;gap:20px;color:#c5cdbb;text-decoration:none}
-.rm-opening .rm-opening-foot a>span{font-size:16px;color:#ddbb78}
-@keyframes rm-photo-arrive{from{transform:scale(1.06)}to{transform:scale(1)}}
-@keyframes rm-slogan-shimmer{from{background-position:230% center}to{background-position:0% center}}
-@media(max-width:1100px){.rm-opening .rm-opening-inner,.rm-opening .rm-opening-foot{width:calc(100% - 80px)}.rm-opening .rm-opening-card{min-width:230px}.rm-opening .rm-opening-card p{font-size:28px}}
-@media(max-width:800px){.home-page .rm-opening h1{font-size:95px}.rm-opening .rm-opening-card{min-width:205px;padding:23px;margin-bottom:25px}.rm-opening .rm-opening-card>svg{height:48px;right:20px;top:18px}.rm-opening .rm-opening-card p{font-size:25px;margin-top:38px}.rm-opening .rm-opening-card>span{font-size:6px}.rm-opening .rm-opening-slogan{font-size:28px}}
-@media(max-width:600px){.home-page .rm-opening{height:calc(100svh - 140px);min-height:710px;max-height:860px}.rm-opening .rm-opening-photo{object-position:62% center}.rm-opening .rm-opening-shade{background:linear-gradient(90deg,#10291ee3,#19322277),linear-gradient(0deg,#12291fe6,transparent 65%)}.rm-opening .rm-opening-inner{height:calc(100% - 55px);display:block;width:calc(100% - 40px);padding:40px 0 0}.rm-opening .rm-opening-eyebrow{font-size:7px;letter-spacing:.13em;gap:9px}.rm-opening .rm-opening-eyebrow>span{width:18px}.home-page .rm-opening h1{font-size:clamp(78px,19vw,110px);margin-top:27px;line-height:.92}.rm-opening .rm-opening-description{font-size:11px;margin-top:25px}.rm-opening .rm-opening-button{font-size:10px;padding:15px 18px;min-height:48px;gap:25px;margin-top:27px}.rm-opening .rm-opening-slogan{font-size:25px;margin-top:24px;max-width:290px}.rm-opening .rm-opening-card{position:absolute;right:0;bottom:13px;margin:0;padding:15px 20px 16px;min-width:0;width:205px;max-width:none}.rm-opening .rm-opening-card>svg{width:30px;height:40px;right:17px;top:12px}.rm-opening .rm-opening-card p{font-size:24px;margin-top:0;padding-right:20px}.rm-opening .rm-opening-card>span{font-size:6px;letter-spacing:.07em;margin-top:12px}.rm-opening .rm-opening-foot{width:calc(100% - 40px);height:55px;font-size:6px;gap:15px;letter-spacing:.1em}.rm-opening .rm-opening-foot>span:nth-child(2){display:none}.rm-opening .rm-opening-foot a{gap:12px;font-size:6px}.rm-opening .rm-opening-foot a>span{font-size:13px}}
-@media(prefers-reduced-motion:reduce){.rm-opening .rm-opening-photo,.rm-opening .rm-opening-slogan{animation:none}.rm-opening .rm-opening-button{transition:none}.rm-opening .rm-opening-slogan{background:none;-webkit-text-fill-color:currentColor;color:#f0d69f;filter:none}}
+/* Scoped to the approved opening section; existing site sections retain their styles. */
+.home-page .rm-opening{position:relative;isolation:isolate;overflow:hidden;display:block;margin:0;max-width:none;padding:0;height:calc(100svh - 143px);min-height:720px;background:#607d57;color:#fffaf0;font-family:'DM Sans',sans-serif}
+.rm-opening .rm-opening-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;border-radius:0}
+.rm-opening .rm-opening-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(17,34,28,.91),rgba(22,40,31,.64) 45%,rgba(22,40,31,.08) 80%),linear-gradient(0deg,rgba(9,25,18,.84),transparent 48%)}
+.rm-opening .rm-opening-copy{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;width:70%;height:100%;padding:55px 0 50px 8%}
+.rm-opening .rm-opening-eyebrow{margin:0;display:flex;align-items:center;gap:10px;font:500 9px/1.7 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#f2e7d5}
+.rm-opening .rm-opening-eyebrow>span{display:block;width:6px;height:6px;flex-shrink:0;border-radius:50%;background:#e7ccb0}
+.home-page .rm-opening h1{margin:33px 0 30px;max-width:none;font-family:Italiana,'Times New Roman',serif;font-size:clamp(100px,9.7vw,154px);font-weight:400;line-height:.92;letter-spacing:-.05em;text-transform:none;color:#fffaf0}
+.rm-opening h1 .rm-opening-future{font-family:Georgia,serif;font-weight:400;font-size:.91em;letter-spacing:-.065em;text-shadow:0 2px 18px #08191070}
+.home-page .rm-opening h1 em{display:inline-block;padding-bottom:10px;font-family:Georgia,serif;font-size:.98em;font-weight:400;font-style:italic;letter-spacing:-.06em;color:#f0dbc0}
+.rm-opening .rm-opening-bottom{margin-top:auto}
+.rm-opening .rm-opening-slogan{margin:0;font:400 clamp(11px,3.1vw,15px)/1.6 'DM Sans',sans-serif;white-space:nowrap;color:#fffaf0}
+.rm-opening .rm-opening-link{display:flex;align-items:center;justify-content:space-between;gap:45px;width:fit-content;min-width:205px;max-width:255px;margin-top:17px;padding:12px 0 9px;border-bottom:1px solid #f7f0e095;border-radius:0;background:none;color:#fffaf0;font:400 10px/1.7 'DM Sans',sans-serif;text-decoration:none}
+.rm-opening .rm-opening-link>span{font-size:20px}
+.rm-opening .rm-opening-link:focus-visible{outline:2px solid #fffaf0;outline-offset:7px}
+.rm-opening .rm-opening-note{position:absolute;right:5%;bottom:70px;text-align:right;color:#fffaf0}
+.rm-opening .rm-opening-note>span{display:block;font:500 12px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fffaf0}
+.rm-opening .rm-opening-note p{margin:17px 0 0;font:400 43px/1.15 Georgia,serif;letter-spacing:-.035em;color:#fff;text-shadow:0 2px 12px #071b12b3}
+.rm-opening .rm-opening-note p em{font-family:Georgia,serif;font-size:1em;font-weight:400;font-style:italic;color:#fff}
+.rm-opening .rm-opening-vertical{position:absolute;left:27px;top:45%;writing-mode:vertical-rl;transform:rotate(180deg);font:400 8px/1.7 'DM Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#efe9dbb3}
+@media(min-width:1600px){.home-page .rm-opening{min-height:800px}.rm-opening .rm-opening-copy{padding-top:75px}}
+@media(max-width:1000px){.rm-opening .rm-opening-copy{width:78%;padding-left:7%;padding-top:65px}.home-page .rm-opening h1{font-size:110px}.rm-opening .rm-opening-note{right:4%}.rm-opening .rm-opening-vertical{left:20px}}
+@media(max-width:680px){.home-page .rm-opening{height:calc(100svh - 135px);min-height:850px}.rm-opening .rm-opening-copy{width:100%;padding:55px 8% 230px}.rm-opening .rm-opening-eyebrow{font-size:7px;max-width:250px}.home-page .rm-opening h1{font-size:clamp(86px,21vw,120px);margin:33px 0 40px}.rm-opening .rm-opening-photo{object-position:44% center}.rm-opening .rm-opening-slogan{font-size:clamp(11px,3.1vw,15px)}.rm-opening .rm-opening-link{min-width:210px}.rm-opening .rm-opening-note{bottom:65px;left:8%;right:auto;text-align:left}.rm-opening .rm-opening-note>span{font-size:10px}.rm-opening .rm-opening-note p{font-size:28px;margin-top:12px}.rm-opening .rm-opening-vertical{display:none}}

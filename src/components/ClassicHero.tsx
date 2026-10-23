@@ -3,23 +3,21 @@ import './OpeningHero.css';
 export default function ClassicHero() {
   return (
     <section id="hero" className="rm-opening" aria-labelledby="rm-opening-title">
-      <img className="rm-opening-photo" src="/wheat-field.png" alt="Golden wheat illustrating the possibility of a future harvest" fetchPriority="high" />
-      <div className="rm-opening-shade" />
-      <div className="rm-opening-inner">
-        <div className="rm-opening-copy">
-          <p className="rm-opening-eyebrow"><span />For people. For dignity. For tomorrow.</p>
-          <h1 id="rm-opening-title">Where hope<br />takes <em>root.</em></h1>
-          <p className="rm-opening-description">Standing with Sudan’s forgotten communities.<br />Nourishing lives today. Growing a future, together.</p>
-          <a className="rm-opening-button" href="#donate">Help a family today <span aria-hidden="true">↗</span></a>
+      <img className="rm-opening-photo" src="/barley-opening.webp" alt="An illustrative photograph of green barley beneath a blue sky" fetchPriority="high" width="1600" height="1059" />
+      <div className="rm-opening-shade" aria-hidden="true" />
+      <div className="rm-opening-copy">
+        <p className="rm-opening-eyebrow"><span aria-hidden="true" />Rooted in community. Looking ahead.</p>
+        <h1 id="rm-opening-title">A <span className="rm-opening-future">future</span><br />worth<br /><em>growing.</em></h1>
+        <div className="rm-opening-bottom">
           <p className="rm-opening-slogan">Committed to grow rural communities.</p>
+          <a className="rm-opening-link" href="#about">Discover our vision <span aria-hidden="true">↗</span></a>
         </div>
-        <aside className="rm-opening-card" aria-label="Our shared commitment">
-          <svg viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M60 153V58M60 110C14 108 7 77 11 52c35-2 49 21 49 58Zm0-30c43-4 50-35 45-60-31 2-45 23-45 60Z" stroke="currentColor" strokeWidth="1.1" /><path d="m60 109-34-39m34 9 30-41" stroke="currentColor" strokeWidth="1.1" /></svg>
-          <p>Two communities.<br /><em>One shared future.</em></p>
-          <span>Coptic Orthodox &amp; Nuba Mountains</span>
-        </aside>
       </div>
-      <div className="rm-opening-foot"><span>Rooted in London. Connected to Sudan.</span><span>Illustrative harvest photograph</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+      <aside className="rm-opening-note" aria-label="The Virgin Mary Farm vision">
+        <span>The Virgin Mary Farm vision</span>
+        <p>From the land.<br /><em>For the future.</em></p>
+      </aside>
+      <div className="rm-opening-vertical" aria-hidden="true">Land · Learning · Possibility</div>
     </section>
   );
 }
