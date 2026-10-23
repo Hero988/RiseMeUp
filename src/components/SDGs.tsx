@@ -64,12 +64,17 @@ function GoalIllustration({ number }: { number: number }) {
 export default function SDGs() {
   return (
     <section id="sdgs" className="section rm-sdg-editorial" aria-labelledby="sdgs-title">
-      <div className="container">
+      <div className="rm-sdg-hero">
+        <img className="rm-sdg-hero-photo" src="/barley-opening.webp" alt="Green barley beneath a blue sky, illustrating the farm’s future possibilities" loading="lazy" width="1600" height="1059" />
+        <div className="container">
         <div className="rm-sdg-overline"><span>Risemeup · Virgin Mary Farm</span><span>Our planned contribution</span></div>
         <div className="rm-sdg-heading">
           <div><p className="rm-sdg-kicker">A local vision. A global commitment.</p><h2 id="sdgs-title">One farm.<br /><em>Four global goals.</em></h2></div>
           <div className="rm-sdg-intro"><p>Risemeup is committed to using the UN Sustainable Development Goals as a framework for rebuilding Virgin Mary Farm. These four goals connect our original proposal with practical action for communities in Sudan.</p><span>United Nations Sustainable Development Goals</span></div>
         </div>
+        </div>
+      </div>
+      <div className="container rm-sdg-content">
         <div className="rm-sdg-grid">
           {goals.map(goal => (
             <article className="rm-sdg-goal" key={goal.number} aria-labelledby={`sdg-goal-${goal.number}-title`}>
