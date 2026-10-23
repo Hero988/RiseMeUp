@@ -36,7 +36,6 @@ export function ClassicVision() {
   return <section id="vision-mission" className="section classic-vision rm-field-vision" aria-labelledby="vision-mission-title">
     <div className="container">
       <div className="section-head">
-        <p className="eyebrow">Our heart</p>
         <h2 id="vision-mission-title">Vision <span>&amp;</span> <em>Mission.</em></h2>
         <p>Two communities. One shared vision. A future of hope.</p>
       </div>
