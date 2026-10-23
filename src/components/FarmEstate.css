@@ -73,3 +73,11 @@
 #virgin-mary-farm .rm-estate-flourish{display:none}
 
 #virgin-mary-farm .rm-estate-band{margin-bottom:75px}@media(max-width:900px){#virgin-mary-farm .rm-estate-band{margin-bottom:55px}}@media(max-width:600px){#virgin-mary-farm .rm-estate-band{margin-bottom:40px}}
+/* Larger description for the sustainable agriculture pillar. */
+#virgin-mary-farm .rm-estate-pillars > article:first-child > p {
+  font-size:16px;
+  line-height:1.8;
+}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-pillars > article:first-child > p {font-size:15px}
+}
