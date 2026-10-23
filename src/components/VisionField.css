@@ -60,3 +60,10 @@
 @media(max-width:650px) {
   .home-page #vision-mission.rm-field-vision .chapter {font-size:12px}
 }
+
+/* Remove the decorative rule beside Our heart. */
+.home-page #vision-mission.rm-field-vision .section-head > .eyebrow::before,
+.home-page #vision-mission.rm-field-vision .section-head > .eyebrow::after {
+  content:none;
+  display:none;
+}
