@@ -272,7 +272,7 @@ footer .brand-slogan { color: #e3ac80; }
 .classic-about h2, .classic-founder h2 { font-size: clamp(2.2rem, 3.2vw, 3rem); }
 .classic-about h2 { color: #171923; font-weight: 700; line-height: 1.1; overflow-wrap: break-word; }
 .classic-about-emphasis { display: block; color: #171923; font-weight: 700; font-variant-ligatures: none; letter-spacing: -.015em; }
-.classic-about-slogan { margin: 28px 0 0; font: italic 1.4rem/1.5 "Fraunces", serif; color: #a65c30; }
+.classic-about-slogan { margin: 28px 0 0; font: italic 1.4rem/1.5 "Fraunces", serif; color: #24583d; }
 .classic-values { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
 .classic-values > div { display: flex; align-items: center; gap: 12px; padding: 16px; background: #fefaf3; border: 1px solid #eee5d7; border-radius: 14px; }
 .classic-value-icon { display: grid; place-items: center; flex: 0 0 38px; height: 38px; background: #f3e6d5; border-radius: 10px; color: #a65c30; font-size: 1.45rem; }
