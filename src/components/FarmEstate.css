@@ -126,3 +126,6 @@
 @media(max-width:600px) {
   #virgin-mary-farm .rm-estate-subtitle {font-size:15px}
 }
+
+/* Keep the location aligned right after removing the repeated project label. */
+#virgin-mary-farm .rm-estate-top {justify-content:flex-end}
