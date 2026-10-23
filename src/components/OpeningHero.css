@@ -30,3 +30,24 @@
 @media(max-width:800px){.home-page .rm-opening h1{font-size:95px}.rm-opening .rm-opening-card{min-width:205px;padding:23px;margin-bottom:25px}.rm-opening .rm-opening-card>svg{height:48px;right:20px;top:18px}.rm-opening .rm-opening-card p{font-size:25px;margin-top:38px}.rm-opening .rm-opening-card>span{font-size:6px}.rm-opening .rm-opening-slogan{font-size:28px}}
 @media(max-width:600px){.home-page .rm-opening{height:calc(100svh - 140px);min-height:710px;max-height:860px}.rm-opening .rm-opening-photo{object-position:62% center}.rm-opening .rm-opening-shade{background:linear-gradient(90deg,#10291ee3,#19322277),linear-gradient(0deg,#12291fe6,transparent 65%)}.rm-opening .rm-opening-inner{height:calc(100% - 55px);display:block;width:calc(100% - 40px);padding:40px 0 0}.rm-opening .rm-opening-eyebrow{font-size:7px;letter-spacing:.13em;gap:9px}.rm-opening .rm-opening-eyebrow>span{width:18px}.home-page .rm-opening h1{font-size:clamp(78px,19vw,110px);margin-top:27px;line-height:.92}.rm-opening .rm-opening-description{font-size:11px;margin-top:25px}.rm-opening .rm-opening-button{font-size:10px;padding:15px 18px;min-height:48px;gap:25px;margin-top:27px}.rm-opening .rm-opening-slogan{font-size:25px;margin-top:24px;max-width:290px}.rm-opening .rm-opening-card{position:absolute;right:0;bottom:13px;margin:0;padding:15px 20px 16px;min-width:0;width:205px;max-width:none}.rm-opening .rm-opening-card>svg{width:30px;height:40px;right:17px;top:12px}.rm-opening .rm-opening-card p{font-size:24px;margin-top:0;padding-right:20px}.rm-opening .rm-opening-card>span{font-size:6px;letter-spacing:.07em;margin-top:12px}.rm-opening .rm-opening-foot{width:calc(100% - 40px);height:55px;font-size:6px;gap:15px;letter-spacing:.1em}.rm-opening .rm-opening-foot>span:nth-child(2){display:none}.rm-opening .rm-opening-foot a{gap:12px;font-size:6px}.rm-opening .rm-opening-foot a>span{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.rm-opening .rm-opening-photo,.rm-opening .rm-opening-slogan{animation:none}.rm-opening .rm-opening-button{transition:none}.rm-opening .rm-opening-slogan{background:none;-webkit-text-fill-color:currentColor;color:#f0d69f;filter:none}}
+
+/* Oval shared-commitment card on the opening screen. */
+.rm-opening .rm-opening-card {
+  border-radius:999px;
+  padding:36px 30px;
+  text-align:center;
+}
+.rm-opening .rm-opening-card > svg {
+  position:static;
+  display:block;
+  width:36px;
+  height:48px;
+  margin:0 auto;
+}
+.rm-opening .rm-opening-card p {margin-top:18px}
+@media(max-width:600px) {
+  .rm-opening .rm-opening-card {padding:22px 20px}
+  .rm-opening .rm-opening-card > svg {display:none}
+  .rm-opening .rm-opening-card p {margin-top:0;padding-right:0}
+  .rm-opening .rm-opening-card > span {margin-top:9px}
+}
