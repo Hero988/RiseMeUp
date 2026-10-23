@@ -606,3 +606,17 @@ footer .brand-slogan { color: #e3ac80; }
     right:10px;
   }
 }
+
+/* Slightly smaller oval labels on the land image. */
+.home-page #about .classic-map-measurements {
+  width:190px;
+  padding:18px 20px;
+}
+.home-page #about .classic-image-badge {
+  padding:15px 23px;
+}
+.home-page #about .classic-image-badge strong {font-size:1.9rem}
+.home-page #about .classic-image-badge span {font-size:.78rem}
+@media(max-width:600px) {
+  .home-page #about .classic-map-measurements {width:180px;padding:17px 18px}
+}
