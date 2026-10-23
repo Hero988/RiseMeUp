@@ -620,3 +620,9 @@ footer .brand-slogan { color: #e3ac80; }
 @media(max-width:600px) {
   .home-page #about .classic-map-measurements {width:180px;padding:17px 18px}
 }
+
+/* Extend the measurement oval towards the right edge. */
+.home-page #about .classic-map-measurements {width:210px;right:-8px}
+@media(max-width:600px) {
+  .home-page #about .classic-map-measurements {width:200px;right:-10px}
+}
