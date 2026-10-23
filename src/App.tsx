@@ -1,514 +1,89 @@
-import { useEffect, useRef, useState } from "react";
-import FarmPlan from "./components/FarmPlan";
-import FarmReadiness from "./components/FarmReadiness";
-import FarmRoadmap from "./components/FarmRoadmap";
-import ClassicHero from "./components/ClassicHero";
-import SDGs from "./components/SDGs";
-import TeamFlipCard from "./components/TeamFlipCard";
-import ContactForm from "./components/ContactForm";
-import { ClassicAbout, ClassicVision, ClassicObjectives, ClassicFounder, ClassicCommunityHistory } from "./components/ClassicSections";
+import { useEffect, useRef, useState } from 'react';
+import './homepage.css';
 
-const email = "i.tradros@risemeup.org";
-const team = [
-  {
-    name: "Prof. Dr. Elamin Ali Ahmed",
-    role: "Fruit & vegetable production",
-    image: "/team-1-elamin.png",
-    bio: "Agricultural expertise guiding horticulture and the Mango Project.",
-    qualifications:
-      "PhD, INRA, France · MSc, University of Gezira · BSc, University of Khartoum",
-  },
-  {
-    name: "Dr. Eng. Khalid Salih",
-    role: "Renewable energy & training",
-    image: "/team-4-khalid.jpeg",
-    bio: "Former university lecturer in Berlin, Xplines International founder and DIESALIHS chairman.",
-    qualifications: "PhD in Control Engineering",
-    website: "https://www.xplines.org/",
-    trainingWebsite: "https://www.diesalihs.com/#academy",
-  },
-  {
-    name: "Dr. Munir G. Botrus",
-    role: "Agricultural safety & crop protection",
-    image: "/team-2-munir.png",
-    bio: "15 years of experience with FAO/UN in pesticide application and agricultural safety.",
-    qualifications: "PhD, University of London · BSc, Agricultural Science",
-  },
-  {
-    name: "Dr. Mohammed A. F. Khames",
-    role: "Seed pathology",
-    image: "/team-3-mohammed.png",
-    bio: "Seed pathology expertise and international research experience across Europe and Africa.",
-    qualifications: "PhD, Giessen University · MSc, Aberdeen · BSc, Cairo",
-  },
+const chapters = [
+  { title: 'Restore the source of life.', name: 'Water comes first', number: '01', text: 'Our founder reports that the farm’s seven wells were destroyed and its pumping equipment stolen. A technical assessment, a viable water source and new storage are the first steps towards rebuilding.', image: '/farmland-satellite.png', alt: 'Supplied satellite image associated with Virgin Mary Farm', caption: 'Supplied site image. A technical survey is still required.' },
+  { title: 'Turn possibility into a harvest.', name: 'Bring the land back to life', number: '02', text: 'An initial growing area would connect sustainable agriculture with practical training. The crops, irrigation, equipment and starting area will follow assessment and an agreed, funded plan.', image: '/greenhouse-tomatoes.jpg', alt: 'Young tomato plants in a greenhouse', caption: 'Illustrative greenhouse photograph. These facilities are planned.' },
+  { title: 'Grow more than food.', name: 'Build lasting livelihoods', number: '03', text: 'Clean energy, produce handling, education and opportunities to earn an income form our longer-term vision. Women from both communities would help shape a place to learn, work and rebuild.', image: '/packaging.jpg', alt: 'Fresh peppers sorted into produce crates', caption: 'Illustrative produce photograph, not current farm operations.' },
 ];
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-function Brand() {
-  return (
-    <a className="brand" href="/#hero" aria-label="Risemeup home">
-      <img
-        src="/logo.png"
-        alt="Risemeup Sustainability"
-        width="300"
-        height="106"
-      />
-    </a>
-  );
-}
+const advisers = [
+  ['Prof. Dr. Elamin Ali Ahmed','Horticulture','/team-1-elamin.png'],
+  ['Dr. Eng. Khalid Salih','Energy & education','/team-4-khalid.jpeg'],
+  ['Dr. Munir G. Botrus','Crop protection','/team-2-munir.png'],
+  ['Dr. Mohammed A. F. Khames','Seed science','/team-3-mohammed.png'],
+];
+function Arrow({ down = false }: { down?: boolean }) { return <span aria-hidden="true">{down ? '↓' : '↗'}</span>; }
+function Seed({ className = '' }: { className?: string }) { return <svg className={className} viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M60 153V58M60 110C14 108 7 77 11 52c35-2 49 21 49 58Zm0-30c43-4 50-35 45-60-31 2-45 23-45 60Z" stroke="currentColor" strokeWidth="1.1"/><path d="m60 109-34-39m34 9 30-41" stroke="currentColor" strokeWidth="1.1"/></svg>; }
 export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [chapter, setChapter] = useState(0);
+  const [interest, setInterest] = useState('Food & essential supplies');
+  const supportDialog = useRef<HTMLDialogElement>(null);
+  const planDialog = useRef<HTMLDialogElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
-  const donationDialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
-    // Deep links may arrive before React has rendered their target section.
-    const hash = window.location.hash.slice(1);
-    if (!hash) return;
-    const frame = requestAnimationFrame(() => {
-      document.getElementById(hash)?.scrollIntoView({ behavior: "instant" });
-    });
-    return () => cancelAnimationFrame(frame);
+    const items = document.querySelectorAll('.reveal');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }), { threshold: .08 });
+    items.forEach(item => { item.classList.add('reveal-ready'); observer.observe(item); });
+    return () => observer.disconnect();
   }, []);
   useEffect(() => {
-    const close = (event: KeyboardEvent) => {
-      if (menuOpen && event.key === "Escape") {
-        setMenuOpen(false);
-        menuButton.current?.focus();
-      }
+    function escape(event: KeyboardEvent) { if (event.key === 'Escape' && menu) { setMenu(false); menuButton.current?.focus(); } }
+    window.addEventListener('keydown', escape);
+    return () => window.removeEventListener('keydown', escape);
+  }, [menu]);
+  useEffect(() => {
+    const aliases: Record<string, string> = {
+      hero: 'home', about: 'purpose', communities: 'purpose', 'vision-mission': 'purpose',
+      'nuba-story': 'purpose', relief: 'work', 'sudan-crisis': 'work',
+      'virgin-mary-farm': 'farm', projects: 'farm', 'farm-readiness': 'farm',
+      'farm-plan': 'farm', 'land-framework': 'farm', 'phase-one-equipment': 'farm',
+      'farming-education': 'farm', team: 'advisers', founder: 'people',
+      donate: 'join', partnership: 'join', sdgs: 'farm', objectives: 'farm',
     };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, [menuOpen]);
-  return (
-    <>
-      <a className="skip-link" href="#main">
-        Skip to content
-      </a>
-      <div className="announcement">
-        Standing with Sudan’s Coptic Orthodox and Nuba Mountains communities{" "}
-        <a href="#sudan-crisis">
-          Why our work matters <Arrow />
-        </a>
-      </div>
-      <header className="site-header">
-        <div className="container header-inner">
-          <Brand />
-          <button
-            ref={menuButton}
-            className="menu-button"
-            aria-expanded={menuOpen}
-            aria-controls="main-nav"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? "Close" : "Menu"}{" "}
-            <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
-          </button>
-          <nav
-            id="main-nav"
-            aria-label="Main navigation"
-            className={menuOpen ? "is-open" : ""}
-            onClick={() => setMenuOpen(false)}
-          >
-            <a href="#hero">Home</a>
-            <a href="#about">About us</a>
-            <a href="#communities">Our communities</a>
-            <a href="#virgin-mary-farm">Our projects</a>
-            <a href="#team">Our team</a>
-            <a href="/development-partners/">Partner with us</a>
-            <a href="#contact">Contact</a>
-            <button className="button small" onClick={() => donationDialog.current?.showModal()}>Donate</button>
-          </nav>
-        </div>
-      </header>
-      <main id="main">
-        <ClassicHero />
-        <ClassicAbout />
-        <section id="sudan-crisis" className="section crisis">
-          <div className="container two-col">
-            <div>
-              <p className="eyebrow">The war in Sudan</p>
-              <h2>
-                Homes lost.
-                <br />
-                Churches burned.
-                <br />
-                <em>Communities uprooted.</em>
-              </h2>
-            </div>
-            <div className="prose">
-              <p className="lead">
-                Since April 2023, war has torn apart families, livelihoods and
-                places of refuge across Sudan.
-              </p>
-              <p>
-                For the communities we support, the loss is deeply personal.
-                Families have been displaced, food and income have become
-                uncertain, and churches have been damaged, burned, destroyed or
-                occupied. These are places of worship, belonging and mutual
-                support; their loss reaches far beyond the buildings.
-              </p>
-              <p>
-                The Coptic Orthodox community and the people of the Nuba
-                Mountains have endured immense suffering, often with little
-                international attention. Their stories, dignity and future must
-                not be forgotten.
-              </p>
-              <div className="source-note">
-                Background:{" "}
-                <a href="https://www.unocha.org/sudan">
-                  UN OCHA’s Sudan response
-                </a>{" "}
-                ·{" "}
-                <a href="https://www.csw.org.uk/2024/01/15/press/6147/article.htm">
-                  CSW reporting on attacks on churches
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="communities" className="section cream">
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <p className="eyebrow">Our communities</p>
-                <h2>
-                  Two communities. Equal commitment.
-                </h2>
-              </div>
-              <p>
-                We listen to people whose lives have been shaped by exclusion
-                and conflict, and stand alongside their determination to
-                rebuild.
-              </p>
-            </div>
-            <div className="community-stories">
-              <article className="community-story">
-                <span className="community-location">Belonging · Sudan</span>
-                <h3>Coptic Orthodox<span>community</span></h3>
-                <p>
-                  Sudan’s Coptic Orthodox families are part of the country’s
-                  social and spiritual life. War has separated families,
-                  disrupted livelihoods and threatened churches and community
-                  spaces.
-                </p>
-                <p>
-                  This is our founder’s own community. Risemeup brings that
-                  personal connection to practical support for families facing
-                  displacement and uncertainty.
-                </p>
-                <a className="text-link" href="#relief">
-                  Supporting families now →
-                </a>
-              </article>
-              <div className="community-connection" aria-hidden="true"><span>&amp;</span></div>
-              <article className="community-story">
-                <span className="community-location">Resilience · Sudan</span>
-                <h3>Nuba Mountains<span>communities</span></h3>
-                <p>
-                  The Nuba Mountains in South Kordofan are home to diverse
-                  communities with deep ties to land and farming. Decades of
-                  conflict and displacement have interrupted education, food
-                  production and everyday life.
-                </p>
-                <p>
-                  Our original vision grew from a commitment to these
-                  communities: helping people rebuild through food security,
-                  training and opportunities to earn a living.
-                </p>
-                <a className="text-link" href="#nuba-story">
-                  Read our community history →
-                </a>
-              </article>
-            </div>
-          </div>
-        </section>
-        <ClassicVision />
-        <section id="relief" className="section">
-          <div className="container relief-grid">
-            <figure className="photo">
-              <img
-                src="/sudan-crisis-7.jpeg"
-                alt="Food portions packed in bags for community support"
-                width="960"
-                height="1280"
-                loading="lazy"
-              />
-              <figcaption>Sudan food assistance archive · Risemeup · Photograph date unconfirmed. <a href="/crisis-response/#photo-records">About our records</a></figcaption>
-            </figure>
-            <div>
-              <p className="eyebrow">What we are doing now</p>
-              <h2>
-                Food today.
-                <br />
-                <em>Dignity, always.</em>
-              </h2>
-              <p className="lead">
-                With support from friends, families and our wider community, we
-                help families affected by the war access food and essential
-                supplies.
-              </p>
-              <p>
-                Our work includes preparing meals and organising food assistance
-                through trusted community connections. We support as many
-                families as available resources and access allow.
-              </p>
-              <p>
-                This immediate response continues alongside our longer-term
-                ambition to rebuild Virgin Mary Farm.
-              </p>
-              <a className="button" href="#donate">
-                Ask how to support food assistance <Arrow />
-              </a>
-            </div>
-          </div>
-          <aside className="container crisis-history-link" aria-labelledby="crisis-history-title">
-            <div><p className="eyebrow">Our coronavirus response</p><h3 id="crisis-history-title">When there is a crisis, Risemeup steps up to help.</h3><p>Discover Iman’s pandemic work supporting a food bank and homeless shelter in London, alongside food aid for families in Sudan.</p></div>
-            <a className="text-link" href="/crisis-response/">Read our coronavirus story <Arrow /></a>
-          </aside>
-        </section>
-        <section id="virgin-mary-farm" className="section farm">
-          <span className="anchor" id="projects" />
-          <div className="container">
-            <div className="farm-intro">
-              <p className="eyebrow">Our long-term project · Our main project</p>
-              <h2>Virgin Mary Farm</h2>
-              <p className="farm-subtitle">Rebuilding through agriculture, clean energy and education.</p>
-            </div>
-            <div className="classic-farm-status"><strong><span className="status-dot" /> Rebuilding planned</strong><span>The farm is not operational due to the war. The land remains.</span></div>
-            <div className="classic-farm-pillars">
-              <article><span>01</span><h3>Sustainable agriculture</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
-              <article><span>02</span><h3>Clean energy for farming</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
-              <article><span>03</span><h3>Education &amp; training</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
-            </div>
-            <div className="actions"><a className="button" href="/development-partners/">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
-            <section className="farm-women" aria-labelledby="farm-women-title">
-              <p className="eyebrow">Women and girls at the heart of Virgin Mary Farm</p>
-              <h3 id="farm-women-title">A place to rebuild lives.<br />A future to grow together.</h3>
-              <p>Our main purpose is to help women affected by Sudan’s war rebuild their lives — including survivors of sexual violence, women whose husbands have been killed, and mothers raising children alone.</p>
-              <p>Every woman and girl deserves to live with dignity, feel valued and have opportunities to learn. We envision a farm where sustainable farming education, practical training and opportunities to earn an income help women rebuild confidence and independence, support their families and shape their own futures. For Iman, this is a vision of healing, connection and renewed hope.</p>
-              <p>For girls and young women, we plan education and skills opportunities that build confidence and widen future choices. Girls’ learning will be age-appropriate, supervised and designed to support their safety and continued schooling.</p>
-              <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from both communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
-              <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
-            </section>
-            <FarmReadiness />
-            <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The farm covers 130 hectares (approximately 321 acres), as confirmed by founder Iman Tadros. The original proposal sets out the four connected facilities below.</p>
-            <FarmPlan />
-            <FarmRoadmap />
-            <a className="mango-callout" href="/mango-project/">
-              <img
-                src="/mango-hero.jpg"
-                alt="Mangoes illustrating the proposed Mango Project"
-                width="160"
-                height="120"
-                loading="lazy"
-              />
-              <div>
-                <p className="eyebrow">
-                  A supporting project within Virgin Mary Farm
-                </p>
-                <h3>
-                  The Mango Project <Arrow />
-                </h3>
-                <p>
-                  A proposed route to better handling, packing and value for
-                  Sudanese mangoes.
-                </p>
-              </div>
-            </a>
-          </div>
-        </section>
-        <ClassicObjectives />
-        <SDGs />
-        <section id="partnership" className="section">
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <p className="eyebrow">For charities & development partners</p>
-                <h2>
-                  Bring your expertise.
-                  <br />
-                  <em>Build with us.</em>
-                </h2>
-              </div>
-              <p>
-                We welcome conversations with humanitarian organisations,
-                foundations, agricultural institutions and technical partners
-                who share our commitment to community recovery.
-              </p>
-            </div>
-            <div className="partner-grid">
-              <article>
-                <h3>Immediate relief</h3>
-                <p>
-                  Support food assistance and strengthen the practical response
-                  to families’ needs.
-                </p>
-              </article>
-              <article>
-                <h3>Equipment & infrastructure</h3>
-                <p>
-                  Explore support for solar pumps, irrigation, machinery, tools,
-                  storage and farm infrastructure.
-                </p>
-              </article>
-              <article>
-                <h3>Education & technical partnership</h3>
-                <p>
-                  Help shape sustainable farming education and practical
-                  training, assess the site and refine the farm plan with
-                  realistic delivery milestones.
-                </p>
-                <a className="text-link" href="#farming-education">
-                  Explore education & training <Arrow />
-                </a>
-              </article>
-            </div>
-            <div className="partner-note">
-              <p>
-                <strong>A clear starting point for partners.</strong> Read the
-                current farm status, proposed first stage, equipment needs and
-                budget status, or download our dated two-page rebuilding brief.
-              </p>
-              <a className="button" href="/development-partners/">
-                View partner information <Arrow />
-              </a>
-            </div>
-          </div>
-        </section>
-        <section id="team" className="section cream">
-          <div className="container">
-            <div className="section-head">
-              <div>
-                <p className="eyebrow">Our team & advisers</p>
-                <h2>
-                  Experience to guide
-                  <br />
-                  <em>the next chapter.</em>
-                </h2>
-              </div>
-              <p>
-                Expertise in horticulture, crop protection, seed science and
-                renewable energy informs the farm’s development vision.
-              </p>
-            </div>
-            <p className="team-flip-instructions">Select a portrait to turn the card and read the profile.</p>
-            <div className="team-grid">
-              {team.map((person) => (
-                <TeamFlipCard person={person} key={person.name} />
-              ))}
-            </div>
-          </div>
-        </section>
-        <ClassicFounder />
-        <ClassicCommunityHistory />
-        <section id="donate" className="section support">
-          <div className="container">
-            <p className="eyebrow">Support Risemeup</p>
-            <h2>
-              Help a family today.
-              <br />
-              <em>Help rebuild tomorrow.</em>
-            </h2>
-            <p className="lead">Choose the work you would like to support.</p>
-            <div className="support-grid">
-              <article>
-                <span>01 / Food assistance</span>
-                <h3>Stand with families.</h3>
-                <p>
-                  Ask about contributing towards food and essential supplies for
-                  families affected by Sudan’s war.
-                </p>
-                <button className="button" onClick={() => donationDialog.current?.showModal()}>
-                  Enquire about a donation <Arrow />
-                </button>
-              </article>
-              <article>
-                <span>02 / Virgin Mary Farm</span>
-                <h3>Be part of recovery.</h3>
-                <p>
-                  Discuss equipment, technical expertise or funding for a
-                  defined part of the main farm project.
-                </p>
-                <a
-                  className="button outline"
-                  href={`mailto:${email}?subject=Virgin%20Mary%20Farm%20partnership`}
-                >
-                  Support the farm’s rebuilding <Arrow />
-                </a>
-              </article>
-            </div>
-            <p className="support-disclosure">
-              Donation enquiries are handled directly by the team. This website
-              does not take payments. Please contact us to discuss the purpose
-              of your support and the available arrangements. Risemeup is not
-              currently registered in the UK. <a href="/development-partners/#accountability">Read our organisation and accountability status.</a>
-            </p>
-          </div>
-        </section>
-        <section id="contact" className="section">
-          <div className="container">
-            <div className="section-head"><p className="eyebrow">Get in touch</p><h2>Let’s put your support to work.</h2><p>Whether you can help with food assistance, equipment, expertise or a development partnership, we would like to hear from you.</p></div>
-            <div className="contact-grid">
-              <div className="classic-contact-copy">
-                <h3>A conversation is a good place to start.</h3>
-                <p>Tell us about your organisation, your interests, or how you would like to help.</p>
-                <address className="classic-contact-details">
-                  <div><span aria-hidden="true">⌖</span><div><strong>Our address</strong><span>2 Rosecroft Gardens<br />London, NW2 6HX, United Kingdom</span></div></div>
-                  <div><span aria-hidden="true">✉</span><div><strong>Email us</strong><a href={`mailto:${email}`}>{email}</a></div></div>
-                  <div><span aria-hidden="true">☎</span><div><strong>Call us</strong><a href="tel:+447867977844">+44 786 797 7844</a></div></div>
-                </address>
-                <div className="classic-contact-note"><p className="eyebrow">Two ways to help</p><p>Support food assistance now, or work with us on the long-term rebuilding of Virgin Mary Farm.</p></div>
-              </div>
-            <div className="contact-panel">
-              <ContactForm />
-            </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div className="container footer-grid">
-          <div>
-            <Brand />
-            <p className="brand-slogan">Think globally, act locally.</p>
-            <p>
-              Standing with forgotten communities.
-              <br />
-              Growing the possibility of a better tomorrow.
-            </p>
-          </div>
-          <nav aria-label="Footer navigation">
-            <a href="#vision-mission">Vision & mission</a>
-            <a href="#communities">Our communities</a>
-            <a href="#virgin-mary-farm">Virgin Mary Farm</a>
-            <a href="#sdgs">UN Sustainable Development Goals</a>
-            <a href="/crisis-response/">Our coronavirus response</a>
-            <a href="/mango-project/">Mango subproject</a>
-          </nav>
-          <nav aria-label="Get involved">
-            <a href="#team">Our team</a>
-            <a href="/development-partners/">For development partners</a>
-            <a href="#donate">Donation enquiries</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-        <div className="container footer-bottom">
-          <span>© {new Date().getFullYear()} Risemeup</span>
-          <span>London · Sudan</span>
-          <a href="#hero">Back to top ↑</a>
-        </div>
-      </footer>
-      <a className="classic-back-top" href="#hero" aria-label="Back to top">↑</a>
-      <dialog ref={donationDialog} className="classic-donation-dialog" aria-labelledby="donation-title" onClick={event => { if (event.target === event.currentTarget) donationDialog.current?.close(); }}>
-        <button className="dialog-close" aria-label="Close donation information" onClick={() => donationDialog.current?.close()}>×</button>
-        <p className="eyebrow">Food assistance</p><h2 id="donation-title">Support families today.</h2>
-        <p>Your support can help families in Sudan’s Coptic Orthodox and Nuba Mountains communities access food and essential supplies.</p>
-        <hr /><h3>Arrange a donation with the team.</h3><p>Please contact us to discuss the purpose of your support and the available arrangements. This website does not take payments.</p>
-        <a className="button" href={`mailto:${email}?subject=Food%20assistance%20support`}>Email about a donation →</a>
-        <div className="dialog-contact"><a href={`mailto:${email}`}>{email}</a><a href="tel:+447867977844">+44 786 797 7844</a><a href="#contact" onClick={() => donationDialog.current?.close()}>Prepare an email enquiry →</a></div>
-        <p className="dialog-farm-link">Interested in longer-term recovery? <a href="#partnership" onClick={() => donationDialog.current?.close()}>Explore farm partnerships →</a></p>
-      </dialog>
-    </>
-  );
+    let frame = 0;
+    const followHash = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const raw = window.location.hash.slice(1);
+        const target = document.getElementById(raw) ?? document.getElementById(aliases[raw] ?? '');
+        target?.scrollIntoView({ behavior: 'instant' });
+      });
+    };
+    followHash();
+    window.addEventListener('hashchange', followHash);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener('hashchange', followHash); };
+  }, []);
+  function openSupport(value: string) { setInterest(value); supportDialog.current?.showModal(); }
+  return <>
+    <a href="#main" className="skip-link">Skip to content</a>
+    <div className="topline"><span>Think globally. Act locally.</span><span>FOOD · DIGNITY · OPPORTUNITY</span><span>LONDON <i>—</i> SUDAN</span></div>
+    <header className="site-nav">
+      <a className="logo" href="#home" aria-label="Risemeup home"><img src="/logo.png" width="174" height="62" alt="Risemeup Sustainability"/></a>
+      <button ref={menuButton} className="menu-button" aria-expanded={menu} aria-controls="main-navigation" onClick={()=>setMenu(!menu)}>{menu?'Close −':'Menu +'}</button>
+      <nav id="main-navigation" className={menu?'open':''} aria-label="Main navigation" onClick={()=>setMenu(false)}><a href="#purpose">Our purpose</a><a href="#work">Our work</a><a href="#farm">Virgin Mary Farm</a><a href="#people">Our people</a><a href="/development-partners/">For partners</a></nav>
+      <button className="button gold nav-cta" onClick={()=>openSupport('Food & essential supplies')}>Make a difference <Arrow/></button>
+    </header>
+    <main id="main">
+      <section id="home" className="hero">
+        <img className="hero-background" src="/wheat-field.png" alt="Golden wheat illustrating the possibility of a future harvest" fetchPriority="high"/>
+        <div className="hero-shade"/>
+        <div className="hero-inner shell"><div className="hero-content"><p className="eyebrow"><span/> FOR PEOPLE. FOR DIGNITY. FOR TOMORROW.</p><h1>Where hope<br/>takes <em>root.</em></h1><p className="hero-description">Standing with Sudan’s forgotten communities.<br/>Nourishing lives today. Growing a future, together.</p><div className="hero-actions"><button className="button gold" onClick={()=>openSupport('Food & essential supplies')}>Help a family today <Arrow/></button></div><p className="hero-slogan">Committed to grow rural communities.</p></div><div className="hero-side"><Seed/><p>Two communities.<br/><em>One shared future.</em></p><span>COPTIC ORTHODOX & NUBA MOUNTAINS</span></div></div>
+        <div className="hero-foot shell"><span>ROOTED IN LONDON. CONNECTED TO SUDAN.</span><span>Illustrative harvest photograph</span><a href="#purpose">SCROLL TO EXPLORE <Arrow down/></a></div>
+      </section>
+      <div className="belief-strip"><div className="shell"><span>Food with dignity</span><b>✧</b><span>Opportunity through learning</span><b>✧</b><span>Recovery through community</span></div></div>
+      <section id="purpose" className="purpose section shell reveal"><div className="section-kicker"><span className="tiny-seed">↗</span> THE HEART OF RISEMEUP <span className="section-count">01 / OUR PURPOSE</span></div><div className="purpose-grid"><div className="purpose-images"><figure className="purpose-main"><img src="/sudan-crisis-7.jpeg" alt="Packed food portions prepared for community food assistance" loading="lazy"/><figcaption>Practical care. Personal commitment.</figcaption></figure><figure className="purpose-inset"><img src="/greenhouse-tomatoes.jpg" alt="Greenhouse plants illustrating our sustainable farming vision" loading="lazy"/></figure><div className="purpose-seal"><span>PEOPLE AT</span><Seed/><span>THE HEART</span></div></div><div className="purpose-copy"><p className="eyebrow muted">NO COMMUNITY SHOULD BE FORGOTTEN</p><h2>A little care today.<br/>A world of<br/><em>possibility tomorrow.</em></h2><p className="lead">When lives are uprooted, belonging becomes a beginning.</p><p>War has taken homes, livelihoods and places of refuge from communities across Sudan. We stand alongside Sudan’s Coptic Orthodox and Nuba Mountains communities, with equal care and a lasting commitment.</p><p>Our work connects food assistance today with a vision for recovery through sustainable farming, education and opportunities to earn a living.</p><a className="text-link" href="#work">See how that commitment takes shape <Arrow/></a></div></div><p className="image-note">Food assistance archive: photograph date unconfirmed. Greenhouse image: illustrative, not current farm operations.</p></section>
+      <section id="work" className="work-section section"><div className="shell"><div className="section-kicker reveal"><span className="tiny-seed">↗</span> OUR WORK <span className="section-count">02 / CARE & RECOVERY</span></div><div className="section-head reveal"><h2>Meeting today’s needs.<br/><em>Making room for tomorrow.</em></h2><p>Immediate care and long-term possibility.<br/>Two connected parts of one commitment.</p></div><div className="work-grid"><article className="work-card reveal"><div className="work-image"><img src="/sudan-crisis-8.jpeg" alt="Photograph from the Risemeup Sudan food assistance archive" loading="lazy"/><span className="image-tag">01 / IMMEDIATE CARE</span><span className="image-circle" aria-hidden="true">↗</span></div><div className="work-copy"><p className="eyebrow muted">FOOD & ESSENTIAL SUPPLIES</p><h3>Because dignity<br/>begins with <em>care.</em></h3><p>Helping families access food and essentials through trusted community connections, as resources and safe access allow.</p><button className="text-link" onClick={()=>openSupport('Food & essential supplies')}>Stand with a family <Arrow/></button></div></article><article className="work-card reveal"><div className="work-image"><img src="/greenhouse.jpg" alt="Greenhouse photograph illustrating future agricultural possibilities" loading="lazy"/><span className="image-tag">02 / LASTING RECOVERY</span><span className="image-circle" aria-hidden="true">↗</span></div><div className="work-copy"><p className="eyebrow muted">FARMING, LEARNING & LIVELIHOODS</p><h3>Planting the seeds<br/>of <em>independence.</em></h3><p>Reimagining Virgin Mary Farm as a place where agriculture, clean energy and practical learning help communities rebuild.</p><a className="text-link" href="#farm">Explore our long-term vision <Arrow/></a></div></article></div><div className="work-caption">Food photograph from our archive; date unconfirmed. Agricultural photographs illustrate planned activities. Virgin Mary Farm is not currently operational.</div></div></section>
+      <section id="farm" className="farm-section"><div className="farm-intro shell"><div className="farm-title reveal"><p className="eyebrow">OUR FLAGSHIP VISION · OMDURMAN, SUDAN</p><h2>More than a farm.<br/><em>A future to believe in.</em></h2><p>Virgin Mary Farm is the heart of our long-term vision: productive land, shared learning and a place for people to rebuild their lives.</p><div className="farm-status"><span/> REBUILDING PLANNED · NOT YET OPERATIONAL</div></div><div className="farm-facts reveal"><div><strong>130<span>hectares</span></strong><p>of land in the founder’s reported farm area</p></div><div><Seed/><p>One connected vision for food, clean energy, education and livelihoods.</p></div></div></div><div className="farm-journey shell reveal"><div className="journey-photo"><img key={chapters[chapter].image} src={chapters[chapter].image} alt={chapters[chapter].alt} loading="lazy"/><div className="journey-photo-caption"><span>THE REBUILDING JOURNEY</span><strong>{chapters[chapter].number}<i> / 03</i></strong></div><p>{chapters[chapter].caption}</p></div><div className="journey-content"><p className="eyebrow">EVERY FUTURE STARTS SOMEWHERE</p><h3>{chapters[chapter].title}</h3><div className="chapter-list">{chapters.map((item,index)=><div className={`chapter ${chapter===index?'active':''}`} key={item.number}><h4><button aria-expanded={chapter===index} aria-controls={`chapter-content-${index}`} onClick={()=>setChapter(index)}><span>{item.number}</span>{item.name}<span className="chapter-plus">{chapter===index?'−':'+'}</span></button></h4><div id={`chapter-content-${index}`} hidden={chapter!==index}><p>{item.text}</p></div></div>)}</div><button className="text-link on-dark" onClick={()=>openSupport('Farm rebuilding & equipment')}>Help bring the vision to life <Arrow/></button></div></div><div className="farm-bottom shell"><p>Safe access, a technical assessment, agreed specifications and funding are needed before delivery. The journey above describes a proposed approach.</p><button onClick={()=>planDialog.current?.showModal()}>View the illustrated farm vision <Arrow/></button></div></section>
+      <section className="women-section section shell reveal"><div className="women-heading"><p className="eyebrow muted">WOMEN AT THE HEART OF THE VISION</p><h2>Not just a place to work.<br/>A place to <em>begin again.</em></h2><p>For women affected by war, a future should hold more than survival. It should hold dignity, confidence and the freedom to shape what comes next.</p></div><div className="women-grid"><article><span className="line-icon" aria-hidden="true">01</span><h3>Skills to grow.</h3><p>Sustainable farming education and practical training, developed with women from both communities.</p></article><article><span className="line-icon" aria-hidden="true">02</span><h3>Room to belong.</h3><p>A shared vision for widows, mothers raising children alone and survivors of violence to rebuild confidence and independence.</p></article><article><span className="line-icon" aria-hidden="true">03</span><h3>A future to shape.</h3><p>Opportunities to earn an income and help guide the farm’s development, with dignity and choice at the centre.</p></article></div><div className="women-note"><p>This programme is planned. Participation should never require sharing personal experiences of violence. Qualified partners are needed to help develop an appropriate approach.</p><button className="text-link" onClick={()=>openSupport('Women’s education & livelihoods')}>Help shape this programme <Arrow/></button></div></section>
+      <section id="people" className="founder-section"><div className="shell founder-grid"><figure className="founder-portrait reveal"><img src="/founder-iman-tadros.jpg" alt="Iman Tadros, founder of Risemeup" loading="lazy"/><figcaption><strong>Iman Tadros</strong><span>Founder of Risemeup</span></figcaption></figure><div className="founder-copy reveal"><p className="eyebrow muted">A PERSONAL COMMITMENT. A SHARED PURPOSE.</p><span className="quote-mark" aria-hidden="true">“</span><h2>A story that starts<br/>with people.<br/><em>And stays with them.</em></h2><p>As a member of Sudan’s Coptic Orthodox community, Iman understands the personal loss caused by war. Her work brings that connection to practical care for people whose needs are too often overlooked.</p><p>From food support in London during the pandemic to food assistance in Sudan, the commitment remains the same: stand alongside people today and keep believing in their tomorrow.</p><button className="text-link" onClick={()=>openSupport('A conversation with the team')}>Connect with our purpose <Arrow/></button></div></div></section>
+      <section id="advisers" className="advisers section shell reveal"><div className="section-head"><div><p className="eyebrow muted">EXPERIENCE TO GUIDE THE NEXT CHAPTER</p><h2>Knowledge with <em>purpose.</em></h2></div><p>Agricultural, scientific and technical expertise<br/>informing our vision for recovery.</p></div><div className="adviser-grid">{advisers.map(([name,role,image])=><article key={name}><div className="adviser-image"><img src={image} alt={name} loading="lazy"/></div><p className="eyebrow muted">{role}</p><h3>{name}</h3></article>)}</div></section>
+      <section id="join" className="join-section"><Seed className="join-seed"/><div className="shell join-inner reveal"><p className="eyebrow">EVERY ACT OF CARE CAN BE A BEGINNING</p><h2>Be part of something<br/><em>worth growing.</em></h2><p>Your expertise, equipment, time or support could help<br/>turn a shared vision into the next practical step.</p><div className="join-actions"><button className="button gold" onClick={()=>openSupport('Food & essential supplies')}>Support families today <Arrow/></button><button className="button outline" onClick={()=>openSupport('Farm rebuilding & equipment')}>Become a partner <Arrow/></button></div><span className="join-small">Think globally. Act locally.</span></div></section>
+      <section id="contact" className="contact-section shell"><div><p className="eyebrow muted">LET’S START A CONVERSATION</p><h2>Good things begin<br/><em>with connection.</em></h2></div><address className="contact-details"><a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org <Arrow/></a><a href="tel:+447867977844">+44 786 797 7844</a><p>2 Rosecroft Gardens<br/>London, NW2 6HX, United Kingdom</p></address></section>
+    </main>
+    <footer><div className="shell"><div className="footer-top"><div><a className="footer-brand" href="#home">risemeup<span>↗</span></a><p>Rooted in community.<br/>Growing a better tomorrow.</p></div><div className="footer-nav"><p>EXPLORE</p><a href="#purpose">Our purpose</a><a href="#work">Our work</a><a href="#farm">Virgin Mary Farm</a><a href="#people">Our people</a><a href="/crisis-response/">Our coronavirus response</a><a href="/mango-project/">The Mango Project</a></div><div className="footer-nav"><p>TAKE PART</p><a href="/development-partners/">Development partnerships</a><a href="#contact">Contact us</a><button onClick={()=>openSupport('Food & essential supplies')}>Support food assistance</button><button onClick={()=>openSupport('Farm rebuilding & equipment')}>Partner in rebuilding</button><button onClick={()=>openSupport('Women’s education & livelihoods')}>Share your expertise</button></div><div className="footer-location"><span>LONDON</span><div className="location-line"/><span>SUDAN</span><p>Two communities.<br/>One shared future.</p></div></div><div className="accountability"><p>Risemeup is a London-based initiative and is not currently registered in the UK. Farm activities described here are planned. Donation arrangements are discussed directly with the team. This website does not take payments.</p><a href="#home">BACK TO TOP ↑</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Risemeup</span><span>Committed to grow rural communities.</span></div></div></footer>
+    <dialog ref={supportDialog} className="support-dialog" aria-labelledby="support-title" onClick={e=>{if(e.target===e.currentTarget)supportDialog.current?.close();}}><button className="dialog-close" onClick={()=>supportDialog.current?.close()} aria-label="Close support information">×</button><Seed/><p className="eyebrow muted">YOUR PART IN THE NEXT CHAPTER</p><h2 id="support-title">A little support.<br/><em>A new beginning.</em></h2><p>Find the part of our work that speaks to you.</p><label htmlFor="support-interest">I would like to help with</label><select id="support-interest" value={interest} onChange={e=>{setInterest(e.target.value);}}>{['Food & essential supplies','Farm rebuilding & equipment','Women’s education & livelihoods','A conversation with the team'].map(value=><option key={value}>{value}</option>)}</select><a className="button forest" href={`mailto:i.tradros@risemeup.org?subject=${encodeURIComponent(`Risemeup enquiry: ${interest}`)}&body=${encodeURIComponent(`Hello Iman,\r\n\r\nI would like to discuss ${interest.toLowerCase()}.\r\n\r\n`)}`}>Email Iman about this <Arrow/></a><p className="support-explanation">Your email app opens so you can review and send your message. Please do not include sensitive personal details about families or beneficiaries.</p><div className="support-real-links"><a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org</a><a href="tel:+447867977844">+44 786 797 7844</a><a href="/development-partners/">Read our development-partner information <Arrow/></a></div><small className="dialog-note">Donation enquiries are handled by the team. This website does not take payments.</small></dialog>
+    <dialog ref={planDialog} className="plan-dialog" aria-labelledby="plan-title" onClick={e=>{if(e.target===e.currentTarget)planDialog.current?.close();}}><button className="dialog-close" onClick={()=>planDialog.current?.close()} aria-label="Close farm illustration">×</button><p className="eyebrow muted">AN ILLUSTRATION OF THE POSSIBILITIES</p><h2 id="plan-title">The farm we <em>envision.</em></h2><img src="/virgin-mary-five-phase-roadmap.jpeg" alt="Illustrated five-phase concept for the future of Virgin Mary Farm"/><p>Future vision, not existing facilities. Areas, participant targets and financial assumptions in this supplied planning illustration require assessment and agreement.</p></dialog>
+  </>;
 }
