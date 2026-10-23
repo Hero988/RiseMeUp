@@ -102,3 +102,10 @@
 @media(max-width:600px) {
   .home-page #virgin-mary-farm .rm-estate-pillars h3 {font-size:min(31px,7cqi)}
 }
+
+@media(max-width:600px) {
+  .home-page #virgin-mary-farm .rm-estate-pillars > article,
+  .home-page #virgin-mary-farm .rm-estate-pillars > article + article {
+    padding-left:0;
+  }
+}
