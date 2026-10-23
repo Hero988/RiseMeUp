@@ -136,3 +136,10 @@
     width: 170px;
   }
 }
+
+/* Shared oval shape for the site's primary and secondary action buttons. */
+body.warm-brand .button,
+body.warm-brand .rm-opening-button,
+body.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary {
+  border-radius:999px !important;
+}
