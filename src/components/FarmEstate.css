@@ -109,3 +109,9 @@
     padding-left:0;
   }
 }
+
+/* Larger rebuilding status heading. */
+#virgin-mary-farm .rm-estate-status > strong {font-size:28px;line-height:1.3}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-status > strong {font-size:24px}
+}
