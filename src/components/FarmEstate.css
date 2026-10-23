@@ -83,9 +83,9 @@
 }
 
 /* Consistent single-line headings and readable descriptions for all pillars. */
-#virgin-mary-farm .rm-estate-pillars > article {container-type:inline-size}
+#virgin-mary-farm .rm-estate-pillars {container-type:inline-size}
 .home-page #virgin-mary-farm .rm-estate-pillars h3 {
-  font-size:min(39px,9cqi);
+  font-size:min(39px,2.5cqi);
   white-space:nowrap;
   line-height:1.2;
 }
@@ -97,4 +97,8 @@
 @media(max-width:600px) {
   #virgin-mary-farm .rm-estate-pillars > article > p,
   #virgin-mary-farm .rm-estate-pillars > article:first-child > p {font-size:15px}
+}
+
+@media(max-width:600px) {
+  .home-page #virgin-mary-farm .rm-estate-pillars h3 {font-size:min(31px,7cqi)}
 }
