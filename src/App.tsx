@@ -1,3 +1,4 @@
+import './components/FarmEstate.css';
 import { useEffect, useRef, useState } from "react";
 import FarmPlan from "./components/FarmPlan";
 import FarmReadiness from "./components/FarmReadiness";
@@ -267,21 +268,28 @@ export default function App() {
             <a className="text-link" href="/crisis-response/">Read our coronavirus story <Arrow /></a>
           </aside>
         </section>
-        <section id="virgin-mary-farm" className="section farm">
+        <section id="virgin-mary-farm" className="section farm farm-estate-intro">
           <span className="anchor" id="projects" />
+          <div className="rm-estate-band">
+            <div className="container">
+              <div className="rm-estate-top"><span>Our long-term project · Our main project</span><span>Omdurman · Sudan</span></div>
+              <div className="rm-estate-title">
+                <p className="rm-estate-kicker">The heart of Risemeup’s vision</p>
+                <h2>Virgin Mary <em>Farm.</em></h2>
+                <p className="rm-estate-subtitle">Rebuilding through agriculture,<br />clean energy and education.</p>
+                <div className="rm-estate-flourish" aria-hidden="true"><span /><svg viewBox="0 0 40 48" fill="none" stroke="currentColor" strokeWidth="1"><path d="M20 46V18M20 33C6 33 3 24 4 15c12 0 16 8 16 18Zm0-10C34 22 36 12 34 4c-10 1-14 7-14 19Z" /><path d="m20 33-10-12m10 1 10-12" /></svg><span /></div>
+              </div>
+              <div className="rm-estate-status"><strong><span aria-hidden="true" />Rebuilding planned</strong><p>The farm is not operational due to the war.<br />The land remains.</p></div>
+              <div className="rm-estate-pillars">
+                <article><span>01</span><h3>Sustainable<br />agriculture.</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
+                <article><span>02</span><h3>Clean energy<br />for farming.</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
+                <article><span>03</span><h3>Education<br />&amp; training.</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
+              </div>
+              <div className="rm-estate-actions"><a className="rm-estate-primary" href="/development-partners/">Partner in rebuilding <span aria-hidden="true">↗</span></a><a className="rm-estate-secondary" href="/mango-project/">Read the Mango proposal <span aria-hidden="true">↗</span></a></div>
+              <div className="rm-estate-foot"><p>Women and girls at the heart of the vision.</p><a href="#farm-women-title" aria-label="Read about women and girls at the heart of Virgin Mary Farm">↓</a></div>
+            </div>
+          </div>
           <div className="container">
-            <div className="farm-intro">
-              <p className="eyebrow">Our long-term project · Our main project</p>
-              <h2>Virgin Mary Farm</h2>
-              <p className="farm-subtitle">Rebuilding through agriculture, clean energy and education.</p>
-            </div>
-            <div className="classic-farm-status"><strong><span className="status-dot" /> Rebuilding planned</strong><span>The farm is not operational due to the war. The land remains.</span></div>
-            <div className="classic-farm-pillars">
-              <article><span>01</span><h3>Sustainable agriculture</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
-              <article><span>02</span><h3>Clean energy for farming</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
-              <article><span>03</span><h3>Education &amp; training</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
-            </div>
-            <div className="actions"><a className="button" href="/development-partners/">Partner in rebuilding →</a><a className="button outline" href="/mango-project/">Read the Mango proposal</a></div>
             <section className="farm-women" aria-labelledby="farm-women-title">
               <p className="eyebrow">Women and girls at the heart of Virgin Mary Farm</p>
               <h3 id="farm-women-title">A place to rebuild lives.<br />A future to grow together.</h3>
