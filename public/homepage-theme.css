@@ -298,3 +298,8 @@
 @media(max-width:600px) {
   .home-page #sudan-crisis h2 {font-size:clamp(28px,6.5vw,36px)}
 }
+
+/* Approved community colours: orange main title and matching green subheadings. */
+.home-page.warm-brand #communities .section-head h2 {color:#b45c2f}
+.home-page.warm-brand #communities .community-story h3,
+.home-page.warm-brand #communities .community-story h3 span {color:#24583d}
