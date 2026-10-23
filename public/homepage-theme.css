@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 /* The approved warm cream homepage, with the original Risemeup logo. */
 .home-page .announcement {
   background: #1d542d;
@@ -239,3 +240,7 @@
 .home-page #about h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(44px,4.5vw,64px);font-weight:500;line-height:1.05;letter-spacing:-.025em;color:#244334}
 .home-page #about h2 .classic-about-emphasis{font-family:inherit;font-weight:inherit;color:inherit}
 @media(max-width:600px){.home-page #about h2{font-size:clamp(39px,10vw,50px)}}
+
+/* Approved warm orange Playfair Display option for the about heading. */
+.home-page #about h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:#b45c2f;font-size:clamp(40px,4vw,57px);line-height:1.13;letter-spacing:-.035em}
+@media(max-width:600px){.home-page #about h2{font-size:44px}}
