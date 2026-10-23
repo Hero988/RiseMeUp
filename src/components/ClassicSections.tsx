@@ -41,14 +41,14 @@ export function ClassicVision() {
       </div>
       <div className="vision-grid">
         <article id="vision">
-          <p className="chapter">I · The future we envision</p>
+          <p className="chapter">The future we envision</p>
           <h3>Our Vision</h3>
           <p>A future where communities affected by war can live with dignity, grow nutritious food and build lasting livelihoods.</p>
           <p>Where land flourishes, opportunity is shared and families have the freedom to rebuild their lives.</p>
           <p>Thriving land. Stronger communities. Renewed hope.</p>
         </article>
         <article id="mission">
-          <p className="chapter">II · The work that guides us</p>
+          <p className="chapter">The work that guides us</p>
           <h3>Our Mission</h3>
           <p>To stand with Sudan’s Coptic Orthodox and Nuba Mountains communities through food assistance today and opportunities for tomorrow.</p>
           <p>With our partners, we aim to rebuild Virgin Mary Farm as a place for sustainable farming, clean energy, learning and practical training.</p>
