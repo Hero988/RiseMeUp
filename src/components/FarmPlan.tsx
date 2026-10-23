@@ -18,7 +18,7 @@ export default function FarmPlan() {
               width="1024"
               height="658"
               loading="eager"
-            / /><span className="panel-number">I</span><div className="panel-copy"><p className="eyebrow">Renewable energy</p><h4>Biogas<br /><em>plant.</em></h4><p className="output">Electricity · Gas · Fertiliser</p></div></div><details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Original biogas concept picture retained</p>
+            /><span className="panel-number">I</span><div className="panel-copy"><p className="eyebrow">Renewable energy</p><h4>Biogas<br /><em>plant.</em></h4><p className="output">Electricity · Gas · Fertiliser</p></div></div><details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Original biogas concept picture retained</p>
             
             
             
