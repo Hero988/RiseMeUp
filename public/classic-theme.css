@@ -626,3 +626,10 @@ footer .brand-slogan { color: #e3ac80; }
 @media(max-width:600px) {
   .home-page #about .classic-map-measurements {width:200px;right:-10px}
 }
+
+/* More compact vertical spacing inside the oval land labels. */
+.home-page #about .classic-map-measurements {padding-top:12px;padding-bottom:12px}
+.home-page #about .classic-image-badge {padding-top:10px;padding-bottom:10px}
+@media(max-width:600px) {
+  .home-page #about .classic-map-measurements {padding-top:11px;padding-bottom:11px}
+}
