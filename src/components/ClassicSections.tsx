@@ -1,3 +1,5 @@
+import './VisionField.css';
+
 export function ClassicAbout() {
   const values = [
     ["↗", "Recovery", "Long-term livelihoods"],
@@ -31,12 +33,28 @@ export function ClassicAbout() {
 }
 
 export function ClassicVision() {
-  return <section id="vision-mission" className="section classic-vision">
+  return <section id="vision-mission" className="section classic-vision rm-field-vision" aria-labelledby="vision-mission-title">
     <div className="container">
-      <div className="section-head"><p className="eyebrow">Our heart</p><h2>Vision &amp; Mission</h2><p>Two Communities. One Vision. A Future of Hope.</p></div>
+      <div className="section-head">
+        <p className="eyebrow">Our heart</p>
+        <h2 id="vision-mission-title">Vision <span>&amp;</span> <em>Mission.</em></h2>
+        <p>Two communities. One shared vision. A future of hope.</p>
+      </div>
       <div className="vision-grid">
-        <article id="vision"><span className="vision-icon" aria-hidden="true">◎</span><h3>Our Vision</h3><p>A future in which communities affected by war can live with dignity, access nutritious food and build secure livelihoods.</p><p>We envision productive land, shared opportunity and a place for people to learn, work and rebuild their lives.</p><p>From fragile land to thriving communities.</p></article>
-        <article id="mission"><span className="vision-icon" aria-hidden="true">↗</span><h3>Our Mission</h3><p>To stand alongside Sudan’s Coptic Orthodox and Nuba Mountains communities through practical food assistance and long-term recovery.</p><p>Working with partners, we aim to rebuild Virgin Mary Farm through sustainable farming, clean energy, education and practical training.</p><p>Think globally, act locally.</p></article>
+        <article id="vision">
+          <p className="chapter">I · The future we envision</p>
+          <h3>Our Vision</h3>
+          <p>A future where communities affected by war can live with dignity, grow nutritious food and build lasting livelihoods.</p>
+          <p>Where land flourishes, opportunity is shared and families have the freedom to rebuild their lives.</p>
+          <p>Thriving land. Stronger communities. Renewed hope.</p>
+        </article>
+        <article id="mission">
+          <p className="chapter">II · The work that guides us</p>
+          <h3>Our Mission</h3>
+          <p>To stand with Sudan’s Coptic Orthodox and Nuba Mountains communities through food assistance today and opportunities for tomorrow.</p>
+          <p>With our partners, we aim to rebuild Virgin Mary Farm as a place for sustainable farming, clean energy, learning and practical training.</p>
+          <p>Think globally, act locally.</p>
+        </article>
       </div>
     </div>
   </section>;

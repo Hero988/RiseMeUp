@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+.home-page #vision-mission.rm-field-vision {
+  position:relative; isolation:isolate; overflow:hidden;
+  min-height:820px; padding:65px 0 75px; background:#193c2b; color:#fcf7e9;
+}
+.home-page #vision-mission.rm-field-vision::before {
+  content:""; position:absolute; inset:0; z-index:-2;
+  background:url('/barley-opening.webp') center/cover;
+}
+.home-page #vision-mission.rm-field-vision::after {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(0deg,#10281ee8,#10281ec2 55%,#10281e86);
+}
+.home-page #vision-mission.rm-field-vision > .container {width:calc(100% - 128px);max-width:1216px;margin:auto}
+.home-page #vision-mission.rm-field-vision .section-head {display:block;text-align:center;max-width:1050px;margin:0 auto;padding:0}
+.home-page #vision-mission.rm-field-vision .eyebrow,
+.home-page #vision-mission.rm-field-vision .chapter {
+  color:#eddbb6;font:500 9px/1.8 'DM Sans',sans-serif;letter-spacing:.15em;text-transform:uppercase;
+}
+.home-page #vision-mission.rm-field-vision .section-head .eyebrow {margin:0 0 24px}
+.home-page #vision-mission.rm-field-vision h2,
+.home-page #vision-mission.rm-field-vision h3 {font-family:'Playfair Display',Georgia,serif;font-weight:500;letter-spacing:-.035em;line-height:1.13}
+.home-page #vision-mission.rm-field-vision h2 {margin:0;color:#fcf7e9;font-size:clamp(50px,5.3vw,78px)}
+.home-page #vision-mission.rm-field-vision h2 > span {font-size:.82em}
+.home-page #vision-mission.rm-field-vision h2 em {font:italic 500 1em/1.13 'Playfair Display',Georgia,serif;color:#e8c99a}
+.home-page #vision-mission.rm-field-vision .section-head > p:last-child {max-width:none;margin:27px 0 0;color:#f6efdc;font:400 14px/1.8 'DM Sans',sans-serif}
+.home-page #vision-mission.rm-field-vision .vision-grid {display:grid;grid-template-columns:1fr 1fr;gap:85px;max-width:none;margin:70px 0 0;padding:0;border:0}
+.home-page #vision-mission.rm-field-vision .vision-grid article {position:static;overflow:visible;padding:0;border:0;border-radius:0;text-align:left;background:none;box-shadow:none;color:#fcf7e9}
+.home-page #vision-mission.rm-field-vision .vision-grid article::before {content:none}
+.home-page #vision-mission.rm-field-vision .chapter {margin:0}
+.home-page #vision-mission.rm-field-vision .vision-grid h3 {font-size:39px;margin:18px 0 26px;color:#fff8e8}
+.home-page #vision-mission.rm-field-vision .vision-grid article > p:not(.chapter) {max-width:490px;margin:0;color:#f2f1e6;font:400 14px/1.95 'DM Sans',sans-serif;text-shadow:0 1px 10px #0d271a66}
+.home-page #vision-mission.rm-field-vision .vision-grid article > p + p:not(.chapter) {margin-top:20px}
+.home-page #vision-mission.rm-field-vision .vision-grid article > p:last-child {font:italic 500 20px/1.5 'Playfair Display',Georgia,serif;color:#f0d2a0;margin-top:28px}
+@media(max-width:1000px){
+ .home-page #vision-mission.rm-field-vision > .container{width:calc(100% - 80px)}
+ .home-page #vision-mission.rm-field-vision .vision-grid{gap:50px}
+ .home-page #vision-mission.rm-field-vision .vision-grid h3{font-size:35px}
+}
+@media(max-width:650px){
+ .home-page #vision-mission.rm-field-vision{padding:45px 0 50px;min-height:0}
+ .home-page #vision-mission.rm-field-vision::before{background-position:40% center}
+ .home-page #vision-mission.rm-field-vision > .container{width:calc(100% - 40px)}
+ .home-page #vision-mission.rm-field-vision h2{font-size:48px}
+ .home-page #vision-mission.rm-field-vision .section-head .eyebrow{margin-bottom:20px}
+ .home-page #vision-mission.rm-field-vision .section-head > p:last-child{font-size:12px;margin-top:22px}
+ .home-page #vision-mission.rm-field-vision .vision-grid{grid-template-columns:1fr;gap:38px;margin-top:45px}
+ .home-page #vision-mission.rm-field-vision .vision-grid h3{font-size:33px;margin:15px 0 20px}
+ .home-page #vision-mission.rm-field-vision .vision-grid article > p:not(.chapter){max-width:none}
+ .home-page #vision-mission.rm-field-vision .vision-grid article > p:last-child{font-size:19px;margin-top:23px}
+}
