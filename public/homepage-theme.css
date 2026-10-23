@@ -244,3 +244,8 @@
 /* Approved warm orange Playfair Display option for the about heading. */
 .home-page #about h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:#b45c2f;font-size:clamp(40px,4vw,57px);line-height:1.13;letter-spacing:-.035em}
 @media(max-width:600px){.home-page #about h2{font-size:44px}}
+
+/* Approved orange Playfair Display community heading. */
+.home-page #communities .section-head{max-width:1120px}
+.home-page #communities .section-head h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,4.1vw,58px);font-weight:500;line-height:1.16;letter-spacing:-.035em;color:#b45c2f}
+@media(max-width:650px){.home-page #communities .section-head h2{font-size:42px}}
