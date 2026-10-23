@@ -35,3 +35,41 @@
 @media(max-width:900px){#virgin-mary-farm .rm-estate-band{padding-top:58px;margin-bottom:55px}#virgin-mary-farm .rm-estate-pillars>article{padding-right:23px}#virgin-mary-farm .rm-estate-pillars>article+article{padding-left:23px}.home-page #virgin-mary-farm .rm-estate-pillars h3{font-size:33px}#virgin-mary-farm .rm-estate-pillars p{font-size:11px}}
 @media(max-width:600px){#virgin-mary-farm .rm-estate-band{padding:42px 0 32px;margin-bottom:40px}#virgin-mary-farm .rm-estate-top{font-size:8px;letter-spacing:.06em;gap:20px}#virgin-mary-farm .rm-estate-top>span:first-child{max-width:190px}#virgin-mary-farm .rm-estate-top>span:last-child{text-align:right}#virgin-mary-farm .rm-estate-title{padding-top:34px}#virgin-mary-farm .rm-estate-kicker{font-size:9px}.home-page #virgin-mary-farm .rm-estate-title h2{font-size:62px;max-width:340px;margin:20px auto 0;line-height:1.01}#virgin-mary-farm .rm-estate-subtitle{font-size:25px;margin-top:20px}#virgin-mary-farm .rm-estate-flourish{margin-top:22px;gap:20px}#virgin-mary-farm .rm-estate-flourish>span{width:65px}#virgin-mary-farm .rm-estate-flourish>svg{width:25px;height:30px}#virgin-mary-farm .rm-estate-status{flex-direction:column;align-items:flex-start;gap:14px;padding:22px 0;margin-top:18px}#virgin-mary-farm .rm-estate-status>strong{font-size:12px}#virgin-mary-farm .rm-estate-status>p{font-size:11px;text-align:left}#virgin-mary-farm .rm-estate-pillars{grid-template-columns:1fr;margin-top:15px}.home-page #virgin-mary-farm .rm-estate-pillars>article{position:relative;padding:23px 0 23px 53px;border-bottom:1px solid #d4dac7}.home-page #virgin-mary-farm .rm-estate-pillars>article+article{padding-left:53px;border-left:0}#virgin-mary-farm .rm-estate-pillars>article>span{position:absolute;left:0;top:24px;font-size:33px;margin:0}.home-page #virgin-mary-farm .rm-estate-pillars h3{font-size:31px;line-height:1.1}#virgin-mary-farm .rm-estate-pillars h3 br{display:none}#virgin-mary-farm .rm-estate-pillars p{font-size:11px;line-height:1.9;margin-top:13px;max-width:none}#virgin-mary-farm .rm-estate-actions{align-items:flex-start;flex-direction:column;gap:18px;margin-top:27px}#virgin-mary-farm .rm-estate-actions a{font-size:11px;min-height:46px}#virgin-mary-farm .rm-estate-primary{padding:14px 20px}#virgin-mary-farm .rm-estate-foot{margin-top:28px;padding-top:23px;gap:16px}#virgin-mary-farm .rm-estate-foot>p{font-size:24px;max-width:280px}}
 @media(prefers-reduced-motion:reduce){#virgin-mary-farm .rm-estate-primary{transition:none}}
+
+/* Approved tomato background treatment, restricted to the farm introduction. */
+#virgin-mary-farm .rm-estate-band{position:relative;overflow:hidden;margin:0;isolation:isolate;background:#183524;color:#fff9ed;padding-top:40px}
+#virgin-mary-farm .rm-estate-band:before{content:'';position:absolute;inset:0;z-index:-2;background:url('/farm-tomato-background.webp') center center/cover no-repeat}
+#virgin-mary-farm .rm-estate-band:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,28,19,.92),rgba(10,31,20,.72) 38%,rgba(10,31,20,.48) 80%),linear-gradient(90deg,#15332440,#15332415)}
+#virgin-mary-farm .rm-estate-top{color:#fff7e6;border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-kicker{color:#f3e7cd}
+.home-page #virgin-mary-farm .rm-estate-title h2{color:#fffaf0;font-size:clamp(72px,8vw,116px)}
+.home-page #virgin-mary-farm .rm-estate-title h2 em{color:#f1d4a2;font-family:Georgia,serif;font-size:.87em}
+#virgin-mary-farm .rm-estate-subtitle{font-family:Georgia,serif;color:#fffaf0;font-size:27px;text-shadow:0 2px 10px #10291970}
+#virgin-mary-farm .rm-estate-flourish{color:#e6c48a}
+#virgin-mary-farm .rm-estate-flourish>span{background:#f5edd550}
+#virgin-mary-farm .rm-estate-status{border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-status>strong,#virgin-mary-farm .rm-estate-status>p{color:#fff8e9}
+#virgin-mary-farm .rm-estate-status>strong>span{background:#e6c48a}
+#virgin-mary-farm .rm-estate-pillars>article+article{border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-pillars>article>span{color:#e6c48a}
+.home-page #virgin-mary-farm .rm-estate-pillars h3{color:#fffaf0}
+#virgin-mary-farm .rm-estate-pillars p{color:#eee9dc}
+#virgin-mary-farm .rm-estate-primary{background:#eed3a3;border-color:#eed3a3;color:#203b2c}
+#virgin-mary-farm .rm-estate-primary:hover{background:#f6e1ba}
+#virgin-mary-farm .rm-estate-secondary{color:#fffaf0;border-color:#eed3a3}
+#virgin-mary-farm .rm-estate-foot{border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-foot>p{color:#fff6e4}
+#virgin-mary-farm .rm-estate-foot>a{color:#eed3a3}
+@media(max-width:600px){.home-page #virgin-mary-farm .rm-estate-title h2{font-size:64px}#virgin-mary-farm .rm-estate-subtitle{font-size:23px}#virgin-mary-farm .rm-estate-band:before{background-position:58% center}}
+/* Requested text emphasis and removal of horizontal decorative rules. */
+#virgin-mary-farm .rm-estate-top{font-size:14px;letter-spacing:.1em;border-bottom:0}
+#virgin-mary-farm .rm-estate-kicker{font-size:13px;letter-spacing:.14em}
+#virgin-mary-farm .rm-estate-status{border-bottom:0}
+#virgin-mary-farm .rm-estate-status>strong{font-size:20px;font-weight:600}
+#virgin-mary-farm .rm-estate-flourish>span{display:none}
+#virgin-mary-farm .rm-estate-foot{border-top:0}
+@media(max-width:600px){#virgin-mary-farm .rm-estate-top{font-size:11px}#virgin-mary-farm .rm-estate-top>span:first-child{max-width:230px}#virgin-mary-farm .rm-estate-kicker{font-size:11px}#virgin-mary-farm .rm-estate-status>strong{font-size:18px}.home-page #virgin-mary-farm .rm-estate-pillars>article{border-bottom:0}}
+
+#virgin-mary-farm .rm-estate-flourish{display:none}
+
+#virgin-mary-farm .rm-estate-band{margin-bottom:75px}@media(max-width:900px){#virgin-mary-farm .rm-estate-band{margin-bottom:55px}}@media(max-width:600px){#virgin-mary-farm .rm-estate-band{margin-bottom:40px}}
