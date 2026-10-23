@@ -178,9 +178,7 @@ export default function App() {
                 </h2>
               </div>
               <p>
-                We listen to people whose lives have been shaped by exclusion
-                and conflict, and stand alongside their determination to
-                rebuild.
+                Standing with overlooked communities. Rebuilding hope together.
               </p>
             </div>
             <div className="community-stories">
