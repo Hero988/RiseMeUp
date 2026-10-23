@@ -51,3 +51,8 @@
   .rm-opening .rm-opening-card p {margin-top:0;padding-right:0}
   .rm-opening .rm-opening-card > span {margin-top:9px}
 }
+
+/* Compact the oval card so its message starts without a large top gap. */
+.rm-opening .rm-opening-card {padding-top:24px;padding-bottom:24px}
+.rm-opening .rm-opening-card > svg {display:none}
+.rm-opening .rm-opening-card p {margin-top:0}
