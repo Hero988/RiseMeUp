@@ -23,7 +23,7 @@ export function ClassicAbout() {
       </div>
       <div>
         <p className="eyebrow">Who we are</p>
-        <h2>No community should be <span className="classic-about-emphasis">forgotten.</span></h2>
+        <h2>No community should be<br /><span className="classic-about-emphasis">forgotten.</span></h2>
         <p className="lead">Risemeup is a London-based initiative supporting Sudan’s Coptic Orthodox and Nuba Mountains communities.</p>
         <p>We connect food assistance today with a longer-term commitment to recovery. Our main project, Virgin Mary Farm, brings together sustainable agriculture, clean energy, education and the opportunity to earn a living.</p>
         <div className="classic-values">{values.map(([icon, title, description]) => <div key={title}><span className="classic-value-icon" aria-hidden="true">{icon}</span><div><strong>{title}</strong><span>{description}</span></div></div>)}</div>
