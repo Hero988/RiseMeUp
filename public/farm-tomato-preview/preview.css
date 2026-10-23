@@ -33,3 +33,5 @@
 #virgin-mary-farm .rm-estate-flourish>span{display:none}
 #virgin-mary-farm .rm-estate-foot{border-top:0}
 @media(max-width:600px){#virgin-mary-farm .rm-estate-top{font-size:11px}#virgin-mary-farm .rm-estate-top>span:first-child{max-width:230px}#virgin-mary-farm .rm-estate-kicker{font-size:11px}#virgin-mary-farm .rm-estate-status>strong{font-size:18px}.home-page #virgin-mary-farm .rm-estate-pillars>article{border-bottom:0}}
+
+#virgin-mary-farm .rm-estate-flourish{display:none}
