@@ -586,3 +586,23 @@ footer .brand-slogan { color: #e3ac80; }
   font-size:min(1em,9.2cqi);
   line-height:1.13;
 }
+
+/* Oval information labels over the About section's land image. */
+.home-page #about .classic-map-measurements {
+  width:210px;
+  padding:23px 25px;
+  right:12px;
+  border:1px solid #d8cbb8;
+  border-radius:999px;
+  text-align:center;
+}
+.home-page #about .classic-image-badge {
+  border-radius:999px;
+}
+@media(max-width:600px) {
+  .home-page #about .classic-map-measurements {
+    width:190px;
+    padding:20px;
+    right:10px;
+  }
+}
