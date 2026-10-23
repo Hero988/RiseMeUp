@@ -270,14 +270,14 @@ export default function App() {
           <span className="anchor" id="projects" />
           <div className="rm-estate-band">
             <div className="container">
-              <div className="rm-estate-top"><span>Our long-term project · Our main project</span><span>Omdurman · Sudan</span></div>
+              <div className="rm-estate-top"><span>Omdurman · Sudan</span></div>
               <div className="rm-estate-title">
                 <p className="rm-estate-kicker">The heart of Risemeup’s vision</p>
                 <h2>Virgin Mary <em>Farm.</em></h2>
                 <p className="rm-estate-subtitle">Rebuilding through agriculture, clean energy and education.</p>
                 <div className="rm-estate-flourish" aria-hidden="true"><span /><svg viewBox="0 0 40 48" fill="none" stroke="currentColor" strokeWidth="1"><path d="M20 46V18M20 33C6 33 3 24 4 15c12 0 16 8 16 18Zm0-10C34 22 36 12 34 4c-10 1-14 7-14 19Z" /><path d="m20 33-10-12m10 1 10-12" /></svg><span /></div>
               </div>
-              <div className="rm-estate-status"><strong>Rebuilding planned</strong><p>The farm is not operational due to the war.<br />The land remains.</p></div>
+              <div className="rm-estate-status"><strong>Rebuilding planned</strong></div>
               <div className="rm-estate-pillars">
                 <article><h3>Sustainable agriculture.</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
                 <article><h3>Clean energy for farming.</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
