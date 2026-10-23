@@ -118,3 +118,11 @@
 
 /* Bold headings across the three farm introduction columns. */
 .home-page #virgin-mary-farm .rm-estate-pillars h3 {font-weight:700}
+
+/* Approved left-aligned title with a discreet rebuilding subtitle. */
+#virgin-mary-farm .rm-estate-title {text-align:left}
+#virgin-mary-farm .rm-estate-title h2 {margin-left:0;margin-right:0;max-width:none}
+#virgin-mary-farm .rm-estate-subtitle {font-size:16px}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-subtitle {font-size:15px}
+}
