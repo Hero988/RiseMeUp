@@ -230,3 +230,7 @@
 .home-page #about{padding-bottom:36px}
 .home-page #sudan-crisis{padding-top:36px}
 @media(max-width:600px){.home-page #about{padding-bottom:28px}.home-page #sudan-crisis{padding-top:28px}}
+
+/* Position the about-section slogan above the map, aligned to the left. */
+.home-page #about .classic-about-slogan{margin:0 0 30px;text-align:left}
+@media(max-width:600px){.home-page #about .classic-about-slogan{margin-bottom:24px}}

@@ -6,6 +6,7 @@ export function ClassicAbout() {
     ["✧", "Food assistance", "Practical help today"],
   ];
   return <section id="about" className="section classic-about">
+    <div className="container"><p className="classic-about-slogan">Think globally, act locally.</p></div>
     <div className="container classic-about-grid">
       <div className="classic-about-visual">
         <figure className="classic-image-wrap" aria-describedby="map-survey-note">
@@ -24,7 +25,6 @@ export function ClassicAbout() {
         <p className="lead">Risemeup is a London-based initiative supporting Sudan’s Coptic Orthodox and Nuba Mountains communities.</p>
         <p>We connect food assistance today with a longer-term commitment to recovery. Our main project, Virgin Mary Farm, brings together sustainable agriculture, clean energy, education and the opportunity to earn a living.</p>
         <div className="classic-values">{values.map(([icon, title, description]) => <div key={title}><span className="classic-value-icon" aria-hidden="true">{icon}</span><div><strong>{title}</strong><span>{description}</span></div></div>)}</div>
-        <p className="classic-about-slogan">Think globally, act locally.</p>
       </div>
     </div>
   </section>;
