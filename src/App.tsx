@@ -279,9 +279,9 @@ export default function App() {
               </div>
               <div className="rm-estate-status"><strong><span aria-hidden="true" />Rebuilding planned</strong><p>The farm is not operational due to the war.<br />The land remains.</p></div>
               <div className="rm-estate-pillars">
-                <article><span>01</span><h3>Sustainable<br />agriculture.</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
-                <article><span>02</span><h3>Clean energy<br />for farming.</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
-                <article><span>03</span><h3>Education<br />&amp; training.</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
+                <article><span>I</span><h3>Sustainable<br />agriculture.</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
+                <article><span>II</span><h3>Clean energy<br />for farming.</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
+                <article><span>III</span><h3>Education<br />&amp; training.</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
               </div>
               <div className="rm-estate-actions"><a className="rm-estate-primary" href="/development-partners/">Partner in rebuilding <span aria-hidden="true">↗</span></a><a className="rm-estate-secondary" href="/mango-project/">Read the Mango proposal <span aria-hidden="true">↗</span></a></div>
               <div className="rm-estate-foot"><p>Women and girls at the heart of the vision.</p><a href="#farm-women-title" aria-label="Read about women and girls at the heart of Virgin Mary Farm">↓</a></div>
