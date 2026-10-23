@@ -24,7 +24,7 @@
 .home-page #vision-mission.rm-field-vision h2 {margin:0;color:#fcf7e9;font-size:clamp(50px,5.3vw,78px)}
 .home-page #vision-mission.rm-field-vision h2 > span {font-size:.82em}
 .home-page #vision-mission.rm-field-vision h2 em {font:italic 500 1em/1.13 'Playfair Display',Georgia,serif;color:#e8c99a}
-.home-page #vision-mission.rm-field-vision .section-head > p:last-child {max-width:none;margin:27px 0 0;color:#f6efdc;font:400 clamp(16px,1.35vw,18px)/1.65 'DM Sans',sans-serif}
+.home-page #vision-mission.rm-field-vision .section-head > p:last-child {max-width:none;margin:14px 0 0;color:#f6efdc;font:400 clamp(16px,1.35vw,18px)/1.65 'DM Sans',sans-serif}
 .home-page #vision-mission.rm-field-vision .vision-grid {display:grid;grid-template-columns:1fr 1fr;gap:85px;max-width:none;margin:70px 0 0;padding:0;border:0}
 .home-page #vision-mission.rm-field-vision .vision-grid article {position:static;overflow:visible;padding:0;border:0;border-radius:0;text-align:left;background:none;box-shadow:none;color:#fcf7e9}
 .home-page #vision-mission.rm-field-vision .vision-grid article::before {content:none}
@@ -44,7 +44,7 @@
  .home-page #vision-mission.rm-field-vision > .container{width:calc(100% - 40px)}
  .home-page #vision-mission.rm-field-vision h2{font-size:48px}
  .home-page #vision-mission.rm-field-vision .section-head .eyebrow{margin-bottom:20px}
- .home-page #vision-mission.rm-field-vision .section-head > p:last-child{font-size:16px;margin-top:22px}
+ .home-page #vision-mission.rm-field-vision .section-head > p:last-child{font-size:16px;margin-top:12px}
  .home-page #vision-mission.rm-field-vision .vision-grid{grid-template-columns:1fr;gap:38px;margin-top:45px}
  .home-page #vision-mission.rm-field-vision .vision-grid h3{font-size:37px;margin:15px 0 20px}
  .home-page #vision-mission.rm-field-vision .vision-grid article > p:not(.chapter){max-width:none}
