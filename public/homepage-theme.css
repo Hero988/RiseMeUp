@@ -538,3 +538,111 @@
   .home-page #objectives h2 {font-size:38px}
   .home-page #objectives .classic-section-slogan {font-size:20px}
 }
+
+/* Approved ivory roadmap with orange headings and forest green text. */
+.home-page #virgin-mary-farm #land-framework {
+  background:#faf7ef;color:#405b48;padding:42px 40px;
+  border:1px solid #e0e5d8;border-radius:24px;
+  font:400 16px/1.85 'DM Sans',sans-serif;
+}
+.home-page #land-framework p {margin:0 0 20px}
+.home-page #land-framework .growth-heading {
+  display:grid;grid-template-columns:1.15fr 1fr;gap:55px;align-items:start;margin-bottom:35px;
+}
+.home-page #land-framework .eyebrow {
+  font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;
+  text-transform:uppercase;color:#a4633d;margin:0 0 18px;
+}
+.home-page #land-framework .growth-heading h3 {
+  font:500 clamp(34px,3.8vw,50px)/1.2 'Lora',Georgia,serif;
+  letter-spacing:-.035em;color:#b45c2f;margin:0;
+}
+.home-page #land-framework .growth-heading h3 em {
+  font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:#b45c2f;
+}
+.home-page #land-framework .growth-intro {padding-top:33px;font-size:16px;color:#405b48}
+.home-page #land-framework .growth-intro p {line-height:1.85}
+.home-page #land-framework .growth-family-target {
+  display:block;border-top:1px solid #d2decb;padding-top:18px;margin-bottom:0;
+}
+.home-page #land-framework .growth-family-target strong {
+  display:block;color:#b45c2f;font:500 27px/1.4 'Lora',Georgia,serif;margin-bottom:6px;
+}
+.home-page #land-framework .growth-family-target span {
+  display:block;font-size:12px;line-height:1.7;color:#617159;
+}
+.home-page #land-framework .growth-illustration {
+  max-width:none;margin:28px 0 22px;padding:20px;background:#fffdf7;
+  border:1px solid #dde4d4;border-radius:20px;text-align:center;
+}
+.home-page #land-framework .growth-illustration > a {background:transparent;border-radius:12px}
+.home-page #land-framework .growth-illustration img {
+  display:block;width:100%;max-width:730px;height:auto;margin:0 auto;border-radius:12px;
+}
+.home-page #land-framework .growth-illustration figcaption {
+  max-width:850px;margin:18px auto 0;font-size:12px;color:#617159;line-height:1.85;text-align:left;
+}
+.home-page #land-framework .button {
+  display:inline-block;border-radius:999px;padding:15px 24px;background:#24583d;color:#fffdf3;
+  text-decoration:none;font:500 13px/1.6 'DM Sans',sans-serif;border:1px solid #24583d;box-shadow:none;
+}
+.home-page #land-framework .button:hover {background:#1b4530}
+.home-page #land-framework .growth-view-image {margin-bottom:0}
+.home-page #land-framework .text-link {
+  color:#24583d;font-size:14px;text-decoration:none;border-bottom:1px solid #a9b99a;padding-bottom:5px;
+}
+.home-page #land-framework .actions {display:flex;align-items:center;flex-wrap:wrap;gap:25px}
+.home-page #land-framework h4 {
+  font:500 30px/1.3 'Lora',Georgia,serif;color:#24583d;margin:0 0 20px;
+}
+.home-page #land-framework #phase-one-equipment-title {color:#b45c2f}
+.home-page #land-framework .growth-phase-one {margin:45px 0;padding-top:35px;border-top:1px solid #d2decb}
+.home-page #land-framework .growth-phase-one > p:not(.eyebrow) {max-width:900px}
+.home-page #land-framework .growth-details {
+  background:#f0f4eb;border:1px solid #d2decb;border-radius:18px;padding:22px 25px;margin:35px 0;
+}
+.home-page #land-framework .growth-details summary {
+  padding:0;color:#24583d;font-size:16px;font-weight:500;cursor:pointer;
+}
+.home-page #land-framework .growth-details[open] summary {margin-bottom:25px}
+.home-page #land-framework .growth-start-note {
+  font-size:14px;background:transparent;color:#405b48;padding:0;border:0;border-radius:0;line-height:1.85;
+}
+.home-page #land-framework .growth-phases {list-style:none;margin:25px 0;padding:0}
+.home-page #land-framework .growth-phases > li {
+  border-top:1px solid #d2decb;border-bottom:0;padding:25px 0;display:grid;
+  grid-template-columns:1fr .7fr 1.5fr;gap:25px;
+}
+.home-page #land-framework .growth-phase-title {display:flex;gap:15px}
+.home-page #land-framework .growth-number {color:#a4633d;font-size:12px;font-family:'DM Sans',sans-serif}
+.home-page #land-framework .growth-phase-title h4 {font-size:23px;margin:0 0 20px}
+.home-page #land-framework .growth-phase-area {padding-left:0}
+.home-page #land-framework .growth-phase-area strong,
+.home-page #land-framework .growth-phase-area span {display:block}
+.home-page #land-framework .growth-phase-area strong {
+  font:500 16px/1.85 'Lora',Georgia,serif;color:#24583d;
+}
+.home-page #land-framework .growth-phase-area span,
+.home-page #land-framework .growth-note {font-size:12px;color:#617159}
+.home-page #land-framework .growth-phase-detail {font-size:14px;grid-column:auto}
+.home-page #land-framework .growth-phase-detail p {font-size:14px;line-height:1.85;margin:0 0 20px}
+.home-page #land-framework .growth-phase-detail .growth-outcome {color:#405b48}
+.home-page #land-framework .growth-income {
+  display:block;border-top:1px solid #d2decb;padding:25px 0 0;background:transparent;
+  color:#405b48;border-radius:0;
+}
+.home-page #land-framework .growth-income h4 {font-size:28px}
+.home-page #land-framework .growth-income .eyebrow {color:#a4633d}
+.home-page #land-framework .growth-income p {line-height:1.85}
+.home-page #land-framework .growth-income ol {margin:1em 0;padding-left:40px}
+.home-page #land-framework .growth-income li {padding:5px 0;border:0;line-height:1.85}
+.home-page #land-framework .growth-note {margin-bottom:0;max-width:none;line-height:1.85}
+@media(max-width:800px) {
+  .home-page #land-framework .growth-heading {grid-template-columns:1fr;gap:10px}
+  .home-page #land-framework .growth-intro {padding-top:8px}
+  .home-page #virgin-mary-farm #land-framework {padding:30px 25px}
+  .home-page #land-framework .growth-phases > li {grid-template-columns:1fr}
+  .home-page #land-framework .growth-illustration {padding:12px}
+  .home-page #land-framework .growth-illustration figcaption {font-size:11px}
+  .home-page #land-framework .growth-heading h3 {font-size:36px}
+}
