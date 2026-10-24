@@ -1,0 +1,322 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Risemeup · Burnt-orange button experiment</title>
+<link rel="stylesheet" href="https://www.risemeup.org/site.css"><link rel="stylesheet" href="https://www.risemeup.org/classic-theme.css"><link rel="stylesheet" href="https://www.risemeup.org/homepage-theme.css"><link rel="stylesheet" href="https://www.risemeup.org/brand-theme.css">
+<style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* All new styles are confined to the opening screen. Original sections keep their original styles. */
+.home-page .rm-opening{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 140px);min-height:680px;max-height:950px;padding:0;background:#173d30;color:#faf8f2;font-family:'Manrope',sans-serif}
+.rm-opening .rm-opening-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 60%;animation:rm-photo-arrive 2s ease-out both}
+.rm-opening .rm-opening-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0d241ce0 0%,#10251bb8 38%,#12271b21 80%),linear-gradient(0deg,#0c1d14b8,transparent 40%)}
+.rm-opening .rm-opening-inner{position:relative;width:calc(100% - 128px);max-width:1320px;height:calc(100% - 65px);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:10px 0 30px}
+.rm-opening .rm-opening-eyebrow{margin:0;display:flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-size:9px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:#e4d6b4;line-height:1.8}
+.rm-opening .rm-opening-eyebrow>span{height:1px;width:25px;background:#ddbb78}
+.home-page .rm-opening h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(86px,9.4vw,142px);font-weight:400;letter-spacing:-.045em;line-height:.89;margin:29px 0 0;color:#faf8f2;max-width:none;text-transform:none}
+.home-page .rm-opening h1 em{font-family:inherit;color:#e5c487;font-weight:400;font-style:italic}
+.rm-opening .rm-opening-description{font-size:13px;font-weight:400;line-height:1.9;color:#e0e6da;margin:30px 0 0}
+.rm-opening .rm-opening-button{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;padding:17px 23px;min-height:52px;font-size:11px;font-weight:600;background:#ddbb78;color:#16382b;margin-top:33px;border:1px solid transparent;border-radius:0;text-decoration:none;transition:transform .25s,background .25s}
+.rm-opening .rm-opening-button>span{font-size:18px;font-weight:400;line-height:1}
+.rm-opening .rm-opening-button:hover{background:#e9cd98;transform:translateY(-3px)}
+.rm-opening a:focus-visible{outline:3px solid #f3dcab;outline-offset:5px}
+.rm-opening .rm-opening-slogan{font:italic 30px/1.35 'Cormorant Garamond',Georgia,serif;letter-spacing:.01em;margin:26px 0 0;color:#f0d69f;background:linear-gradient(110deg,#d9b46e 0%,#f5dda7 30%,#fff5d8 43%,#ddba73 56%,#f1d69e 75%,#d9b46e 100%);background-size:230% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:rm-slogan-shimmer 6s linear infinite;filter:drop-shadow(0 1px 7px #d8b36d35)}
+.rm-opening .rm-opening-card{align-self:flex-end;border:1px solid #f0e8cd40;background:#1b352b44;backdrop-filter:blur(12px);padding:28px 30px;min-width:240px;max-width:300px;margin:0 0 33px;position:relative}
+.rm-opening .rm-opening-card>svg{width:44px;height:60px;color:#ddbb78;position:absolute;right:25px;top:23px}
+.rm-opening .rm-opening-card p{font-family:'Cormorant Garamond',Georgia,serif;font-size:31px;line-height:1.08;margin:50px 0 0;letter-spacing:-.02em;color:#faf8f2}
+.rm-opening .rm-opening-card p em{color:#ddbb78}
+.rm-opening .rm-opening-card>span{display:block;font-size:7px;letter-spacing:.12em;margin-top:21px;color:#c7d1c1;text-transform:uppercase}
+.rm-opening .rm-opening-foot{position:relative;width:calc(100% - 128px);max-width:1320px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f2ecd836;height:65px;font-size:7px;letter-spacing:.14em;color:#c5cdbb;text-transform:uppercase}
+.rm-opening .rm-opening-foot>span:nth-child(2){font-size:8px;letter-spacing:.02em;text-transform:none;color:#d0d6c6}
+.rm-opening .rm-opening-foot a{display:flex;align-items:center;gap:20px;color:#c5cdbb;text-decoration:none}
+.rm-opening .rm-opening-foot a>span{font-size:16px;color:#ddbb78}
+@keyframes rm-photo-arrive{from{transform:scale(1.06)}to{transform:scale(1)}}
+@keyframes rm-slogan-shimmer{from{background-position:230% center}to{background-position:0% center}}
+@media(max-width:1100px){.rm-opening .rm-opening-inner,.rm-opening .rm-opening-foot{width:calc(100% - 80px)}.rm-opening .rm-opening-card{min-width:230px}.rm-opening .rm-opening-card p{font-size:28px}}
+@media(max-width:800px){.home-page .rm-opening h1{font-size:95px}.rm-opening .rm-opening-card{min-width:205px;padding:23px;margin-bottom:25px}.rm-opening .rm-opening-card>svg{height:48px;right:20px;top:18px}.rm-opening .rm-opening-card p{font-size:25px;margin-top:38px}.rm-opening .rm-opening-card>span{font-size:6px}.rm-opening .rm-opening-slogan{font-size:28px}}
+@media(max-width:600px){.home-page .rm-opening{height:calc(100svh - 140px);min-height:710px;max-height:860px}.rm-opening .rm-opening-photo{object-position:62% center}.rm-opening .rm-opening-shade{background:linear-gradient(90deg,#10291ee3,#19322277),linear-gradient(0deg,#12291fe6,transparent 65%)}.rm-opening .rm-opening-inner{height:calc(100% - 55px);display:block;width:calc(100% - 40px);padding:40px 0 0}.rm-opening .rm-opening-eyebrow{font-size:7px;letter-spacing:.13em;gap:9px}.rm-opening .rm-opening-eyebrow>span{width:18px}.home-page .rm-opening h1{font-size:clamp(78px,19vw,110px);margin-top:27px;line-height:.92}.rm-opening .rm-opening-description{font-size:11px;margin-top:25px}.rm-opening .rm-opening-button{font-size:10px;padding:15px 18px;min-height:48px;gap:25px;margin-top:27px}.rm-opening .rm-opening-slogan{font-size:25px;margin-top:24px;max-width:290px}.rm-opening .rm-opening-card{position:absolute;right:0;bottom:13px;margin:0;padding:15px 20px 16px;min-width:0;width:205px;max-width:none}.rm-opening .rm-opening-card>svg{width:30px;height:40px;right:17px;top:12px}.rm-opening .rm-opening-card p{font-size:24px;margin-top:0;padding-right:20px}.rm-opening .rm-opening-card>span{font-size:6px;letter-spacing:.07em;margin-top:12px}.rm-opening .rm-opening-foot{width:calc(100% - 40px);height:55px;font-size:6px;gap:15px;letter-spacing:.1em}.rm-opening .rm-opening-foot>span:nth-child(2){display:none}.rm-opening .rm-opening-foot a{gap:12px;font-size:6px}.rm-opening .rm-opening-foot a>span{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.rm-opening .rm-opening-photo,.rm-opening .rm-opening-slogan{animation:none}.rm-opening .rm-opening-button{transition:none}.rm-opening .rm-opening-slogan{background:none;-webkit-text-fill-color:currentColor;color:#f0d69f;filter:none}}
+
+/* Oval shared-commitment card on the opening screen. */
+.rm-opening .rm-opening-card {
+  border-radius:999px;
+  padding:36px 30px;
+  text-align:center;
+}
+.rm-opening .rm-opening-card > svg {
+  position:static;
+  display:block;
+  width:36px;
+  height:48px;
+  margin:0 auto;
+}
+.rm-opening .rm-opening-card p {margin-top:18px}
+@media(max-width:600px) {
+  .rm-opening .rm-opening-card {padding:22px 20px}
+  .rm-opening .rm-opening-card > svg {display:none}
+  .rm-opening .rm-opening-card p {margin-top:0;padding-right:0}
+  .rm-opening .rm-opening-card > span {margin-top:9px}
+}
+
+/* Compact the oval card so its message starts without a large top gap. */
+.rm-opening .rm-opening-card {padding-top:24px;padding-bottom:24px}
+.rm-opening .rm-opening-card > svg {display:none}
+.rm-opening .rm-opening-card p {margin-top:0}
+
+/* More readable community names inside the homepage oval. */
+.rm-opening .rm-opening-card > span {
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.08em;
+}
+@media(max-width:600px) {
+  .rm-opening .rm-opening-card > span {font-size:9px;letter-spacing:.04em}
+}
+
+/* Bold text throughout the homepage oval commitment card. */
+.rm-opening .rm-opening-card p,
+.rm-opening .rm-opening-card p em,
+.rm-opening .rm-opening-card > span {font-weight:700}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Manrope:wght@400;500;600&display=swap');
+
+/* The Garden Estate treatment is limited to the farm introduction. */
+.home-page #virgin-mary-farm.farm-estate-intro{padding-top:0}
+#virgin-mary-farm .rm-estate-band{background:#faf7ef;color:#244334;padding:74px 0 40px;margin-bottom:75px;font-family:'Manrope',sans-serif;isolation:isolate}
+#virgin-mary-farm .rm-estate-top{display:flex;justify-content:space-between;gap:25px;padding-bottom:21px;border-bottom:1px solid #d4dac7;font-size:10px;line-height:1.7;letter-spacing:.13em;text-transform:uppercase;color:#687661}
+#virgin-mary-farm .rm-estate-title{text-align:center;padding-top:42px}
+#virgin-mary-farm .rm-estate-kicker{font-family:'Manrope',sans-serif;font-size:10px;font-weight:500;line-height:1.7;letter-spacing:.16em;color:#687661;text-transform:uppercase;margin:0}
+.home-page #virgin-mary-farm .rm-estate-title h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(64px,6.8vw,100px);font-weight:400;line-height:.98;letter-spacing:-.035em;color:#244334;margin:23px 0 0}
+.home-page #virgin-mary-farm .rm-estate-title h2 em{font-family:inherit;font-weight:400;font-style:italic;color:#ac884b}
+#virgin-mary-farm .rm-estate-subtitle{font:italic 29px/1.3 'Cormorant Garamond',Georgia,serif;color:#687661;margin:23px 0 0}
+#virgin-mary-farm .rm-estate-flourish{display:flex;justify-content:center;align-items:center;gap:25px;margin-top:25px;color:#ac884b}
+#virgin-mary-farm .rm-estate-flourish>span{height:1px;width:90px;background:#d4dac7}
+#virgin-mary-farm .rm-estate-flourish>svg{width:30px;height:36px}
+#virgin-mary-farm .rm-estate-status{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:25px 0;margin-top:25px;border-bottom:1px solid #d4dac7}
+#virgin-mary-farm .rm-estate-status>strong{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:500;color:#244334}
+#virgin-mary-farm .rm-estate-status>strong>span{width:6px;height:6px;border-radius:50%;background:#ac884b}
+#virgin-mary-farm .rm-estate-status>p{font-size:12px;line-height:1.85;text-align:right;color:#687661;margin:0}
+#virgin-mary-farm .rm-estate-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:36px}
+#virgin-mary-farm .rm-estate-pillars>article{padding:0 35px 5px 0;background:none;min-width:0}
+#virgin-mary-farm .rm-estate-pillars>article+article{padding-left:35px;border-left:1px solid #d4dac7}
+#virgin-mary-farm .rm-estate-pillars>article>span{font:italic 44px/1 'Cormorant Garamond',Georgia,serif;color:#ac884b;display:block;margin-bottom:21px}
+.home-page #virgin-mary-farm .rm-estate-pillars h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:39px;line-height:1.04;letter-spacing:-.02em;font-weight:400;color:#244334;margin:0}
+#virgin-mary-farm .rm-estate-pillars p{font-size:12px;line-height:1.95;color:#687661;max-width:320px;margin:21px 0 0}
+#virgin-mary-farm .rm-estate-actions{display:flex;align-items:center;flex-wrap:wrap;gap:32px;margin-top:38px}
+#virgin-mary-farm .rm-estate-actions a{font-family:'Manrope',sans-serif;font-size:12px;font-weight:500;display:inline-flex;align-items:center;justify-content:space-between;gap:35px;min-height:49px;text-decoration:none;border-radius:0;box-shadow:none}
+#virgin-mary-farm .rm-estate-primary{background:#244334;color:#faf7ef;padding:16px 24px;border:1px solid #244334;transition:background .2s}
+#virgin-mary-farm .rm-estate-primary:hover{background:#365740}
+#virgin-mary-farm .rm-estate-secondary{background:none;color:#244334;border-bottom:1px solid #ac884b;padding:13px 0}
+#virgin-mary-farm .rm-estate-actions a>span{font-size:20px;font-weight:400}
+#virgin-mary-farm .rm-estate-foot{margin-top:35px;border-top:1px solid #d4dac7;padding-top:25px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+#virgin-mary-farm .rm-estate-foot>p{font:italic 27px/1.25 'Cormorant Garamond',Georgia,serif;color:#687661;margin:0}
+#virgin-mary-farm .rm-estate-foot>a{font-size:22px;line-height:1;color:#ac884b;text-decoration:none;padding:8px}
+#virgin-mary-farm .rm-estate-band a:focus-visible{outline:3px solid #ac884b;outline-offset:5px}
+@media(max-width:900px){#virgin-mary-farm .rm-estate-band{padding-top:58px;margin-bottom:55px}#virgin-mary-farm .rm-estate-pillars>article{padding-right:23px}#virgin-mary-farm .rm-estate-pillars>article+article{padding-left:23px}.home-page #virgin-mary-farm .rm-estate-pillars h3{font-size:33px}#virgin-mary-farm .rm-estate-pillars p{font-size:11px}}
+@media(max-width:600px){#virgin-mary-farm .rm-estate-band{padding:42px 0 32px;margin-bottom:40px}#virgin-mary-farm .rm-estate-top{font-size:8px;letter-spacing:.06em;gap:20px}#virgin-mary-farm .rm-estate-top>span:first-child{max-width:190px}#virgin-mary-farm .rm-estate-top>span:last-child{text-align:right}#virgin-mary-farm .rm-estate-title{padding-top:34px}#virgin-mary-farm .rm-estate-kicker{font-size:9px}.home-page #virgin-mary-farm .rm-estate-title h2{font-size:62px;max-width:340px;margin:20px auto 0;line-height:1.01}#virgin-mary-farm .rm-estate-subtitle{font-size:25px;margin-top:20px}#virgin-mary-farm .rm-estate-flourish{margin-top:22px;gap:20px}#virgin-mary-farm .rm-estate-flourish>span{width:65px}#virgin-mary-farm .rm-estate-flourish>svg{width:25px;height:30px}#virgin-mary-farm .rm-estate-status{flex-direction:column;align-items:flex-start;gap:14px;padding:22px 0;margin-top:18px}#virgin-mary-farm .rm-estate-status>strong{font-size:12px}#virgin-mary-farm .rm-estate-status>p{font-size:11px;text-align:left}#virgin-mary-farm .rm-estate-pillars{grid-template-columns:1fr;margin-top:15px}.home-page #virgin-mary-farm .rm-estate-pillars>article{position:relative;padding:23px 0 23px 53px;border-bottom:1px solid #d4dac7}.home-page #virgin-mary-farm .rm-estate-pillars>article+article{padding-left:53px;border-left:0}#virgin-mary-farm .rm-estate-pillars>article>span{position:absolute;left:0;top:24px;font-size:33px;margin:0}.home-page #virgin-mary-farm .rm-estate-pillars h3{font-size:31px;line-height:1.1}#virgin-mary-farm .rm-estate-pillars h3 br{display:none}#virgin-mary-farm .rm-estate-pillars p{font-size:11px;line-height:1.9;margin-top:13px;max-width:none}#virgin-mary-farm .rm-estate-actions{align-items:flex-start;flex-direction:column;gap:18px;margin-top:27px}#virgin-mary-farm .rm-estate-actions a{font-size:11px;min-height:46px}#virgin-mary-farm .rm-estate-primary{padding:14px 20px}#virgin-mary-farm .rm-estate-foot{margin-top:28px;padding-top:23px;gap:16px}#virgin-mary-farm .rm-estate-foot>p{font-size:24px;max-width:280px}}
+@media(prefers-reduced-motion:reduce){#virgin-mary-farm .rm-estate-primary{transition:none}}
+
+/* Approved tomato background treatment, restricted to the farm introduction. */
+#virgin-mary-farm .rm-estate-band{position:relative;overflow:hidden;margin:0;isolation:isolate;background:#183524;color:#fff9ed;padding-top:40px}
+#virgin-mary-farm .rm-estate-band:before{content:'';position:absolute;inset:0;z-index:-2;background:url('/farm-tomato-background.webp') center center/cover no-repeat}
+#virgin-mary-farm .rm-estate-band:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,28,19,.92),rgba(10,31,20,.72) 38%,rgba(10,31,20,.48) 80%),linear-gradient(90deg,#15332440,#15332415)}
+#virgin-mary-farm .rm-estate-top{color:#fff7e6;border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-kicker{color:#f3e7cd}
+.home-page #virgin-mary-farm .rm-estate-title h2{color:#fffaf0;font-size:clamp(72px,8vw,116px)}
+.home-page #virgin-mary-farm .rm-estate-title h2 em{color:#f1d4a2;font-family:Georgia,serif;font-size:.87em}
+#virgin-mary-farm .rm-estate-subtitle{font-family:Georgia,serif;color:#fffaf0;font-size:27px;text-shadow:0 2px 10px #10291970}
+#virgin-mary-farm .rm-estate-flourish{color:#e6c48a}
+#virgin-mary-farm .rm-estate-flourish>span{background:#f5edd550}
+#virgin-mary-farm .rm-estate-status{border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-status>strong,#virgin-mary-farm .rm-estate-status>p{color:#fff8e9}
+#virgin-mary-farm .rm-estate-status>strong>span{background:#e6c48a}
+#virgin-mary-farm .rm-estate-pillars>article+article{border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-pillars>article>span{color:#e6c48a}
+.home-page #virgin-mary-farm .rm-estate-pillars h3{color:#fffaf0}
+#virgin-mary-farm .rm-estate-pillars p{color:#eee9dc}
+#virgin-mary-farm .rm-estate-primary{background:#eed3a3;border-color:#eed3a3;color:#203b2c}
+#virgin-mary-farm .rm-estate-primary:hover{background:#f6e1ba}
+#virgin-mary-farm .rm-estate-secondary{color:#fffaf0;border-color:#eed3a3}
+#virgin-mary-farm .rm-estate-foot{border-color:#f5edd540}
+#virgin-mary-farm .rm-estate-foot>p{color:#fff6e4}
+#virgin-mary-farm .rm-estate-foot>a{color:#eed3a3}
+@media(max-width:600px){.home-page #virgin-mary-farm .rm-estate-title h2{font-size:64px}#virgin-mary-farm .rm-estate-subtitle{font-size:23px}#virgin-mary-farm .rm-estate-band:before{background-position:58% center}}
+/* Requested text emphasis and removal of horizontal decorative rules. */
+#virgin-mary-farm .rm-estate-top{font-size:14px;letter-spacing:.1em;border-bottom:0}
+#virgin-mary-farm .rm-estate-kicker{font-size:13px;letter-spacing:.14em}
+#virgin-mary-farm .rm-estate-status{border-bottom:0}
+#virgin-mary-farm .rm-estate-status>strong{font-size:20px;font-weight:600}
+#virgin-mary-farm .rm-estate-flourish>span{display:none}
+#virgin-mary-farm .rm-estate-foot{border-top:0}
+@media(max-width:600px){#virgin-mary-farm .rm-estate-top{font-size:11px}#virgin-mary-farm .rm-estate-top>span:first-child{max-width:230px}#virgin-mary-farm .rm-estate-kicker{font-size:11px}#virgin-mary-farm .rm-estate-status>strong{font-size:18px}.home-page #virgin-mary-farm .rm-estate-pillars>article{border-bottom:0}}
+
+#virgin-mary-farm .rm-estate-flourish{display:none}
+
+#virgin-mary-farm .rm-estate-band{margin-bottom:75px}@media(max-width:900px){#virgin-mary-farm .rm-estate-band{margin-bottom:55px}}@media(max-width:600px){#virgin-mary-farm .rm-estate-band{margin-bottom:40px}}
+/* Larger description for the sustainable agriculture pillar. */
+#virgin-mary-farm .rm-estate-pillars > article:first-child > p {
+  font-size:16px;
+  line-height:1.8;
+}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-pillars > article:first-child > p {font-size:15px}
+}
+
+/* Consistent single-line headings and readable descriptions for all pillars. */
+#virgin-mary-farm .rm-estate-pillars {container-type:inline-size}
+.home-page #virgin-mary-farm .rm-estate-pillars h3 {
+  font-size:min(39px,2.5cqi);
+  white-space:nowrap;
+  line-height:1.2;
+}
+#virgin-mary-farm .rm-estate-pillars > article > p,
+#virgin-mary-farm .rm-estate-pillars > article:first-child > p {
+  font-size:16px;
+  line-height:1.8;
+}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-pillars > article > p,
+  #virgin-mary-farm .rm-estate-pillars > article:first-child > p {font-size:15px}
+}
+
+@media(max-width:600px) {
+  .home-page #virgin-mary-farm .rm-estate-pillars h3 {font-size:min(31px,7cqi)}
+}
+
+@media(max-width:600px) {
+  .home-page #virgin-mary-farm .rm-estate-pillars > article,
+  .home-page #virgin-mary-farm .rm-estate-pillars > article + article {
+    padding-left:0;
+  }
+}
+
+/* Larger rebuilding status heading. */
+#virgin-mary-farm .rm-estate-status > strong {font-size:28px;line-height:1.3}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-status > strong {font-size:24px}
+}
+
+/* Bold headings across the three farm introduction columns. */
+.home-page #virgin-mary-farm .rm-estate-pillars h3 {font-weight:700}
+
+/* Approved left-aligned title with a discreet rebuilding subtitle. */
+#virgin-mary-farm .rm-estate-title {text-align:left}
+#virgin-mary-farm .rm-estate-title h2 {margin-left:0;margin-right:0;max-width:none}
+#virgin-mary-farm .rm-estate-subtitle {font-size:16px}
+@media(max-width:600px) {
+  #virgin-mary-farm .rm-estate-subtitle {font-size:15px}
+}
+
+/* Keep the location aligned right after removing the repeated project label. */
+#virgin-mary-farm .rm-estate-top {justify-content:flex-end}
+
+.orange-preview-note{margin:0;padding:8px 5%;background:#ecefe3;color:#617159;text-align:center;font:10px/1.8 'DM Sans',sans-serif;letter-spacing:.07em}
+body.home-page .orange-preview-header{background:#fffefa;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:20px 5%}body.home-page .orange-preview-header img{width:165px;height:auto}body.home-page .orange-preview-header nav{display:flex;flex-wrap:wrap;gap:20px}body.home-page .orange-preview-header a{font:12px/1.8 'DM Sans',sans-serif;color:#24583d;text-decoration:none}
+.home-page.warm-brand #hero .rm-opening-button,
+.home-page.warm-brand #relief .button,
+.home-page.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary,
+.home-page.warm-brand #virgin-mary-farm #farm-readiness .button{
+ background:#b45c2f!important;border:1px solid #b45c2f!important;color:#fffaf0!important;
+ border-radius:999px!important;box-shadow:none;
+}
+.home-page.warm-brand #hero .rm-opening-button:hover,
+.home-page.warm-brand #relief .button:hover,
+.home-page.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary:hover,
+.home-page.warm-brand #virgin-mary-farm #farm-readiness .button:hover{
+ background:#954923!important;border-color:#954923!important;
+}
+@media(max-width:650px){body.home-page .orange-preview-header{align-items:flex-start}body.home-page .orange-preview-header nav{gap:10px;max-width:180px}body.home-page .orange-preview-header img{width:130px}}
+</style></head><body class="home-page warm-brand"><p class="orange-preview-note">EXPERIMENTAL BUTTON COLOURS · MAIN WEBSITE UNCHANGED</p><header class="orange-preview-header"><img src="https://www.risemeup.org/logo.png" alt="Risemeup Sustainability"><nav aria-label="Preview sections"><a href="#hero">1 · Where hope takes root</a><a href="#relief">2 · Food today</a><a href="#virgin-mary-farm">3 · Virgin Mary Farm</a><a href="#farm-readiness">4 · Rebuilding starts with water</a></nav></header><main><section id="hero" class="rm-opening" aria-labelledby="rm-opening-title">
+      <img class="rm-opening-photo" src="https://www.risemeup.org/wheat-field.png" alt="Golden wheat illustrating the possibility of a future harvest" fetchpriority="high" />
+      <div class="rm-opening-shade" />
+      <div class="rm-opening-inner">
+        <div class="rm-opening-copy">
+          <p class="rm-opening-eyebrow"><span ></span>For people. For dignity. For tomorrow.</p>
+          <h1 id="rm-opening-title">Where hope<br />takes <em>root.</em></h1>
+          <p class="rm-opening-description">Standing with Sudan’s forgotten communities.<br />Nourishing lives today. Growing a future, together.</p>
+          <a class="rm-opening-button" href="#donate">Help a family today <span aria-hidden="true">↗</span></a>
+          <p class="rm-opening-slogan">Committed to grow rural communities.</p>
+        </div>
+        <aside class="rm-opening-card" aria-label="Our shared commitment">
+          <svg viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M60 153V58M60 110C14 108 7 77 11 52c35-2 49 21 49 58Zm0-30c43-4 50-35 45-60-31 2-45 23-45 60Z" stroke="currentColor" stroke-width="1.1" /><path d="m60 109-34-39m34 9 30-41" stroke="currentColor" stroke-width="1.1" /></svg>
+          <p>Two communities.<br /><em>One shared future.</em></p>
+          <span>Coptic Orthodox &amp; Nuba Mountains</span>
+        </aside>
+      </div>
+      <div class="rm-opening-foot"><span>Rooted in London. Connected to Sudan.</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>
+    </section><section id="relief" class="section">
+          <div class="container relief-grid">
+            <figure class="photo">
+              <img
+                src="https://www.risemeup.org/sudan-crisis-7.jpeg"
+                alt="Food portions packed in bags for community support"
+                width="960"
+                height="1280"
+                loading="lazy"
+              />
+              <figcaption>Sudan food assistance archive · Risemeup · Photograph date unconfirmed. <a href="/crisis-response/#photo-records">About our records</a></figcaption>
+            </figure>
+            <div>
+              
+              <h2>
+                Food today.
+                <br />
+                <em>Dignity, always.</em>
+              </h2>
+              <p class="lead">
+                With support from friends, families and our wider community, we
+                help families affected by the war access food and essential
+                supplies.
+              </p>
+              <p>
+                Our work includes preparing meals and organising food assistance
+                through trusted community connections. We support as many
+                families as available resources and access allow.
+              </p>
+              <p>
+                This immediate response continues alongside our longer-term
+                ambition to rebuild Virgin Mary Farm.
+              </p>
+              <a class="button" href="#donate">
+                Ask how to support food assistance <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <aside class="container crisis-history-link" aria-labelledby="crisis-history-title">
+            <div><p class="eyebrow">Our coronavirus response</p><h3 id="crisis-history-title">When there is a crisis, Risemeup steps up to help.</h3><p>Discover Iman’s pandemic work supporting a food bank and homeless shelter in London, alongside food aid for families in Sudan.</p></div>
+            <a class="text-link" href="/crisis-response/">Read our coronavirus story <span aria-hidden="true">↗</span></a>
+          </aside>
+        </section>
+        <section id="virgin-mary-farm" class="section farm farm-estate-intro">
+          <span class="anchor" id="projects" ></span>
+          <div class="rm-estate-band">
+            <div class="container">
+              <div class="rm-estate-top"><span>Omdurman · Sudan</span></div>
+              <div class="rm-estate-title">
+                <p class="rm-estate-kicker">The heart of Risemeup’s vision</p>
+                <h2>Virgin Mary <em>Farm.</em></h2>
+                <p class="rm-estate-subtitle">Rebuilding through agriculture, clean energy and education.</p>
+                <div class="rm-estate-flourish" aria-hidden="true"><span ></span><svg viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 46V18M20 33C6 33 3 24 4 15c12 0 16 8 16 18Zm0-10C34 22 36 12 34 4c-10 1-14 7-14 19Z" /><path d="m20 33-10-12m10 1 10-12" /></svg><span ></span></div>
+              </div>
+              <div class="rm-estate-status"><strong>Rebuilding planned</strong></div>
+              <div class="rm-estate-pillars">
+                <article><h3>Sustainable agriculture.</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
+                <article><h3>Clean energy for farming.</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
+                <article><h3>Education &amp; training.</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
+              </div>
+              <div class="rm-estate-actions"><a class="rm-estate-primary" href="/development-partners/">Partner in rebuilding <span aria-hidden="true">↗</span></a><a class="rm-estate-secondary" href="/mango-project/">Read the Mango proposal <span aria-hidden="true">↗</span></a></div>
+              <div class="rm-estate-foot"><p>Women and girls at the heart of the vision.</p><a href="#farm-women-title" aria-label="Read about women and girls at the heart of Virgin Mary Farm">↓</a></div>
+            </div>
+          </div>
+          <div class="farm-readiness-surround"><div class="container"><section class="farm-readiness" id="farm-readiness" aria-labelledby="farm-readiness-title">
+      <div>
+        <p class="eyebrow">Farm status and readiness</p>
+        <p class="readiness-date">Updated 21 October 2026</p>
+        <h3 id="farm-readiness-title">Rebuilding starts with water.</h3>
+        <p>Virgin Mary Farm was destroyed during the war and is not operational. Our founder reports that the farm’s seven wells have been destroyed and all pumping equipment stolen. Rebuilding requires a technical assessment of the wells and new water storage, alongside a complete pumping and irrigation system.</p>
+      </div>
+      <dl>
+        <div><dt>Land &amp; permission</dt><dd>The farm belongs to the Coptic Orthodox Church in Sudan, Khartoum–Omdurman, according to founder Iman Tadros. She confirms permission to use the land; the written project-use terms still need review.</dd></div>
+        <div><dt>Project coordination</dt><dd>Iman Tadros coordinates partner enquiries and machinery-donation paperwork. Bishop Sarabon and farm manager Jhone Wadeea are the founder-identified local contacts in Sudan.</dd></div>
+        <div><dt>Intended equipment ownership</dt><dd>Donated machinery and project equipment are intended to belong to Virgin Mary Farm together with Risemeup, for the farm’s community purpose. Legal title and responsibilities will be recorded in written agreements with the Church and donors.</dd></div>
+        <div><dt>Before equipment delivery</dt><dd>A dated technical assessment, safe access, secure equipment storage and an agreed maintenance plan must be established.</dd></div>
+        <div><dt>First proposed stage</dt><dd>Assess the seven destroyed wells; establish a viable initial water source through rehabilitation or replacement as advised; build new water storage and an initial growing and education area. Specifications and costs await assessment and quotations.</dd></div>
+      </dl>
+      <div class="actions"><a class="button" href="/development-partners/">For development partners →</a><a class="text-link" href="/development-partners/#equipment">View equipment needs →</a></div>
+      <p class="readiness-note">Latest visit: approximately mid-October 2026, according to Iman’s update on 21 October; the exact date is unconfirmed. A dated technical assessment is still needed. With the war ongoing, safe access must be checked before each visit or delivery.</p>
+    </section></div></div></section></main></body></html>
