@@ -1016,3 +1016,43 @@
 /* Move the map's upper measurement oval a little further right. */
 .home-page #about .classic-map-measurements{right:-48px}
 @media(max-width:600px){.home-page #about .classic-map-measurements{right:-16px}}
+
+/* Approved calm green Sudan story text on warm ivory. */
+.home-page.warm-brand #sudan-crisis {
+ background:#faf7ef;color:#405b48;padding:65px 0 70px;
+}
+.home-page.warm-brand #sudan-crisis .two-col {
+ display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:start;
+}
+.home-page.warm-brand #sudan-crisis .eyebrow {
+ font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;
+ color:#a4633d;margin:0 0 22px;padding:0;
+}
+.home-page.warm-brand #sudan-crisis .eyebrow::before,
+.home-page.warm-brand #sudan-crisis .eyebrow::after {content:none;display:none}
+.home-page.warm-brand #sudan-crisis .prose {max-width:590px}
+.home-page.warm-brand #sudan-crisis .prose > p {
+ font:400 17px/1.95 'DM Sans',sans-serif;color:#405b48;margin:0 0 28px;
+}
+.home-page.warm-brand #sudan-crisis .prose > p.lead {
+ font:500 clamp(22px,2.1vw,28px)/1.65 'Lora',Georgia,serif;letter-spacing:-.02em;
+ color:#24583d;margin:0 0 30px;
+}
+.home-page.warm-brand #sudan-crisis .source-note {
+ border:0;border-top:1px solid #d2decb;padding:20px 0 0;margin-top:5px;
+ font:400 11px/1.9 'DM Sans',sans-serif;color:#617159;background:transparent;border-radius:0;
+}
+.home-page.warm-brand #sudan-crisis .source-note a {
+ color:#526b54;text-decoration:underline;text-underline-offset:3px;
+}
+@media(max-width:900px) {
+ .home-page.warm-brand #sudan-crisis .two-col {gap:45px;grid-template-columns:.9fr 1.1fr}
+}
+@media(max-width:700px) {
+ .home-page.warm-brand #sudan-crisis .two-col {grid-template-columns:1fr;gap:35px}
+ .home-page.warm-brand #sudan-crisis {padding:38px 0 45px}
+ .home-page.warm-brand #sudan-crisis .prose {max-width:none}
+ .home-page.warm-brand #sudan-crisis h2 {font-size:38px}
+ .home-page.warm-brand #sudan-crisis .prose > p {font-size:16px;line-height:1.9}
+ .home-page.warm-brand #sudan-crisis .prose > p.lead {font-size:23px}
+}
