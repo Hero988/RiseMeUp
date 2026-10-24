@@ -243,3 +243,33 @@ body #women .stage-scope strong{text-transform:none;letter-spacing:normal}
 
 /* Approved warm orange headings across all four women’s livelihoods boxes. */
 body #women .women-card-heading,body #women .stage-scope strong{color:#b45c2f}
+
+/* Approved ivory and sage farm status and readiness design. */
+body #readiness{background:#faf7ef;color:#405b48;font:400 15px/1.85 'DM Sans',sans-serif;padding:50px 0 65px}
+body #readiness .container{width:min(1200px,90%)}
+body #readiness .partners-section-heading{max-width:810px;margin-bottom:32px}
+body #readiness .eyebrow{font:600 11px/1.85 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#61745b;margin:0 0 20px;padding:0}
+body #readiness .eyebrow:before,body #readiness .eyebrow:after{display:none;content:none}
+body #readiness h2{font:500 clamp(38px,4.5vw,58px)/1.18 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 25px}
+body #readiness h2 em{font-family:inherit;font-weight:500;font-size:inherit;color:inherit;font-style:italic}
+body #readiness .partners-section-heading>p:last-child{font:400 17px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0}
+body #readiness .readiness-summary{display:flex;gap:32px;align-items:center;background:#eaf0e4;border:1px solid #a8ba9e;border-radius:24px;padding:25px 30px;margin:32px 0}
+body #readiness .readiness-summary strong{font:500 24px/1.35 'Lora',Georgia,serif;color:#b45c2f;flex-shrink:0}
+body #readiness .readiness-summary span{font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48}
+body #readiness .readiness-register{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0}
+body #readiness .readiness-register>div{display:block;background:#f0f4eb;border:1px solid #a8ba9e;border-radius:24px;padding:27px 30px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+body #readiness .readiness-register dt{font:500 24px/1.4 'Lora',Georgia,serif;color:#b45c2f;margin-bottom:16px;letter-spacing:-.02em}
+body #readiness .readiness-register dd{margin:0}
+body #readiness .status-label{display:inline-block;background:#e3ebdc;color:#3c6145;border:1px solid #d0dcc8;border-radius:18px;padding:5px 12px;font:500 11px/1.6 'DM Sans',sans-serif;letter-spacing:normal}
+body #readiness .readiness-register p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:18px 0 0}
+body #readiness a{color:inherit}
+body #readiness .partners-note{font:400 12px/1.85 'DM Sans',sans-serif;color:#64715d;max-width:950px;margin:30px 0 0;padding-top:22px;border-top:1px solid #d2decb}
+@media(max-width:720px){
+body #readiness{padding:35px 0 50px}
+body #readiness .readiness-register{grid-template-columns:1fr;gap:20px}
+body #readiness .readiness-summary{display:block;padding:24px}
+body #readiness .readiness-summary strong{display:block;margin-bottom:15px}
+body #readiness .readiness-register>div{padding:24px}
+body #readiness h2{font-size:40px}
+body #readiness .partners-section-heading>p:last-child{font-size:16px}
+}
