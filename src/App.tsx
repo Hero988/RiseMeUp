@@ -172,7 +172,7 @@ export default function App() {
           <div className="container">
             <div className="section-head">
               <div>
-                <p className="eyebrow">Our communities</p>
+                
                 <h2>
                   Two communities. Equal commitment.
                 </h2>
