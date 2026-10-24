@@ -791,3 +791,5 @@
  .home-page #virgin-mary-farm #farm-plan .panel>.panel-category{left:24px;top:22px;font-size:10px}
  .home-page #virgin-mary-farm #farm-plan .photo-choice{right:20px;top:55px}
 }
+
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .panel:after{background:linear-gradient(0deg,#0c231bf5,#132c2280 28%,transparent 64%)}
