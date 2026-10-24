@@ -306,9 +306,6 @@ export default function App() {
               <FarmReadiness />
             </div>
           </div>
-          <div className="container">
-            <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The farm covers 130 hectares (approximately 321 acres), as confirmed by founder Iman Tadros. The original proposal sets out the four connected facilities below.</p>
-          </div>
           <FarmPlan />
           <div className="farm-roadmap-surround">
             <div className="container">
