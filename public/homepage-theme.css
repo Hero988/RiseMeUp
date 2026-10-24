@@ -914,3 +914,18 @@
 .home-page.warm-brand #virgin-mary-farm #land-framework .button:hover {
   background:#d87928!important;border-color:#d87928!important;
 }
+
+/* Approved matching medium orange for the remaining four green homepage actions. */
+.home-page.warm-brand .site-header .button,
+.home-page.warm-brand #virgin-mary-farm #farm-plan .farm-education .button,
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners>a,
+.home-page.warm-brand #partnership .button {
+ background:#ed8b35!important;border:1px solid #ed8b35!important;color:#fffaf0!important;
+ border-radius:999px!important;box-shadow:none;
+}
+.home-page.warm-brand .site-header .button:hover,
+.home-page.warm-brand #virgin-mary-farm #farm-plan .farm-education .button:hover,
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners>a:hover,
+.home-page.warm-brand #partnership .button:hover {
+ background:#d87928!important;border-color:#d87928!important;
+}
