@@ -929,3 +929,80 @@
 .home-page.warm-brand #partnership .button:hover {
  background:#d87928!important;border-color:#d87928!important;
 }
+
+/* Approved founder section: ivory, orange Lora, sage values, compact lower-left name badge. */
+.home-page.warm-brand #founder {
+ background:#faf7ef;color:#405b48;padding:45px 0 55px;font:400 15px/1.85 'DM Sans',sans-serif;
+}
+.home-page.warm-brand #founder .classic-founder-grid {
+ display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:start;
+}
+.home-page.warm-brand #founder .classic-image-wrap {position:relative;margin:0}
+.home-page.warm-brand #founder .classic-image-wrap>img {
+ display:block;width:100%;height:740px;object-fit:cover;object-position:center 30%;border-radius:28px;
+}
+.home-page.warm-brand #founder .classic-image-badge {
+ position:absolute;bottom:6px;left:12px;right:auto;max-width:calc(100% - 48px);
+ padding:9px 17px;background:#f0f4ebf2;border:1px solid #d2decb;border-radius:17px;
+ color:#24583d;backdrop-filter:blur(8px);box-shadow:none;
+}
+.home-page.warm-brand #founder .classic-image-badge span {
+ display:block;font:400 9px/1.85 'DM Sans',sans-serif;letter-spacing:.1em;
+ text-transform:uppercase;color:#617159;margin:0 0 2px;
+}
+.home-page.warm-brand #founder .classic-image-badge strong {
+ display:block;font:500 23px/1.3 'Lora',Georgia,serif;color:#24583d;
+}
+.home-page.warm-brand #founder .eyebrow {
+ font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;
+ color:#a4633d;margin:0 0 18px;padding:0;
+}
+.home-page.warm-brand #founder .eyebrow::before,
+.home-page.warm-brand #founder .eyebrow::after,
+.home-page.warm-brand #founder h2::before,
+.home-page.warm-brand #founder h2::after {content:none;display:none}
+.home-page.warm-brand #founder h2 {
+ font:500 clamp(35px,3.8vw,50px)/1.2 'Lora',Georgia,serif;letter-spacing:-.035em;
+ color:#b45c2f;margin:0 0 25px;padding:0;border:0;
+}
+.home-page.warm-brand #founder .classic-founder-grid>div>p:not(.eyebrow) {
+ font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 18px;
+}
+.home-page.warm-brand #founder .classic-founder-grid>div>p.lead {
+ font-size:18px;font-weight:500;line-height:1.85;color:#2c513b;margin-bottom:23px;
+}
+.home-page.warm-brand #founder .classic-founder-values {
+ display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0;
+}
+.home-page.warm-brand #founder .classic-founder-values>div {
+ padding:20px;background:#f0f4eb;border:1px solid #9eb493;border-radius:20px;
+ box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08;
+}
+.home-page.warm-brand #founder .classic-founder-values strong {
+ display:block;font:500 19px/1.4 'Lora',Georgia,serif;color:#24583d;margin-bottom:9px;
+}
+.home-page.warm-brand #founder .classic-founder-values span {
+ display:block;font:400 12px/1.7 'DM Sans',sans-serif;color:#526b54;
+}
+.home-page.warm-brand #founder .text-link {
+ display:inline-block;background:#ed8b35;border:1px solid #ed8b35;border-radius:999px;
+ padding:15px 24px;color:#fffaf0;font:500 13px/1.6 'DM Sans',sans-serif;text-decoration:none;
+}
+.home-page.warm-brand #founder .text-link:hover {background:#d87928;border-color:#d87928}
+@media(max-width:950px) {
+ .home-page.warm-brand #founder .classic-founder-grid {gap:35px}
+ .home-page.warm-brand #founder .classic-founder-values {grid-template-columns:1fr}
+ .home-page.warm-brand #founder .classic-image-wrap>img {height:780px}
+}
+@media(max-width:700px) {
+ .home-page.warm-brand #founder .classic-founder-grid {grid-template-columns:1fr;gap:35px}
+ .home-page.warm-brand #founder .classic-image-wrap>img {height:550px;object-position:center 25%}
+ .home-page.warm-brand #founder h2 {font-size:38px}
+ .home-page.warm-brand #founder .classic-founder-values {grid-template-columns:1fr 1fr}
+ .home-page.warm-brand #founder {padding:30px 0}
+ .home-page.warm-brand #founder .classic-founder-grid>div>p.lead {font-size:17px}
+}
+@media(max-width:420px) {
+ .home-page.warm-brand #founder .classic-founder-values {grid-template-columns:1fr}
+ .home-page.warm-brand #founder .classic-image-wrap>img {height:470px}
+}
