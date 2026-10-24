@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;600&display=swap');
 .partners-page .site-header nav { position: static; display: flex; flex-direction: row; flex-wrap: wrap; gap: 28px; align-items: center; max-height: none; overflow: visible; padding: 0; border: 0; background: transparent; }
 .partners-page .header-inner { justify-content: space-between; }
 .partners-page h2 em { color: #a65c30; }
@@ -208,4 +209,31 @@
  .partners-page p, .partners-page small, .partners-page a, .partners-page em { color: #222; }
  .container { width: 100%; }
  .equipment-item, .stage-milestones li, .outcome-grid article { break-inside: avoid; }
+}
+
+/* Approved ivory and sage women’s livelihoods section, option 1. */
+body #women{background:#faf7ef;color:#405b48;padding:45px 0 60px;font:400 16px/1.85 'DM Sans',sans-serif}
+body #women .eyebrow{font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#24583d;margin:0 0 18px;padding:0}
+body #women .eyebrow:before,body #women .eyebrow:after,body #women .women-main-heading:before,body #women .women-main-heading:after{display:none;content:none}
+body #women .women-main-heading{font:500 clamp(35px,4vw,54px)/1.2 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 25px;padding:0;border:0}
+body #women .women-main-heading em{font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:inherit}
+body #women .women-layout-intro{max-width:950px;margin-bottom:32px}
+body #women .lead{font:500 18px/1.85 'DM Sans',sans-serif;color:#2c513b;margin:0}
+body #women .women-story-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;margin:32px 0}
+body #women .women-story-grid article{background:#f0f4eb;border:2px solid #a8ba9e;border-radius:26px;padding:27px 30px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+body #women .women-card-heading{font:500 25px/1.35 'Lora',Georgia,serif;letter-spacing:-.02em;color:#24583d;margin:0 0 18px}
+body #women .women-story-grid p{font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0}
+body #women .stage-scope{background:#eaf0e4;border:1px solid #a8ba9e;border-radius:24px;padding:25px 30px;margin:28px 0}
+body #women .stage-scope strong{display:block;font:500 23px/1.4 'Lora',Georgia,serif;color:#24583d;margin-bottom:15px}
+body #women .stage-scope p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 16px}
+body #women .stage-scope p:last-child{margin-bottom:0}
+body #women .stage-scope a{color:#24583d}
+body #women .text-link{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;border-radius:999px;padding:15px 24px;font:500 13px/1.6 'DM Sans',sans-serif;text-decoration:none}
+body #women .text-link:hover{background:#d87928;border-color:#d87928}
+@media(max-width:800px){
+body #women .women-story-grid{grid-template-columns:1fr;gap:24px}
+body #women{padding:32px 0 60px}
+body #women .lead{font-size:17px}
+body #women .women-story-grid article{padding:25px}
+body #women .stage-scope{padding:24px}
 }
