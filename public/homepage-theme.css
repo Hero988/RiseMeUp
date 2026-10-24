@@ -793,3 +793,45 @@
 }
 
 .home-page #virgin-mary-farm #farm-plan #biogas-plant .panel:after{background:linear-gradient(0deg,#0c231bf5,#132c2280 28%,transparent 64%)}
+
+/* Approved calm SDG cards, orange slogan and Lora partnership heading. */
+.home-page.warm-brand #sdgs.rm-sdg-editorial{background:#faf7ef;color:#405b48;font-family:'DM Sans',sans-serif}
+.home-page.warm-brand #sdgs .rm-sdg-content{padding-top:38px}
+.home-page.warm-brand #sdgs .rm-sdg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;scroll-margin-top:25px}
+.home-page.warm-brand #sdgs .rm-sdg-goal,.home-page.warm-brand #sdgs .rm-sdg-goal+.rm-sdg-goal,.home-page.warm-brand #sdgs .rm-sdg-goal:nth-child(even){
+ padding:28px 30px;background:#f0f4eb;border:1px solid #d2decb;border-radius:20px;
+ box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08;
+ transition:transform 240ms ease,box-shadow 240ms ease,border-color 240ms ease;
+}
+.home-page.warm-brand #sdgs .rm-sdg-mark{margin:0 0 20px}
+.home-page.warm-brand #sdgs .rm-sdg-mark>span{font:500 38px/1.2 'Lora',Georgia,serif;color:#a4633d}
+.home-page.warm-brand #sdgs .rm-sdg-mark>svg{color:#a4633d;height:38px;width:38px;stroke-width:1.8}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-goal h3{font:500 24px/1.35 'Lora',Georgia,serif;letter-spacing:-.025em;text-transform:none;color:#24583d;min-height:0;margin:0 0 14px}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-goal h4{font:600 15px/1.7 'DM Sans',sans-serif;letter-spacing:0;color:#24583d;min-height:0;margin:0 0 13px}
+.home-page.warm-brand #sdgs .rm-sdg-goal>p{font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;min-height:0;margin:0}
+.home-page.warm-brand #sdgs .rm-sdg-target{font:500 13px/1.8 'DM Sans',sans-serif;color:#24583d;padding:17px 24px 17px 0;min-height:0;border-color:#d2decb;margin-top:22px}
+.home-page.warm-brand #sdgs .rm-sdg-target>span:first-child{font-size:10px;color:#a4633d}
+.home-page.warm-brand #sdgs .rm-sdg-measure{border-color:#d2decb}
+.home-page.warm-brand #sdgs .rm-sdg-measure summary{font:400 12px/1.8 'DM Sans',sans-serif;color:#526b54;padding:15px 0 0;min-height:0}
+.home-page.warm-brand #sdgs .rm-sdg-measure p{font:400 13px/1.85 'DM Sans',sans-serif;color:#405b48;padding:12px 0 0;margin:0}
+.home-page.warm-brand #sdgs .rm-sdg-bottom{margin-top:35px;border-color:#d2decb}
+.home-page.warm-brand #sdgs .rm-sdg-bottom>p{color:#24583d}
+.home-page.warm-brand #sdgs .rm-sdg-partners{border-color:#d2decb}
+.home-page.warm-brand #sdgs .rm-sdg-partners>div>p:last-child{color:#405b48}
+.home-page.warm-brand #sdgs .rm-sdg-note{color:#617159}
+@media(hover:hover){.home-page.warm-brand #sdgs .rm-sdg-goal:hover{transform:translateY(-3px);border-color:#b7c9aa;box-shadow:0 6px 10px #203d2a0c,0 14px 26px #203d2a17}}
+@media(prefers-reduced-motion:reduce){.home-page.warm-brand #sdgs .rm-sdg-goal{transition:none}.home-page.warm-brand #sdgs .rm-sdg-goal:hover{transform:none}}
+@media(max-width:650px){.home-page.warm-brand #sdgs .rm-sdg-grid{grid-template-columns:1fr;gap:20px}.home-page.warm-brand #sdgs .rm-sdg-goal,.home-page.warm-brand #sdgs .rm-sdg-goal+.rm-sdg-goal,.home-page.warm-brand #sdgs .rm-sdg-goal:nth-child(even){padding:25px}.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-goal h3{font-size:23px}}
+
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-bottom>p,
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-bottom>p em{color:#b45c2f;font-family:'Lora',Georgia,serif;font-size:27px;font-weight:500;line-height:1.4}
+.home-page.warm-brand #sdgs .rm-sdg-bottom>span{font:400 10px/1.8 'DM Sans',sans-serif;color:#617159;letter-spacing:.07em}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners h3,
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners h3 em{font:500 clamp(32px,3.5vw,46px)/1.2 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners h3 em{font-style:italic}
+.home-page.warm-brand #sdgs .rm-sdg-partners .rm-sdg-kicker{font:600 11px/1.7 'DM Sans',sans-serif;color:#a4633d;letter-spacing:.12em}
+.home-page.warm-brand #sdgs .rm-sdg-partners>div>p:last-child{font:400 16px/1.85 'DM Sans',sans-serif;color:#405b48;max-width:720px}
+.home-page.warm-brand #sdgs .rm-sdg-partners>a{background:#24583d;color:#fffdf3;border:1px solid #24583d;border-radius:999px;padding:15px 24px;gap:22px;font:500 13px/1.6 'DM Sans',sans-serif}
+.home-page.warm-brand #sdgs .rm-sdg-partners>a:hover{background:#1b4530}
+@media(max-width:650px){.home-page.warm-brand #sdgs .rm-sdg-bottom{align-items:flex-start;flex-direction:column;gap:14px}.home-page.warm-brand #sdgs .rm-sdg-partners{grid-template-columns:1fr;gap:24px}.home-page.warm-brand #sdgs .rm-sdg-partners>a{justify-self:start}}
+
