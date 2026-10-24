@@ -894,3 +894,6 @@
 .home-page #virgin-mary-farm .farm-women > p.women-plan-note {
   background:#eaf0e4;border:2px solid #a8ba9e;border-radius:24px;overflow:hidden;
 }
+
+/* Approved italic treatment for both farm plan introduction sentences. */
+.home-page #virgin-mary-farm #farm-plan .intro-copy{font-style:italic}
