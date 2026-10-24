@@ -227,10 +227,10 @@ export default function App() {
           <div className="container relief-grid">
             <figure className="photo">
               <img
-                src="/sudan-crisis-7.jpeg"
-                alt="Food portions packed in bags for community support"
-                width="960"
-                height="1280"
+                src="/crisis-response/photos/sudan-food-staples.jpg"
+                alt="Bags of dry food staples beside a bottle of cooking oil"
+                width="967"
+                height="1536"
                 loading="lazy"
               />
               <figcaption>Sudan food assistance archive · Risemeup · Photograph date unconfirmed. <a href="/crisis-response/#photo-records">About our records</a></figcaption>
