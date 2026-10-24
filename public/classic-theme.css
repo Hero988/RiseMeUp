@@ -633,3 +633,11 @@ footer .brand-slogan { color: #e3ac80; }
 @media(max-width:600px) {
   .home-page #about .classic-map-measurements {padding-top:11px;padding-bottom:11px}
 }
+
+/* Approved forest green palette for the About introduction and values. */
+.home-page #about .classic-about-grid > div:last-child > .lead {color:#24583d}
+.home-page #about .classic-about-grid > div:last-child > p:not(.lead):not(.eyebrow) {color:#405b48}
+.home-page #about .classic-values > div {background:#f0f4eb;border-color:#d2decb}
+.home-page #about .classic-values strong {color:#24583d}
+.home-page #about .classic-values div span:not(.classic-value-icon) {color:#566c54}
+.home-page #about .classic-value-icon {background:#e2ebda;color:#24583d}
