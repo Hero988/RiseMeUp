@@ -354,3 +354,42 @@
   .home-page #relief .photo img {height:400px}
   .home-page #relief {padding-top:35px}
 }
+
+/* Approved calm editorial design for women and girls at Virgin Mary Farm. */
+.home-page #virgin-mary-farm .farm-women {
+  max-width:1000px;margin:55px auto 65px;padding:40px;
+  background:#faf7ef;color:#405b48;border:0;border-radius:0;box-shadow:none;
+}
+.home-page #virgin-mary-farm .farm-women > .eyebrow {
+  color:#a4633d;font:600 11px/1.7 'DM Sans',sans-serif;
+  text-transform:uppercase;letter-spacing:.13em;margin:0 0 22px;
+}
+.home-page #virgin-mary-farm .farm-women h3 {
+  font:500 clamp(35px,4vw,54px)/1.2 'Lora',Georgia,serif;
+  letter-spacing:-.035em;color:#24583d;margin:0 0 32px;
+}
+.home-page #virgin-mary-farm .farm-women h3 em {
+  font-family:inherit;font-weight:500;font-size:inherit;font-style:italic;color:#24583d;
+}
+.home-page #virgin-mary-farm .farm-women > p:not(.eyebrow) {
+  max-width:850px;font:400 17px/1.85 'DM Sans',sans-serif;margin:0 0 22px;color:#405b48;
+}
+.home-page #virgin-mary-farm .farm-women > h3 + p {
+  font-size:19px;line-height:1.85;font-weight:500;color:#2c513b;
+}
+.home-page #virgin-mary-farm .farm-women > p.women-plan-note {
+  font-size:14px;line-height:1.85;color:#576e53;background:#f0f3e8;
+  border-left:2px solid #bdcaaa;padding:20px 24px;margin-top:30px;
+}
+.home-page #virgin-mary-farm .farm-women > .text-link {
+  display:inline-block;font:500 14px/1.7 'DM Sans',sans-serif;color:#24583d;
+  text-decoration:none;border-bottom:1px solid #a9b99a;padding-bottom:7px;margin-top:5px;
+}
+@media(max-width:600px) {
+  .home-page #virgin-mary-farm .farm-women {padding:26px 22px;margin:35px auto 45px}
+  .home-page #virgin-mary-farm .farm-women h3 {font-size:34px}
+  .home-page #virgin-mary-farm .farm-women > .eyebrow {font-size:9px}
+  .home-page #virgin-mary-farm .farm-women > p:not(.eyebrow) {font-size:16px}
+  .home-page #virgin-mary-farm .farm-women > h3 + p {font-size:17px}
+  .home-page #virgin-mary-farm .farm-women > p.women-plan-note {font-size:13px;padding:18px}
+}
