@@ -393,3 +393,15 @@
   .home-page #virgin-mary-farm .farm-women > h3 + p:not(.eyebrow) {font-size:17px}
   .home-page #virgin-mary-farm .farm-women > p.women-plan-note {font-size:13px;padding:18px}
 }
+
+/* Match the neighbouring farm readiness card's box layout. */
+.home-page #virgin-mary-farm .farm-women {
+  max-width:none;
+  margin:50px 0;
+  padding:36px 40px;
+  border-radius:24px;
+  border-top:4px solid #c2703a;
+}
+@media(max-width:760px) {
+  .home-page #virgin-mary-farm .farm-women {padding:27px 24px}
+}
