@@ -237,3 +237,6 @@ body #women .lead{font-size:17px}
 body #women .women-story-grid article{padding:25px}
 body #women .stage-scope{padding:24px}
 }
+
+body #women .stage-scope{max-width:none}
+body #women .stage-scope strong{text-transform:none;letter-spacing:normal}
