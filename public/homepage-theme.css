@@ -835,3 +835,20 @@
 .home-page.warm-brand #sdgs .rm-sdg-partners>a:hover{background:#1b4530}
 @media(max-width:650px){.home-page.warm-brand #sdgs .rm-sdg-bottom{align-items:flex-start;flex-direction:column;gap:14px}.home-page.warm-brand #sdgs .rm-sdg-partners{grid-template-columns:1fr;gap:24px}.home-page.warm-brand #sdgs .rm-sdg-partners>a{justify-self:start}}
 
+
+/* Approved ivory SDG introduction with green and orange Lora heading. */
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero{
+ background:#faf7ef;color:#405b48;min-height:0;padding:35px 0 48px;
+}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero-photo,
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero:after{display:none}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-overline{color:#617159;border-color:#d2decb}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1.25fr 1fr;gap:65px;align-items:center;margin:48px 0 0}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-kicker{font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;color:#a4633d}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font:500 clamp(42px,5.2vw,70px)/1.16 'Lora',Georgia,serif;letter-spacing:-.035em;color:#24583d;margin:20px 0 0}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero h2 em{font:italic 500 1em/1.16 'Lora',Georgia,serif;letter-spacing:inherit;color:#b45c2f;text-shadow:none}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-intro>p{font:400 16px/1.85 'DM Sans',sans-serif;color:#405b48;text-shadow:none;max-width:520px}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-intro>span{font:400 10px/1.8 'DM Sans',sans-serif;letter-spacing:.07em;color:#617159;margin-top:22px}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-content{padding-top:0}
+@media(max-width:800px){.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero{padding:30px 0 35px}.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1fr;gap:28px;margin-top:35px}.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font-size:clamp(39px,7.5vw,62px)}}
+
