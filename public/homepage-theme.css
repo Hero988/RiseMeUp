@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
@@ -327,4 +328,29 @@
   .home-page #relief .crisis-history-link {transition:none}
   .home-page #relief .crisis-history-link:hover,
   .home-page #relief .crisis-history-link:focus-within {transform:none}
+}
+
+/* Approved ivory and forest green food assistance section. */
+.home-page #relief {padding-top:58px;background:#faf7ef}
+.home-page #relief .relief-grid {display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:70px}
+.home-page #relief .photo {margin:0}
+.home-page #relief .photo img {width:100%;height:565px;object-fit:cover;border-radius:24px}
+.home-page #relief .photo figcaption {font:10px/1.7 'DM Sans',sans-serif;color:#6b765e;margin-top:15px}
+.home-page #relief .relief-grid h2 {
+  font:500 clamp(42px,4.5vw,64px)/1.14 'Lora',Georgia,serif;
+  letter-spacing:-.035em;color:#24583d;margin:0 0 28px;padding:0;border:0;
+}
+.home-page #relief .relief-grid h2 em {font:italic 500 1em/1.14 'Lora',Georgia,serif;color:#24583d}
+.home-page #relief .relief-grid h2::before,
+.home-page #relief .relief-grid h2::after {content:none;display:none}
+.home-page #relief .relief-grid > div > p {font:400 17px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 19px}
+.home-page #relief .relief-grid > div > p.lead {font-size:19px;font-weight:500;color:#2c513b}
+.home-page #relief .relief-grid .button {
+  border-radius:999px;background:#24583d;border-color:#24583d;color:#fffdf3;
+  box-shadow:none;font:500 13px/1.5 'DM Sans',sans-serif;padding:17px 24px;margin-top:9px;
+}
+@media(max-width:800px) {
+  .home-page #relief .relief-grid {grid-template-columns:1fr;gap:32px}
+  .home-page #relief .photo img {height:400px}
+  .home-page #relief {padding-top:35px}
 }
