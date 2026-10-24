@@ -874,3 +874,14 @@
 @media(max-width:600px) {
   .home-page #virgin-mary-farm .farm-women-surround {padding:25px 0}
 }
+
+/* Approved full ivory surround for the readiness section only. */
+.home-page #virgin-mary-farm .farm-readiness-surround {
+  background:#faf7ef;padding:40px 0;
+}
+.home-page #virgin-mary-farm .farm-readiness-surround #farm-readiness {
+  margin:0;background:#faf7ef;
+}
+@media(max-width:700px) {
+  .home-page #virgin-mary-farm .farm-readiness-surround {padding:25px 0}
+}
