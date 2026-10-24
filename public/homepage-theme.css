@@ -897,3 +897,20 @@
 
 /* Approved italic treatment for both farm plan introduction sentences. */
 .home-page #virgin-mary-farm #farm-plan .intro-copy{font-style:italic}
+
+/* Approved medium orange buttons in the five previewed sections. */
+.home-page.warm-brand #hero .rm-opening-button,
+.home-page.warm-brand #relief .button,
+.home-page.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary,
+.home-page.warm-brand #virgin-mary-farm #farm-readiness .button,
+.home-page.warm-brand #virgin-mary-farm #land-framework .button {
+  background:#ed8b35!important;border:1px solid #ed8b35!important;color:#fffaf0!important;
+  border-radius:999px!important;box-shadow:none;
+}
+.home-page.warm-brand #hero .rm-opening-button:hover,
+.home-page.warm-brand #relief .button:hover,
+.home-page.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary:hover,
+.home-page.warm-brand #virgin-mary-farm #farm-readiness .button:hover,
+.home-page.warm-brand #virgin-mary-farm #land-framework .button:hover {
+  background:#d87928!important;border-color:#d87928!important;
+}
