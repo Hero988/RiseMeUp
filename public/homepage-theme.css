@@ -852,3 +852,14 @@
 .home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-content{padding-top:0}
 @media(max-width:800px){.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero{padding:30px 0 35px}.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1fr;gap:28px;margin-top:35px}.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font-size:clamp(39px,7.5vw,62px)}}
 
+
+/* Approved full ivory background around the five-phase roadmap only. */
+.home-page #virgin-mary-farm .farm-roadmap-surround {
+  background:#faf7ef;padding:40px 0;
+}
+.home-page #virgin-mary-farm .farm-roadmap-surround #land-framework {
+  margin:0;background:#faf7ef;border-color:#e0e5d8;
+}
+@media(max-width:800px) {
+  .home-page #virgin-mary-farm .farm-roadmap-surround {padding:25px 0}
+}
