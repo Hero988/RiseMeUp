@@ -641,3 +641,20 @@ footer .brand-slogan { color: #e3ac80; }
 .home-page #about .classic-values strong {color:#24583d}
 .home-page #about .classic-values div span:not(.classic-value-icon) {color:#566c54}
 .home-page #about .classic-value-icon {background:#e2ebda;color:#24583d}
+
+/* Approved subtle elevation for the four About value boxes. */
+.home-page #about .classic-values > div {
+  box-shadow:0 2px 4px #203d2a08,0 5px 12px #203d2a08;
+  transition:transform 240ms ease,box-shadow 240ms ease,border-color 240ms ease;
+}
+@media(hover:hover) {
+  .home-page #about .classic-values > div:hover {
+    transform:translateY(-3px);
+    box-shadow:0 5px 8px #203d2a0c,0 12px 24px #203d2a1f;
+    border-color:#b7c9aa;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-page #about .classic-values > div {transition:none}
+  .home-page #about .classic-values > div:hover {transform:none}
+}
