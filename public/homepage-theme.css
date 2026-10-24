@@ -1014,5 +1014,5 @@
 .home-page.warm-brand #founder .eyebrow{color:#24583d}
 
 /* Move the map's upper measurement oval a little further right. */
-.home-page #about .classic-map-measurements{right:-40px}
+.home-page #about .classic-map-measurements{right:-48px}
 @media(max-width:600px){.home-page #about .classic-map-measurements{right:-16px}}
