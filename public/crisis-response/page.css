@@ -146,3 +146,18 @@
 #coronavirus-response .response-locations h3 br{display:none}
 #coronavirus-response.response-story{padding:35px 0}
 }
+
+/* Approved four support stories in two rows of sage cards. */
+#coronavirus-response .response-locations{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#coronavirus-response .response-locations article,
+#coronavirus-response .response-locations article+article{
+ background:#f0f4eb;border:1px solid #9eb493;border-radius:24px;padding:28px 30px;
+ box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08;
+}
+#coronavirus-response .response-locations h3{font-size:27px;margin-bottom:20px}
+#coronavirus-response .response-locations p:not(.response-location):last-child{margin-bottom:0}
+@media(max-width:700px){
+ #coronavirus-response .response-locations{grid-template-columns:1fr}
+ #coronavirus-response .response-locations article,
+ #coronavirus-response .response-locations article+article{padding:25px}
+}
