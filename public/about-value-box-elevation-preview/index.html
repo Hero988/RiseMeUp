@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>About value boxes · Gentle elevation preview</title><link rel="stylesheet" href="/about-heading-options/style.css"><style>
+#about .classic-about-slogan {color:#24583d}
+#about h2 {container-type:inline-size}
+#about h2>.classic-about-first-line,#about h2>.classic-about-emphasis {display:block;white-space:nowrap;font-size:min(1em,9.2cqi);line-height:1.13}
+
+#about .classic-about-grid>div:last-child>.lead{color:#24583d}
+#about .classic-about-grid>div:last-child>p:not(.lead):not(.eyebrow){color:#405b48}
+#about .classic-values>div{background:#f0f4eb;border-color:#d2decb;box-shadow:0 2px 4px #203d2a08,0 5px 12px #203d2a08;transition:transform 240ms ease,box-shadow 240ms ease,border-color 240ms ease}
+#about .classic-values strong{color:#24583d}
+#about .classic-values div span:not(.classic-value-icon){color:#566c54}
+#about .classic-value-icon{background:#e2ebda;color:#24583d}
+.show-lift #about .classic-values>div{transform:translateY(-3px);box-shadow:0 5px 8px #203d2a0c,0 12px 24px #203d2a1f;border-color:#b7c9aa}
+@media(hover:hover){#about .classic-values>div:hover{transform:translateY(-3px);box-shadow:0 5px 8px #203d2a0c,0 12px 24px #203d2a1f;border-color:#b7c9aa}}
+#about .classic-map-measurements{width:210px;right:-8px;border:1px solid #d8cbb8;border-radius:999px;text-align:center;padding:12px 20px}
+#about .classic-image-badge{border-radius:999px;padding:10px 23px}
+#about .classic-image-badge strong{font-size:1.9rem}
+#about .classic-image-badge span{font-size:.78rem}
+#lift-toggle{border:1px solid #24583d;border-radius:999px;background:#24583d;color:#fffefa;font:500 11px/1.5 sans-serif;padding:8px 15px;margin:0 10px;cursor:pointer}
+#lift-toggle:focus-visible{outline:3px solid #b78449;outline-offset:4px}
+#lift-status{font-size:10px;color:#637159}
+@media(prefers-reduced-motion:reduce){#about .classic-values>div{transition:none}#about .classic-values>div:hover,.show-lift #about .classic-values>div{transform:none}}
+</style></head><body data-theme="orange"><div class="preview"><span>RISEMEUP · HEADING OPTIONS</span><span>EXPERIMENTAL ONLY · LIVE WEBSITE UNCHANGED</span></div><header class="header"><img src="/logo.png" alt="Risemeup Sustainability" width="152" height="54"></header><div class="selection"><span>Four value boxes · Gentle elevation</span><p>Hover over a box, or <button id="lift-toggle" type="button" aria-pressed="false">Show lifted boxes</button> <span id="lift-status" role="status">Resting appearance</span></p></div><main><section id="about" class="section classic-about">
+    <div class="container"><p class="classic-about-slogan">Think globally, act locally.</p></div>
+    <div class="container classic-about-grid">
+      <div class="classic-about-visual">
+        <figure class="classic-image-wrap" aria-describedby="map-survey-note">
+          <img src="/farmland-satellite.png" alt="Supplied satellite image with an outlined plot associated with Virgin Mary Farm" width="772" height="421" loading="lazy" decoding="async" />
+          <div class="classic-map-measurements" aria-label="Original map annotations, not a verified whole-farm survey">
+            <span>Marked perimeter</span><strong>2,234.92 m</strong>
+            <span>Marked plot area</span><strong>296,258.95 m²</strong>
+          </div>
+          <figcaption class="classic-image-badge"><strong>One</strong><span>Shared commitment</span></figcaption>
+        </figure>
+        <p class="classic-map-note" id="map-survey-note">Supplied map image; the marked plot and measurements await survey confirmation. The farm’s reported total area is 130 hectares. The image is not a verified survey of the full site.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Who we are</p>
+        <h2><span class="classic-about-first-line">No community should be</span><span class="classic-about-emphasis">forgotten.</span></h2>
+        <p class="lead">Risemeup is a London-based initiative supporting Sudan’s Coptic Orthodox and Nuba Mountains communities.</p>
+        <p>We connect food assistance today with a longer-term commitment to recovery. Our main project, Virgin Mary Farm, brings together sustainable agriculture, clean energy, education and the opportunity to earn a living.</p>
+        <div class="classic-values"><div><span class="classic-value-icon" aria-hidden="true">↗</span><div><strong>Recovery</strong><span>Long-term livelihoods</span></div></div><div><span class="classic-value-icon" aria-hidden="true">♡</span><div><strong>Community</strong><span>People at the centre</span></div></div><div><span class="classic-value-icon" aria-hidden="true">◎</span><div><strong>Partnership</strong><span>Shared expertise</span></div></div><div><span class="classic-value-icon" aria-hidden="true">✧</span><div><strong>Food assistance</strong><span>Practical help today</span></div></div></div>
+      </div>
+    </div>
+  </section></main><footer>Experimental typography preview · Your main website has not been changed.</footer><script>document.getElementById('lift-toggle').addEventListener('click',function(){const on=document.body.classList.toggle('show-lift');this.setAttribute('aria-pressed',String(on));this.textContent=on?'Show resting boxes':'Show lifted boxes';document.getElementById('lift-status').textContent=on?'Lifted appearance':'Resting appearance';});</script></body></html>
