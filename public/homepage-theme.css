@@ -405,3 +405,58 @@
 @media(max-width:760px) {
   .home-page #virgin-mary-farm .farm-women {padding:27px 24px}
 }
+
+/* Approved forest green editorial style for farm status and readiness only. */
+.home-page #virgin-mary-farm #farm-readiness {
+  padding:36px 40px;background:#faf7ef;color:#405b48;
+  border-radius:24px;border-top:4px solid #c2703a;
+}
+.home-page #virgin-mary-farm #farm-readiness .eyebrow {
+  font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.13em;
+  text-transform:uppercase;color:#a4633d;margin:0 0 7px;
+}
+.home-page #virgin-mary-farm #farm-readiness .readiness-date {
+  font:400 11px/1.7 'DM Sans',sans-serif;color:#6b7b61;margin:0 0 24px;
+}
+.home-page #virgin-mary-farm #farm-readiness h3 {
+  font:500 clamp(34px,4vw,54px)/1.2 'Lora',Georgia,serif;
+  letter-spacing:-.035em;color:#24583d;margin:0 0 26px;
+}
+.home-page #virgin-mary-farm #farm-readiness > div:first-child > p:last-child {
+  font:400 18px/1.85 'DM Sans',sans-serif;color:#405b48;max-width:1050px;margin:0;
+}
+.home-page #virgin-mary-farm #farm-readiness dl {
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:25px 46px;margin:34px 0;
+}
+.home-page #virgin-mary-farm #farm-readiness dl > div {
+  border-top:1px solid #d2decb;padding-top:18px;
+}
+.home-page #virgin-mary-farm #farm-readiness dl > div:last-child {grid-column:1/-1}
+.home-page #virgin-mary-farm #farm-readiness dt {
+  font:500 22px/1.35 'Lora',Georgia,serif;color:#24583d;margin-bottom:10px;
+}
+.home-page #virgin-mary-farm #farm-readiness dd {
+  font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0;
+}
+.home-page #virgin-mary-farm #farm-readiness .actions {
+  display:flex;align-items:center;flex-wrap:wrap;gap:28px;margin-top:30px;
+}
+.home-page #virgin-mary-farm #farm-readiness .button {
+  display:inline-block;border-radius:999px;padding:14px 23px;background:#24583d;
+  border:1px solid #24583d;color:#fffdf3;text-decoration:none;box-shadow:none;
+  font:500 13px/1.6 'DM Sans',sans-serif;
+}
+.home-page #virgin-mary-farm #farm-readiness .text-link {
+  font:500 13px/1.85 'DM Sans',sans-serif;color:#24583d;text-decoration:none;
+  border-bottom:1px solid #a9b99a;padding-bottom:6px;
+}
+.home-page #virgin-mary-farm #farm-readiness .readiness-note {
+  font:400 12px/1.85 'DM Sans',sans-serif;color:#617159;margin:26px 0 0;max-width:1050px;
+}
+@media(max-width:700px) {
+  .home-page #virgin-mary-farm #farm-readiness {padding:27px 24px}
+  .home-page #virgin-mary-farm #farm-readiness dl {grid-template-columns:minmax(0,1fr);gap:22px}
+  .home-page #virgin-mary-farm #farm-readiness h3 {font-size:34px}
+  .home-page #virgin-mary-farm #farm-readiness dt {font-size:21px}
+  .home-page #virgin-mary-farm #farm-readiness > div:first-child > p:last-child {font-size:17px}
+}
