@@ -1078,3 +1078,11 @@
 @media(max-width:700px){
  .home-page #virgin-mary-farm #farm-readiness > div:first-child > p.readiness-slogan{font-size:19px}
 }
+
+/* Approved orange vision-development link in the women and girls section. */
+.home-page #virgin-mary-farm .farm-women > .text-link {
+ color:#ed8b35;border-bottom-color:#ed8b35;
+}
+.home-page #virgin-mary-farm .farm-women > .text-link:hover {
+ color:#d87928;border-bottom-color:#d87928;
+}
