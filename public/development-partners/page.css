@@ -240,3 +240,6 @@ body #women .stage-scope{padding:24px}
 
 body #women .stage-scope{max-width:none}
 body #women .stage-scope strong{text-transform:none;letter-spacing:normal}
+
+/* Approved warm orange headings across all four women’s livelihoods boxes. */
+body #women .women-card-heading,body #women .stage-scope strong{color:#b45c2f}
