@@ -303,3 +303,28 @@
 .home-page.warm-brand #communities .section-head h2 {color:#b45c2f}
 .home-page.warm-brand #communities .community-story h3,
 .home-page.warm-brand #communities .community-story h3 span {color:#24583d}
+
+/* Approved gentle elevation for the rectangular coronavirus story card. */
+.home-page #relief .crisis-history-link {
+  border-radius:0;
+  box-shadow:0 3px 7px #203d2a08,0 10px 24px #203d2a08;
+  transform:translateY(0);
+  transition:transform 280ms ease,box-shadow 280ms ease,border-color 280ms ease;
+}
+.home-page #relief .crisis-history-link:focus-within {
+  transform:translateY(-6px);
+  box-shadow:0 9px 14px #203d2a10,0 25px 48px #203d2a24;
+  border-color:#bec9ac;
+}
+@media(hover:hover) {
+  .home-page #relief .crisis-history-link:hover {
+    transform:translateY(-6px);
+    box-shadow:0 9px 14px #203d2a10,0 25px 48px #203d2a24;
+    border-color:#bec9ac;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-page #relief .crisis-history-link {transition:none}
+  .home-page #relief .crisis-history-link:hover,
+  .home-page #relief .crisis-history-link:focus-within {transform:none}
+}
