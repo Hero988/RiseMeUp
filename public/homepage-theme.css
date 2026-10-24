@@ -863,3 +863,14 @@
 @media(max-width:800px) {
   .home-page #virgin-mary-farm .farm-roadmap-surround {padding:25px 0}
 }
+
+/* Approved ivory surround and warm orange heading for women and girls. */
+.home-page #virgin-mary-farm .farm-women-surround {
+  background:#faf7ef;padding:40px 0;
+}
+.home-page #virgin-mary-farm .farm-women-surround .farm-women {margin:0}
+.home-page #virgin-mary-farm .farm-women h3,
+.home-page #virgin-mary-farm .farm-women h3 em {color:#b45c2f}
+@media(max-width:600px) {
+  .home-page #virgin-mary-farm .farm-women-surround {padding:25px 0}
+}
