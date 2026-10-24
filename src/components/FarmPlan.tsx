@@ -1,11 +1,6 @@
-import { useState } from 'react';
 import './FarmPlanGallery.css';
 
 export default function FarmPlan() {
-  const [poultryPhoto, setPoultryPhoto] = useState({
-    src: '/farm-plan/chicks.webp',
-    alt: 'Two young chicks in grass',
-  });
   return (
     <section id="farm-plan" className="rm-photo-plan" aria-labelledby="farm-plan-title">
 <section className="intro" aria-labelledby="farm-plan-title"><p className="eyebrow">THE LONG-TERM VISION · FOUR CONNECTED POSSIBILITIES</p><h3 id="farm-plan-title">What we plan to <em>build.</em></h3><p className="intro-copy">Energy. Food. Skills. Livelihoods.<br />One shared vision for the future of Virgin Mary Farm.</p></section><div className="status-wrap"><p className="plan-status">
@@ -97,7 +92,7 @@ export default function FarmPlan() {
               harvest and creating work beyond growing, in packing, handling and
               distribution.
             </p>
-</div></div>          </div></details></article><article className="project" id="poultry-farm"><div className="panel"><img id="poultry-photo" src={poultryPhoto.src} alt={poultryPhoto.alt} loading="lazy" /><div className="photo-choice" role="group" aria-label="Choose poultry photograph"><button type="button" onClick={() => setPoultryPhoto({src: "/farm-plan/chick.webp", alt: "A young chick sitting in grass"})} aria-pressed={poultryPhoto.src === "/farm-plan/chick.webp"}>One chick</button><button type="button" onClick={() => setPoultryPhoto({src: "/farm-plan/chicks.webp", alt: "Two young chicks in grass"})} aria-pressed={poultryPhoto.src === "/farm-plan/chicks.webp"}>Two chicks</button></div><p className="panel-category">Food & livelihoods</p><div className="panel-copy"><h4>Small beginnings.<br /><em>New possibilities.</em></h4><p className="output">Egg production · Poultry farming</p></div></div><details className="project-details"><summary>Explore the food & livelihoods plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="poultry-farm"><div className="panel"><img id="poultry-photo" src="/farm-plan/chicks.webp" alt="Two young chicks in grass" loading="lazy" /><p className="panel-category">Food & livelihoods</p><div className="panel-copy"><h4>Small beginnings.<br /><em>New possibilities.</em></h4><p className="output">Egg production · Poultry farming</p></div></div><details className="project-details"><summary>Explore the food & livelihoods plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
             
             
             
