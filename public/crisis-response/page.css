@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;600&display=swap');
 .response-page .header-inner { justify-content: space-between; }
 .response-page .site-header nav { position: static; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 28px; max-height: none; overflow: visible; padding: 0; border: 0; background: transparent; }
 .response-hero { padding: 55px 0 80px; background: radial-gradient(ellipse at 75% 40%, #3d5a3e30, transparent 65%), linear-gradient(180deg, #131313, #1e1e2a); color: #fff; }
@@ -119,3 +120,29 @@
 .response-page .response-hero .response-hero-note,.response-page .response-hero .response-back {color:#61705e}
 .response-page #response-title {color:#24583d}
 .response-page #response-title em {color:#b45c2f}
+
+/* Approved three-column crisis support story, including ongoing support in Sudan. */
+#coronavirus-response.response-story{background:#faf7ef;color:#405b48;padding:48px 0 55px;font-family:'DM Sans',sans-serif}
+#coronavirus-response .section-head{display:block;max-width:850px;margin:0 auto;text-align:center}
+#coronavirus-response .eyebrow{font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#a4633d;margin:0 0 18px;padding:0}
+#coronavirus-response .eyebrow:before,#coronavirus-response .eyebrow:after,#coronavirus-response h2:before,#coronavirus-response h2:after{display:none;content:none}
+#coronavirus-response h2{font:500 clamp(38px,4vw,54px)/1.18 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 24px;padding:0;border:0}
+#coronavirus-response h2 em{font-family:inherit;color:inherit;font-weight:500;font-style:italic}
+#coronavirus-response .section-head>p:last-child{font:400 16px/1.85 'DM Sans',sans-serif;color:#405b48;max-width:800px;margin:0 auto}
+#coronavirus-response .response-locations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin:45px 0 0;max-width:none}
+#coronavirus-response .response-locations article{min-width:0;padding:0 10px 0 0}
+#coronavirus-response .response-locations article+article{border:0;border-left:1px solid #d2decb;padding-left:30px}
+#coronavirus-response .response-locations article+article:before{display:none;content:none}
+#coronavirus-response .response-location{font:600 10px/1.8 'DM Sans',sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#a4633d;margin:0 0 20px}
+#coronavirus-response .response-locations h3{font:500 27px/1.3 'Lora',Georgia,serif;letter-spacing:-.025em;color:#24583d;margin:0 0 24px}
+#coronavirus-response .response-locations p:not(.response-location){font:400 15px/1.9 'DM Sans',sans-serif;color:#405b48;margin:0 0 18px}
+#coronavirus-response .response-slogan{text-align:center;margin:35px 0 0;color:#b45c2f;font:italic 500 24px/1.5 'Lora',Georgia,serif}
+#coronavirus-response .response-gallery-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:25px}
+#coronavirus-response .response-gallery-nav a{color:#24583d;font:400 12px/1.85 'DM Sans',sans-serif;text-decoration:none;border:0;border-bottom:1px solid #a9b99a;padding:0 0 6px;background:transparent;border-radius:0}
+@media(max-width:850px){
+#coronavirus-response .response-locations{grid-template-columns:1fr;gap:25px}
+#coronavirus-response .response-locations article,#coronavirus-response .response-locations article+article{border:0;border-top:1px solid #d2decb;padding:25px 0 0}
+#coronavirus-response .response-locations h3{font-size:28px}
+#coronavirus-response .response-locations h3 br{display:none}
+#coronavirus-response.response-story{padding:35px 0}
+}
