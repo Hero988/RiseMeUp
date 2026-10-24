@@ -236,7 +236,7 @@ export default function App() {
               <figcaption>Sudan food assistance archive · Risemeup · Photograph date unconfirmed. <a href="/crisis-response/#photo-records">About our records</a></figcaption>
             </figure>
             <div>
-              <p className="eyebrow">What we are doing now</p>
+              
               <h2>
                 Food today.
                 <br />
