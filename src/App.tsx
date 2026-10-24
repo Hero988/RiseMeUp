@@ -287,7 +287,8 @@ export default function App() {
               <div className="rm-estate-foot"><p>Women and girls at the heart of the vision.</p><a href="#farm-women-title" aria-label="Read about women and girls at the heart of Virgin Mary Farm">↓</a></div>
             </div>
           </div>
-          <div className="container">
+          <div className="farm-women-surround">
+            <div className="container">
             <section className="farm-women" aria-labelledby="farm-women-title">
               <p className="eyebrow">Women and girls at the heart of Virgin Mary Farm</p>
               <h3 id="farm-women-title">A place to rebuild lives.<br /><em>A future to grow together.</em></h3>
@@ -297,6 +298,9 @@ export default function App() {
               <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from both communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
               <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
             </section>
+            </div>
+          </div>
+          <div className="container">
             <FarmReadiness />
             <p className="classic-farm-context">Virgin Mary Farm is the heart of Risemeup’s long-term work in Omdurman, Khartoum. The farm covers 130 hectares (approximately 321 acres), as confirmed by founder Iman Tadros. The original proposal sets out the four connected facilities below.</p>
           </div>
