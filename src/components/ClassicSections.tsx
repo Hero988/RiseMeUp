@@ -19,7 +19,7 @@ export function ClassicAbout() {
           </div>
           <figcaption className="classic-image-badge"><strong>One</strong><span>Shared commitment</span></figcaption>
         </figure>
-        <p className="classic-map-note" id="map-survey-note">Supplied map image; the marked plot and measurements await survey confirmation. The farm’s reported total area is 130 hectares. The image is not a verified survey of the full site.</p>
+        <p className="classic-map-note" id="map-survey-note">Illustrative map. The marked area and measurements await survey confirmation. The farm’s reported total area is 130 hectares.</p>
       </div>
       <div>
         <p className="eyebrow">Who we are</p>
