@@ -18,7 +18,7 @@ export default function FarmPlan() {
               width="1024"
               height="658"
               loading="eager"
-            /><span className="panel-number">I</span><div className="panel-copy"><p className="eyebrow">Renewable energy</p><h4>Biogas<br /><em>plant.</em></h4><p className="output">Electricity · Gas · Fertiliser</p></div></div><details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Original biogas concept picture retained</p>
+            /><p className="panel-category">Renewable energy</p><div className="panel-copy"><h4>Biogas<br /><em>plant.</em></h4><p className="output">Electricity · Gas · Fertiliser</p></div></div><details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Original biogas concept picture retained</p>
             
             
             
@@ -43,7 +43,7 @@ export default function FarmPlan() {
               produced within the farm, supporting a more self-sufficient
               agricultural system.
             </p>
-</div></div>          </div></details></article><article className="project" id="commercial-greenhouses"><div className="panel"><img src="/farm-plan/lettuce.webp" alt="Fresh lettuce illustrating the proposed growing programme" loading="eager" /><span className="panel-number">II</span><div className="panel-copy"><p className="eyebrow">Sustainable growing</p><h4>Room to<br /><em>grow.</em></h4><p className="output">10 proposed greenhouses</p></div></div><details className="project-details"><summary>Explore the sustainable growing plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="commercial-greenhouses"><div className="panel"><img src="/farm-plan/lettuce.webp" alt="Fresh lettuce illustrating the proposed growing programme" loading="eager" /><p className="panel-category">Sustainable growing</p><div className="panel-copy"><h4>Room to<br /><em>grow.</em></h4><p className="output">10 proposed greenhouses</p></div></div><details className="project-details"><summary>Explore the sustainable growing plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
             
             
             
@@ -71,7 +71,7 @@ export default function FarmPlan() {
               agricultural jobs and skills that families can use to build
               livelihoods.
             </p>
-</div></div>          </div></details></article><article className="project" id="sorting-packaging"><div className="panel"><img src="/farm-plan/tomatoes.webp" alt="Freshly harvested tomatoes illustrating produce handling" loading="lazy" /><span className="panel-number">III</span><div className="panel-copy"><p className="eyebrow">Produce handling</p><h4>Sorting and<br /><em>packaging plant.</em></h4><p className="output">Sorting · Packing · Reaching markets</p></div></div><details className="project-details"><summary>Explore the produce handling plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="sorting-packaging"><div className="panel"><img src="/farm-plan/tomatoes.webp" alt="Freshly harvested tomatoes illustrating produce handling" loading="lazy" /><p className="panel-category">Produce handling</p><div className="panel-copy"><h4>Sorting and<br /><em>packaging plant.</em></h4><p className="output">Sorting · Packing · Reaching markets</p></div></div><details className="project-details"><summary>Explore the produce handling plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
             
             
             
@@ -97,7 +97,7 @@ export default function FarmPlan() {
               harvest and creating work beyond growing, in packing, handling and
               distribution.
             </p>
-</div></div>          </div></details></article><article className="project" id="poultry-farm"><div className="panel"><img id="poultry-photo" src={poultryPhoto.src} alt={poultryPhoto.alt} loading="lazy" /><span className="panel-number">IV</span><div className="photo-choice" role="group" aria-label="Choose poultry photograph"><button type="button" onClick={() => setPoultryPhoto({src: "/farm-plan/chick.webp", alt: "A young chick sitting in grass"})} aria-pressed={poultryPhoto.src === "/farm-plan/chick.webp"}>One chick</button><button type="button" onClick={() => setPoultryPhoto({src: "/farm-plan/chicks.webp", alt: "Two young chicks in grass"})} aria-pressed={poultryPhoto.src === "/farm-plan/chicks.webp"}>Two chicks</button></div><div className="panel-copy"><p className="eyebrow">Food & livelihoods</p><h4>Small beginnings.<br /><em>New possibilities.</em></h4><p className="output">Egg production · Poultry farming</p></div></div><details className="project-details"><summary>Explore the food & livelihoods plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="poultry-farm"><div className="panel"><img id="poultry-photo" src={poultryPhoto.src} alt={poultryPhoto.alt} loading="lazy" /><div className="photo-choice" role="group" aria-label="Choose poultry photograph"><button type="button" onClick={() => setPoultryPhoto({src: "/farm-plan/chick.webp", alt: "A young chick sitting in grass"})} aria-pressed={poultryPhoto.src === "/farm-plan/chick.webp"}>One chick</button><button type="button" onClick={() => setPoultryPhoto({src: "/farm-plan/chicks.webp", alt: "Two young chicks in grass"})} aria-pressed={poultryPhoto.src === "/farm-plan/chicks.webp"}>Two chicks</button></div><p className="panel-category">Food & livelihoods</p><div className="panel-copy"><h4>Small beginnings.<br /><em>New possibilities.</em></h4><p className="output">Egg production · Poultry farming</p></div></div><details className="project-details"><summary>Explore the food & livelihoods plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
             
             
             
