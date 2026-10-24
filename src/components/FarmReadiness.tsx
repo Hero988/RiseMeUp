@@ -5,6 +5,7 @@ export default function FarmReadiness() {
         <p className="eyebrow">Farm status and readiness</p>
         <p className="readiness-date">Updated 21 October 2026</p>
         <h3 id="farm-readiness-title">Rebuilding starts with water.</h3>
+        <p className="readiness-slogan">Restore water. Revive the land. Renew livelihoods.</p>
         <p>Virgin Mary Farm was destroyed during the war and is not operational. Our founder reports that the farm’s seven wells have been destroyed and all pumping equipment stolen. Rebuilding requires a technical assessment of the wells and new water storage, alongside a complete pumping and irrigation system.</p>
       </div>
       <dl>
