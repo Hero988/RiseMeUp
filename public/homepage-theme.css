@@ -646,3 +646,89 @@
   .home-page #land-framework .growth-illustration figcaption {font-size:11px}
   .home-page #land-framework .growth-heading h3 {font-size:36px}
 }
+
+/* Approved orange and ivory partnership section with soft sage cards. */
+.home-page #partnership {
+  background:#faf7ef;color:#405b48;padding:48px 0 55px;
+  font:400 16px/1.85 'DM Sans',sans-serif;
+}
+.home-page #partnership .section-head {
+  display:grid;grid-template-columns:1.1fr 1fr;gap:75px;align-items:center;
+  margin:0 0 38px;max-width:none;text-align:left;
+}
+.home-page #partnership .eyebrow {
+  font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  color:#a4633d;margin:0 0 18px;padding:0;
+}
+.home-page #partnership .eyebrow::before,
+.home-page #partnership .eyebrow::after,
+.home-page #partnership h2::before,
+.home-page #partnership h2::after {content:none;display:none}
+.home-page #partnership h2 {
+  font:500 clamp(38px,4.2vw,56px)/1.2 'Lora',Georgia,serif;letter-spacing:-.035em;
+  color:#b45c2f;margin:0;padding:0;border:0;
+}
+.home-page #partnership h2 em {
+  font-family:inherit;font-size:inherit;font-style:italic;font-weight:500;color:inherit;
+}
+.home-page #partnership p {margin:0 0 18px}
+.home-page #partnership .section-head > p {
+  font:400 17px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0;max-width:520px;
+}
+.home-page #partnership .partner-grid {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;
+}
+.home-page #partnership .partner-grid article {
+  background:#f0f4eb;border:1px solid #d2decb;border-radius:20px;padding:28px 27px;
+  box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08;
+  transition:transform 240ms ease,box-shadow 240ms ease;
+}
+.home-page #partnership .partner-grid h3 {
+  font:500 25px/1.35 'Lora',Georgia,serif;letter-spacing:-.02em;color:#24583d;margin:0 0 18px;
+}
+.home-page #partnership .partner-grid p {
+  font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0;
+}
+.home-page #partnership .partner-grid .text-link {display:inline-block;margin-top:22px}
+.home-page #partnership .text-link {
+  color:#24583d;font:500 13px/1.85 'DM Sans',sans-serif;
+  text-decoration:none;border-bottom:1px solid #a9b99a;padding-bottom:6px;
+}
+.home-page #partnership .partner-note {
+  display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:40px;
+  background:transparent;color:#405b48;border:0;border-top:1px solid #d2decb;
+  padding:29px 0 0;margin-top:35px;border-radius:0;box-shadow:none;
+}
+.home-page #partnership .partner-note p {
+  font:400 15px/1.85 'DM Sans',sans-serif;margin:0;max-width:800px;color:#405b48;
+}
+.home-page #partnership .partner-note strong {
+  display:block;font:500 22px/1.5 'Lora',Georgia,serif;color:#24583d;margin-bottom:10px;
+}
+.home-page #partnership .button {
+  display:inline-block;border-radius:999px;padding:15px 24px;background:#24583d;
+  color:#fffdf3;text-decoration:none;font:500 13px/1.6 'DM Sans',sans-serif;
+  border:1px solid #24583d;white-space:nowrap;box-shadow:none;
+}
+.home-page #partnership .button:hover {background:#1b4530}
+@media(hover:hover) {
+  .home-page #partnership .partner-grid article:hover {
+    transform:translateY(-3px);box-shadow:0 6px 10px #203d2a0c,0 14px 26px #203d2a17;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-page #partnership .partner-grid article {transition:none}
+  .home-page #partnership .partner-grid article:hover {transform:none}
+}
+@media(max-width:900px) {
+  .home-page #partnership .section-head {gap:35px}
+  .home-page #partnership .partner-grid {grid-template-columns:1fr}
+  .home-page #partnership .partner-note {grid-template-columns:1fr;gap:22px}
+  .home-page #partnership .partner-note .button {justify-self:start}
+}
+@media(max-width:650px) {
+  .home-page #partnership .section-head {grid-template-columns:1fr;gap:25px}
+  .home-page #partnership h2 {font-size:39px}
+  .home-page #partnership {padding:35px 0}
+  .home-page #partnership .partner-grid article {padding:25px}
+}
