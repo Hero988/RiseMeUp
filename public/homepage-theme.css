@@ -732,3 +732,32 @@
   .home-page #partnership {padding:35px 0}
   .home-page #partnership .partner-grid article {padding:25px}
 }
+
+/* Approved ivory and orange farm plan; preserve photographs and Roman numerals. */
+.home-page #virgin-mary-farm #farm-plan{background:#faf7ef;color:#405b48;--line:#d2decb;--gold:#a4633d}
+.home-page #virgin-mary-farm #farm-plan .intro{padding:50px 5% 28px}
+.home-page #virgin-mary-farm #farm-plan .intro>.eyebrow{color:#a4633d;font:600 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em}
+.home-page #virgin-mary-farm #farm-plan .intro h3{font:500 clamp(32px,4.8vw,68px)/1.2 'Lora',Georgia,serif;color:#b45c2f;letter-spacing:-.035em;margin:20px 0}
+.home-page #virgin-mary-farm #farm-plan .intro h3 em{font-family:inherit;font-style:italic;font-weight:500;color:inherit}
+.home-page #virgin-mary-farm #farm-plan .intro-copy{font:400 16px/1.85 'DM Sans',sans-serif;color:#405b48}
+.home-page #virgin-mary-farm #farm-plan .plan-status{font:400 12px/1.85 'DM Sans',sans-serif;color:#617159}
+.home-page #virgin-mary-farm #farm-plan .status-wrap{padding-bottom:35px}
+.home-page #virgin-mary-farm #farm-plan .project{background:#f0f4eb;border:1px solid #d2decb;border-radius:20px;overflow:hidden;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+.home-page #virgin-mary-farm #farm-plan .project-details summary{font-size:13px;color:#24583d}
+.home-page #virgin-mary-farm #farm-plan .detail-inner{font-size:14px;color:#405b48}
+.home-page #virgin-mary-farm #farm-plan .caption{font-size:10px;color:#617159}
+.home-page #virgin-mary-farm #farm-plan .plan-purpose strong{color:#24583d}
+.home-page #virgin-mary-farm #farm-plan .capacity-note{font-size:12px}
+.home-page #virgin-mary-farm #farm-plan .learning{color:#24583d}
+.home-page #virgin-mary-farm #farm-plan .learning>details>summary{font-family:'Lora',Georgia,serif;font-size:42px;line-height:1.3}
+.home-page #virgin-mary-farm #farm-plan .learning em{color:#b45c2f}
+.home-page #virgin-mary-farm #farm-plan .education-intro h4,.home-page #virgin-mary-farm #farm-plan .education-partnership h5,.home-page #virgin-mary-farm #farm-plan .education-topics h5{font-family:'Lora',Georgia,serif;color:#24583d;line-height:1.3}
+.home-page #virgin-mary-farm #farm-plan .education-intro>p,.home-page #virgin-mary-farm #farm-plan .education-partnership p,.home-page #virgin-mary-farm #farm-plan .education-topics p{font-size:14px;color:#405b48}
+.home-page #virgin-mary-farm #farm-plan .button{background:#24583d;border:1px solid #24583d;border-radius:999px;padding:15px 24px;color:#fffdf3;font:500 13px/1.6 'DM Sans',sans-serif}
+.home-page #virgin-mary-farm #farm-plan .energy-banner{color:#fcf5e5}
+.home-page #virgin-mary-farm #farm-plan .energy-banner .eyebrow{color:#e7c898}
+.home-page #virgin-mary-farm #farm-plan .energy-banner h4 em{color:#e7c898}
+.home-page #virgin-mary-farm #farm-plan .energy-banner a{border-color:#e7c898}
+.home-page #virgin-mary-farm #farm-plan .fine-print{color:#617159;font:400 12px/1.85 'DM Sans',sans-serif;padding-bottom:35px;margin-bottom:0}
+@media(max-width:650px){.home-page #virgin-mary-farm #farm-plan .intro>.eyebrow{font-size:8px}.home-page #virgin-mary-farm #farm-plan .intro h3{font-size:clamp(27px,6.5vw,43px)}.home-page #virgin-mary-farm #farm-plan .intro-copy{font-size:14px}.home-page #virgin-mary-farm #farm-plan .plan-status{font-size:11px}.home-page #virgin-mary-farm #farm-plan .learning>details>summary{font-size:29px}}
+
