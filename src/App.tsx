@@ -292,6 +292,7 @@ export default function App() {
             <section className="farm-women" aria-labelledby="farm-women-title">
               <p className="eyebrow">Women and girls at the heart of Virgin Mary Farm</p>
               <h3 id="farm-women-title">A place to rebuild lives.<br /><em>A future to grow together.</em></h3>
+              <p className="women-slogan">Rooted in dignity. Growing in strength. Rebuilding futures.</p>
               <p>Our main purpose is to help women affected by Sudan’s war rebuild their lives — including survivors of sexual violence, women whose husbands have been killed, and mothers raising children alone.</p>
               <p>Every woman and girl deserves to live with dignity, feel valued and have opportunities to learn. We envision a farm where sustainable farming education, practical training and opportunities to earn an income help women rebuild confidence and independence, support their families and shape their own futures. For Iman, this is a vision of healing, connection and renewed hope.</p>
               <p>For girls and young women, we plan education and skills opportunities that build confidence and widen future choices. Girls’ learning will be age-appropriate, supervised and designed to support their safety and continued schooling.</p>
