@@ -62,7 +62,7 @@ export function ClassicVision() {
 export function ClassicObjectives() {
   const objectives = [
     ["Green energy", "obj-green-energy.jpeg", "Develop solar power and biogas to support farming and make productive use of organic by-products."],
-    ["Food security", "obj-food-security.jpeg", "Combine immediate food assistance with planned crop and poultry production for a more secure future."],
+    ["Food security", "food-security-selected.svg", "Combine immediate food assistance with planned crop and poultry production for a more secure future."],
     ["New jobs", "obj-new-jobs.jpeg", "Create opportunities across growing, processing, packing, maintenance and distribution as the farm develops."],
     ["Ending poverty", "obj-ending-poverty.jpeg", "Help families build the skills and opportunities to earn a living and become more self-reliant."],
     ["Education & training", "obj-education.jpeg", "Bring sustainable farming education and hands-on training into every part of the project."],
