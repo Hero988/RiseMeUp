@@ -1006,3 +1006,6 @@
  .home-page.warm-brand #founder .classic-founder-values {grid-template-columns:1fr}
  .home-page.warm-brand #founder .classic-image-wrap>img {height:470px}
 }
+
+.home-page.warm-brand #founder .classic-image-wrap{width:100%;min-width:0;justify-self:stretch}
+.home-page.warm-brand #founder .classic-image-badge{text-align:left}
