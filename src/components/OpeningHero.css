@@ -56,3 +56,13 @@
 .rm-opening .rm-opening-card {padding-top:24px;padding-bottom:24px}
 .rm-opening .rm-opening-card > svg {display:none}
 .rm-opening .rm-opening-card p {margin-top:0}
+
+/* More readable community names inside the homepage oval. */
+.rm-opening .rm-opening-card > span {
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.08em;
+}
+@media(max-width:600px) {
+  .rm-opening .rm-opening-card > span {font-size:9px;letter-spacing:.04em}
+}
