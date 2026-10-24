@@ -3,7 +3,7 @@ import './FarmPlanGallery.css';
 export default function FarmPlan() {
   return (
     <section id="farm-plan" className="rm-photo-plan" aria-labelledby="farm-plan-title">
-<section className="intro" aria-labelledby="farm-plan-title"><p className="eyebrow">THE LONG-TERM VISION · FOUR CONNECTED POSSIBILITIES</p><h3 id="farm-plan-title">What we plan to <em>build.</em></h3><p className="intro-copy">Energy. Food. Skills. Livelihoods.<br />One shared vision for the future of Virgin Mary Farm.</p></section><div className="status-wrap"><p className="plan-status">
+<section className="intro" aria-labelledby="farm-plan-title"><p className="eyebrow">THE LONG-TERM VISION · FOUR CONNECTED POSSIBILITIES</p><h3 id="farm-plan-title">What we plan to <em>build.</em></h3><p className="intro-copy">Rebuild the farm. Restore livelihoods. Renew hope.<br />A shared future rooted in the strength of our communities.</p></section><div className="status-wrap"><p className="plan-status">
         Historical proposal · The farm is not currently operational. These
         facilities describe our long-term vision, not the immediate rebuilding
         sequence. Our <a href="/development-partners/#first-stage">current proposed first stage</a> focuses on assessment and restoring water access.
