@@ -187,7 +187,7 @@ export default function FarmPlan() {
             Partner on education &amp; training <span aria-hidden="true">↗</span>
           </a>
         </div>
-      </section></details></section><section className="energy-banner"><img src="/farm-plan/energy.webp" alt="A lightbulb on grass, illustrating the energy vision" loading="lazy" /><div><p className="eyebrow">ONE CONNECTED VISION</p><h4>Growing more<br />than a <em>harvest.</em></h4><p>The farm’s original proposal connects renewable energy, food production, education and livelihoods.</p><a href="/development-partners/">Explore partnership <span aria-hidden="true">↗</span></a></div></section><p className="fine-print">
+      </section></details></section><section className="energy-banner"><img src="/farm-plan/energy.webp" alt="A lightbulb on grass, illustrating the energy vision" loading="lazy" /><div><p className="eyebrow">ONE CONNECTED VISION</p><h4>More than rebuilding a farm.<br /><em>Rebuilding lives and futures.</em></h4><p>The farm’s original proposal connects renewable energy, food production, education and livelihoods.</p><a href="/development-partners/">Explore partnership <span aria-hidden="true">↗</span></a></div></section><p className="fine-print">
         Based on the Risemeup Sustainable Farming proposal issued on 19 November
         2018, pages 7–8. The four phases describe its original project sequence.
         Delivery dates, final specifications and costs will be updated for the
