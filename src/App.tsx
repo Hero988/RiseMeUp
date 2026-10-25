@@ -139,22 +139,22 @@ export default function App() {
             </div>
             <div className="prose">
               <p className="lead">
-                Since April 2023, war has torn apart families, livelihoods and
-                places of refuge across Sudan.
+                Since April 2023, war has uprooted lives and devastated
+                communities across Sudan.
               </p>
               <p>
-                For the communities we support, war has taken away far more than
-                homes and income. Families have been displaced, access to food
-                has become uncertain, and churches have been damaged, burned,
-                destroyed or occupied. These places hold faith, memories and
-                community life—their loss is felt far beyond their walls.
+                For the people we support, the losses reach beyond homes and
+                income. Families have been displaced, food has become harder to
+                access, and churches have been damaged, burned, destroyed or
+                occupied. These places hold faith, memories and community
+                life—their loss is felt far beyond their walls.
               </p>
               <p>
                 Sudan’s Coptic Orthodox and Nuba Mountains communities have
                 endured immense suffering, often with little international
-                attention. Risemeup stands alongside them: supporting families
-                today and working towards a future shaped by dignity,
-                opportunity and hope.
+                attention. Risemeup stands alongside them, providing food
+                assistance today while working towards lasting recovery,
+                dignity and hope.
               </p>
               <div className="source-note">
                 Background:{" "}
