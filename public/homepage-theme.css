@@ -1140,3 +1140,43 @@
 .home-page.warm-brand #communities .community-stories{grid-template-columns:1fr}
 .home-page.warm-brand #communities .community-story{padding:24px 22px}
 }
+
+/* Approved Nuba Mountains community history: ivory, orange Lora and sage cards. */
+.home-page.warm-brand #nuba-story {
+  background:#fbf8f0;color:#294b38;padding:45px 0 55px;font:400 16px/1.85 'DM Sans',Arial,sans-serif;
+}
+.home-page.warm-brand #nuba-story > .container{width:min(1120px,88%);max-width:1120px;margin:auto}
+.home-page.warm-brand #nuba-story .section-head{display:block;text-align:center;max-width:1000px;margin:0 auto 35px}
+.home-page.warm-brand #nuba-story .classic-badge,
+.home-page.warm-brand #nuba-story .eyebrow{font:500 11px/1.8 'DM Sans',Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#526b53;margin:0 0 15px;background:none;padding:0;border:0}
+.home-page.warm-brand #nuba-story .eyebrow::before,
+.home-page.warm-brand #nuba-story .eyebrow::after{content:none;display:none}
+.home-page.warm-brand #nuba-story h2{font:400 clamp(35px,4.1vw,54px)/1.2 'Lora',Georgia,serif;letter-spacing:-.03em;color:#b45c2f;margin:0 0 24px}
+.home-page.warm-brand #nuba-story h2 em{font:italic 400 .76em/1.2 'Lora',Georgia,serif;display:inline-block;margin-top:9px;color:#b45c2f}
+.home-page.warm-brand #nuba-story .section-head > p:last-child{max-width:780px;margin:0 auto;color:#294b38;font:400 16px/1.85 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #nuba-story h3{font:400 29px/1.3 'Lora',Georgia,serif;letter-spacing:-.02em;color:#b45c2f;margin:0 0 20px}
+.home-page.warm-brand #nuba-story p{color:#294b38;margin:0 0 18px}
+.home-page.warm-brand #nuba-story .classic-history-map{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:35px;background:#e9eddf;border:1px solid #dce3d1;border-radius:24px;padding:30px;margin:0 0 30px}
+.home-page.warm-brand #nuba-story .classic-history-map > img{display:block;width:100%;height:370px;object-fit:contain;background:#f9f7ef;border:1px solid #d5ddcb;border-radius:16px}
+.home-page.warm-brand #nuba-story .classic-history-map > div{padding:0}
+.home-page.warm-brand #nuba-story .text-link{color:#9c4e24;text-decoration:underline;text-underline-offset:4px}
+.home-page.warm-brand #nuba-story .classic-archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0 0 30px}
+.home-page.warm-brand #nuba-story .classic-archive-grid figure{margin:0;min-width:0;background:#e9eddf;border:1px solid #dce3d1;border-radius:22px;overflow:hidden}
+.home-page.warm-brand #nuba-story .classic-archive-image{padding:12px 12px 0;height:auto}
+.home-page.warm-brand #nuba-story .classic-archive-image img{display:block;width:100%;height:220px;object-fit:cover;border-radius:13px}
+.home-page.warm-brand #nuba-story .classic-archive-image > span{display:none}
+.home-page.warm-brand #nuba-story figcaption{padding:23px;background:none}
+.home-page.warm-brand #nuba-story figcaption h3{font-size:26px;margin-bottom:14px}
+.home-page.warm-brand #nuba-story figcaption p:last-child{margin:0;font-size:15px}
+.home-page.warm-brand #nuba-story .classic-history-response{display:block;background:#e9eddf;border:1px solid #dce3d1;border-radius:24px;padding:30px;margin:0}
+.home-page.warm-brand #nuba-story .classic-history-response h3{font-size:32px}
+.home-page.warm-brand #nuba-story .actions{display:flex;align-items:center;flex-wrap:wrap;gap:25px;margin-top:23px}
+.home-page.warm-brand #nuba-story .button{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;border-radius:999px;padding:12px 24px;text-decoration:none}
+@media(max-width:760px){
+.home-page.warm-brand #nuba-story .classic-history-map{grid-template-columns:1fr;padding:22px;gap:25px}
+.home-page.warm-brand #nuba-story .classic-history-map > img{height:330px}
+.home-page.warm-brand #nuba-story .classic-archive-grid{grid-template-columns:1fr}
+.home-page.warm-brand #nuba-story .classic-archive-image img{height:280px}
+.home-page.warm-brand #nuba-story h2{font-size:35px}
+.home-page.warm-brand #nuba-story .classic-history-response{padding:24px}
+}
