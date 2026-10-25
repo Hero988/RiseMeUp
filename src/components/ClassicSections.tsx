@@ -92,7 +92,7 @@ export function ClassicCommunityHistory() {
   const archive = [
     ["displaced-region-no-overlays", "Leaving home", "Displacement has forced families to leave their homes, farmland and the community networks they rely on."],
     ["children-outside-cave", "Seeking shelter", "Families have sought shelter among the rocks and caves, searching for safety during conflict."],
-    ["families-cave-shelter", "Families together", "Safe shelter, food and the chance to rebuild remain central to the community’s needs."],
+    ["families-cave-shelter", "Families together", "Families need safety, food and support to rebuild their lives and care for one another."],
   ];
   return <section id="nuba-story" className="section classic-history"><div className="container">
     <div className="section-head"><p className="classic-badge">Community history</p><h2>The Nuba Mountains.<br /><em>Standing with communities. Supporting their future.</em></h2><p>Supporting the people of the Nuba Mountains who have suffered genocide and been displaced from their homeland.</p></div>
