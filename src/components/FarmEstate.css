@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=DM+Sans:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Manrope:wght@400;500;600&display=swap');
 
 /* The Garden Estate treatment is limited to the farm introduction. */
@@ -129,3 +130,25 @@
 
 /* Keep the location aligned right after removing the repeated project label. */
 #virgin-mary-farm .rm-estate-top {justify-content:flex-end}
+
+/* Approved three matching sage boxes for the farm's connected priorities. */
+.home-page.warm-brand #virgin-mary-farm .rm-estate-pillars {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;
+}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-pillars > article,
+.home-page.warm-brand #virgin-mary-farm .rm-estate-pillars > article + article {
+  background:#e9eddf;border:1px solid #dce3d1;border-radius:22px;
+  padding:28px 26px;min-width:0;box-shadow:none;
+}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-pillars h3 {
+  font:400 30px/1.25 'Lora',Georgia,serif;letter-spacing:-.025em;
+  color:#b45c2f;margin:0 0 20px;white-space:normal;overflow-wrap:normal;min-height:2.5em;
+}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-pillars p {
+  font:400 16px/1.85 'DM Sans',Arial,sans-serif;color:#294b38;
+  margin:0;max-width:none;text-shadow:none;
+}
+@media(max-width:760px) {
+  .home-page.warm-brand #virgin-mary-farm .rm-estate-pillars {grid-template-columns:1fr}
+  .home-page.warm-brand #virgin-mary-farm .rm-estate-pillars h3 {min-height:0}
+}
