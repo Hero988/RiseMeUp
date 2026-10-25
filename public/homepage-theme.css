@@ -1229,3 +1229,27 @@
 .home-page.warm-brand #contact h2{font-size:36px}
 }
 @media(max-width:400px){.home-page.warm-brand #contact .form-row{grid-template-columns:1fr;gap:0}}
+
+/* Approved support option 1: ivory background and soft sage support cards. */
+.home-page.warm-brand #donate.support{background:#fbf8f0;color:#294b38;padding:45px 0;font:400 16px/1.85 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #donate > .container{width:min(1120px,88%);max-width:1120px;margin:auto}
+.home-page.warm-brand #donate .eyebrow{text-align:center;font:400 11px/1.85 'DM Sans',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#526b53;margin:0 0 14px}
+.home-page.warm-brand #donate .eyebrow::before,.home-page.warm-brand #donate .eyebrow::after{content:none;display:none}
+.home-page.warm-brand #donate h2{font:400 clamp(36px,4.1vw,54px)/1.2 'Lora',Georgia,serif;letter-spacing:-.03em;color:#b45c2f;text-align:center;margin:0 0 22px}
+.home-page.warm-brand #donate h2 em{font:italic 400 1em/1.2 'Lora',Georgia,serif;color:#b45c2f}
+.home-page.warm-brand #donate .lead{text-align:center;margin:0 0 32px;font:400 16px/1.85 'DM Sans',Arial,sans-serif;color:#294b38}
+.home-page.warm-brand #donate .support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.home-page.warm-brand #donate .support-grid article{background:#e9eddf;color:#294b38;border:1px solid #dce3d1;border-radius:24px;padding:30px;display:flex;flex-direction:column;min-width:0;text-align:left;box-shadow:none}
+.home-page.warm-brand #donate .support-grid article > span{font:400 11px/1.85 'DM Sans',Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#526b53;margin:0 0 18px}
+.home-page.warm-brand #donate h3{font:400 31px/1.3 'Lora',Georgia,serif;letter-spacing:-.02em;color:#b45c2f;margin:0 0 20px}
+.home-page.warm-brand #donate .support-grid p{font:400 16px/1.85 'DM Sans',Arial,sans-serif;color:#294b38;margin:0 0 25px}
+.home-page.warm-brand #donate .button{display:inline-flex;justify-content:space-between;align-items:center;gap:20px;align-self:flex-start;margin-top:auto;background:#ed8b35;border:1px solid #ed8b35;border-radius:999px;color:#fffaf0;padding:13px 22px;text-decoration:none;font:500 14px/1.6 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #donate .button.outline{background:transparent;color:#a64f26;border-color:#bd754d}
+.home-page.warm-brand #donate .support-disclosure{margin:27px auto 0;max-width:950px;font:400 13px/1.85 'DM Sans',Arial,sans-serif;color:#526b53;text-align:center}
+.home-page.warm-brand #donate .support-disclosure a{color:#9c4e24;text-underline-offset:4px}
+@media(max-width:650px){
+.home-page.warm-brand #donate .support-grid{grid-template-columns:1fr}
+.home-page.warm-brand #donate .support-grid article{padding:25px}
+.home-page.warm-brand #donate h2{font-size:36px}
+.home-page.warm-brand #donate .button{font-size:13px}
+}
