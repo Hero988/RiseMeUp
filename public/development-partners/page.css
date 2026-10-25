@@ -307,3 +307,32 @@ body #first-stage h2{font-size:37px}
 body #first-stage .partners-section-heading>p:last-child{font-size:16px}
 body #first-stage .full-vision h3{font-size:28px}
 }
+
+/* Approved ivory, orange and sage funding transparency section. */
+body #budget{background:#faf7ef;color:#405b48;font:400 15px/1.85 'DM Sans',sans-serif;padding:50px 0 65px}
+body #budget .container{width:min(1200px,90%)}
+body #budget .budget-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:65px;align-items:start}
+body #budget .eyebrow{font:600 11px/1.85 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#61745b;margin:0 0 20px;padding:0}
+body #budget .eyebrow:before,body #budget .eyebrow:after{display:none;content:none}
+body #budget h2{font:500 clamp(38px,4.4vw,57px)/1.22 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 28px}
+body #budget h2 em{font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:inherit}
+body #budget p{font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 20px}
+body #budget .budget-status{border:1px solid #a8ba9e;border-radius:24px;background:#eaf0e4;padding:22px 27px;margin:0 0 27px}
+body #budget .budget-status>span{display:block;font:600 10px/1.85 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.12em;color:#61745b;margin-bottom:10px}
+body #budget .budget-status>strong{display:block;font:500 25px/1.4 'Lora',Georgia,serif;color:#b45c2f;margin-bottom:9px}
+body #budget .budget-status p{font-size:13px;margin:0}
+body #budget .private-records{background:#f0f4eb;border:1px solid #a8ba9e;border-radius:26px;padding:30px 32px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08;margin-top:0;color:#405b48}
+body #budget .private-records .eyebrow{font:600 10px/1.85 'DM Sans',sans-serif;letter-spacing:.12em;color:#61745b;margin-bottom:17px}
+body #budget .private-records h3{font:500 30px/1.35 'Lora',Georgia,serif;letter-spacing:-.025em;color:#b45c2f;margin:0 0 25px}
+body #budget .private-records p{font-size:14px}
+body #budget .private-records p strong{color:#24583d}
+body #budget .private-records .partners-note{font-size:12px;color:#64715d;margin:24px 0 0;padding-top:20px;border-top:1px solid #d2decb}
+body #budget .text-link{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;padding:14px 23px;border-radius:999px;text-decoration:none;font:500 12px/1.85 'DM Sans',sans-serif;margin-top:5px}
+body #budget .text-link:hover{background:#d87928;border-color:#d87928}
+@media(max-width:850px){
+body #budget .budget-layout{grid-template-columns:1fr;gap:32px}
+body #budget{padding:35px 0 50px}
+body #budget .private-records{padding:25px}
+body #budget h2{font-size:42px}
+body #budget .private-records h3{font-size:28px}
+}
