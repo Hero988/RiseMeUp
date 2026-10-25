@@ -1341,3 +1341,11 @@
 
 /* Reduce the empty space immediately before Vision & Mission. */
 .home-page.warm-brand #communities{padding-bottom:25px}
+
+/* Tighter framing hides the embedded top and bottom lettering in the last archive photo. */
+.home-page.warm-brand #nuba-story .classic-archive-grid figure:last-child .classic-archive-image{
+  padding:0;margin:12px 12px 0;border-radius:13px;overflow:hidden;
+}
+.home-page.warm-brand #nuba-story .classic-archive-grid figure:last-child .classic-archive-image img{
+  transform:scale(1.28);transform-origin:center;object-position:center;
+}
