@@ -312,13 +312,13 @@ export default function App() {
               <FarmRoadmap />
             </div>
           </div>
-          <div className="container">
+          <div className="farm-mango-surround"><div className="container">
             <a className="mango-callout" href="/mango-project/">
               <img
-                src="/mango-hero.jpg"
-                alt="Mangoes illustrating the proposed Mango Project"
-                width="160"
-                height="120"
+                src="/mango-selected-photo-six.svg"
+                alt="Golden mangoes on a tree, illustrating the proposed Mango Project"
+                width="840"
+                height="560"
                 loading="lazy"
               />
               <div>
@@ -326,15 +326,16 @@ export default function App() {
                   A supporting project within Virgin Mary Farm
                 </p>
                 <h3>
-                  The Mango Project <Arrow />
+                  The Mango Project
                 </h3>
                 <p>
                   A proposed route to better handling, packing and value for
                   Sudanese mangoes.
                 </p>
+                <span className="mango-explore">Explore the Mango Project →</span>
               </div>
             </a>
-          </div>
+          </div></div>
         </section>
         <ClassicObjectives />
         <SDGs />
