@@ -25,3 +25,22 @@
     background:linear-gradient(90deg,rgba(16,40,30,.80),rgba(16,40,30,.45) 65%,rgba(16,40,30,.12));
   }
 }
+
+/* Approved rebuilding message layout and softer, brighter photograph. */
+.home-page .rm-photo-plan .energy-banner{min-height:510px;padding:60px 8%}
+.home-page .rm-photo-plan .energy-banner > div{max-width:850px}
+.home-page .rm-photo-plan .energy-banner h4{
+  font-size:clamp(42px,4.4vw,62px);line-height:1.08;max-width:850px;letter-spacing:-.025em;
+}
+.home-page .rm-photo-plan .energy-banner p:not(.eyebrow){max-width:440px}
+.home-page .rm-photo-plan .energy-banner > img{filter:brightness(1.16)}
+.home-page .rm-photo-plan .energy-banner:after{
+  background:linear-gradient(180deg,rgba(255,255,235,.22) 0%,rgba(255,255,235,.08) 20%,transparent 42%),linear-gradient(90deg,rgba(16,40,30,.36) 0%,rgba(16,40,30,.22) 32%,rgba(16,40,30,.05) 62%,transparent 100%);
+}
+@media(max-width:650px){
+  .home-page .rm-photo-plan .energy-banner{padding:45px 7%;min-height:510px}
+  .home-page .rm-photo-plan .energy-banner h4{font-size:42px}
+  .home-page .rm-photo-plan .energy-banner:after{
+    background:linear-gradient(180deg,rgba(255,255,235,.18),transparent 40%),linear-gradient(90deg,rgba(16,40,30,.48),rgba(16,40,30,.26) 65%,rgba(16,40,30,.04));
+  }
+}
