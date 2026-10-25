@@ -1122,3 +1122,21 @@
 /* Finish the light supporting-project section without a dark bottom band. */
 .home-page.warm-brand #virgin-mary-farm{padding-bottom:0}
 .home-page.warm-brand #virgin-mary-farm .mango-callout h3{text-decoration:none}
+
+/* Approved equal community cards: ivory surround, matching sage boxes and orange Lora headings. */
+.home-page.warm-brand #communities{background:#fbf8f0;color:#294b38}
+.home-page.warm-brand #communities .section-head h2{font-family:'Lora',Georgia,serif;color:#b45c2f}
+.home-page.warm-brand #communities .section-head>p{color:#294b38}
+.home-page.warm-brand #communities .community-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1120px;align-items:stretch}
+.home-page.warm-brand #communities .community-connection{display:none}
+.home-page.warm-brand #communities .community-story{display:flex;flex-direction:column;min-width:0;background:#e9eddf;border:1px solid #dce3d1;border-radius:20px;padding:30px}
+.home-page.warm-brand #communities .community-location{color:#526b53;font-size:11px;letter-spacing:.14em;margin-bottom:16px}
+.home-page.warm-brand #communities .community-location::before{display:none;content:none}
+.home-page.warm-brand #communities .community-story h3{font:400 clamp(27px,3vw,36px)/1.25 'Lora',Georgia,serif;color:#b45c2f;margin:0 0 20px}
+.home-page.warm-brand #communities .community-story h3 span{font:italic 400 1em/1.25 'Lora',Georgia,serif;color:#b45c2f;margin:0}
+.home-page.warm-brand #communities .community-story p{font:400 16px/1.85 'DM Sans',sans-serif;color:#294b38;margin:0 0 18px}
+.home-page.warm-brand #communities .community-story .text-link{color:#9c4e24;border-bottom-color:#9c4e24;margin-top:auto}
+@media(max-width:650px){
+.home-page.warm-brand #communities .community-stories{grid-template-columns:1fr}
+.home-page.warm-brand #communities .community-story{padding:24px 22px}
+}
