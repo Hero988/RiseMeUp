@@ -273,3 +273,37 @@ body #readiness .readiness-register>div{padding:24px}
 body #readiness h2{font-size:40px}
 body #readiness .partners-section-heading>p:last-child{font-size:16px}
 }
+
+/* Approved warm orange and sage first rebuilding stage. */
+body #first-stage{background:#faf7ef;color:#405b48;font:400 15px/1.85 'DM Sans',sans-serif;padding:50px 0 65px}
+body #first-stage .container{width:min(1200px,90%)}
+body #first-stage .partners-section-heading{max-width:950px;margin-bottom:32px}
+body #first-stage .eyebrow{font:600 11px/1.85 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#61745b;margin:0 0 20px;padding:0}
+body #first-stage .eyebrow:before,body #first-stage .eyebrow:after{display:none;content:none}
+body #first-stage h2{font:500 clamp(36px,4.4vw,57px)/1.22 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 25px}
+body #first-stage h2 em{font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:inherit}
+body #first-stage .partners-section-heading>p:last-child{font:400 17px/1.85 'DM Sans',sans-serif;max-width:810px;color:#405b48;margin:0}
+body #first-stage .stage-scope{max-width:none;background:#eaf0e4;border:1px solid #a8ba9e;border-radius:24px;padding:25px 30px;margin:32px 0}
+body #first-stage .stage-scope>strong{font:500 24px/1.4 'Lora',Georgia,serif;color:#b45c2f;display:block;margin-bottom:14px;text-transform:none;letter-spacing:normal}
+body #first-stage .stage-scope p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0}
+body #first-stage .stage-milestones{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:0;padding:0;list-style:none}
+body #first-stage .stage-milestones li{display:block;background:#f0f4eb;border:1px solid #a8ba9e;border-radius:24px;padding:27px 30px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+body #first-stage .milestone-number{font:500 12px/1.5 'DM Sans',sans-serif;color:#6b7b61;letter-spacing:.1em;margin-bottom:14px}
+body #first-stage .stage-milestones h3{font:500 25px/1.35 'Lora',Georgia,serif;color:#b45c2f;letter-spacing:-.02em;margin:0 0 17px}
+body #first-stage .stage-milestones p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 18px}
+body #first-stage .stage-milestones .milestone-proof{font-size:12px;margin:20px 0 0;padding-top:17px;border-top:1px solid #d2decb;color:#46634a}
+body #first-stage .partners-note{font:400 12px/1.85 'DM Sans',sans-serif;color:#64715d;margin:28px 0}
+body #first-stage .full-vision{display:grid;grid-template-columns:.9fr 1.2fr;gap:50px;border-top:1px solid #d2decb;margin-top:36px;padding-top:35px}
+body #first-stage .full-vision h3{font:500 30px/1.35 'Lora',Georgia,serif;color:#b45c2f;margin:0}
+body #first-stage .full-vision p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin-top:0}
+body #first-stage .full-vision .eyebrow{font-size:10px}
+body #first-stage .text-link{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;padding:13px 22px;border-radius:999px;text-decoration:none;font:500 12px/1.85 'DM Sans',sans-serif}
+body #first-stage .text-link:hover{background:#d87928;border-color:#d87928}
+@media(max-width:720px){
+body #first-stage{padding:35px 0 50px}
+body #first-stage .stage-milestones,body #first-stage .full-vision{grid-template-columns:1fr;gap:20px}
+body #first-stage .stage-scope,body #first-stage .stage-milestones li{padding:24px}
+body #first-stage h2{font-size:37px}
+body #first-stage .partners-section-heading>p:last-child{font-size:16px}
+body #first-stage .full-vision h3{font-size:28px}
+}
