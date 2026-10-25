@@ -1088,3 +1088,6 @@
 }
 
 .home-page #virgin-mary-farm .farm-women > .text-link{font-weight:700}
+
+/* Keep the full cooking-oil bottle visible in the food assistance photo. */
+.home-page #relief .photo img{object-position:center top}
