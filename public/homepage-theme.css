@@ -1091,3 +1091,8 @@
 
 /* Keep the full cooking-oil bottle visible in the food assistance photo. */
 .home-page #relief .photo img{object-position:center top}
+
+/* Allow the approved explicit UN SDG heading to read comfortably. */
+.home-page #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1fr;gap:24px}
+.home-page #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font-size:clamp(36px,4vw,54px)}
+.home-page #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-intro>p{max-width:850px}
