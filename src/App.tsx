@@ -432,7 +432,7 @@ export default function App() {
             <p className="lead">Choose the work you would like to support.</p>
             <div className="support-grid">
               <article>
-                <span>01 / Food assistance</span>
+                <span>Food assistance</span>
                 <h3>Stand with families.</h3>
                 <p>
                   Ask about contributing towards food and essential supplies for
@@ -443,7 +443,7 @@ export default function App() {
                 </button>
               </article>
               <article>
-                <span>02 / Virgin Mary Farm</span>
+                <span>Virgin Mary Farm</span>
                 <h3>Be part of recovery.</h3>
                 <p>
                   Discuss equipment, technical expertise or funding for a
