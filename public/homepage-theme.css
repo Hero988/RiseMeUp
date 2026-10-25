@@ -1180,3 +1180,7 @@
 .home-page.warm-brand #nuba-story h2{font-size:35px}
 .home-page.warm-brand #nuba-story .classic-history-response{padding:24px}
 }
+
+/* Match the approved full-width, left-aligned community response card. */
+.home-page.warm-brand #nuba-story .classic-history-response{max-width:none;width:100%;text-align:left}
+.home-page.warm-brand #nuba-story .classic-history-response .actions{justify-content:flex-start}
