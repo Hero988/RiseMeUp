@@ -426,9 +426,9 @@ export default function App() {
           <div className="container">
             <p className="eyebrow">Support Risemeup</p>
             <h2>
-              Help a family today.
+              Stand with families.
               <br />
-              <em>Help rebuild tomorrow.</em>
+              <em>Be part of their recovery.</em>
             </h2>
             <p className="lead">Choose the work you would like to support.</p>
             <div className="support-grid">
