@@ -30,8 +30,8 @@ export default function ContactForm() {
   }
   return (
     <>
-      <h3>Prepare an email enquiry</h3>
-      <p className="enquiry-intro">Complete the details below to prepare an email to Iman. Your email app will open so you can review and send it. Nothing is sent or stored by this form.</p>
+      <h3>Get in touch with Iman</h3>
+      <p className="enquiry-intro">Fill in your details to prepare an email to Iman. Your email app will open for you to review and send it. This form does not send or store your information.</p>
       <form onSubmit={handleSubmit}>
         <div className="form-row">
           <label>
