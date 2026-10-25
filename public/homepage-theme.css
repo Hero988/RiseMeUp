@@ -1330,3 +1330,11 @@
 .home-page.warm-brand #team .team-compact-role{font-size:13px}
 .home-page.warm-brand #team .team-compact-portrait > span{font-size:10px;left:4px;right:4px}
 }
+
+/* Tighten the transition from Sudan background sources to the community stories. */
+.home-page.warm-brand #sudan-crisis{padding-bottom:25px}
+.home-page.warm-brand #communities{padding-top:30px}
+@media(max-width:700px){
+.home-page.warm-brand #sudan-crisis{padding-bottom:20px}
+.home-page.warm-brand #communities{padding-top:25px}
+}
