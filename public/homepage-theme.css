@@ -1282,3 +1282,51 @@
 .home-page.warm-brand footer .footer-bottom a{display:flex;align-items:center;min-height:44px}
 .home-page.warm-brand footer .brand{width:140px}
 }
+
+/* Approved compact team section with smaller portraits and readable profiles. */
+.home-page.warm-brand #team{background:#fbf8f0;color:#294b38;padding:35px 0 45px;font:400 16px/1.85 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #team > .container{width:min(1080px,88%);max-width:1080px;margin:auto}
+.home-page.warm-brand #team .section-head{display:block;max-width:900px;text-align:center;margin:0 auto 24px}
+.home-page.warm-brand #team .eyebrow{font:400 11px/1.85 'DM Sans',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#526b53;margin:0 0 14px}
+.home-page.warm-brand #team .eyebrow::before,.home-page.warm-brand #team .eyebrow::after{content:none;display:none}
+.home-page.warm-brand #team h2{font:400 clamp(36px,4.1vw,50px)/1.2 'Lora',Georgia,serif;color:#b45c2f;letter-spacing:-.03em;margin:0 0 20px}
+.home-page.warm-brand #team h2 em{font:italic 400 1em/1.2 'Lora',Georgia,serif;color:#b45c2f}
+.home-page.warm-brand #team .section-head > p:last-child{margin:0 auto;max-width:780px;font:400 15px/1.85 'DM Sans',Arial,sans-serif;color:#294b38}
+.home-page.warm-brand #team .team-flip-instructions{text-align:center;color:#526b53;font:400 12px/1.85 'DM Sans',Arial,sans-serif;margin:0 0 24px}
+.home-page.warm-brand #team .team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:none;margin:0}
+.home-page.warm-brand #team .team-compact-card{background:#e9eddf;border:1px solid #dce3d1;border-radius:22px;padding:24px;min-width:0;min-height:224px}
+.home-page.warm-brand #team .team-compact-front{display:grid;grid-template-columns:140px minmax(0,1fr);gap:24px;align-items:center;height:100%}
+.home-page.warm-brand #team .team-compact-portrait{position:relative;display:block;width:140px;height:170px;border:0;border-radius:16px;overflow:hidden;padding:0;background:#fffdf7;cursor:pointer}
+.home-page.warm-brand #team .team-compact-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:0}
+.home-page.warm-brand #team .team-compact-portrait > span{position:absolute;left:8px;right:8px;bottom:8px;background:#fffdf7eb;border-radius:999px;color:#294b38;font:500 11px/1.6 'DM Sans',Arial,sans-serif;padding:5px 8px;text-align:center}
+.home-page.warm-brand #team .team-compact-card h3{font:400 23px/1.3 'Lora',Georgia,serif;color:#b45c2f;letter-spacing:-.015em;margin:0 0 12px}
+.home-page.warm-brand #team .team-compact-role{font:400 14px/1.65 'DM Sans',Arial,sans-serif;margin:0;color:#294b38}
+.home-page.warm-brand #team .team-compact-back{font:400 14px/1.7 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #team .team-compact-back h3{font-size:21px}
+.home-page.warm-brand #team .team-compact-back p{color:#294b38;margin:0 0 12px}
+.home-page.warm-brand #team .team-compact-qualifications{border-top:1px solid #ccd7c3;padding-top:12px}
+.home-page.warm-brand #team .team-compact-back a{color:#9c4e24;display:inline-block;margin:0 16px 10px 0;text-decoration:underline;text-underline-offset:4px}
+.home-page.warm-brand #team .team-compact-close{display:block;background:#fffdf7;border:1px solid #b5c5a9;border-radius:999px;color:#294b38;padding:8px 15px;font:400 12px/1.6 'DM Sans',Arial,sans-serif;cursor:pointer}
+.home-page.warm-brand #team [hidden]{display:none!important}
+.home-page.warm-brand #team button:focus-visible,.home-page.warm-brand #team a:focus-visible{outline:2px solid #b45c2f;outline-offset:4px}
+@media(max-width:850px){
+.home-page.warm-brand #team .team-compact-front{grid-template-columns:115px minmax(0,1fr);gap:18px}
+.home-page.warm-brand #team .team-compact-portrait{width:115px;height:150px}
+.home-page.warm-brand #team .team-compact-card{padding:20px}
+.home-page.warm-brand #team .team-compact-card h3{font-size:21px}
+}
+@media(max-width:650px){
+.home-page.warm-brand #team .team-grid{grid-template-columns:1fr}
+.home-page.warm-brand #team .team-compact-front{grid-template-columns:120px minmax(0,1fr)}
+.home-page.warm-brand #team .team-compact-portrait{width:120px;height:155px}
+.home-page.warm-brand #team .team-compact-card{min-height:195px}
+.home-page.warm-brand #team h2{font-size:36px}
+}
+@media(max-width:360px){
+.home-page.warm-brand #team .team-compact-front{grid-template-columns:95px minmax(0,1fr);gap:14px}
+.home-page.warm-brand #team .team-compact-portrait{width:95px;height:135px}
+.home-page.warm-brand #team .team-compact-card{padding:16px}
+.home-page.warm-brand #team .team-compact-card h3{font-size:19px}
+.home-page.warm-brand #team .team-compact-role{font-size:13px}
+.home-page.warm-brand #team .team-compact-portrait > span{font-size:10px;left:4px;right:4px}
+}
