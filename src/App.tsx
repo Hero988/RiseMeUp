@@ -468,7 +468,7 @@ export default function App() {
         </section>
         <section id="contact" className="section">
           <div className="container">
-            <div className="section-head"><p className="eyebrow">Get in touch</p><h2>Let’s put your support to work.</h2><p>Whether you can help with food assistance, equipment, expertise or a development partnership, we would like to hear from you.</p></div>
+            <div className="section-head"><p className="eyebrow">Get in touch</p><h2>Let’s put your support to work.</h2><p>Help provide food, share your expertise or support the farm’s rebuilding. We’d love to hear from you.</p></div>
             <div className="contact-grid">
               <div className="classic-contact-copy">
                 <h3>A conversation is a good place to start.</h3>
