@@ -48,7 +48,7 @@
   max-width:none;margin:0 0 20px;text-shadow:none;
 }
 .home-page #vision-mission.rm-field-vision .vision-grid article > p + p:not(.chapter) {margin-top:0}
-.home-page #vision-mission.rm-field-vision .vision-grid article > p:last-child {
+.home-page #vision-mission.rm-field-vision .vision-grid article > p:last-child:not(.chapter) {
   font:italic 400 20px/1.6 'Lora',Georgia,serif;color:#294b38;
   margin:auto 0 0;padding-top:10px;
 }
