@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Support Risemeup · Two softer design options</title><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box}body{margin:0;background:#fbf8f0;color:#294b38;font:400 16px/1.85 'DM Sans',Arial,sans-serif}
+.preview-bar{padding:10px 6%;background:#e9eddf;color:#526b53;font-size:11px;letter-spacing:.08em;display:flex;justify-content:space-between;gap:20px}
+header{padding:20px 6%;background:#fffefa;border-bottom:1px solid #dce3d1;display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
+header img{display:block;width:185px;height:auto}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav button{font:500 13px/1.5 'DM Sans',Arial,sans-serif;padding:11px 17px;border:1px solid #b8c5ac;border-radius:999px;background:#fffdf7;color:#294b38;cursor:pointer}
+nav button[aria-pressed=true]{background:#294b38;color:#fffdf7}
+.option-label{padding:22px 6% 0;text-align:center;color:#526b53;font-size:12px;letter-spacing:.05em}
+.container{width:min(1120px,88%);margin:auto}.section{padding:32px 0 45px}
+.eyebrow{text-align:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#526b53;margin:0 0 14px}
+h2{font:400 clamp(36px,4.1vw,54px)/1.2 'Lora',Georgia,serif;letter-spacing:-.03em;color:#b45c2f;text-align:center;margin:0 0 22px}
+h2 em{font-style:italic}.lead{text-align:center;margin:0 0 32px}
+.support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.support-grid article{background:#e9eddf;border:1px solid #dce3d1;border-radius:24px;padding:30px;display:flex;flex-direction:column;min-width:0}
+.support-grid article>span{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#526b53;margin-bottom:18px}
+h3{font:400 31px/1.3 'Lora',Georgia,serif;letter-spacing:-.02em;color:#b45c2f;margin:0 0 20px}
+.support-grid p{margin:0 0 25px}
+.button{display:inline-flex;justify-content:space-between;align-items:center;gap:20px;align-self:flex-start;margin-top:auto;background:#ed8b35;border:1px solid #ed8b35;border-radius:999px;color:#fffaf0;padding:13px 22px;text-decoration:none;font:500 14px/1.6 'DM Sans',Arial,sans-serif;cursor:pointer}
+.button.outline{background:transparent;color:#a64f26;border-color:#bd754d}
+.support-disclosure{margin:27px auto 0;max-width:950px;font-size:13px;color:#526b53;text-align:center}
+a{color:#9c4e24;text-underline-offset:4px}
+body[data-theme=sage]{background:#e9eddf}
+body[data-theme=sage] .support-grid article{background:#fffdf7;border-color:#cbd8bf}
+footer{padding:20px 6%;font-size:12px;color:#526b53;border-top:1px solid #dce3d1;background:#fffefa}
+dialog{width:min(560px,90vw);border:1px solid #dce3d1;border-radius:24px;background:#fbf8f0;color:#294b38;padding:30px;font:400 16px/1.85 'DM Sans',Arial,sans-serif}dialog::backdrop{background:#10281e88}dialog .close{display:block;margin-left:auto;background:none;border:1px solid #b8c5ac;border-radius:50%;width:38px;height:38px;color:#294b38;font-size:23px;cursor:pointer}
+dialog h2{font-size:35px;text-align:left}dialog h3{font-size:25px}
+@media(max-width:650px){.support-grid{grid-template-columns:1fr}.support-grid article{padding:25px}.preview-bar{flex-direction:column;gap:3px}h2{font-size:36px}.button{font-size:13px}nav button{font-size:12px}}
+</style></head><body data-theme="ivory"><div class="preview-bar"><span>RISEMEUP · SUPPORT SECTION OPTIONS</span><span>MAIN WEBSITE UNCHANGED</span></div><header><img src="https://www.risemeup.org/logo.png" alt="Risemeup Sustainability" width="185" height="65"><nav aria-label="Compare design options"><button type="button" data-theme="ivory" aria-pressed="true">Option 1 · Ivory & sage</button><button type="button" data-theme="sage" aria-pressed="false">Option 2 · Sage & ivory</button></nav></header><div id="option-label" class="option-label" aria-live="polite">Option 1 · Ivory background with soft sage boxes · Recommended</div><main><section id="donate" class="section support">
+          <div class="container">
+            <p class="eyebrow">Support Risemeup</p>
+            <h2>
+              Help a family today.
+              <br />
+              <em>Help rebuild tomorrow.</em>
+            </h2>
+            <p class="lead">Choose the work you would like to support.</p>
+            <div class="support-grid">
+              <article>
+                <span>Food assistance</span>
+                <h3>Stand with families.</h3>
+                <p>
+                  Ask about contributing towards food and essential supplies for
+                  families affected by Sudan’s war.
+                </p>
+                <button class="button" type="button" id="donation-open">
+                  Enquire about a donation <span aria-hidden="true">↗</span>
+                </button>
+              </article>
+              <article>
+                <span>Virgin Mary Farm</span>
+                <h3>Be part of recovery.</h3>
+                <p>
+                  Discuss equipment, technical expertise or funding for a
+                  defined part of the main farm project.
+                </p>
+                <a
+                  class="button outline"
+                  href="mailto:i.tradros@risemeup.org?subject=Virgin%20Mary%20Farm%20partnership"
+                >
+                  Support the farm’s rebuilding <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            </div>
+            <p class="support-disclosure">
+              Donation enquiries are handled directly by the team. This website
+              does not take payments. Please contact us to discuss the purpose
+              of your support and the available arrangements. Risemeup is not
+              currently registered in the UK. <a href="https://www.risemeup.org/development-partners/#accountability">Read our organisation and accountability status.</a>
+            </p>
+          </div>
+        </section></main><footer>Compare both options using the buttons above. The main website is unchanged.</footer><dialog id="donation-dialog" aria-labelledby="donation-title"><button type="button" class="close" id="donation-close" aria-label="Close donation information">×</button><h2 id="donation-title">Support families today.</h2><p>Your support can help families in Sudan’s Coptic Orthodox and Nuba Mountains communities access food and essential supplies.</p><h3>Arrange a donation with the team.</h3><p>Please contact us to discuss the purpose of your support and the available arrangements. This website does not take payments.</p><a class="button" href="mailto:i.tradros@risemeup.org?subject=Food%20assistance%20support">Email about a donation →</a></dialog><script>document.querySelectorAll('nav button').forEach(button=>button.addEventListener('click',()=>{document.body.dataset.theme=button.dataset.theme;document.querySelectorAll('nav button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));document.getElementById('option-label').textContent=button.dataset.theme==='ivory'?'Option 1 · Ivory background with soft sage boxes · Recommended':'Option 2 · Pale sage background with ivory boxes';}));document.getElementById('donation-open').addEventListener('click',()=>document.getElementById('donation-dialog').showModal());document.getElementById('donation-close').addEventListener('click',()=>document.getElementById('donation-dialog').close());</script></body></html>
