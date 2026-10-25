@@ -449,3 +449,11 @@ body.partners-page .partners-hero .partners-path li{padding:20px 0}
 body.partners-page .partners-hero h1{font-size:44px}
 body.partners-page .partners-hero .partners-lead{font-size:17px}
 }
+
+/* Approved two-line green italic SDG goal labels. */
+body #planned-outcomes .goal-label{position:relative;padding-left:20px;margin-bottom:25px}
+body #planned-outcomes .goal-label:before{content:'';position:absolute;left:0;top:5px;width:3px;height:43px;background:var(--goal);border-radius:3px}
+body #planned-outcomes .goal-number{display:block;font:500 11px/1.6 'DM Sans',sans-serif;letter-spacing:.05em;color:#61745b;margin-bottom:8px}
+body #planned-outcomes .goal-name{display:block;font:italic 500 24px/1.4 'Lora',Georgia,serif;letter-spacing:-.02em;color:#24583d;max-width:440px}
+body #planned-outcomes .outcome-grid h3{font-size:24px}
+@media(max-width:720px){body #planned-outcomes .goal-name{font-size:22px}}
