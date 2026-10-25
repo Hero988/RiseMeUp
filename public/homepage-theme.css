@@ -1349,3 +1349,11 @@
 .home-page.warm-brand #nuba-story .classic-archive-grid figure:last-child .classic-archive-image img{
   transform:scale(1.28);transform-origin:center;object-position:center;
 }
+
+/* Match the middle archive photo framing to conceal its embedded white heading. */
+.home-page.warm-brand #nuba-story .classic-archive-grid figure:nth-child(2) .classic-archive-image{
+  padding:0;margin:12px 12px 0;border-radius:13px;overflow:hidden;
+}
+.home-page.warm-brand #nuba-story .classic-archive-grid figure:nth-child(2) .classic-archive-image img{
+  transform:scale(1.28);transform-origin:center;object-position:center;
+}
