@@ -1096,3 +1096,7 @@
 .home-page #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1fr;gap:24px}
 .home-page #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font-size:clamp(36px,4vw,54px)}
 .home-page #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-intro>p{max-width:850px}
+
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1fr;gap:24px}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font-size:clamp(36px,4vw,54px)}
+.home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-intro>p{max-width:850px}
