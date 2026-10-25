@@ -1338,3 +1338,6 @@
 .home-page.warm-brand #sudan-crisis{padding-bottom:20px}
 .home-page.warm-brand #communities{padding-top:25px}
 }
+
+/* Reduce the empty space immediately before Vision & Mission. */
+.home-page.warm-brand #communities{padding-bottom:25px}
