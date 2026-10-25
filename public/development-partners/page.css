@@ -416,3 +416,36 @@ body #planned-outcomes .outcome-grid article{padding:24px}
 body #planned-outcomes h2{font-size:37px}
 body #planned-outcomes .partners-section-heading>p:last-child{font-size:16px}
 }
+
+/* Approved ivory, orange and sage development partners opening. */
+body.partners-page .partners-hero{background:#faf7ef;color:#405b48;font:400 15px/1.85 'DM Sans',sans-serif;padding:30px 0 55px}
+body.partners-page .partners-hero .container{width:min(1200px,90%)}
+body.partners-page .partners-hero .partners-back{display:inline-block;font:400 12px/1.85 'DM Sans',sans-serif;text-decoration:none;color:#64715d;margin-bottom:30px}
+body.partners-page .partners-hero .partners-hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:65px;align-items:start}
+body.partners-page .partners-hero .classic-badge{display:block;background:none;border:0;border-radius:0;padding:0;font:600 10px/1.85 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#61745b;margin:0 0 22px}
+body.partners-page .partners-hero .classic-badge:before,body.partners-page .partners-hero .classic-badge:after,body.partners-page .partners-hero .eyebrow:before,body.partners-page .partners-hero .eyebrow:after{display:none;content:none}
+body.partners-page .partners-hero h1{font:500 clamp(42px,4.7vw,62px)/1.18 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 26px}
+body.partners-page .partners-hero h1 em{font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:inherit}
+body.partners-page .partners-hero .partners-lead{font:500 18px/1.85 'DM Sans',sans-serif;color:#24583d;margin:0 0 23px}
+body.partners-page .partners-hero .partners-hero-grid>div>p:not(.classic-badge):not(.partners-lead):not(.partners-date){font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 27px}
+body.partners-page .partners-hero .actions{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:28px 0}
+body.partners-page .partners-hero .button{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;padding:14px 23px;border-radius:999px;text-decoration:none;font:500 12px/1.85 'DM Sans',sans-serif}
+body.partners-page .partners-hero .button:hover{background:#d87928;border-color:#d87928}
+body.partners-page .partners-hero .text-link{font:600 12px/1.85 'DM Sans',sans-serif;color:#b45c2f;text-decoration:none}
+body.partners-page .partners-hero .partners-date{font:400 11px/1.9 'DM Sans',sans-serif;color:#64715d;margin:25px 0 0}
+body.partners-page .partners-hero .partners-path{background:#f0f4eb;border:1px solid #a8ba9e;border-radius:26px;padding:29px 32px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08;margin-top:5px}
+body.partners-page .partners-hero .eyebrow{font:600 10px/1.85 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#61745b;margin:0 0 20px;padding:0;text-align:left}
+body.partners-page .partners-hero .partners-path ol{list-style:none;margin:0;padding:0}
+body.partners-page .partners-hero .partners-path li{display:flex;gap:18px;padding:22px 0}
+body.partners-page .partners-hero .partners-path li+li{border-top:1px solid #d2decb}
+body.partners-page .partners-hero .partners-path h2{font:500 30px/1.3 'Lora',Georgia,serif;letter-spacing:-.025em;color:#b45c2f;margin:0 0 12px}
+body.partners-page .partners-hero .partners-path li p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0}
+body.partners-page .partners-hero .partners-path-note{font:400 12px/1.85 'DM Sans',sans-serif;color:#24583d;border-top:1px solid #d2decb;padding-top:21px;margin:10px 0 0}
+@media(max-width:850px){
+body.partners-page .partners-hero .partners-hero-grid{grid-template-columns:1fr;gap:30px}
+body.partners-page .partners-hero{padding:25px 0 45px}
+body.partners-page .partners-hero .partners-path{padding:25px}
+body.partners-page .partners-hero .partners-path li{padding:20px 0}
+body.partners-page .partners-hero h1{font-size:44px}
+body.partners-page .partners-hero .partners-lead{font-size:17px}
+}
