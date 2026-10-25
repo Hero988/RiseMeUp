@@ -11,7 +11,7 @@
   width:min(1120px,88%);max-width:1120px;margin:auto;
 }
 .home-page #vision-mission.rm-field-vision .section-head {
-  display:block;text-align:center;max-width:none;margin:0 0 35px;padding:0;
+  display:block;text-align:center;max-width:none;margin:0 0 16px;padding:0;
 }
 .home-page #vision-mission.rm-field-vision h2 {
   font:400 clamp(38px,5vw,60px)/1.2 'Lora',Georgia,serif;
