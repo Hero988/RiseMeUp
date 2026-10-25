@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;600&display=swap');
 
 :root{
   --cream:#f4ecd8;
@@ -494,3 +495,29 @@ footer .fine { margin-top:10px; }
  footer { padding:50px 24px 30px; }
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::after{animation:none!important;transition:none!important}}
+
+/* Approved light community recovery section only. */
+body #opportunity.context{background:#faf7ef;color:#405b48;font:400 15px/1.85 'DM Sans',sans-serif;padding:40px 0 45px}
+body #opportunity .container{width:min(1200px,90%);max-width:1200px;padding:0;margin:0 auto}
+body #opportunity .panel{background:none;border:0;border-radius:0;padding:0;backdrop-filter:none}
+body #opportunity .section-head{display:block;margin:0 0 25px;padding:0;border:0}
+body #opportunity .section-head .num{display:none}
+body #opportunity .section-head .kicker{font:600 11px/1.8 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#617159;margin:0 0 20px;padding:0}
+body #opportunity .section-head h2{font:500 clamp(38px,4.4vw,57px)/1.22 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0;font-variation-settings:normal}
+body #opportunity .section-head h2 em{font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:inherit}
+body #opportunity .panel>p:not(.quote){font:400 17px/1.85 'DM Sans',sans-serif;color:#405b48;max-width:900px;margin:0 0 32px}
+body #opportunity .data{display:grid;grid-template-columns:1fr 1fr;gap:24px;border:0;margin:0}
+body #opportunity .data>div,body #opportunity .data>div:last-child{background:#f0f4eb;border:1px solid #a8ba9e;border-radius:24px;padding:25px 30px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+body #opportunity .data .big{font:500 27px/1.35 'Lora',Georgia,serif;letter-spacing:-.02em;color:#b45c2f;margin:0 0 12px;font-variation-settings:normal}
+body #opportunity .data .lbl{font:600 11px/1.85 'DM Sans',sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#24583d;margin:0 0 12px}
+body #opportunity .data .sub{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0}
+body #opportunity .quote{font:italic 500 23px/1.6 'Lora',Georgia,serif;color:#24583d;border-top:1px solid #d2decb;margin:30px 0 0;padding:23px 0 0;max-width:none;font-variation-settings:normal}
+body #opportunity .quote em{font:inherit;color:inherit}
+@media(max-width:700px){
+body #opportunity.context{padding:30px 0 45px}
+body #opportunity .data{grid-template-columns:1fr;gap:20px}
+body #opportunity .data>div,body #opportunity .data>div:last-child{padding:24px}
+body #opportunity .section-head h2{font-size:39px}
+body #opportunity .panel>p:not(.quote){font-size:16px}
+body #opportunity .quote{font-size:21px}
+}
