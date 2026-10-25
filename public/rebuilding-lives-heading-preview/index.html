@@ -28,4 +28,11 @@ body{margin:0;background:#faf7ef}.preview-bar{padding:10px 6%;background:#e9eddf
 .home-page .rm-photo-plan .energy-banner h4{font-size:clamp(42px,4.4vw,62px);line-height:1.08;max-width:850px;letter-spacing:-.025em}
 .home-page .rm-photo-plan .energy-banner p:not(.eyebrow){max-width:440px}
 @media(max-width:650px){.home-page .rm-photo-plan .energy-banner{padding:45px 7%;min-height:510px}.home-page .rm-photo-plan .energy-banner h4{font-size:42px}}
+
+/* Further lighten the photograph's top edge and soften the remaining overlay. */
+.home-page .rm-photo-plan .energy-banner > img{filter:brightness(1.16)}
+.home-page .rm-photo-plan .energy-banner:after{
+background:linear-gradient(180deg,rgba(255,255,235,.22) 0%,rgba(255,255,235,.08) 20%,transparent 42%),linear-gradient(90deg,rgba(16,40,30,.36) 0%,rgba(16,40,30,.22) 32%,rgba(16,40,30,.05) 62%,transparent 100%);
+}
+@media(max-width:650px){.home-page .rm-photo-plan .energy-banner:after{background:linear-gradient(180deg,rgba(255,255,235,.18),transparent 40%),linear-gradient(90deg,rgba(16,40,30,.48),rgba(16,40,30,.26) 65%,rgba(16,40,30,.04))}}
 </style></head><body class="home-page"><div class="preview-bar"><span>RISEMEUP · NEW HEADING EXPERIMENT</span><span>MAIN WEBSITE UNCHANGED</span></div><header class="preview-header"><img src="/logo.png" alt="Risemeup Sustainability" width="185" height="65"></header><main class="rm-photo-plan"><div class="preview-content"><section class="energy-banner"><img src="https://www.risemeup.org/farm-plan/energy.webp" alt="A lightbulb on grass, illustrating the energy vision" loading="eager" /><div><p class="eyebrow">ONE CONNECTED VISION</p><h4>More than rebuilding a farm.<br /><em>Rebuilding lives and futures.</em></h4><p>The farm’s original proposal connects renewable energy, food production, education and livelihoods.</p><a href="/development-partners/">Explore partnership <span aria-hidden="true">↗</span></a></div></section></div></main><footer class="preview-footer">Proposed heading over the approved brighter photograph · Main website unchanged.</footer></body></html>
