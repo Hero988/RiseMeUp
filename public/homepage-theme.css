@@ -1100,3 +1100,21 @@
 .home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-heading{grid-template-columns:1fr;gap:24px}
 .home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero h2{font-size:clamp(36px,4vw,54px)}
 .home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-hero .rm-sdg-intro>p{max-width:850px}
+
+/* Approved sage supporting-project card with selected mango photograph. */
+.home-page.warm-brand #virgin-mary-farm .farm-mango-surround{background:#faf7ef;padding:35px 0 45px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout{display:grid;grid-template-columns:210px 1fr;align-items:center;gap:35px;background:#f0f4eb;color:#405b48;border:1px solid #a8ba9e;border-radius:26px;overflow:hidden;padding:28px 32px;margin:0;text-decoration:none;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+.home-page.warm-brand #virgin-mary-farm .mango-callout>img{display:block;width:210px;height:190px;object-fit:cover;object-position:center;border-radius:20px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout .eyebrow{font:600 10px/1.8 'DM Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#617159;margin:0 0 15px;padding:0}
+.home-page.warm-brand #virgin-mary-farm .mango-callout .eyebrow:before,.home-page.warm-brand #virgin-mary-farm .mango-callout .eyebrow:after{display:none;content:none}
+.home-page.warm-brand #virgin-mary-farm .mango-callout h3{font:500 36px/1.25 'Lora',Georgia,serif;letter-spacing:-.025em;color:#b45c2f;margin:0 0 17px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout>div>p:not(.eyebrow){font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 20px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout .mango-explore{display:inline-block;font:500 12px/1.7 'DM Sans',sans-serif;background:#ed8b35;color:#fffaf0;padding:12px 22px;border:1px solid #ed8b35;border-radius:999px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout:hover{border-color:#819a73}
+.home-page.warm-brand #virgin-mary-farm .mango-callout:focus-visible{outline:3px solid #b45c2f;outline-offset:5px}
+@media(max-width:650px){
+.home-page.warm-brand #virgin-mary-farm .farm-mango-surround{padding:25px 0 35px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout{grid-template-columns:1fr;padding:25px;gap:24px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout>img{width:100%;height:220px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout h3{font-size:32px}
+}
