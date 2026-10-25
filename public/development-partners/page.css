@@ -385,3 +385,34 @@ body #equipment .equipment-item dl>div+div{padding-top:18px}
 body #equipment .button{border:1px solid #ed8b35;font-family:'DM Sans',sans-serif}
 body #equipment .button:hover{border-color:#d87928}
 @media(max-width:760px){body #equipment .equipment-title>div{flex-basis:auto}}
+
+/* Approved ivory, orange and sage planned SDG outcomes. */
+body #planned-outcomes{background:#faf7ef;color:#405b48;font:400 15px/1.85 'DM Sans',sans-serif;padding:50px 0 65px}
+body #planned-outcomes .container{width:min(1200px,90%)}
+body #planned-outcomes .partners-section-heading{max-width:950px;margin-bottom:36px}
+body #planned-outcomes .eyebrow{font:600 11px/1.85 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#61745b;margin:0 0 20px;padding:0}
+body #planned-outcomes .eyebrow:before,body #planned-outcomes .eyebrow:after{display:none;content:none}
+body #planned-outcomes h2{font:500 clamp(36px,4.4vw,57px)/1.22 'Lora',Georgia,serif;letter-spacing:-.035em;color:#b45c2f;margin:0 0 25px}
+body #planned-outcomes h2 em{font-family:inherit;font-size:inherit;font-weight:500;font-style:italic;color:inherit}
+body #planned-outcomes .partners-section-heading>p:last-child{font:400 17px/1.85 'DM Sans',sans-serif;max-width:850px;color:#405b48;margin:0}
+body #planned-outcomes .outcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+body #planned-outcomes .outcome-grid article{position:relative;background:#f0f4eb;border:1px solid #a8ba9e;border-radius:24px;padding:27px 30px;box-shadow:0 3px 6px #203d2a06,0 8px 20px #203d2a08}
+body #planned-outcomes .outcome-grid article>span{display:flex;align-items:center;gap:10px;font:600 10px/1.85 'DM Sans',sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#61745b;margin-bottom:16px}
+body #planned-outcomes .outcome-grid article>span:before{content:'';display:block;width:9px;height:9px;border-radius:50%;flex-shrink:0;background:var(--goal)}
+body #planned-outcomes .outcome-7{--goal:#fcc30b}
+body #planned-outcomes .outcome-9{--goal:#fd6925}
+body #planned-outcomes .outcome-10{--goal:#dd1367}
+body #planned-outcomes .outcome-12{--goal:#bf8b2e}
+body #planned-outcomes .outcome-grid h3{font:500 26px/1.35 'Lora',Georgia,serif;color:#b45c2f;letter-spacing:-.02em;margin:0 0 17px}
+body #planned-outcomes .outcome-grid p{font:400 14px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 20px}
+body #planned-outcomes .outcome-grid small{display:block;font:400 12px/1.85 'DM Sans',sans-serif;color:#64715d;border-top:1px solid #d2decb;padding-top:16px}
+body #planned-outcomes .sdg-alignment-note{font:400 12px/1.85 'DM Sans',sans-serif;color:#64715d;max-width:950px;margin:28px 0 22px;text-align:left}
+body #planned-outcomes .text-link{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;padding:14px 23px;border-radius:999px;text-decoration:none;font:500 12px/1.85 'DM Sans',sans-serif}
+body #planned-outcomes .text-link:hover{background:#d87928;border-color:#d87928}
+@media(max-width:720px){
+body #planned-outcomes{padding:35px 0 50px}
+body #planned-outcomes .outcome-grid{grid-template-columns:1fr;gap:20px}
+body #planned-outcomes .outcome-grid article{padding:24px}
+body #planned-outcomes h2{font-size:37px}
+body #planned-outcomes .partners-section-heading>p:last-child{font-size:16px}
+}
