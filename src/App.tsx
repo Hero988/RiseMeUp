@@ -143,17 +143,18 @@ export default function App() {
                 places of refuge across Sudan.
               </p>
               <p>
-                For the communities we support, the loss is deeply personal.
-                Families have been displaced, food and income have become
-                uncertain, and churches have been damaged, burned, destroyed or
-                occupied. These are places of worship, belonging and mutual
-                support; their loss reaches far beyond the buildings.
+                For the communities we support, war has taken away far more than
+                homes and income. Families have been displaced, access to food
+                has become uncertain, and churches have been damaged, burned,
+                destroyed or occupied. These places hold faith, memories and
+                community life—their loss is felt far beyond their walls.
               </p>
               <p>
-                The Coptic Orthodox community and the people of the Nuba
-                Mountains have endured immense suffering, often with little
-                international attention. Their stories, dignity and future must
-                not be forgotten.
+                Sudan’s Coptic Orthodox and Nuba Mountains communities have
+                endured immense suffering, often with little international
+                attention. Risemeup stands alongside them: supporting families
+                today and working towards a future shaped by dignity,
+                opportunity and hope.
               </p>
               <div className="source-note">
                 Background:{" "}
