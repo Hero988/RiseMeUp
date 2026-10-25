@@ -44,3 +44,6 @@
     background:linear-gradient(180deg,rgba(255,255,235,.18),transparent 40%),linear-gradient(90deg,rgba(16,40,30,.48),rgba(16,40,30,.26) 65%,rgba(16,40,30,.04));
   }
 }
+
+/* Preserve the approved italic second line against the homepage heading reset. */
+.home-page.warm-brand #virgin-mary-farm .rm-photo-plan .energy-banner h4 em{font-style:italic}
