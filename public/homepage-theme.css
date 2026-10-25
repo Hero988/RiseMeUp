@@ -1118,3 +1118,7 @@
 .home-page.warm-brand #virgin-mary-farm .mango-callout>img{width:100%;height:220px}
 .home-page.warm-brand #virgin-mary-farm .mango-callout h3{font-size:32px}
 }
+
+/* Finish the light supporting-project section without a dark bottom band. */
+.home-page.warm-brand #virgin-mary-farm{padding-bottom:0}
+.home-page.warm-brand #virgin-mary-farm .mango-callout h3{text-decoration:none}
