@@ -1253,3 +1253,32 @@
 .home-page.warm-brand #donate h2{font-size:36px}
 .home-page.warm-brand #donate .button{font-size:13px}
 }
+
+/* Approved compact homepage footer. */
+.home-page.warm-brand footer{background:#f9f5eb;color:#294b38;border-top:1px solid #d4ddc7;padding:24px 0 12px}
+.home-page.warm-brand footer > .container{width:min(1120px,88%);max-width:1120px;margin-left:auto;margin-right:auto}
+.home-page.warm-brand footer .footer-grid{display:grid;grid-template-columns:1.15fr 1.4fr .85fr;gap:34px;align-items:start;padding-top:0;padding-bottom:0}
+.home-page.warm-brand footer .brand{display:inline-block;width:150px;padding:0;background:none;line-height:0}
+.home-page.warm-brand footer .brand img{display:block;width:100%;height:auto;max-width:100%}
+.home-page.warm-brand footer p{font:400 12px/1.65 'DM Sans',Arial,sans-serif;margin:8px 0 0;color:#52634a;max-width:270px}
+.home-page.warm-brand footer .brand-slogan{font:italic 400 14px/1.5 'Lora',Georgia,serif;color:#815328;margin-top:6px}
+.home-page.warm-brand footer .footer-grid > nav{display:grid;gap:3px 20px;padding-top:3px;align-content:start}
+.home-page.warm-brand footer .footer-grid > nav:first-of-type{grid-template-columns:1fr 1fr}
+.home-page.warm-brand footer .footer-grid > nav a{font:400 12px/1.5 'DM Sans',Arial,sans-serif;text-decoration:none;color:#294b38;padding:5px 0;min-height:0;min-width:0;overflow-wrap:anywhere}
+.home-page.warm-brand footer a:hover{text-decoration:underline;color:#9c4e24}
+.home-page.warm-brand footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-top:1px solid #d4ddc7;margin-top:17px;padding:10px 0 0;font:400 11px/1.7 'DM Sans',Arial,sans-serif;color:#52634a}
+.home-page.warm-brand footer .footer-bottom a{color:#294b38;text-decoration:none}
+@media(max-width:850px){
+.home-page.warm-brand footer .footer-grid{grid-template-columns:1fr 1fr;gap:22px}
+.home-page.warm-brand footer .footer-grid > div{grid-column:1/-1}
+.home-page.warm-brand footer .footer-grid > div > p:last-child{max-width:none}
+.home-page.warm-brand footer .footer-grid > div > p:last-child br{display:none}
+}
+@media(max-width:550px){
+.home-page.warm-brand footer .footer-grid{grid-template-columns:1fr;gap:14px}
+.home-page.warm-brand footer .footer-grid > nav:first-of-type,
+.home-page.warm-brand footer .footer-grid > nav:last-of-type{grid-template-columns:1fr 1fr;gap:0 18px}
+.home-page.warm-brand footer .footer-grid > nav a{display:flex;align-items:center;min-height:44px;padding:7px 0}
+.home-page.warm-brand footer .footer-bottom a{display:flex;align-items:center;min-height:44px}
+.home-page.warm-brand footer .brand{width:140px}
+}
