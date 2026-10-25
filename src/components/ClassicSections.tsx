@@ -90,7 +90,7 @@ export function ClassicFounder() {
 
 export function ClassicCommunityHistory() {
   const archive = [
-    ["displaced-region-clean", "Leaving home", "Displacement has forced families to leave homes, farmland and familiar sources of support."],
+    ["displaced-region-no-overlays", "Leaving home", "Displacement has forced families to leave homes, farmland and familiar sources of support."],
     ["children-outside-cave", "Seeking shelter", "Historical photographs document the use of rocky shelters during conflict in the region."],
     ["families-cave-shelter", "Families together", "Safe shelter, food and the chance to rebuild remain central to the community’s needs."],
   ];
