@@ -95,7 +95,7 @@ export default function ContactForm() {
         >
           Open email to send ↗
         </button>
-        <p className="fine-print enquiry-fallback">No email app? Write directly to <a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org</a> or call <a href="tel:+447867977844">+44 786 797 7844</a>.</p>
+        <p className="fine-print enquiry-fallback">No email app? Write directly to <a href="mailto:i.tadros@risemeup.org">i.tadros@risemeup.org</a> or call <a href="tel:+447867977844">+44 786 797 7844</a>.</p>
         <div role="status" aria-live="polite">
           {status === "prepared" && (
             <p className="form-success">
@@ -106,7 +106,7 @@ export default function ContactForm() {
             <p className="form-error">
               Your email could not be prepared. Check the fields and try again, or
               email{" "}
-              <a href="mailto:i.tradros@risemeup.org">i.tradros@risemeup.org</a>
+              <a href="mailto:i.tadros@risemeup.org">i.tadros@risemeup.org</a>
               .
             </p>
           )}

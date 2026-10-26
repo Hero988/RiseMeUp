@@ -9,7 +9,7 @@ import TeamFlipCard from "./components/TeamFlipCard";
 import ContactForm from "./components/ContactForm";
 import { ClassicAbout, ClassicVision, ClassicObjectives, ClassicFounder, ClassicCommunityHistory } from "./components/ClassicSections";
 
-const email = "i.tradros@risemeup.org";
+const email = "i.tadros@risemeup.org";
 const team = [
   {
     name: "Prof. Dr. Elamin Ali Ahmed",
@@ -23,7 +23,7 @@ const team = [
     name: "Dr. Eng. Khalid Salih",
     role: "Renewable energy & training",
     image: "/team-4-khalid.jpeg",
-    bio: "Former university lecturer in Berlin, Xplines International founder and DIESALIHS chairman.",
+    bio: "Renewable energy and workforce-training expertise. Former university lecturer in Berlin, Xplines International founder and DIESALIHS chairman.",
     qualifications: "PhD in Control Engineering",
     website: "https://www.xplines.org/",
     trainingWebsite: "https://www.diesalihs.com/#academy",
@@ -32,7 +32,7 @@ const team = [
     name: "Dr. Munir G. Botrus",
     role: "Agricultural safety & crop protection",
     image: "/team-2-munir.png",
-    bio: "15 years of experience with FAO/UN in pesticide application and agricultural safety.",
+    bio: "Crop protection and agricultural safety expertise, drawing on 15 years of experience with FAO/UN.",
     qualifications: "PhD, University of London · BSc, Agricultural Science",
   },
   {
@@ -263,8 +263,8 @@ export default function App() {
             </div>
           </div>
           <aside className="container crisis-history-link" aria-labelledby="crisis-history-title">
-            <div><p className="eyebrow">Our coronavirus response</p><h3 id="crisis-history-title">When there is a crisis, Risemeup steps up to help.</h3><p>Discover Iman’s pandemic work supporting a food bank and homeless shelter in London, alongside food aid for families in Sudan.</p></div>
-            <a className="text-link" href="/crisis-response/">Read our coronavirus story <Arrow /></a>
+            <div><p className="eyebrow">Our story of practical support</p><h3 id="crisis-history-title">Practical help, when it matters.</h3><p>From pandemic food support in London to assistance for families in Sudan, discover the work behind Risemeup.</p></div>
+            <a className="text-link" href="/crisis-response/">Read our support story <Arrow /></a>
           </aside>
         </section>
         <section id="virgin-mary-farm" className="section farm farm-estate-intro">
@@ -296,7 +296,7 @@ export default function App() {
               <h3 id="farm-women-title">A place to rebuild lives.<br /><em>A future to grow together.</em></h3>
               <p className="women-slogan">Rooted in dignity. Growing in strength. Rebuilding futures.</p>
               <p>Our main purpose is to help women affected by Sudan’s war rebuild their lives — including survivors of sexual violence, women whose husbands have been killed, and mothers raising children alone.</p>
-              <p>Every woman and girl deserves to live with dignity, feel valued and have opportunities to learn. We envision a farm where sustainable farming education, practical training and opportunities to earn an income help women rebuild confidence and independence, support their families and shape their own futures. For Iman, this is a vision of healing, connection and renewed hope.</p>
+              <p>We envision a farm where women can learn practical skills, earn an income and support their families. Sustainable farming education and shared community life would help them build independence and shape their own futures.</p>
               <p>For girls and young women, we plan education and skills opportunities that build confidence and widen future choices. Girls’ learning will be age-appropriate, supervised and designed to support their safety and continued schooling.</p>
               <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from both communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
               <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
@@ -376,9 +376,8 @@ export default function App() {
               <article>
                 <h3>Education & technical partnership</h3>
                 <p>
-                  Help shape sustainable farming education and practical
-                  training, assess the site and refine the farm plan with
-                  realistic delivery milestones.
+                  Help assess the site, design the first water system and develop
+                  practical training for the people who will operate it.
                 </p>
                 <a className="text-link" href="#farming-education">
                   Explore education & training <Arrow />
@@ -494,9 +493,9 @@ export default function App() {
             <Brand />
             <p className="brand-slogan">Think globally, act locally.</p>
             <p>
-              Standing with forgotten communities.
+              Standing with communities.
               <br />
-              Growing the possibility of a better tomorrow.
+              Working towards lasting recovery.
             </p>
           </div>
           <nav aria-label="Footer navigation">
@@ -504,7 +503,7 @@ export default function App() {
             <a href="#communities">Our communities</a>
             <a href="#virgin-mary-farm">Virgin Mary Farm</a>
             <a href="#sdgs">UN Sustainable Development Goals</a>
-            <a href="/crisis-response/">Our coronavirus response</a>
+            <a href="/crisis-response/">Our support story</a>
             <a href="/mango-project/">Mango subproject</a>
           </nav>
           <nav aria-label="Get involved">

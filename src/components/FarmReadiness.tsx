@@ -3,20 +3,17 @@ export default function FarmReadiness() {
     <section className="farm-readiness" id="farm-readiness" aria-labelledby="farm-readiness-title">
       <div>
         <p className="eyebrow">Farm status and readiness</p>
-        <p className="readiness-date">Updated 21 October 2026</p>
+        <p className="readiness-date">Updated 26 October 2026 · Project information supplied 21 October</p>
         <h3 id="farm-readiness-title">Rebuilding starts with water.</h3>
-        <p className="readiness-slogan">Restore water. Revive the land. Renew livelihoods.</p>
-        <p>Virgin Mary Farm was destroyed during the war and is not operational. Our founder reports that the farm’s seven wells have been destroyed and all pumping equipment stolen. Rebuilding requires a technical assessment of the wells and new water storage, alongside a complete pumping and irrigation system.</p>
+        <p>Virgin Mary Farm was destroyed during the war and is not operational. Our founder reports that all seven wells were destroyed and the pumping equipment stolen.</p>
       </div>
       <dl>
-        <div><dt>Land &amp; permission</dt><dd>The farm belongs to the Coptic Orthodox Church in Sudan, Khartoum–Omdurman, according to founder Iman Tadros. She confirms permission to use the land; the written project-use terms still need review.</dd></div>
-        <div><dt>Project coordination</dt><dd>Iman Tadros coordinates partner enquiries and machinery-donation paperwork. Bishop Sarabon and farm manager Jhone Wadeea are the founder-identified local contacts in Sudan.</dd></div>
-        <div><dt>Intended equipment ownership</dt><dd>Donated machinery and project equipment are intended to belong to Virgin Mary Farm together with Risemeup, for the farm’s community purpose. Legal title and responsibilities will be recorded in written agreements with the Church and donors.</dd></div>
-        <div><dt>Before equipment delivery</dt><dd>A dated technical assessment, safe access, secure equipment storage and an agreed maintenance plan must be established.</dd></div>
-        <div><dt>First proposed stage</dt><dd>Assess the seven destroyed wells; establish a viable initial water source through rehabilitation or replacement as advised; build new water storage and an initial growing and education area. Specifications and costs await assessment and quotations.</dd></div>
+        <div><dt>Our first proposed step</dt><dd>Assess the wells, establish a viable water source and build new storage for an initial growing and training area.</dd></div>
+        <div><dt>Before work begins</dt><dd>Confirm safe access, written land-use terms, technical requirements, local responsibilities and a costed plan.</dd></div>
+        <div><dt>Help needed now</dt><dd>Water, irrigation and agricultural specialists to help assess the site and design the first stage.</dd></div>
       </dl>
-      <div className="actions"><a className="button" href="/development-partners/">For development partners →</a><a className="text-link" href="/development-partners/#equipment">View equipment needs →</a></div>
-      <p className="readiness-note">Latest visit: approximately mid-October 2026, according to Iman’s update on 21 October; the exact date is unconfirmed. A dated technical assessment is still needed. With the war ongoing, safe access must be checked before each visit or delivery.</p>
+      <div className="actions"><a className="button" href="/development-partners/#first-stage">Explore the first stage →</a><a className="text-link" href="/development-partners/#readiness">Read the full farm status →</a></div>
+      <p className="readiness-note">Equipment specifications, costs and delivery dates will follow assessment. The partner page includes land, management and equipment-ownership information.</p>
     </section>
   );
 }

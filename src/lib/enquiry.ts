@@ -27,5 +27,5 @@ export function buildEnquiryMailto(enquiry: Enquiry): string {
     ...(enquiry.organisation?.trim() ? [`Organisation: ${enquiry.organisation.trim()}`] : []),
     `Area of interest: ${interest}`,
   ].join("\r\n");
-  return `mailto:i.tradros@risemeup.org?subject=${encodeURIComponent(`Risemeup enquiry: ${interest}`)}&body=${encodeURIComponent(body)}`;
+  return `mailto:i.tadros@risemeup.org?subject=${encodeURIComponent(`Risemeup enquiry: ${interest}`)}&body=${encodeURIComponent(body)}`;
 }

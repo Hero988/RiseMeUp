@@ -3,17 +3,17 @@ import './FarmPlanGallery.css';
 export default function FarmPlan() {
   return (
     <section id="farm-plan" className="rm-photo-plan" aria-labelledby="farm-plan-title">
-<section className="intro" aria-labelledby="farm-plan-title"><p className="eyebrow">THE LONG-TERM VISION · FOUR CONNECTED POSSIBILITIES</p><h3 id="farm-plan-title">What we plan to <em>build.</em></h3><p className="intro-copy">Rebuild the farm. Restore livelihoods. Renew hope.<br />Together, we rebuild more than a farm—we rebuild futures.</p></section><div className="status-wrap"><p className="plan-status">
-        Historical proposal · The farm is not currently operational. These
-        facilities describe our long-term vision, not the immediate rebuilding
-        sequence. Our <a href="/development-partners/#first-stage">current proposed first stage</a> focuses on assessment and restoring water access.
+<section className="intro" aria-labelledby="farm-plan-title"><p className="eyebrow">THE LONG-TERM VISION · FOUR FACILITY COMPONENTS</p><h3 id="farm-plan-title">What we plan to <em>build.</em></h3><p className="intro-copy">Four connected facilities would support food production, energy and work. Education and practical training would run across the whole farm.</p></section><div className="status-wrap"><p className="plan-status">
+        Long-term facilities from the 2018 proposal. The farm is not operational.
+        These are the facilities we hope to develop; the five-phase recovery roadmap
+        below explains how rebuilding could progress. <a href="/development-partners/#first-stage">Assessment and water restoration come first.</a>
       </p></div><section className="collection" id="collection" aria-label="The four parts of the farm vision"><article className="project" id="biogas-plant"><div className="panel"><img
               src="/biogas-plant.jpeg"
               alt="Concept illustration of the proposed Virgin Mary Farm biogas plant"
               width="1024"
               height="658"
               loading="eager"
-            /><p className="panel-category">Renewable energy</p><div className="panel-copy"><h4>Biogas<br /><em>plant.</em></h4><p className="output">Electricity · Gas · Fertiliser</p></div></div><details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Original biogas concept picture retained</p>
+            /><p className="panel-category">Renewable energy</p><div className="panel-copy"><h4>Biogas<br /><em>plant.</em></h4><p className="output">Electricity · Gas · Fertiliser</p></div></div><details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Biogas facility concept · Illustrative, not an existing installation</p>
             
             
             
@@ -38,7 +38,7 @@ export default function FarmPlan() {
               produced within the farm, supporting a more self-sufficient
               agricultural system.
             </p>
-</div></div>          </div></details></article><article className="project" id="commercial-greenhouses"><div className="panel"><img src="/farm-plan/lettuce.webp" alt="Fresh lettuce illustrating the proposed growing programme" loading="eager" /><p className="panel-category">Sustainable growing</p><div className="panel-copy"><h4>Room to<br /><em>grow.</em></h4><p className="output">10 proposed greenhouses</p></div></div><details className="project-details"><summary>Explore the sustainable growing plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="commercial-greenhouses"><div className="panel"><img src="/farm-plan/lettuce.webp" alt="Fresh lettuce illustrating the proposed growing programme" loading="eager" /><p className="panel-category">Sustainable growing</p><div className="panel-copy"><h4>Room to<br /><em>grow.</em></h4><p className="output">10 proposed greenhouses</p></div></div><details className="project-details"><summary>Explore the sustainable growing plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Illustrative photograph · Not current farm production</p>
             
             
             
@@ -66,7 +66,7 @@ export default function FarmPlan() {
               agricultural jobs and skills that families can use to build
               livelihoods.
             </p>
-</div></div>          </div></details></article><article className="project" id="sorting-packaging"><div className="panel"><img src="/farm-plan/tomatoes.webp" alt="Freshly harvested tomatoes illustrating produce handling" loading="lazy" /><p className="panel-category">Produce handling</p><div className="panel-copy"><h4>Sorting and<br /><em>packaging plant.</em></h4><p className="output">Sorting · Packing · Reaching markets</p></div></div><details className="project-details"><summary>Explore the produce handling plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="sorting-packaging"><div className="panel"><img src="/farm-plan/tomatoes.webp" alt="Freshly harvested tomatoes illustrating produce handling" loading="lazy" /><p className="panel-category">Produce handling</p><div className="panel-copy"><h4>Sorting and<br /><em>packaging plant.</em></h4><p className="output">Sorting · Packing · Reaching markets</p></div></div><details className="project-details"><summary>Explore the produce handling plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Illustrative photograph · Not current farm production</p>
             
             
             
@@ -92,7 +92,7 @@ export default function FarmPlan() {
               harvest and creating work beyond growing, in packing, handling and
               distribution.
             </p>
-</div></div>          </div></details></article><article className="project" id="poultry-farm"><div className="panel"><img id="poultry-photo" src="/farm-plan/chicks.webp" alt="Two young chicks in grass" loading="lazy" /><p className="panel-category">Food & livelihoods</p><div className="panel-copy"><h4>Small beginnings.<br /><em>New possibilities.</em></h4><p className="output">Egg production · Poultry farming</p></div></div><details className="project-details"><summary>Explore the food & livelihoods plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Your supplied photograph · illustrative use</p>
+</div></div>          </div></details></article><article className="project" id="poultry-farm"><div className="panel"><img id="poultry-photo" src="/farm-plan/chicks.webp" alt="Two young chicks in grass" loading="lazy" /><p className="panel-category">Food & livelihoods</p><div className="panel-copy"><h4>Small beginnings.<br /><em>New possibilities.</em></h4><p className="output">Egg production · Poultry farming</p></div></div><details className="project-details"><summary>Explore the food & livelihoods plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Illustrative photograph · Not current farm production</p>
             
             
             
@@ -188,10 +188,9 @@ export default function FarmPlan() {
           </a>
         </div>
       </section></details></section><section className="energy-banner"><img src="/farm-plan/energy.webp" alt="A lightbulb on grass, illustrating the energy vision" loading="lazy" /><div><p className="eyebrow">ONE CONNECTED VISION</p><h4>More than rebuilding a farm.<br /><em>Rebuilding lives and futures.</em></h4><p>The farm’s original proposal connects renewable energy, food production, education and livelihoods.</p><a href="/development-partners/">Explore partnership <span aria-hidden="true">↗</span></a></div></section><p className="fine-print">
-        Based on the Risemeup Sustainable Farming proposal issued on 19 November
-        2018, pages 7–8. The four phases describe its original project sequence.
-        Delivery dates, final specifications and costs will be updated for the
-        rebuilding programme with technical and development partners.
+        Facility concepts are drawn from the Risemeup Sustainable Farming proposal
+        dated 19 November 2018, pages 7–8. Their scale, specifications, costs and
+        place in the recovery roadmap will be reviewed with technical partners.
       </p>
     </section>
   );

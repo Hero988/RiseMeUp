@@ -70,7 +70,7 @@ export default function SDGs() {
         <div className="rm-sdg-overline"><span>Risemeup · Virgin Mary Farm</span><span>Our planned contribution</span></div>
         <div className="rm-sdg-heading">
           <div><p className="rm-sdg-kicker">Our planned contribution to the UN Sustainable Development Goals</p><h2 id="sdgs-title">One farm.<br /><em>Four UN Sustainable Development Goals.</em></h2></div>
-          <div className="rm-sdg-intro"><p>Risemeup is committed to using the UN Sustainable Development Goals as a framework for rebuilding Virgin Mary Farm. These four goals connect our original proposal with practical action for communities in Sudan.</p><span>United Nations Sustainable Development Goals</span></div>
+          <div className="rm-sdg-intro"><p>Four UN Sustainable Development Goals help guide our plans for energy, infrastructure, opportunity and responsible use of resources.</p><span>United Nations Sustainable Development Goals</span></div>
         </div>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function SDGs() {
         </div>
         <div className="rm-sdg-bottom"><p>Think globally, <em>act locally.</em></p><span>Our planned contribution · Virgin Mary Farm</span></div>
         <div className="rm-sdg-partners">
-          <div><p className="rm-sdg-kicker">For charities &amp; development partners</p><h3>Help turn shared goals<br />into <em>local progress.</em></h3><p>We welcome partners to refine the plan, agree realistic milestones and develop a transparent approach to measuring progress. The farm is awaiting rebuilding; the activities above are planned.</p></div>
+          <div><p className="rm-sdg-kicker">For charities &amp; development partners</p><h3>Help turn shared goals<br />into <em>local progress.</em></h3><p>As the rebuilding plan develops, we will agree practical measures with partners to track delivery and community benefit.</p></div>
           <a href="/development-partners/#planned-outcomes">View planned outcomes <span aria-hidden="true">↗</span></a>
         </div>
         <p className="rm-sdg-note">This is Risemeup’s own assessment of its planned contribution to the SDGs. It does not imply United Nations endorsement. Suggested measures are for project planning, not reported results or official UN indicators.</p>
