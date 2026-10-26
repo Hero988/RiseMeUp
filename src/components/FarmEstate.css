@@ -40,7 +40,7 @@
 /* Approved tomato background treatment, restricted to the farm introduction. */
 #virgin-mary-farm .rm-estate-band{position:relative;overflow:hidden;margin:0;isolation:isolate;background:#183524;color:#fff9ed;padding-top:40px}
 #virgin-mary-farm .rm-estate-band:before{content:'';position:absolute;inset:0;z-index:-2;background:url('/farm-tomato-background.webp') center center/cover no-repeat}
-#virgin-mary-farm .rm-estate-band:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,28,19,.92),rgba(10,31,20,.72) 38%,rgba(10,31,20,.48) 80%),linear-gradient(90deg,#15332440,#15332415)}
+#virgin-mary-farm .rm-estate-band:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,28,19,.64),rgba(10,31,20,.58) 38%,rgba(10,31,20,.48) 80%),linear-gradient(90deg,#15332440,#15332415)}
 #virgin-mary-farm .rm-estate-top{color:#fff7e6;border-color:#f5edd540}
 #virgin-mary-farm .rm-estate-kicker{color:#f3e7cd}
 .home-page #virgin-mary-farm .rm-estate-title h2{color:#fffaf0;font-size:clamp(72px,8vw,116px)}
