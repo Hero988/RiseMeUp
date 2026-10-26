@@ -1357,3 +1357,13 @@
 .home-page.warm-brand #nuba-story .classic-archive-grid figure:nth-child(2) .classic-archive-image img{
   transform:scale(1.28);transform-origin:center;object-position:center;
 }
+
+/* Approved partnerships and outreach card beneath the technical advisers. */
+.home-page.warm-brand #team .team-outreach-card{display:flex;align-items:center;gap:27px;margin-top:22px;padding:22px;background:#e9eddf;border:1px solid #cbd5c2;border-radius:20px;color:#294b38}
+.home-page.warm-brand #team .team-outreach-portrait{display:block;flex-shrink:0;width:140px;height:170px;object-fit:cover;object-position:50% 47%;border-radius:12px}
+.home-page.warm-brand #team .team-outreach-card .eyebrow{font-size:10px;letter-spacing:.13em;margin:0 0 9px;color:#8e5938}
+.home-page.warm-brand #team .team-outreach-card h3{font:400 27px/1.3 'Lora',Georgia,serif;color:#b45c2f;margin:0 0 9px}
+.home-page.warm-brand #team .team-outreach-role{font:500 15px/1.5 'DM Sans',Arial,sans-serif;margin:0}
+.home-page.warm-brand #team .team-outreach-bio{font:400 14px/1.7 'DM Sans',Arial,sans-serif;max-width:750px;margin:12px 0}
+.home-page.warm-brand #team .team-outreach-card a{font-size:14px;color:#294b38;text-underline-offset:4px}
+@media(max-width:650px){.home-page.warm-brand #team .team-outreach-card{gap:16px;padding:16px;align-items:flex-start}.home-page.warm-brand #team .team-outreach-portrait{width:105px;height:140px}.home-page.warm-brand #team .team-outreach-card h3{font-size:23px}.home-page.warm-brand #team .team-outreach-role{font-size:13px}.home-page.warm-brand #team .team-outreach-bio,.home-page.warm-brand #team .team-outreach-card a{font-size:12px}}

@@ -408,8 +408,8 @@ export default function App() {
                 </h2>
               </div>
               <p>
-                Expertise in horticulture, crop protection, seed science and
-                renewable energy informs the farm’s development vision.
+                Expertise in agriculture, renewable energy and training, alongside
+                partnerships and outreach, supports Risemeup’s development vision.
               </p>
             </div>
             <p className="team-flip-instructions">Select a portrait to turn the card and read the profile.</p>
@@ -418,6 +418,16 @@ export default function App() {
                 <TeamFlipCard person={person} key={person.name} />
               ))}
             </div>
+            <article className="team-outreach-card" aria-labelledby="sally-team-name">
+              <img className="team-outreach-portrait" src="/team-sally-zaki-gabrah.png" alt="Sally Zaki Gabrah" width="140" height="170" loading="lazy" />
+              <div>
+                <p className="eyebrow">Partnerships &amp; outreach</p>
+                <h3 id="sally-team-name">Sally Zaki Gabrah</h3>
+                <p className="team-outreach-role">Partnerships &amp; Outreach Representative</p>
+                <p className="team-outreach-bio">Helping introduce Risemeup to potential partners and supporters, and building connections for its work with communities in Sudan.</p>
+                <a href="mailto:s.gabrah@risemeup.org">s.gabrah@risemeup.org <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
           </div>
         </section>
         <ClassicFounder />
