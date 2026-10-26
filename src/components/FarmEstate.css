@@ -152,3 +152,14 @@
   .home-page.warm-brand #virgin-mary-farm .rm-estate-pillars {grid-template-columns:1fr}
   .home-page.warm-brand #virgin-mary-farm .rm-estate-pillars h3 {min-height:0}
 }
+
+/* Approved researched farm introduction. */
+.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction{background:#e9eddf;border:1px solid #d8dfce;border-radius:20px;padding:26px 30px;margin:26px 0 6px;color:#294b38}
+.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction h3{font:400 28px/1.25 Lora,Georgia,serif;color:#bc602d;margin:0 0 17px}
+.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction p{font:400 16px/1.75 Manrope,sans-serif;margin:0 0 13px;color:#294b38;max-width:none}
+.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction details{font:12px/1.6 Manrope,sans-serif;color:#596c58;margin-top:16px}
+.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction details p{font-size:12px;margin:10px 0 0}
+.rm-farm-introduction summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.rm-farm-introduction a{color:inherit}
+@media(max-width:600px){.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction{padding:21px}.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction h3{font-size:24px}.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction p{font-size:15px}}
+
