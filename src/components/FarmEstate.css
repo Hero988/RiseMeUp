@@ -163,3 +163,6 @@
 .rm-farm-introduction a{color:inherit}
 @media(max-width:600px){.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction{padding:21px}.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction h3{font-size:24px}.home-page.warm-brand #virgin-mary-farm .rm-farm-introduction p{font-size:15px}}
 
+
+/* A warm transition below the farm image instead of a dark band. */
+.home-page.warm-brand #virgin-mary-farm.farm-estate-intro {background:#faf7ef}
