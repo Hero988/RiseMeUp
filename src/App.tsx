@@ -118,7 +118,6 @@ export default function App() {
             <a href="#team">Our team</a>
             <a href="/development-partners/">Partner with us</a>
             <a href="#contact">Contact</a>
-            <a className="button small" style={{ fontSize: "11px", padding: "10px 16px", minHeight: "36px", lineHeight: 1.2 }} href="/mango-project/" target="_blank" rel="noopener noreferrer">Mango Project</a>
             <button className="button small" onClick={() => donationDialog.current?.showModal()}>Donate</button>
           </nav>
         </div>
@@ -273,8 +272,8 @@ export default function App() {
               <FarmRoadmap />
             </div>
           </div>
-          <div className="farm-mango-surround"><div className="container">
-            <a className="mango-callout" href="/mango-project/">
+          <div className="farm-mango-surround" id="mango-project-link"><div className="container">
+            <article className="mango-callout">
               <img
                 src="/mango-selected-photo-six.svg"
                 alt="Golden mangoes on a tree, illustrating the proposed Mango Project"
@@ -293,9 +292,9 @@ export default function App() {
                   A proposed route to better handling, packing and value for
                   Sudanese mangoes.
                 </p>
-                <span className="mango-explore">Explore the Mango Project →</span>
+                <a className="mango-explore" style={{ fontSize: "11px", padding: "9px 16px", minHeight: "36px", display: "inline-flex", alignItems: "center", textDecoration: "none" }} href="/mango-project/">View the Mango Project ↗</a>
               </div>
-            </a>
+            </article>
           </div></div>
         </section>
         <ClassicObjectives />
