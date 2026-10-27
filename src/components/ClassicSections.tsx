@@ -24,7 +24,7 @@ export function ClassicAbout() {
       <div>
         <p className="eyebrow">Who we are</p>
         <h2><span className="classic-about-first-line">No community should be</span><span className="classic-about-emphasis">forgotten.</span></h2>
-        <p className="lead">Risemeup is a London-based initiative supporting Sudan’s Coptic Orthodox and Nuba Mountains communities.</p>
+        <p className="lead">Risemeup is a London-based initiative supporting Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities.</p>
         <p>We support families with food assistance today while working towards lasting recovery. At the heart of this vision is the planned rebuilding of Virgin Mary Farm. Through sustainable agriculture, clean energy, education and practical training, we aim to help people earn a living and rebuild their lives.</p>
         <div className="classic-values">{values.map(([icon, title, description]) => <div key={title}><span className="classic-value-icon" aria-hidden="true">{icon}</span><div><strong>{title}</strong><span>{description}</span></div></div>)}</div>
       </div>
@@ -37,7 +37,7 @@ export function ClassicVision() {
     <div className="container">
       <div className="section-head">
         <h2 id="vision-mission-title">Vision <span>&amp;</span> <em>Mission.</em></h2>
-        <p>Two communities. One shared vision. A future of hope.</p>
+        <p>Three communities. One shared vision. A future of hope.</p>
       </div>
       <div className="vision-grid">
         <article id="vision">
@@ -50,7 +50,7 @@ export function ClassicVision() {
         <article id="mission">
           <p className="chapter">The work that guides us</p>
           <h3>Our Mission</h3>
-          <p>To support Sudan’s Coptic Orthodox and Nuba Mountains communities with food assistance and a practical path towards recovery.</p>
+          <p>To support Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities with food assistance and a practical path towards recovery.</p>
           <p>With our partners, we aim to rebuild Virgin Mary Farm as a place for sustainable farming, clean energy, learning and practical training.</p>
           
         </article>
@@ -80,7 +80,7 @@ export function ClassicFounder() {
     <figure className="classic-image-wrap"><img src="/founder-iman-tadros.jpg" alt="Iman Tadros, founder of Risemeup" width="2016" height="3024" loading="lazy" /><figcaption className="classic-image-badge"><span>Our founder</span><strong>Iman Tadros</strong></figcaption></figure>
     <div><p className="eyebrow">The person behind the purpose</p><h2>A commitment that starts with people.</h2><p className="lead">Iman Tadros founded Risemeup with a personal commitment to communities whose needs are too often overlooked.</p>
       <p>The farm’s original development proposal dates from 2018. During the coronavirus pandemic, Iman supported a food bank and homeless shelter in London and coordinated food assistance for families in Sudan.</p>
-      <p>As a member of Sudan’s Coptic Orthodox community, she brings a personal understanding of the loss caused by war. Risemeup carries that commitment forward through support for both the Coptic Orthodox and Nuba Mountains communities.</p>
+      <p>As a member of Sudan’s Coptic Orthodox community, she brings a personal understanding of the loss caused by war. Risemeup carries that commitment forward through support for the Coptic Orthodox, Nuba Mountains and Blue Nile communities.</p>
       <p>Today, her work connects immediate food assistance with the ambition to rebuild Virgin Mary Farm as a place of farming, learning and opportunity.</p>
       <div className="classic-founder-values"><div><strong>Humanitarian leadership</strong><span>Practical support for people</span></div><div><strong>Community relationships</strong><span>A personal, lasting commitment</span></div></div>
       <a className="text-link" href="#contact">Connect with Iman →</a>
@@ -96,7 +96,7 @@ export function ClassicCommunityHistory() {
   ];
   return <section id="nuba-story" className="section classic-history"><div className="container">
     <div className="section-head"><p className="classic-badge">Community history</p><h2>The Nuba Mountains.<br /><em>Standing with communities. Supporting their future.</em></h2><p>Our commitment reaches beyond immediate relief to the land, livelihoods and community ties people need to rebuild.</p></div>
-    <div className="classic-history-map"><img src="/nuba-story/map-nuba-mountains.jpeg" alt="Archive map showing the Nuba Mountains region in Sudan" loading="lazy" /><div><p className="eyebrow">A place, a people, a future</p><h3>Understanding the place behind the story.</h3><p>Our commitment to the Nuba Mountains begins with its people—their families, their connection to the land and their hopes for a secure future.</p><p>This archive map and these photographs help tell the story of communities affected by conflict and displacement.</p><a className="text-link" href="#communities">Meet both communities →</a></div></div>
+    <div className="classic-history-map"><img src="/nuba-story/map-nuba-mountains.jpeg" alt="Archive map showing the Nuba Mountains region in Sudan" loading="lazy" /><div><p className="eyebrow">A place, a people, a future</p><h3>Understanding the place behind the story.</h3><p>Our commitment to the Nuba Mountains begins with its people—their families, their connection to the land and their hopes for a secure future.</p><p>This archive map and these photographs help tell the story of communities affected by conflict and displacement.</p><a className="text-link" href="#communities">Meet all three communities →</a></div></div>
     <div className="classic-archive-grid">{archive.map(([file, title, description], index) => <figure key={file}><div className="classic-archive-image"><img src={`/nuba-story/${file}.jpeg`} alt={`${title}: historical image from the Nuba Mountains archive`} loading="lazy" /><span aria-hidden="true">0{index + 1}</span></div><figcaption><p className="eyebrow">Historical context</p><h3>{title}</h3><p>{description}</p></figcaption></figure>)}</div>
     <div className="classic-history-response"><p className="eyebrow">Our response</p><h3>Help with food today.<br />Build the foundations for tomorrow.</h3><p>Support immediate food assistance or explore a partnership in the rebuilding of Virgin Mary Farm.</p><div className="actions"><a className="button" href="#donate">Support families →</a><a className="text-link" href="#virgin-mary-farm">Explore Virgin Mary Farm →</a></div></div>
   </div></section>;

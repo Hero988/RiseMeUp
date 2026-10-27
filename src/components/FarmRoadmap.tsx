@@ -45,7 +45,7 @@ export default function FarmRoadmap() {
           <h3 id="farm-growth-title">Start growing.<br /><em>Build a lasting future.</em></h3>
         </div>
         <div className="growth-intro">
-          <p>This roadmap sets out a possible sequence for restoring production and gradually developing the farm’s 130-hectare site. Water assessment comes first; women from both communities would help shape participation and training.</p>
+          <p>This roadmap sets out a possible sequence for restoring production and gradually developing the farm’s 130-hectare site. Water assessment comes first; women from all three communities would help shape participation and training.</p>
           <p className="growth-family-target"><strong>300+ families</strong><span>Proposed long-term reach · participant numbers and selection to be agreed with communities.</span></p>
         </div>
       </div>

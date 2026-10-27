@@ -87,7 +87,7 @@ export default function App() {
         Skip to content
       </a>
       <div className="announcement">
-        Standing with Sudan’s Coptic Orthodox and Nuba Mountains communities{" "}
+        Standing with Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities{" "}
         <a href="#sudan-crisis">
           Why our work matters <Arrow />
         </a>
@@ -150,7 +150,7 @@ export default function App() {
                 life—their loss is felt far beyond their walls.
               </p>
               <p>
-                Sudan’s Coptic Orthodox and Nuba Mountains communities have
+                Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities have
                 endured immense suffering, often with little international
                 attention. Risemeup stands alongside them, providing food
                 assistance today while working towards lasting recovery,
@@ -171,56 +171,14 @@ export default function App() {
         </section>
         <section id="communities" className="section cream">
           <div className="container">
-            <div className="section-head">
-              <div>
-                
-                <h2>
-                  Two communities. Equal commitment.
-                </h2>
-              </div>
-              <p>
-                Standing with overlooked communities. Rebuilding hope together.
-              </p>
-            </div>
+            <div className="section-head"><div><h2>Three communities. Equal commitment.</h2></div><p>Standing with Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities through food assistance and a shared commitment to recovery.</p></div>
             <div className="community-stories">
-              <article className="community-story">
-                <span className="community-location">Belonging · Sudan</span>
-                <h3>Coptic Orthodox<span>community</span></h3>
-                <p>
-                  Sudan’s Coptic Orthodox families are part of the country’s
-                  social and spiritual life. War has separated families,
-                  disrupted livelihoods and threatened churches and community
-                  spaces.
-                </p>
-                <p>
-                  This is our founder’s own community. Risemeup brings that
-                  personal connection to practical support for families facing
-                  displacement and uncertainty.
-                </p>
-                <a className="text-link" href="#relief">
-                  Supporting families now →
-                </a>
-              </article>
-              <div className="community-connection" aria-hidden="true"><span>&amp;</span></div>
-              <article className="community-story">
-                <span className="community-location">Resilience · Sudan</span>
-                <h3>Nuba Mountains<span>communities</span></h3>
-                <p>
-                  The Nuba Mountains in South Kordofan are home to diverse
-                  communities with deep ties to land and farming. Decades of
-                  conflict and displacement have interrupted education, food
-                  production and everyday life.
-                </p>
-                <p>
-                  Our original vision grew from a commitment to these
-                  communities: helping people rebuild through food security,
-                  training and opportunities to earn a living.
-                </p>
-                <a className="text-link" href="#nuba-story">
-                  Read our community history →
-                </a>
-              </article>
+              <article className="community-story"><span className="community-location">Belonging · Sudan</span><h3>Coptic Orthodox<span>community</span></h3><p>Sudan’s Coptic Orthodox families are part of the country’s social and spiritual life. War has separated families, disrupted livelihoods and threatened churches and community spaces.</p><p>This is our founder’s own community. Risemeup brings that personal connection to practical support for families facing displacement and uncertainty.</p><a className="text-link" href="#relief">Supporting families now →</a></article>
+              <article className="community-story"><span className="community-location">Resilience · South Kordofan</span><h3>Nuba Mountains<span>communities</span></h3><p>The Nuba Mountains are home to diverse communities with deep ties to land and farming. Decades of conflict and displacement have interrupted education, food production and everyday life.</p><p>Our commitment is to help people rebuild through food security, practical training and opportunities to earn a living.</p><a className="text-link" href="#nuba-story">Read our community history →</a></article>
+              <article className="community-story"><span className="community-location">Dignity · Blue Nile</span><h3>Blue Nile<span>communities</span></h3><p>Blue Nile’s communities have endured attacks on civilians, destroyed villages and forced displacement. Conflict has uprooted families from their homes and farmland, disrupting food supplies, education and community life.</p><p>Risemeup stands alongside them, recognising their suffering and their right to safety, dignity and a voice in shaping their future.</p><a className="text-link" href="#relief">Supporting families now →</a></article>
             </div>
+            <section className="three-community-purpose" aria-labelledby="shared-community-purpose"><p className="eyebrow">Our shared purpose</p><h3 id="shared-community-purpose">Food, skills and the opportunity to rebuild.</h3><p>Our commitment embraces all three communities. Alongside food assistance, our vision for Virgin Mary Farm brings together sustainable farming, clean energy, education and practical training, with women affected by war at the heart of the planned rebuilding.</p></section>
+            <details className="three-community-sources"><summary>Historical background for the Blue Nile introduction</summary><p>Amnesty International’s <a href="https://www.amnesty.org/en/documents/AFR54/011/2013/en/" target="_blank" rel="noopener noreferrer">2013 Blue Nile report</a> documents war crimes, attacks on civilians and denial of humanitarian access. Its <a href="https://www.amnesty.org.uk/knowledge-hub/all-resources/sudan-new-evidence-scorched-earth-tactics-blue-nile/" target="_blank" rel="noopener noreferrer">accompanying account</a> describes destroyed villages and forced displacement. This background concerns documented events from the conflict beginning in 2011.</p></details>
           </div>
         </section>
         <ClassicVision />
@@ -279,7 +237,7 @@ export default function App() {
                 <div className="rm-estate-flourish" aria-hidden="true"><span /><svg viewBox="0 0 40 48" fill="none" stroke="currentColor" strokeWidth="1"><path d="M20 46V18M20 33C6 33 3 24 4 15c12 0 16 8 16 18Zm0-10C34 22 36 12 34 4c-10 1-14 7-14 19Z" /><path d="m20 33-10-12m10 1 10-12" /></svg><span /></div>
               </div>
               <div className="rm-estate-status"><strong>Rebuilding planned</strong></div>
-              <article className="rm-farm-introduction" aria-labelledby="farm-intro-title"><h3 id="farm-intro-title">Rooted in community. Rebuilding with hope.</h3><p>For generations, Sudan’s Coptic Orthodox community has been part of the country’s life and history. Since the introduction of Sharia-based laws in September 1983, the community has faced periods of discrimination and restrictions on religious freedom. The war that began in April 2023 has brought renewed attacks on churches and clergy.</p><p>Virgin Mary Farm in Omdurman belongs to the Coptic Orthodox Church in Sudan. Destroyed during the war, it is at the heart of Risemeup’s vision for recovery. We aim to rebuild it as a place where women and families from the Coptic Orthodox and Nuba Mountains communities can grow food, learn practical skills and rebuild their livelihoods.</p><details><summary>Background sources</summary><p>Historical context: <a href="https://www.uscirf.gov/sites/default/files/resources/Sudan%20Policy%20Brief%2011%207%2013%20FINAL.pdf" target="_blank" rel="noopener">USCIRF, 2013</a>. Community background: <a href="https://www.uscirf.gov/sites/default/files/Sudan%20Policy%20Update.pdf" target="_blank" rel="noopener">USCIRF, 2017</a> and <a href="https://www.uscirf.gov/news-room/releases-statements/uscirf-sounds-alarm-attacks-against-religious-communities-sudan" target="_blank" rel="noopener">USCIRF, April 2024</a>. Farm ownership and wartime damage are based on information provided by Risemeup’s founder. The farm is not currently operational; rebuilding is planned.</p></details></article>
+              <article className="rm-farm-introduction" aria-labelledby="farm-intro-title"><h3 id="farm-intro-title">Rooted in community. Rebuilding with hope.</h3><p>For generations, Sudan’s Coptic Orthodox community has been part of the country’s life and history. Since the introduction of Sharia-based laws in September 1983, the community has faced periods of discrimination and restrictions on religious freedom. The war that began in April 2023 has brought renewed attacks on churches and clergy.</p><p>Virgin Mary Farm in Omdurman belongs to the Coptic Orthodox Church in Sudan. Destroyed during the war, it is at the heart of Risemeup’s vision for recovery. We aim to rebuild it as a place where women and families from the Coptic Orthodox, Nuba Mountains and Blue Nile communities can grow food, learn practical skills and rebuild their livelihoods.</p><details><summary>Background sources</summary><p>Historical context: <a href="https://www.uscirf.gov/sites/default/files/resources/Sudan%20Policy%20Brief%2011%207%2013%20FINAL.pdf" target="_blank" rel="noopener">USCIRF, 2013</a>. Community background: <a href="https://www.uscirf.gov/sites/default/files/Sudan%20Policy%20Update.pdf" target="_blank" rel="noopener">USCIRF, 2017</a> and <a href="https://www.uscirf.gov/news-room/releases-statements/uscirf-sounds-alarm-attacks-against-religious-communities-sudan" target="_blank" rel="noopener">USCIRF, April 2024</a>. Farm ownership and wartime damage are based on information provided by Risemeup’s founder. The farm is not currently operational; rebuilding is planned.</p></details></article>
               <div className="rm-estate-pillars">
                 <article><h3>Sustainable agriculture.</h3><p>Rebuild productive farming, improve food security and create opportunities for communities to earn a living.</p></article>
                 <article><h3>Clean energy for farming.</h3><p>Plan solar-powered systems and biogas to support operations, make use of organic materials and care for the land.</p></article>
@@ -298,7 +256,7 @@ export default function App() {
               <p>Our main purpose is to help women affected by Sudan’s war rebuild their lives — including survivors of sexual violence, women whose husbands have been killed, and mothers raising children alone.</p>
               <p>We envision a farm where women can learn practical skills, earn an income and support their families. Sustainable farming education and shared community life would help them build independence and shape their own futures.</p>
               <p>For girls and young women, we plan education and skills opportunities that build confidence and widen future choices. Girls’ learning will be age-appropriate, supervised and designed to support their safety and continued schooling.</p>
-              <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from both communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
+              <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from all three communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
               <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
             </section>
             </div>
@@ -533,7 +491,7 @@ export default function App() {
       <dialog ref={donationDialog} className="classic-donation-dialog" aria-labelledby="donation-title" onClick={event => { if (event.target === event.currentTarget) donationDialog.current?.close(); }}>
         <button className="dialog-close" aria-label="Close donation information" onClick={() => donationDialog.current?.close()}>×</button>
         <p className="eyebrow">Food assistance</p><h2 id="donation-title">Support families today.</h2>
-        <p>Your support can help families in Sudan’s Coptic Orthodox and Nuba Mountains communities access food and essential supplies.</p>
+        <p>Your support can help families in Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities access food and essential supplies.</p>
         <hr /><h3>Arrange a donation with the team.</h3><p>Please contact us to discuss the purpose of your support and the available arrangements. This website does not take payments.</p>
         <a className="button" href={`mailto:${email}?subject=Food%20assistance%20support`}>Email about a donation →</a>
         <div className="dialog-contact"><a href={`mailto:${email}`}>{email}</a><a href="tel:+447867977844">+44 786 797 7844</a><a href="#contact" onClick={() => donationDialog.current?.close()}>Prepare an email enquiry →</a></div>

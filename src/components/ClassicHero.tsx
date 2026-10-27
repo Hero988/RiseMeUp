@@ -15,8 +15,8 @@ export default function ClassicHero() {
         </div>
         <aside className="rm-opening-card" aria-label="Our shared commitment">
           <svg viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M60 153V58M60 110C14 108 7 77 11 52c35-2 49 21 49 58Zm0-30c43-4 50-35 45-60-31 2-45 23-45 60Z" stroke="currentColor" strokeWidth="1.1" /><path d="m60 109-34-39m34 9 30-41" stroke="currentColor" strokeWidth="1.1" /></svg>
-          <p>Two communities.<br /><em>One shared future.</em></p>
-          <span>Coptic Orthodox &amp; Nuba Mountains</span>
+          <p>Three communities.<br /><em>One shared future.</em></p>
+          <span>Coptic Orthodox · Nuba Mountains · Blue Nile</span>
         </aside>
       </div>
       <div className="rm-opening-foot"><span>Rooted in London. Connected to Sudan.</span><a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a></div>

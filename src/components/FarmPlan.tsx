@@ -141,7 +141,7 @@ export default function FarmPlan() {
           <p>
             We plan to make Virgin Mary Farm a place to learn as well as produce
             food. Sustainable farming education and hands-on training will help
-            members of the Coptic Orthodox and Nuba Mountains communities build
+            members of the Coptic Orthodox, Nuba Mountains and Blue Nile communities build
             skills for employment, food security and lasting livelihoods.
           </p>
         </div>
