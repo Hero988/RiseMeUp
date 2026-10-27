@@ -274,6 +274,30 @@ export default function App() {
             </div>
           </div>
 
+          <div className="farm-mango-surround" id="mango-project-overview"><div className="container">
+            <a className="mango-callout" href="/mango-project/">
+              <img
+                src="/mango-selected-photo-six.svg"
+                alt="Golden mangoes on a tree, illustrating the proposed Mango Project"
+                width="840"
+                height="560"
+                loading="lazy"
+              />
+              <div>
+                <p className="eyebrow">
+                  A supporting project within Virgin Mary Farm
+                </p>
+                <h3>
+                  The Mango Project
+                </h3>
+                <p>
+                  A proposed route to better handling, packing and value for
+                  Sudanese mangoes.
+                </p>
+                <span className="mango-explore">Explore the Mango Project →</span>
+              </div>
+            </a>
+          </div></div>
         </section>
         <ClassicObjectives />
         <SDGs />
