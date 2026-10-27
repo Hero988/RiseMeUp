@@ -118,6 +118,7 @@ export default function App() {
             <a href="#team">Our team</a>
             <a href="/development-partners/">Partner with us</a>
             <a href="#contact">Contact</a>
+            <a className="button small" href="/mango-project/" target="_blank" rel="noopener noreferrer">Mango Project</a>
             <button className="button small" onClick={() => donationDialog.current?.showModal()}>Donate</button>
           </nav>
         </div>
