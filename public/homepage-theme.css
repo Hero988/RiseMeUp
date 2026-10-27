@@ -1379,3 +1379,7 @@
 .home-page.warm-brand #communities .three-community-sources{margin-top:22px;font-size:12px;color:#294b38}
 .home-page.warm-brand #communities .three-community-sources summary{cursor:pointer;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:800px){.home-page.warm-brand #communities .community-stories{grid-template-columns:1fr}}
+
+/* Approved modest orange oval for the women and girls call to action. */
+.home-page #virgin-mary-farm .farm-women > a.button.small{display:inline-flex;align-items:center;justify-content:center;background:#ed8b35!important;color:#fff!important;border:0;border-radius:999px;padding:12px 20px;font:500 13px/1.5 'DM Sans',Arial,sans-serif;text-decoration:none;min-height:44px}
+.home-page #virgin-mary-farm .farm-women > a.button.small:hover{background:#d87928!important}
