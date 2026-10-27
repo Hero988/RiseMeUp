@@ -220,9 +220,9 @@ export default function App() {
               </a>
             </div>
           </div>
-          <aside className="container crisis-history-link" aria-labelledby="crisis-history-title">
+          <aside className="container crisis-history-link" id="support-story-preview" aria-labelledby="crisis-history-title">
             <div><p className="eyebrow">Our story of practical support</p><h3 id="crisis-history-title">Practical help, when it matters.</h3><p>From pandemic food support in London to assistance for families in Sudan, discover the work behind Risemeup.</p></div>
-            <a className="text-link" href="/crisis-response/">Read our support story <Arrow /></a>
+            <a className="button" href="/crisis-response/">Read our support story <Arrow /></a>
           </aside>
         </section>
         <section id="virgin-mary-farm" className="section farm farm-estate-intro">
