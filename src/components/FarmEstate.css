@@ -195,3 +195,7 @@
 .home-page.warm-brand #virgin-mary-farm .rm-mango-mini{margin-left:40px;border-radius:999px;padding-left:6px;padding-right:14px}
 .home-page.warm-brand #virgin-mary-farm .rm-mango-mini img{border-radius:50%}
 @media(max-width:600px){.home-page.warm-brand #virgin-mary-farm .rm-mango-mini{margin-left:24px}}
+
+/* Slightly larger oval link for easier reading. */
+.home-page.warm-brand #virgin-mary-farm .rm-mango-mini{font-size:13px;gap:10px;padding:6px 17px 6px 6px}
+.home-page.warm-brand #virgin-mary-farm .rm-mango-mini img{width:40px;height:40px}
