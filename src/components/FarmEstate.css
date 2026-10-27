@@ -176,3 +176,12 @@
 .home-page.warm-brand #virgin-mary-farm .rm-estate-mango-button{display:inline-flex;align-items:center;min-height:36px;padding:9px 16px;border-radius:30px;background:#ee8b2b;color:white;font:500 11px/1.3 'DM Sans',Arial,sans-serif;text-decoration:none}
 .home-page.warm-brand #virgin-mary-farm .rm-estate-mango-button:hover{background:#d7731f}
 @media(max-width:600px){.home-page.warm-brand #virgin-mary-farm .rm-estate-mango{padding:18px;gap:16px;align-items:flex-start}.home-page.warm-brand #virgin-mary-farm .rm-estate-mango>img{width:85px;height:105px;flex-basis:85px}.home-page.warm-brand #virgin-mary-farm .rm-estate-mango h3{font-size:22px}.home-page.warm-brand #virgin-mary-farm .rm-estate-mango p:not(.eyebrow){font-size:13px}}
+
+/* Smaller supporting-project link, preview variant. */
+.home-page.warm-brand #virgin-mary-farm .rm-estate-mango{max-width:470px;padding:12px;gap:14px;border-radius:16px;margin-top:20px}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-mango>img{width:76px;height:82px;flex-basis:76px;border-radius:10px}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-mango .eyebrow{font-size:8px;line-height:1.4;letter-spacing:.05em;margin-bottom:4px}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-mango h3{font-size:20px;line-height:1.2;margin-bottom:5px}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-mango p:not(.eyebrow){font-size:11px;line-height:1.5;margin-bottom:7px}
+.home-page.warm-brand #virgin-mary-farm .rm-estate-mango-button{font-size:10px;min-height:28px;padding:6px 12px}
+@media(max-width:600px){.home-page.warm-brand #virgin-mary-farm .rm-estate-mango{max-width:100%}.home-page.warm-brand #virgin-mary-farm .rm-estate-mango>img{width:66px;height:78px;flex-basis:66px}}
