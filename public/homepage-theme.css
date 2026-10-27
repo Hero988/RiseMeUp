@@ -1381,5 +1381,21 @@
 @media(max-width:800px){.home-page.warm-brand #communities .community-stories{grid-template-columns:1fr}}
 
 /* Approved modest orange oval for the women and girls call to action. */
-.home-page #virgin-mary-farm .farm-women > a.button.small{display:inline-flex;align-items:center;justify-content:center;background:#ed8b35!important;color:#fff!important;border:0;border-radius:999px;padding:12px 20px;font:500 13px/1.5 'DM Sans',Arial,sans-serif;text-decoration:none;min-height:44px}
+.home-page #virgin-mary-farm .farm-women > a.button.small{display:inline-flex;align-items:center;justify-content:center;background:#b15312!important;color:#fff!important;border:0;border-radius:999px;padding:12px 20px;font:500 13px/1.5 'DM Sans',Arial,sans-serif;text-decoration:none;min-height:44px}
 .home-page #virgin-mary-farm .farm-women > a.button.small:hover{background:#d87928!important}
+
+/* Readable overview before the full farm planning details. */
+.home-page #land-framework .growth-overview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin:24px 0}
+.home-page #land-framework .growth-overview .growth-illustration{margin:0}
+.home-page #land-framework .growth-illustration img{max-height:380px;width:auto;max-width:100%;object-fit:contain}
+.home-page #land-framework .growth-summary{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.home-page #land-framework .growth-summary li{display:flex;gap:16px;padding:14px 18px;background:#eef1e6;border:1px solid #d1dbc7;border-radius:16px}
+.home-page #land-framework .growth-summary li>span{font:400 22px/1.2 Lora,Georgia,serif;color:#9a491f}
+.home-page #land-framework .growth-summary h4{font:400 21px/1.3 Lora,Georgia,serif;color:#a64c20;margin:0 0 5px}
+.home-page #land-framework .growth-summary p{font:400 14px/1.6 'DM Sans',Arial,sans-serif;color:#294b38;margin:0}
+.home-page #land-framework .growth-phase-one .growth-illustration img{max-height:340px}
+.home-page #farm-readiness .water-more-details{margin:24px 0;padding:18px 22px;background:#f0f4eb;border:1px solid #cbd5c2;border-radius:18px}
+.home-page #farm-readiness .water-more-details>summary{cursor:pointer;font:600 15px/1.6 'DM Sans',Arial,sans-serif;color:#294b38}
+.home-page #farm-readiness .water-more-details[open]>summary{margin-bottom:22px}
+.home-page #farm-readiness .water-update-note{font-size:13px}
+@media(max-width:760px){.home-page #land-framework .growth-overview{grid-template-columns:1fr}.home-page #land-framework .growth-illustration img{max-height:320px}.home-page #land-framework .growth-summary{gap:10px}.home-page #land-framework .growth-summary h4{font-size:20px}}

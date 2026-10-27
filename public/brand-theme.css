@@ -143,3 +143,10 @@ body.warm-brand .rm-opening-button,
 body.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary {
   border-radius:999px !important;
 }
+
+/* Deeper orange keeps pale button lettering easier to read across the site. */
+body.warm-brand .button:not(.outline),body.warm-brand .rm-opening-button,body.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary,body.warm-brand .mango-explore{background:#b15312!important;background-image:none!important;color:#fffaf0!important;border-color:#b15312!important}
+body.warm-brand .button:not(.outline):hover,body.warm-brand .rm-opening-button:hover,body.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary:hover{background:#963f09!important;border-color:#963f09!important;color:#fffaf0!important}
+body.warm-brand .button,body.warm-brand .rm-opening-button{font-size:15px!important;line-height:1.5;min-height:44px}
+body.warm-brand .button:focus-visible,body.warm-brand .rm-opening-button:focus-visible{outline:3px solid #294b38;outline-offset:4px}
+@media(max-width:600px){body.warm-brand .button,body.warm-brand .rm-opening-button{font-size:14px!important;max-width:100%;white-space:normal;text-align:center}}
