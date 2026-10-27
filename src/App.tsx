@@ -244,15 +244,7 @@ export default function App() {
                 <article><h3>Education &amp; training.</h3><p>Connect sustainable farming education with hands-on skills in growing, water management, processing and maintenance.</p></article>
               </div>
               <div className="rm-estate-actions"><a className="rm-estate-primary" href="/development-partners/">Partner in rebuilding <span aria-hidden="true">↗</span></a></div>
-              <article className="rm-estate-mango" id="mango-project-link" aria-labelledby="farm-mango-title">
-                <img src="/mango-selected-photo-six.svg" alt="Golden mangoes on a tree, illustrating the proposed Mango Project" width="140" height="140" loading="lazy" />
-                <div>
-                  <p className="eyebrow">A supporting project within Virgin Mary Farm</p>
-                  <h3 id="farm-mango-title">The Mango Project</h3>
-                  <p>A proposed route to better handling, packing and value for Sudanese mangoes.</p>
-                  <a className="rm-estate-mango-button" href="/mango-project/">View the Mango Project ↗</a>
-                </div>
-              </article>
+              <a className="rm-mango-mini" id="mango-project-link" href="/mango-project/"><img src="/mango-selected-photo-six.svg" alt="" width="32" height="32" /><span>Mango Project ↗</span></a>
               <div className="rm-estate-foot"><p>Women and girls at the heart of the vision.</p><a href="#farm-women-title" aria-label="Read about women and girls at the heart of Virgin Mary Farm">↓</a></div>
             </div>
           </div>
