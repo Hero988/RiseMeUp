@@ -258,7 +258,7 @@ export default function App() {
               <p>We envision a farm where women can learn practical skills, earn an income and support their families. Sustainable farming education and shared community life would help them build independence and shape their own futures.</p>
               <p>For girls and young women, we plan education and skills opportunities that build confidence and widen future choices. Girls’ learning will be age-appropriate, supervised and designed to support their safety and continued schooling.</p>
               <p className="women-plan-note">This is our planned purpose as we work towards rebuilding. Women from all three communities would help shape the programme. Participation should never require sharing a personal experience of violence. Farming and community support do not replace specialist care; we welcome women’s organisations and qualified support partners to help develop an appropriate approach.</p>
-              <a className="text-link" href="/development-partners/#women">Help develop this vision →</a>
+              <a className="button small" href="/development-partners/#women">Help develop this vision →</a>
             </section>
             </div>
           </div>
