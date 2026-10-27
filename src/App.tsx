@@ -421,7 +421,7 @@ export default function App() {
                   defined part of the main farm project.
                 </p>
                 <a
-                  className="button outline"
+                  className="button"
                   href={`mailto:${email}?subject=Virgin%20Mary%20Farm%20partnership`}
                 >
                   Support the farm’s rebuilding <Arrow />
