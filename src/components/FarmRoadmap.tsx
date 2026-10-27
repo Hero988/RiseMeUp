@@ -49,12 +49,15 @@ export default function FarmRoadmap() {
           <p className="growth-family-target"><strong>300+ families</strong><span>Proposed long-term reach · participant numbers and selection to be agreed with communities.</span></p>
         </div>
       </div>
+      <div className="growth-overview">
       <figure className="growth-illustration">
         <a href="/virgin-mary-five-phase-roadmap.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open the illustrated five-phase farm plan at full size in a new tab">
           <img src="/virgin-mary-five-phase-roadmap.jpeg" width="1024" height="1536" loading="lazy" alt="Proposed Virgin Mary Farm recovery roadmap: start production, expand farming, build commercial capacity, add value and develop the full 130-hectare farm, with income intended to support gradual reinvestment." />
         </a>
         <figcaption>Proposed recovery roadmap, not existing facilities. Areas, the ambition to reach 300+ families and income allocations are illustrative; feasibility, costs and financial arrangements remain to be assessed and agreed.</figcaption>
       </figure>
+      <ol className="growth-summary" aria-label="Five proposed recovery phases">{phases.map((phase, index) => <li key={phase.title}><span aria-hidden="true">0{index + 1}</span><div><h4>{phase.title}</h4><p>{phase.outcome}</p></div></li>)}</ol>
+      </div>
       <a className="button growth-view-image" href="/virgin-mary-five-phase-roadmap.jpeg" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
       <section className="growth-phase-one" id="phase-one-equipment" aria-labelledby="phase-one-equipment-title">
         <p className="eyebrow">A closer look at Phase 1</p>

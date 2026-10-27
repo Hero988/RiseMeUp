@@ -904,7 +904,7 @@
 .home-page.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary,
 .home-page.warm-brand #virgin-mary-farm #farm-readiness .button,
 .home-page.warm-brand #virgin-mary-farm #land-framework .button {
-  background:#ed8b35!important;border:1px solid #ed8b35!important;color:#fffaf0!important;
+  background:#b15312!important;border:1px solid #b15312!important;color:#fffaf0!important;
   border-radius:999px!important;box-shadow:none;
 }
 .home-page.warm-brand #hero .rm-opening-button:hover,
@@ -912,7 +912,7 @@
 .home-page.warm-brand #virgin-mary-farm .rm-estate-actions a.rm-estate-primary:hover,
 .home-page.warm-brand #virgin-mary-farm #farm-readiness .button:hover,
 .home-page.warm-brand #virgin-mary-farm #land-framework .button:hover {
-  background:#d87928!important;border-color:#d87928!important;
+  background:#963f09!important;border-color:#963f09!important;
 }
 
 /* Approved matching medium orange for the remaining four green homepage actions. */
@@ -920,14 +920,14 @@
 .home-page.warm-brand #virgin-mary-farm #farm-plan .farm-education .button,
 .home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners>a,
 .home-page.warm-brand #partnership .button {
- background:#ed8b35!important;border:1px solid #ed8b35!important;color:#fffaf0!important;
+ background:#b15312!important;border:1px solid #b15312!important;color:#fffaf0!important;
  border-radius:999px!important;box-shadow:none;
 }
 .home-page.warm-brand .site-header .button:hover,
 .home-page.warm-brand #virgin-mary-farm #farm-plan .farm-education .button:hover,
 .home-page.warm-brand #sdgs.rm-sdg-editorial .rm-sdg-partners>a:hover,
 .home-page.warm-brand #partnership .button:hover {
- background:#d87928!important;border-color:#d87928!important;
+ background:#963f09!important;border-color:#963f09!important;
 }
 
 /* Approved founder section: ivory, orange Lora, sage values, compact lower-left name badge. */
@@ -985,10 +985,10 @@
  display:block;font:400 12px/1.7 'DM Sans',sans-serif;color:#526b54;
 }
 .home-page.warm-brand #founder .text-link {
- display:inline-block;background:#ed8b35;border:1px solid #ed8b35;border-radius:999px;
+ display:inline-block;background:#b15312;border:1px solid #b15312;border-radius:999px;
  padding:15px 24px;color:#fffaf0;font:500 13px/1.6 'DM Sans',sans-serif;text-decoration:none;
 }
-.home-page.warm-brand #founder .text-link:hover {background:#d87928;border-color:#d87928}
+.home-page.warm-brand #founder .text-link:hover {background:#963f09;border-color:#963f09}
 @media(max-width:950px) {
  .home-page.warm-brand #founder .classic-founder-grid {gap:35px}
  .home-page.warm-brand #founder .classic-founder-values {grid-template-columns:1fr}
@@ -1081,10 +1081,10 @@
 
 /* Approved orange vision-development link in the women and girls section. */
 .home-page #virgin-mary-farm .farm-women > .text-link {
- color:#ed8b35;border-bottom-color:#ed8b35;
+ color:#b15312;border-bottom-color:#b15312;
 }
 .home-page #virgin-mary-farm .farm-women > .text-link:hover {
- color:#d87928;border-bottom-color:#d87928;
+ color:#963f09;border-bottom-color:#963f09;
 }
 
 .home-page #virgin-mary-farm .farm-women > .text-link{font-weight:700}
@@ -1109,7 +1109,7 @@
 .home-page.warm-brand #virgin-mary-farm .mango-callout .eyebrow:before,.home-page.warm-brand #virgin-mary-farm .mango-callout .eyebrow:after{display:none;content:none}
 .home-page.warm-brand #virgin-mary-farm .mango-callout h3{font:500 36px/1.25 'Lora',Georgia,serif;letter-spacing:-.025em;color:#b45c2f;margin:0 0 17px}
 .home-page.warm-brand #virgin-mary-farm .mango-callout>div>p:not(.eyebrow){font:400 15px/1.85 'DM Sans',sans-serif;color:#405b48;margin:0 0 20px}
-.home-page.warm-brand #virgin-mary-farm .mango-callout .mango-explore{display:inline-block;font:500 12px/1.7 'DM Sans',sans-serif;background:#ed8b35;color:#fffaf0;padding:12px 22px;border:1px solid #ed8b35;border-radius:999px}
+.home-page.warm-brand #virgin-mary-farm .mango-callout .mango-explore{display:inline-block;font:500 12px/1.7 'DM Sans',sans-serif;background:#b15312;color:#fffaf0;padding:12px 22px;border:1px solid #b15312;border-radius:999px}
 .home-page.warm-brand #virgin-mary-farm .mango-callout:hover{border-color:#819a73}
 .home-page.warm-brand #virgin-mary-farm .mango-callout:focus-visible{outline:3px solid #b45c2f;outline-offset:5px}
 @media(max-width:650px){
@@ -1171,7 +1171,7 @@
 .home-page.warm-brand #nuba-story .classic-history-response{display:block;background:#e9eddf;border:1px solid #dce3d1;border-radius:24px;padding:30px;margin:0}
 .home-page.warm-brand #nuba-story .classic-history-response h3{font-size:32px}
 .home-page.warm-brand #nuba-story .actions{display:flex;align-items:center;flex-wrap:wrap;gap:25px;margin-top:23px}
-.home-page.warm-brand #nuba-story .button{display:inline-block;background:#ed8b35;border:1px solid #ed8b35;color:#fffaf0;border-radius:999px;padding:12px 24px;text-decoration:none}
+.home-page.warm-brand #nuba-story .button{display:inline-block;background:#b15312;border:1px solid #b15312;color:#fffaf0;border-radius:999px;padding:12px 24px;text-decoration:none}
 @media(max-width:760px){
 .home-page.warm-brand #nuba-story .classic-history-map{grid-template-columns:1fr;padding:22px;gap:25px}
 .home-page.warm-brand #nuba-story .classic-history-map > img{height:330px}
@@ -1220,7 +1220,7 @@
 .home-page.warm-brand #contact .optional-label,
 .home-page.warm-brand #contact .fine-print{font-size:12px;color:#526b53}
 .home-page.warm-brand #contact .fine-print{line-height:1.7}
-.home-page.warm-brand #contact .button{border:1px solid #ed8b35;background:#ed8b35;color:#fffaf0;border-radius:999px;padding:13px 24px;font:500 14px/1.5 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #contact .button{border:1px solid #b15312;background:#b15312;color:#fffaf0;border-radius:999px;padding:13px 24px;font:500 14px/1.5 'DM Sans',Arial,sans-serif}
 .home-page.warm-brand #contact .enquiry-fallback{margin:18px 0 0}
 @media(max-width:760px){
 .home-page.warm-brand #contact .contact-grid{grid-template-columns:1fr}
@@ -1243,7 +1243,7 @@
 .home-page.warm-brand #donate .support-grid article > span{font:400 11px/1.85 'DM Sans',Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#526b53;margin:0 0 18px}
 .home-page.warm-brand #donate h3{font:400 31px/1.3 'Lora',Georgia,serif;letter-spacing:-.02em;color:#b45c2f;margin:0 0 20px}
 .home-page.warm-brand #donate .support-grid p{font:400 16px/1.85 'DM Sans',Arial,sans-serif;color:#294b38;margin:0 0 25px}
-.home-page.warm-brand #donate .button{display:inline-flex;justify-content:space-between;align-items:center;gap:20px;align-self:flex-start;margin-top:auto;background:#ed8b35;border:1px solid #ed8b35;border-radius:999px;color:#fffaf0;padding:13px 22px;text-decoration:none;font:500 14px/1.6 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #donate .button{display:inline-flex;justify-content:space-between;align-items:center;gap:20px;align-self:flex-start;margin-top:auto;background:#b15312;border:1px solid #b15312;border-radius:999px;color:#fffaf0;padding:13px 22px;text-decoration:none;font:500 14px/1.6 'DM Sans',Arial,sans-serif}
 .home-page.warm-brand #donate .button.outline{background:transparent;color:#a64f26;border-color:#bd754d}
 .home-page.warm-brand #donate .support-disclosure{margin:27px auto 0;max-width:950px;font:400 13px/1.85 'DM Sans',Arial,sans-serif;color:#526b53;text-align:center}
 .home-page.warm-brand #donate .support-disclosure a{color:#9c4e24;text-underline-offset:4px}
@@ -1381,5 +1381,21 @@
 @media(max-width:800px){.home-page.warm-brand #communities .community-stories{grid-template-columns:1fr}}
 
 /* Approved modest orange oval for the women and girls call to action. */
-.home-page #virgin-mary-farm .farm-women > a.button.small{display:inline-flex;align-items:center;justify-content:center;background:#ed8b35!important;color:#fff!important;border:0;border-radius:999px;padding:12px 20px;font:500 13px/1.5 'DM Sans',Arial,sans-serif;text-decoration:none;min-height:44px}
-.home-page #virgin-mary-farm .farm-women > a.button.small:hover{background:#d87928!important}
+.home-page #virgin-mary-farm .farm-women > a.button.small{display:inline-flex;align-items:center;justify-content:center;background:#b15312!important;color:#fff!important;border:0;border-radius:999px;padding:12px 20px;font:500 13px/1.5 'DM Sans',Arial,sans-serif;text-decoration:none;min-height:44px}
+.home-page #virgin-mary-farm .farm-women > a.button.small:hover{background:#963f09!important}
+
+/* Readable overview before the full farm planning details. */
+.home-page #land-framework .growth-overview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin:24px 0}
+.home-page #land-framework .growth-overview .growth-illustration{margin:0}
+.home-page #land-framework .growth-illustration img{max-height:380px;width:auto;max-width:100%;object-fit:contain}
+.home-page #land-framework .growth-summary{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.home-page #land-framework .growth-summary li{display:flex;gap:16px;padding:14px 18px;background:#eef1e6;border:1px solid #d1dbc7;border-radius:16px}
+.home-page #land-framework .growth-summary li>span{font:400 22px/1.2 Lora,Georgia,serif;color:#9a491f}
+.home-page #land-framework .growth-summary h4{font:400 21px/1.3 Lora,Georgia,serif;color:#a64c20;margin:0 0 5px}
+.home-page #land-framework .growth-summary p{font:400 14px/1.6 'DM Sans',Arial,sans-serif;color:#294b38;margin:0}
+.home-page #land-framework .growth-phase-one .growth-illustration img{max-height:340px}
+.home-page #farm-readiness .water-more-details{margin:24px 0;padding:18px 22px;background:#f0f4eb;border:1px solid #cbd5c2;border-radius:18px}
+.home-page #farm-readiness .water-more-details>summary{cursor:pointer;font:600 15px/1.6 'DM Sans',Arial,sans-serif;color:#294b38}
+.home-page #farm-readiness .water-more-details[open]>summary{margin-bottom:22px}
+.home-page #farm-readiness .water-update-note{font-size:13px}
+@media(max-width:760px){.home-page #land-framework .growth-overview{grid-template-columns:1fr}.home-page #land-framework .growth-illustration img{max-height:320px}.home-page #land-framework .growth-summary{gap:10px}.home-page #land-framework .growth-summary h4{font-size:20px}}
