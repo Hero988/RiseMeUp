@@ -66,7 +66,7 @@ export default function FarmRoadmap() {
           </a>
           <figcaption>Proposed equipment and project-support activities, not existing assets or confirmed purchases. Water restoration comes first. Machinery specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</figcaption>
         </figure>
-        <div className="actions"><a className="button" href="/virgin-mary-phase-one-machinery.jpg?v=2" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="text-link" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
+        <div className="actions"><a className="button" href="/virgin-mary-phase-one-machinery.jpg?v=2" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="button" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
       </section>
       <details className="growth-details">
       <summary>Read the five phases and funding approach</summary>
