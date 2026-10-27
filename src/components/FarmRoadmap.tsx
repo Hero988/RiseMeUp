@@ -3,7 +3,7 @@ const phases = [
     title: "Start & produce",
     area: "20–30 hectares",
     label: "Indicative first-phase area",
-    text: "Assess the land and seven destroyed wells, restore a viable water source and build new storage. Establish irrigation, suitable machinery, farmer groups and practical training before starting marketable crops.",
+    text: "Inspect the land and seven wells reported intact, replace broken pumps and build new reservoir or tank storage. Establish irrigation, suitable machinery, farmer groups and practical training before starting marketable crops.",
     outcome: "A first harvest, practical skills and the beginnings of farm income.",
   },
   {

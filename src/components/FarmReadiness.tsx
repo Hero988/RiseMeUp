@@ -1,19 +1,19 @@
+import './WaterSystem.css';
+
 export default function FarmReadiness() {
   return (
-    <section className="farm-readiness" id="farm-readiness" aria-labelledby="farm-readiness-title">
-      <div>
-        <p className="eyebrow">Farm status and readiness</p>
-        <p className="readiness-date">Updated 26 October 2026 · Project information supplied 21 October</p>
-        <h3 id="farm-readiness-title">Rebuilding starts with water.</h3>
-        <p>Virgin Mary Farm was destroyed during the war and is not operational. Our founder reports that all seven wells were destroyed and the pumping equipment stolen.</p>
-      </div>
-      <dl>
-        <div><dt>Our first proposed step</dt><dd>Assess the wells, establish a viable water source and build new storage for an initial growing and training area.</dd></div>
-        <div><dt>Before work begins</dt><dd>Confirm safe access, written land-use terms, technical requirements, local responsibilities and a costed plan.</dd></div>
-        <div><dt>Help needed now</dt><dd>Water, irrigation and agricultural specialists to help assess the site and design the first stage.</dd></div>
-      </dl>
-      <div className="actions"><a className="button" href="/development-partners/#first-stage">Explore the first stage →</a><a className="text-link" href="/development-partners/#readiness">Read the full farm status →</a></div>
-      <p className="readiness-note">Equipment specifications, costs and delivery dates will follow assessment. The partner page includes land, management and equipment-ownership information.</p>
+    <section className="rm-water-system" id="farm-readiness" aria-labelledby="farm-readiness-title">
+      <p className="eyebrow">Virgin Mary Farm · A practical first step</p>
+      <h3 id="farm-readiness-title">Restore the pumps.<br /><em>Let the farm grow.</em></h3>
+      <p className="water-lead">Our latest update from Sudan reports that the seven wells remain intact, but their pumps are broken and need replacing. Our proposed next step is to restore pumping and build a reservoir, creating a water supply for growing and practical training.</p>
+      <aside className="water-status"><strong>Latest reported status · 27 October 2026</strong><p>Seven existing wells reported intact. Pumps reported broken and requiring replacement. This replaces the earlier account that the wells were destroyed. Technical inspection, water-quality tests and sustainable-yield tests are still needed.</p></aside>
+      <figure className="water-pathway"><a href="/water-system/" aria-label="Explore the proposed well, reservoir and greenhouse irrigation system"><img src="/water-system/water-pathway.svg" alt="Proposed water pathway: seven existing wells with replacement pumps feed a new reservoir; filtration and controls supply pipes and drip irrigation in ten planned greenhouses." width="1100" height="690" loading="lazy" /></a><figcaption>Concept diagram, not a site map or engineering design. All ten greenhouses are planned; the assessed first growing area may be smaller.</figcaption></figure>
+      <div className="water-priorities"><article><h4>Restore the water supply.</h4><p>Inspect the wells and specify suitable replacement pumps, controls and power from measured water levels and sustainable flow.</p></article><article><h4>Store water for when it is needed.</h4><p>Design a lined reservoir or suitable tank storage around the assessed supply, crop demand and reserve needs.</p></article><article><h4>Connect the greenhouses.</h4><p>Use filtration, controlled pipe branches and drip lines to deliver water close to plant roots.</p></article></div>
+      <div className="water-explanation"><h4>Store first. Irrigate when the crops need it.</h4><p>The proposed routine is pumping from 6 pm to 6 am into storage, then using the water for irrigation. This needs reliable night-time power. Daytime solar pumping into storage is another option to assess. Gravity supply or an irrigation pump will depend on site levels and pressure requirements.</p></div>
+      <details className="water-calculation"><summary>How big will the reservoir be?</summary><p>The final capacity is not yet set. The reported historical filling rate gives 7 wells × 6 barrels per hour × 12 hours = <strong>504 barrels</strong>. Assuming approximately 200 litres per barrel, that is <strong>100,800 litres (100.8 m³)</strong> over 12 hours.</p><p>This is a historical planning estimate, not a tested current yield or a reservoir specification. The exact barrel capacity and gallon standard need confirming. Greenhouse area, crops, pumping tests, irrigation timing, losses and reserve storage will determine the design.</p></details>
+      <div className="water-explanation"><p className="eyebrow">A system designed for this farm</p><h4>The right design. The skills to keep it working.</h4><p>Connect water supply, suitable energy and practical training in one coordinated system, designed around the land, crops and local operating needs.</p></div>
+      <div className="water-priorities"><article><h4>Understand the water.</h4><p>Test water quality, including salinity, and assess the soil and crops. Choose filtration and any additional treatment from the results.</p></article><article><h4>Match energy to the work.</h4><p>Assess renewable power alongside reliable available supplies, comparing pumping schedules, operating costs and maintenance.</p></article><article><h4>Build local skills.</h4><p>Include operator training, routine checks, filter cleaning, spare parts and agreed servicing responsibilities.</p></article></div>
+      <div className="actions"><a className="button" href="/water-system/">Explore the interactive water plan →</a><a className="text-link" href="/development-partners/#equipment">View equipment needs →</a></div>
     </section>
   );
 }
