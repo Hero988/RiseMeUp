@@ -1399,3 +1399,9 @@
 .home-page #farm-readiness .water-more-details[open]>summary{margin-bottom:22px}
 .home-page #farm-readiness .water-update-note{font-size:13px}
 @media(max-width:760px){.home-page #land-framework .growth-overview{grid-template-columns:1fr}.home-page #land-framework .growth-illustration img{max-height:320px}.home-page #land-framework .growth-summary{gap:10px}.home-page #land-framework .growth-summary h4{font-size:20px}}
+
+/* Compact support-story button with a centred, larger label. */
+.home-page #relief .crisis-history-link{grid-template-columns:minmax(0,1fr) max-content;gap:28px}
+.home-page #relief .crisis-history-link > .button{display:inline-flex;align-items:center;justify-content:center;justify-self:end;width:fit-content;min-width:0;max-width:100%;min-height:44px;padding:10px 16px;gap:0;text-align:center;font-size:16px!important;font-weight:600!important;line-height:24px;border:0}
+.home-page #relief .crisis-history-link > .button > span[aria-hidden="true"]{display:none}
+@media(max-width:700px){.home-page #relief .crisis-history-link > .button{margin-top:20px}}
