@@ -44,17 +44,13 @@ export function ClassicVision() {
           <p className="chapter">The future we envision</p>
           <h3>Our Vision</h3>
           <p>A future where communities affected by war can live with dignity, grow nutritious food and build lasting livelihoods.</p>
-          <p>We envision Virgin Mary Farm as a place where women can gain skills and independence, young people can learn, and families from all three communities can build a more secure future together.</p>
-          <p>Where land flourishes, opportunity is shared and families have the freedom to rebuild their lives.</p>
-          
+          <p>We envision a farm where women gain independence, young people learn and families from all three communities rebuild together. Where land flourishes, opportunity is shared and people have the freedom to shape their future.</p>
         </article>
         <article id="mission">
           <p className="chapter">The work that guides us</p>
           <h3>Our Mission</h3>
           <p>To support Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities with food assistance and a practical path towards recovery.</p>
-          <p>We will work with communities and technical partners to shape each stage of rebuilding, prioritising women affected by war. Through hands-on training, we aim to help people grow food, care for the land and earn a living.</p>
-          <p>With our partners, we aim to rebuild Virgin Mary Farm as a place for sustainable farming, clean energy, learning and practical training.</p>
-          
+          <p>Working with communities and technical partners, we aim to rebuild Virgin Mary Farm through sustainable agriculture, clean energy and practical training—helping women affected by war gain skills, earn a living and support their families.</p>
         </article>
       </div>
     </div>

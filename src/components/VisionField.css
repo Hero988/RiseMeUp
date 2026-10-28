@@ -32,7 +32,7 @@
 .home-page #vision-mission.rm-field-vision .vision-grid article {
   position:static;display:flex;flex-direction:column;min-width:0;overflow:visible;
   background:#e9eddf;color:#294b38;border:1px solid #dce3d1;
-  border-radius:22px;padding:32px;text-align:left;box-shadow:none;
+  border-radius:22px;padding:26px 30px;text-align:left;box-shadow:none;
 }
 .home-page #vision-mission.rm-field-vision .vision-grid article::before {content:none}
 .home-page #vision-mission.rm-field-vision .chapter {
@@ -40,17 +40,17 @@
   text-transform:uppercase;color:#526b53;margin:0 0 16px;
 }
 .home-page #vision-mission.rm-field-vision .vision-grid h3 {
-  font:400 34px/1.25 'Lora',Georgia,serif;color:#b45c2f;margin:0 0 24px;
+  font:400 34px/1.25 'Lora',Georgia,serif;color:#b45c2f;margin:0 0 18px;
   letter-spacing:normal;
 }
 .home-page #vision-mission.rm-field-vision .vision-grid article > p:not(.chapter) {
-  font:400 16px/1.85 'DM Sans',Arial,sans-serif;color:#294b38;
-  max-width:none;margin:0 0 20px;text-shadow:none;
+  font:400 16px/1.75 'DM Sans',Arial,sans-serif;color:#294b38;
+  max-width:none;margin:0 0 16px;text-shadow:none;
 }
 .home-page #vision-mission.rm-field-vision .vision-grid article > p + p:not(.chapter) {margin-top:0}
 .home-page #vision-mission.rm-field-vision .vision-grid article > p:last-child:not(.chapter) {
-  font:italic 400 20px/1.6 'Lora',Georgia,serif;color:#294b38;
-  margin:auto 0 0;padding-top:10px;
+  font:400 16px/1.75 'DM Sans',Arial,sans-serif;color:#294b38;
+  margin:0;padding-top:0;
 }
 @media(max-width:650px) {
   .home-page #vision-mission.rm-field-vision {padding:18px 0 35px}
