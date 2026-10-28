@@ -1407,5 +1407,5 @@
 @media(max-width:700px){.home-page #relief .crisis-history-link > .button{margin-top:20px}}
 
 /* Preview only: a softer orange for the support-story action. */
-.home-page #relief .crisis-history-link > a.button{background:#ee963f!important;color:#243c30!important;box-shadow:none}
-.home-page #relief .crisis-history-link > a.button:hover{background:#e68a32!important;color:#243c30!important}
+.home-page #relief .crisis-history-link > a.button{background:#dc7929!important;color:#192d22!important;box-shadow:none}
+.home-page #relief .crisis-history-link > a.button:hover{background:#d57224!important;color:#192d22!important}
