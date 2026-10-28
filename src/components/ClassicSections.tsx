@@ -49,7 +49,7 @@ export function ClassicVision() {
         <article id="mission">
           <p className="chapter">The work that guides us</p>
           <h3>Our Mission</h3>
-          <p>To support Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities with food assistance and a practical path towards recovery.</p>
+          <p>To support Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities through food assistance and lasting recovery.</p>
           <p>Working with communities and technical partners, we aim to rebuild Virgin Mary Farm through sustainable agriculture, clean energy and practical training—helping women affected by war gain skills, earn a living and support their families.</p>
         </article>
       </div>
