@@ -44,6 +44,7 @@ export function ClassicVision() {
           <p className="chapter">The future we envision</p>
           <h3>Our Vision</h3>
           <p>A future where communities affected by war can live with dignity, grow nutritious food and build lasting livelihoods.</p>
+          <p>We envision Virgin Mary Farm as a place where women can gain skills and independence, young people can learn, and families from all three communities can build a more secure future together.</p>
           <p>Where land flourishes, opportunity is shared and families have the freedom to rebuild their lives.</p>
           
         </article>
