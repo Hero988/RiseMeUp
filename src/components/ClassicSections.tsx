@@ -52,6 +52,7 @@ export function ClassicVision() {
           <p className="chapter">The work that guides us</p>
           <h3>Our Mission</h3>
           <p>To support Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities with food assistance and a practical path towards recovery.</p>
+          <p>We will work with communities and technical partners to shape each stage of rebuilding, prioritising women affected by war. Through hands-on training, we aim to help people grow food, care for the land and earn a living.</p>
           <p>With our partners, we aim to rebuild Virgin Mary Farm as a place for sustainable farming, clean energy, learning and practical training.</p>
           
         </article>
