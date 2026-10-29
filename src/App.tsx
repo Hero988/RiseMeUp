@@ -322,16 +322,25 @@ export default function App() {
               <article>
                 <h3>Immediate relief</h3>
                 <p>
-                  Support food assistance and strengthen the practical response
-                  to families’ needs.
+                  Support food assistance and essential supplies for families
+                  affected by Sudan’s war. Help us respond through trusted
+                  community connections, as available resources and safe access
+                  allow.
                 </p>
+                <a className="text-link" href="#relief">
+                  Explore food assistance <Arrow />
+                </a>
               </article>
               <article>
                 <h3>Equipment & infrastructure</h3>
                 <p>
-                  Explore support for solar pumps, irrigation, machinery, tools,
-                  storage and farm infrastructure.
+                  Help plan solar pumps, irrigation, tools, machinery and storage
+                  for Virgin Mary Farm. Match equipment to assessed needs, with
+                  installation, maintenance and operator training in mind.
                 </p>
+                <a className="text-link" href="/development-partners/#equipment">
+                  Explore equipment needs <Arrow />
+                </a>
               </article>
               <article>
                 <h3>Education & technical partnership</h3>
