@@ -144,10 +144,10 @@ export default function App() {
               </p>
               <p>
                 For the people we support, the losses reach beyond homes and
-                income. Families have been displaced, food has become harder to
-                access, and churches have been damaged, burned, destroyed or
-                occupied. These places hold faith, memories and community
-                life—their loss is felt far beyond their walls.
+                livelihoods. Families have been displaced, access to food has
+                become uncertain, and churches have been damaged, destroyed or
+                occupied. These places of worship hold memories and bring
+                communities together—their loss is felt far beyond their walls.
               </p>
               <p>
                 Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities have
