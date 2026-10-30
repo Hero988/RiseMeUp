@@ -64,7 +64,13 @@ the public website.
 
 ## Vercel retirement
 
-Only disconnect RiseMeUp's Git integration after automated IONOS publishing
-has succeeded. Preserve the legacy Vercel project and deployments for
-recovery; never delete them or change another project. No DNS or email
-changes are required for this migration.
+On October 30, 2026, automatic GitHub-to-IONOS publishing passed for commit
+`d493ef5a254367607c942af8a723ccb743c77945` (GitHub Actions run `41083336843`).
+Both the apex and www domains served that revision and all five checked pages.
+RiseMeUp's Vercel Git integration was then disconnected. Future pushes no
+longer trigger Vercel deployments. The old Vercel project, deployments, and
+domain associations are retained for recovery; they have not been deleted or
+paused. Public DNS already points to IONOS and was not changed.
+
+Preserve that separation; never reconnect Vercel during routine publishing or
+change another project. No email or billing settings were changed.

@@ -32,5 +32,5 @@ The owner explicitly requests that normal website updates be saved to GitHub and
 - This plan uses SSH/SFTP command-line access, not IONOS Cloud infrastructure. Publishing credentials are isolated in GitHub environment secrets `RISEMEUP_IONOS_SSH_KEY` and `RISEMEUP_IONOS_KNOWN_HOSTS`.
 - Local credentials live only in ignored `.env.ionos.local` and `.ionos.local/` with restricted file permissions. Never display, commit, upload as website files, or copy them into another project. Use a dedicated key with strict host verification; do not change global SSH configuration.
 - Preserve old WordPress files/database and private backups. Do not use deployment deletion flags or remove old data without a separate explicit request.
-- Legacy Vercel reference, only for migration/recovery: project `prj_vbgZLz2nFHnyjoQzEsv6QZzfx6xn` (`rise-me-up`), team `team_VNljHgfcHPy9BqB4fQnP7udX`. Do not reconnect or deploy there during routine work.
+- Legacy Vercel reference, only for recovery: project `prj_vbgZLz2nFHnyjoQzEsv6QZzfx6xn` (`rise-me-up`), team `team_VNljHgfcHPy9BqB4fQnP7udX`. Its Git integration was disconnected on October 30, 2026, after automatic IONOS publishing passed. The project remains preserved, not deleted. Do not reconnect or deploy there during routine work.
 - See `IONOS_DEPLOYMENT.md` for publishing, verification, and recovery details.
