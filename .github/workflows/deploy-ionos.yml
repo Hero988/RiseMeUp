@@ -1,0 +1,83 @@
+name: Publish RiseMeUp to IONOS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: risemeup-ionos-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'Hero988/RiseMeUp' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: ionos-production
+      url: https://www.risemeup.org
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+
+      - name: Install the pinned package manager and dependencies
+        run: |
+          npm install --global pnpm@10.18.1
+          pnpm install --frozen-lockfile
+
+      - name: Build and check the website
+        run: |
+          pnpm build
+          pnpm check:ionos
+
+      - name: Prepare RiseMeUp-only publishing credentials
+        env:
+          SSH_KEY: ${{ secrets.RISEMEUP_IONOS_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.RISEMEUP_IONOS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY"
+          test -n "$KNOWN_HOSTS"
+          umask 077
+          mkdir -p "$RUNNER_TEMP/risemeup-ionos"
+          printf '%s\n' "$SSH_KEY" > "$RUNNER_TEMP/risemeup-ionos/key"
+          printf '%s\n' "$KNOWN_HOSTS" > "$RUNNER_TEMP/risemeup-ionos/known_hosts"
+          printf 'RISEMEUP_IONOS_KEY_FILE=%s\n' "$RUNNER_TEMP/risemeup-ionos/key" >> "$GITHUB_ENV"
+          printf 'RISEMEUP_IONOS_KNOWN_HOSTS_FILE=%s\n' "$RUNNER_TEMP/risemeup-ionos/known_hosts" >> "$GITHUB_ENV"
+
+      - name: Publish only the current main revision
+        run: |
+          set -euo pipefail
+          current_revision="$(git ls-remote origin refs/heads/main | cut -f1)"
+          test "$current_revision" = "$GITHUB_SHA"
+          pnpm deploy:ionos
+
+      - name: Verify the public website
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          const website = 'https://www.risemeup.org';
+          const response = await fetch(`${website}/deployment.json?revision=${process.env.GITHUB_SHA}`, { signal: AbortSignal.timeout(30000), cache: 'no-store' });
+          assert.equal(response.status, 200, 'The public deployment record must load');
+          assert.equal((await response.json()).revision, process.env.GITHUB_SHA, 'The live website must match GitHub');
+          for (const pathname of ['/', '/development-partners/', '/mango-project/', '/crisis-response/', '/water-system/']) {
+            const page = await fetch(`${website}${pathname}`, { signal: AbortSignal.timeout(30000), cache: 'no-store' });
+            assert.equal(page.status, 200, `${pathname} must load`);
+            assert.match(page.headers.get('content-type') ?? '', /text\/html/, `${pathname} must be a website page`);
+          }
+          console.log('RiseMeUp is live on IONOS and matches this GitHub commit.');
+          NODE
+
+      - name: Remove temporary credentials
+        if: always()
+        run: rm -f "$RUNNER_TEMP/risemeup-ionos/key" "$RUNNER_TEMP/risemeup-ionos/known_hosts"
