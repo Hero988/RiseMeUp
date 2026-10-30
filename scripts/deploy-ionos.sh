@@ -8,7 +8,7 @@ key_file="${RISEMEUP_IONOS_KEY_FILE:-$project_root/.ionos.local/id_ed25519}"
 known_hosts="${RISEMEUP_IONOS_KNOWN_HOSTS_FILE:-$project_root/.ionos.local/known_hosts}"
 destination='a715279@access-5019731778.webspace-host.com'
 
-test -f "$key_file" && test -f "$known_hosts"
+test -s "$key_file" && test -s "$known_hosts"
 [[ "$key_file" = /* && "$known_hosts" = /* ]]
 [[ "$key_file" != *'"'* && "$known_hosts" != *'"'* ]]
 revision="$(node -e 'const fs = require("node:fs"); const data = JSON.parse(fs.readFileSync("dist/deployment.json", "utf8")); if (!/^[a-f0-9]{40}$/.test(data.revision)) process.exit(1); process.stdout.write(data.revision);')"
