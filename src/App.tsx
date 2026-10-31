@@ -142,21 +142,20 @@ export default function App() {
                 Since April 2023, war has uprooted lives and devastated
                 communities across Sudan.
               </p>
-              <p className="crisis-loss">
-                For the people we support, the losses reach beyond homes and
-                livelihoods. Families have been displaced, access to food has
-                become uncertain, and churches have been damaged, destroyed or
-                occupied. These places of worship hold memories and bring
-                communities together—their loss is felt far beyond their walls.
-                {" "}Rebuilding is about more than restoring buildings; it is about
-                helping families regain a sense of belonging and hope.
-              </p>
-              <p>
-                Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities have
-                endured immense suffering, often with little international
-                attention. Risemeup stands alongside them, providing food
-                assistance today while working towards lasting recovery,
-                dignity and hope.
+              <p className="crisis-story">
+                For the people we support, war has taken more than homes and
+                livelihoods. Families have been forced to leave their communities,
+                food has become harder to find, and churches have been damaged,
+                destroyed or occupied. These places of worship hold shared memories
+                and bring people together, so their loss is felt far beyond their
+                walls. For Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile
+                communities, rebuilding means more than restoring buildings. It
+                means helping families regain a sense of belonging, rebuild their
+                livelihoods and look towards the future with hope. These
+                communities have endured immense suffering, often with little
+                international attention. RiseMeUp stands alongside them, providing
+                food assistance today while working towards lasting recovery and
+                dignity.
               </p>
               <div className="source-note">
                 Background:{" "}
