@@ -9,6 +9,17 @@ export default function FarmPlan() {
         below explains how rebuilding could progress. <a href="/development-partners/#first-stage">Assessment and water restoration come first.</a>
       </p></div><section className="collection" id="collection" aria-label="The four parts of the farm vision"><article className="project" id="biogas-plant">
           <div className="biogas-feature">
+            <div className="biogas-intro">
+              <p className="eyebrow">Renewable energy · Virgin Mary Farm</p>
+              <h4>Biogas: giving farm by-products <em>a new purpose.</em></h4>
+              <p>
+                We plan to turn manure, crop residues and other organic farm
+                materials into useful energy and nutrient-rich fertiliser —
+                supporting the farm, nourishing the soil and making better use
+                of what we grow.
+              </p>
+            </div>
+            <div className="biogas-illustrations">
           <figure className="biogas-illustration">
             <img
               src="/farm-plan/biogas-process.jpg"
@@ -17,27 +28,24 @@ export default function FarmPlan() {
               height="1491"
               loading="lazy"
             />
-            <figcaption>Concept illustration of the proposed facility — not an existing installation. Animal types and equipment shown are illustrative, not a final farm design.</figcaption>
+            <figcaption>The idea: from farm by-products to useful energy.</figcaption>
           </figure>
-            <div className="biogas-intro">
-              <p className="eyebrow">Renewable energy · Virgin Mary Farm</p>
-              <h4>Biogas <em>plant.</em></h4>
-              <p>Turning farm by-products into useful energy and fertiliser.</p>
-              <p>
-                We plan to turn agricultural residues, manure and other organic
-                farm materials into gas and electricity for farm operations.
-              </p>
-              <p>
-                The nutrient-rich material left after digestion would be used as
-                fertiliser, helping to nourish the soil and support a more
-                self-sufficient farm.
-              </p>
-              <ul>
-                <li>Electricity and gas for farm operations</li>
-                <li>Fertiliser to nourish the soil</li>
-                <li>Productive use of farm by-products</li>
-              </ul>
+              <figure className="biogas-illustration">
+                <img
+                  src="/farm-plan/biogas-components.jpg"
+                  alt="Second concept illustration showing numbered biogas plant components, from organic material collection and digestion to gas storage, energy use and fertiliser."
+                  width="1055"
+                  height="1491"
+                  loading="lazy"
+                />
+                <figcaption>A closer look: how the process could work.</figcaption>
+              </figure>
             </div>
+            <p className="biogas-concept-note">
+              Illustrative concepts only, not an existing installation or final
+              engineering design. Animals and equipment shown are examples; the
+              final plans would require specialist assessment.
+            </p>
           </div>
           <details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Biogas facility concept · Illustrative, not an existing installation</p>
             
