@@ -42,10 +42,10 @@ export default function FarmRoadmap() {
       <div className="growth-heading">
         <div>
           <p className="eyebrow">HOW REBUILDING COULD PROGRESS · FIVE PROPOSED PHASES</p>
-          <h3 id="farm-growth-title">Start growing.<br /><em>Build a lasting future.</em></h3>
+          <h3 id="farm-growth-title">Our vision for<br /><em>rebuilding the farm.</em></h3>
         </div>
         <div className="growth-intro">
-          <p>This roadmap sets out a possible sequence for restoring production and gradually developing the farm’s 130-hectare site. Water assessment comes first; women from all three communities would help shape participation and training.</p>
+          <p>This illustration shows how the farm could develop over time. Our first priority is to assess the site and restore a reliable water supply, so growing and practical training can begin. Further development will depend on safe access, funding and agreement with the communities and partners.</p>
           <p className="growth-family-target"><strong>300+ families</strong><span>Proposed long-term reach · participant numbers and selection to be agreed with communities.</span></p>
         </div>
       </div>
