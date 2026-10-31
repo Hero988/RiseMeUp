@@ -28,6 +28,9 @@ unless needed, or print their contents while diagnosing a problem.
 
 Run `npm run build` followed by `npm run check:ionos`. The second command
 checks the static output and writes `dist/deployment.json` with the revision.
+It also adds content-based versions to the homepage's public stylesheet links,
+so a changed design requests fresh styles instead of reusing an older browser
+copy. The workflow checks these published styles against their version hashes.
 For controlled recovery only, `npm run deploy:ionos` uses the isolated local
 SSH key. Prefer the GitHub workflow for normal updates so the live revision
 matches the saved source. Never deploy uncommitted website edits under an old

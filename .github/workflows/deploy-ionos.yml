@@ -66,6 +66,7 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
+          import { createHash } from 'node:crypto';
           const website = 'https://www.risemeup.org';
           const response = await fetch(`${website}/deployment.json?revision=${process.env.GITHUB_SHA}`, { signal: AbortSignal.timeout(30000), cache: 'no-store' });
           assert.equal(response.status, 200, 'The public deployment record must load');
@@ -74,6 +75,17 @@ jobs:
             const page = await fetch(`${website}${pathname}`, { signal: AbortSignal.timeout(30000), cache: 'no-store' });
             assert.equal(page.status, 200, `${pathname} must load`);
             assert.match(page.headers.get('content-type') ?? '', /text\/html/, `${pathname} must be a website page`);
+            if (pathname === '/') {
+              const homepage = await page.text();
+              const stylesheets = [...homepage.matchAll(/href="(\/(?!assets\/)[^"?]+\.css)\?v=([a-f0-9]{12})"/g)];
+              assert(stylesheets.some(match => match[1] === '/homepage-theme.css'), 'The homepage must request a versioned theme');
+              for (const [, stylesheet, version] of stylesheets) {
+                const asset = await fetch(`${website}${stylesheet}?v=${version}`, { signal: AbortSignal.timeout(30000), cache: 'no-store' });
+                assert.equal(asset.status, 200, `${stylesheet} must load`);
+                const hash = createHash('sha256').update(Buffer.from(await asset.arrayBuffer())).digest('hex').slice(0, 12);
+                assert.equal(hash, version, `${stylesheet} must match its published version`);
+              }
+            }
           }
           console.log('RiseMeUp is live on IONOS and matches this GitHub commit.');
           NODE

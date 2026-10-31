@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { existsSync, lstatSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
@@ -37,5 +38,13 @@ for (const match of homepage.matchAll(/(?:src|href)="(\/(?!\/)[^"#?]+)(?:[?#][^"
 
 const revision = process.env.GITHUB_SHA || execFileSync('git', ['rev-parse', 'HEAD'], { cwd: projectRoot, encoding: 'utf8' }).trim();
 assert(/^[a-f0-9]{40}$/.test(revision), 'A full Git commit is required for publishing');
+const versionedHomepage = homepage.replace(/(<link\b[^>]*\bhref=")(\/(?!\/)[^"?#]+\.css)(?:\?[^"#]*)?(")/g, (match, prefix, pathname, suffix) => {
+  if (pathname.startsWith('/assets/')) return match;
+  const stylesheet = readFileSync(path.join(buildDirectory, pathname));
+  const version = createHash('sha256').update(stylesheet).digest('hex').slice(0, 12);
+  return `${prefix}${pathname}?v=${version}${suffix}`;
+});
+assert(/href="\/homepage-theme\.css\?v=[a-f0-9]{12}"/.test(versionedHomepage), 'The homepage theme must have a content-specific version');
+writeFileSync(path.join(buildDirectory, 'index.html'), versionedHomepage);
 writeFileSync(path.join(buildDirectory, 'deployment.json'), `${JSON.stringify({ revision, builtAt: new Date().toISOString() })}\n`);
 console.log(`IONOS build checks passed for ${revision}. No private files or WordPress files will be uploaded.`);
