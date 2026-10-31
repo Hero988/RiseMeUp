@@ -8,11 +8,7 @@ export default function FarmPlan() {
         These are the facilities we hope to develop; the five-phase recovery roadmap
         below explains how rebuilding could progress. <a href="/development-partners/#first-stage">Assessment and water restoration come first.</a>
       </p></div><section className="collection" id="collection" aria-label="The four parts of the farm vision"><article className="project" id="biogas-plant">
-          <div className="biogas-intro">
-            <p className="eyebrow">Virgin Mary Farm · The long-term vision</p>
-            <h4>Biogas <em>plant.</em></h4>
-            <p>Turning farm by-products into useful energy and fertiliser.</p>
-          </div>
+          <div className="biogas-feature">
           <figure className="biogas-illustration">
             <img
               src="/farm-plan/biogas-process.jpg"
@@ -23,13 +19,26 @@ export default function FarmPlan() {
             />
             <figcaption>Concept illustration of the proposed facility — not an existing installation. Animal types and equipment shown are illustrative, not a final farm design.</figcaption>
           </figure>
-          <p className="biogas-overview">
-            We plan to turn agricultural residues, manure and other organic farm
-            materials into gas and electricity for farm operations. The
-            nutrient-rich material left after digestion would be used as
-            fertiliser, helping to nourish the soil and support a more
-            self-sufficient farm.
-          </p>
+            <div className="biogas-intro">
+              <p className="eyebrow">Renewable energy · Virgin Mary Farm</p>
+              <h4>Biogas <em>plant.</em></h4>
+              <p>Turning farm by-products into useful energy and fertiliser.</p>
+              <p>
+                We plan to turn agricultural residues, manure and other organic
+                farm materials into gas and electricity for farm operations.
+              </p>
+              <p>
+                The nutrient-rich material left after digestion would be used as
+                fertiliser, helping to nourish the soil and support a more
+                self-sufficient farm.
+              </p>
+              <ul>
+                <li>Electricity and gas for farm operations</li>
+                <li>Fertiliser to nourish the soil</li>
+                <li>Productive use of farm by-products</li>
+              </ul>
+            </div>
+          </div>
           <details className="project-details"><summary>Explore the renewable energy plan <span aria-hidden="true">+</span></summary><div className="detail-inner"><p className="caption">Biogas facility concept · Illustrative, not an existing installation</p>
             
             

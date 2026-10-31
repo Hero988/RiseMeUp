@@ -795,15 +795,34 @@
 .home-page #virgin-mary-farm #farm-plan #biogas-plant .panel:after{background:linear-gradient(0deg,#0c231bf5,#132c2280 28%,transparent 64%)}
 
 .home-page #virgin-mary-farm #farm-plan #biogas-plant{grid-column:1 / -1}
-.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro{padding:24px}
+.home-page #virgin-mary-farm #farm-plan .collection{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-feature{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:24px;padding:24px}
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro{min-width:0;padding:0}
 .home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro .eyebrow{margin:0 0 10px;color:#617159;font:500 11px/1.7 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro h4{margin:0 0 12px;color:#24583d;font:400 clamp(32px,4vw,48px)/1.15 'Lora',Georgia,serif}
 .home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro h4 em{color:#b45c2f}
-.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro>p:last-child,.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-overview{margin:0;color:#405b48;font:400 16px/1.7 'DM Sans',sans-serif}
-.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-illustration{margin:0}
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro>p:not(.eyebrow){margin:0 0 14px;color:#405b48;font:400 16px/1.7 'DM Sans',sans-serif}
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-intro ul{margin:0;padding-left:18px;color:#405b48;font:400 14px/1.7 'DM Sans',sans-serif}
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-illustration{min-width:0;margin:0}
 .home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-illustration img{display:block;position:static;width:100%;height:auto;padding:0;border-radius:0;object-fit:contain}
-.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-illustration figcaption{padding:14px 24px 0;color:#617159;font:400 13px/1.6 'DM Sans',sans-serif}
-.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-overview{padding:18px 24px 24px}
+.home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-illustration figcaption{padding:10px 0 0;color:#617159;font:400 12px/1.6 'DM Sans',sans-serif}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant){display:flex;flex-direction:column;height:100%}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel{display:flex;flex:1;flex-direction:column;height:auto;background:transparent}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel:after{display:none}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel>img{position:static;display:block;width:100%;height:220px;object-fit:cover;z-index:auto}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel>.panel-category{position:static;margin:16px 16px 9px;color:#617159;font:500 10px/1.7 'DM Sans',sans-serif;letter-spacing:.06em;text-shadow:none}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel-copy{position:static;display:flex;flex:1;flex-direction:column;padding:0 16px 16px;color:#24583d}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel h4{flex:1;margin:0 0 10px;color:#24583d;font:400 clamp(23px,2.2vw,32px)/1.2 'Lora',Georgia,serif;text-shadow:none;overflow-wrap:break-word}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel h4 em{color:#b45c2f}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .output{margin:0;color:#617159;font-size:13px;line-height:1.6}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .project-details{border-top:1px solid #d2decb}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .project-details summary{padding:12px 16px;gap:10px;font-size:12px;min-height:70px}
+.home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .detail-inner{padding:0 16px 20px}
+@media(max-width:650px){
+ .home-page #virgin-mary-farm #farm-plan .collection{grid-template-columns:1fr}
+ .home-page #virgin-mary-farm #farm-plan #biogas-plant .biogas-feature{grid-template-columns:1fr;gap:20px;padding:16px}
+ .home-page #virgin-mary-farm #farm-plan .project:not(#biogas-plant) .panel>img{height:210px}
+}
 
 /* Approved calm SDG cards, orange slogan and Lora partnership heading. */
 .home-page.warm-brand #sdgs.rm-sdg-editorial{background:#faf7ef;color:#405b48;font-family:'DM Sans',sans-serif}
