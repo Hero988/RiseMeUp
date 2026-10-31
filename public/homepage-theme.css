@@ -372,7 +372,7 @@
   font-family:inherit;font-weight:500;font-size:inherit;font-style:italic;color:#24583d;
 }
 .home-page #virgin-mary-farm .farm-women > p:not(.eyebrow) {
-  max-width:850px;font:400 17px/1.85 'DM Sans',sans-serif;margin:0 0 22px;color:#405b48;
+  max-width:none;font:400 17px/1.85 'DM Sans',sans-serif;margin:0 0 22px;color:#405b48;
 }
 .home-page #virgin-mary-farm .farm-women > h3 + p:not(.eyebrow):not(.women-slogan) {
   font-size:19px;line-height:1.85;font-weight:500;color:#2c513b;
