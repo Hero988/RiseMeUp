@@ -142,12 +142,14 @@ export default function App() {
                 Since April 2023, war has uprooted lives and devastated
                 communities across Sudan.
               </p>
-              <p>
+              <p className="crisis-loss">
                 For the people we support, the losses reach beyond homes and
                 livelihoods. Families have been displaced, access to food has
                 become uncertain, and churches have been damaged, destroyed or
                 occupied. These places of worship hold memories and bring
                 communities together—their loss is felt far beyond their walls.
+                {" "}Rebuilding is about more than restoring buildings; it is about
+                helping families regain a sense of belonging and hope.
               </p>
               <p>
                 Sudan’s Coptic Orthodox, Nuba Mountains and Blue Nile communities have
