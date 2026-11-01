@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/build-languages.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "check:site": "node scripts/verify-site.mjs",
     "check:ionos": "node scripts/verify-ionos-build.mjs",
+    "check:languages": "node scripts/verify-languages.mjs",
     "deploy:ionos": "bash scripts/deploy-ionos.sh"
   },
   "packageManager": "pnpm@10.18.1",

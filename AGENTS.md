@@ -25,6 +25,12 @@ The owner explicitly requests that normal website updates be saved to GitHub and
 5. Verify `https://www.risemeup.org/deployment.json` matches the pushed commit, and check the affected public pages/resources using HTTP requests. For browser work, obey the T3-only requirement and tool restrictions.
 6. Tell the owner plainly what changed and whether GitHub and the live website are both updated. Publishing takes build/upload time; do not promise an instant update or claim completion while it is pending or failed. If access or publishing fails, explain the problem and retain the working site.
 
+# Website languages
+
+- Keep English, French and German available in the language menu on all five website pages.
+- When changing website wording, update the matching entries in `public/translations/` as part of the same change. Preserve factual qualifications, names and figures in each language.
+- Follow `LOCALIZATION.md` and run `npm run check:languages` after building, in addition to the IONOS checks above. Check conditional messages as well as initially visible text.
+
 # RiseMeUp hosting boundaries
 
 - IONOS contract: `110067221`, WordPress Hosting Grow; site `1790838f-0d98-4871-af59-8a52f8116f17`.

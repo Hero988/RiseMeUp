@@ -38,6 +38,7 @@ jobs:
       - name: Build and check the website
         run: |
           pnpm build
+          pnpm check:languages
           pnpm check:ionos
 
       - name: Prepare RiseMeUp-only publishing credentials

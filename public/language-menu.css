@@ -1,0 +1,111 @@
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #24583d;
+  font: 500 13px/1.5 'DM Sans', Arial, sans-serif;
+  max-width: 100%;
+}
+.language-switcher select {
+  width: auto;
+  max-width: 100%;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 28px 8px 10px;
+  color: #24583d;
+  background-color: #fffefa;
+  border: 1px solid #a9b69c;
+  border-radius: 6px;
+  font: inherit;
+}
+.language-switcher select:focus-visible {
+  outline: 3px solid #a44420;
+  outline-offset: 3px;
+}
+.home-page .site-header .header-inner {
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.home-page .site-header .brand {
+  margin-right: auto;
+}
+.home-page .site-header .language-switcher {
+  margin-left: auto;
+}
+.home-page .site-header nav {
+  flex-wrap: wrap;
+}
+.site-header .header-inner > .language-switcher {
+  flex-shrink: 0;
+}
+.site-header .header-inner,
+.masthead,
+.water-header > .container {
+  flex-wrap: wrap;
+}
+.site-header nav,
+.masthead nav,
+.water-nav {
+  flex-wrap: wrap;
+}
+.masthead > .language-switcher {
+  flex-shrink: 0;
+}
+.translation-note {
+  margin: 0;
+  padding: 14px 5%;
+  background: #f9f5eb;
+  color: #4b5b48;
+  font: 400 13px/1.6 'DM Sans', Arial, sans-serif;
+}
+html[lang="fr"] .panel h4,
+html[lang="de"] .panel h4,
+html[lang="fr"] h1,
+html[lang="de"] h1,
+html[lang="fr"] h2,
+html[lang="de"] h2 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+@media (min-width: 1001px) {
+  .home-page .site-header nav {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1000px) {
+  .home-page .site-header .brand img {
+    width: clamp(110px, 25vw, 210px);
+  }
+  .home-page .site-header .menu-button {
+    order: 3;
+  }
+  .home-page .site-header nav {
+    order: 4;
+  }
+  .language-switcher > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .masthead {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .water-header > .container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .site-header .header-inner {
+    flex-wrap: wrap;
+  }
+}

@@ -7,6 +7,7 @@ import ClassicHero from "./components/ClassicHero";
 import SDGs from "./components/SDGs";
 import TeamFlipCard from "./components/TeamFlipCard";
 import ContactForm from "./components/ContactForm";
+import LanguageMenu from "./components/LanguageMenu";
 import { ClassicAbout, ClassicVision, ClassicObjectives, ClassicFounder, ClassicCommunityHistory } from "./components/ClassicSections";
 
 const email = "i.tadros@risemeup.org";
@@ -105,6 +106,7 @@ export default function App() {
             {menuOpen ? "Close" : "Menu"}{" "}
             <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
           </button>
+          <LanguageMenu />
           <nav
             id="main-nav"
             aria-label="Main navigation"
