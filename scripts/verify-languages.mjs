@@ -6,6 +6,7 @@ import vm from 'node:vm';
 import { chooseLanguage, localizedHref, normalizeText, translateText } from '../public/languages.js';
 import { extractText, pageFilename, renderHomepage, sitePages } from './language-content.mjs';
 import { checkLanguageRuntime } from './check-language-runtime.mjs';
+import './verify-investor-enquiry.mjs';
 
 const projectRoot = path.resolve(import.meta.dirname, '..');
 checkLanguageRuntime();
@@ -34,7 +35,8 @@ const homepageMarkup = renderHomepage(projectRoot);
 assert(homepageMarkup.includes('class="language-switcher"'));
 for (const code of ['en', 'fr', 'de']) assert(homepageMarkup.includes(`value="${code}"`));
 assert.equal((homepageMarkup.match(/class="project-details"/g) || []).length, 4);
-assert.equal((homepageMarkup.match(/<form\b/g) || []).length, 1);
+assert.equal((homepageMarkup.match(/<form\b/g) || []).length, 2);
+assert(homepageMarkup.includes('id="investor-enquiry"'));
 
 for (const page of sitePages) {
   const html = readFileSync(path.join(projectRoot, 'dist', pageFilename(page)), 'utf8');
@@ -43,6 +45,8 @@ for (const page of sitePages) {
   const messages = JSON.parse(match[1]);
   const dynamicText = [];
   if (page === 'home') {
+    const investorSource = readFileSync(path.join(projectRoot, 'src/lib/investorEnquiry.ts'), 'utf8');
+    dynamicText.push(...[...investorSource.matchAll(/summary: "([^"]+)"/g)].map(match => match[1]));
     dynamicText.push('Close',
       'Your email app should open with your enquiry. Please press Send there to deliver it. If nothing opens, use the email address above; your details remain in this form.',
       'Your email could not be prepared. Check the fields and try again, or email');

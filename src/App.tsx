@@ -7,6 +7,7 @@ import ClassicHero from "./components/ClassicHero";
 import SDGs from "./components/SDGs";
 import TeamFlipCard from "./components/TeamFlipCard";
 import ContactForm from "./components/ContactForm";
+import InvestorEnquiry from "./components/InvestorEnquiry";
 import LanguageMenu from "./components/LanguageMenu";
 import { ClassicAbout, ClassicVision, ClassicObjectives, ClassicFounder, ClassicCommunityHistory } from "./components/ClassicSections";
 
@@ -444,7 +445,7 @@ export default function App() {
                 </p>
                 <a
                   className="button"
-                  href={`mailto:${email}?subject=Virgin%20Mary%20Farm%20partnership`}
+                  href="#investor-enquiry"
                 >
                   Support the farm’s rebuilding <Arrow />
                 </a>
@@ -458,6 +459,7 @@ export default function App() {
             </p>
           </div>
         </section>
+        <InvestorEnquiry />
         <section id="contact" className="section">
           <div className="container">
             <div className="section-head"><p className="eyebrow">Get in touch</p><h2>Let’s put your support to work.</h2><p>Help provide food, share your expertise or support the farm’s rebuilding. We’d love to hear from you.</p></div>
