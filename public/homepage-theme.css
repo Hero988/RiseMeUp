@@ -27,13 +27,14 @@
 }
 @media (min-width: 900px) {
   .home-page .site-header .brand img {
-    transform: translateY(8px) scaleX(1.25);
+    transform: translateY(8px);
     transform-origin: left center;
   }
 }
 @media (min-width: 1001px) {
-  .home-page .site-header .brand img {
-    transform: scaleX(1.25);
+  .home-page.warm-brand .site-header .brand img {
+    width: 240px;
+    transform: none;
   }
 }
 .home-page .site-header nav {
