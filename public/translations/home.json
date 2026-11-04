@@ -621,5 +621,7 @@
   "Your email app should open with your enquiry. Please press Send there to deliver it. If nothing opens, use the email address above; your details remain in this form.": ["Votre application de messagerie devrait s’ouvrir avec votre demande. Cliquez sur Envoyer dans cette application pour la transmettre. Si rien ne s’ouvre, utilisez l’adresse e-mail ci-dessus ; vos informations restent dans ce formulaire.", "Ihr E-Mail-Programm sollte sich mit Ihrer Anfrage öffnen. Klicken Sie dort auf Senden, um sie abzuschicken. Falls sich nichts öffnet, verwenden Sie die oben angegebene E-Mail-Adresse; Ihre Angaben bleiben in diesem Formular erhalten."],
   "Your email could not be prepared. Check the fields and try again, or email": ["Votre e-mail n’a pas pu être préparé. Vérifiez les champs et réessayez, ou écrivez à", "Ihre E-Mail konnte nicht vorbereitet werden. Prüfen Sie die Felder und versuchen Sie es erneut, oder schreiben Sie an"],
   "Phase": ["Phase", "Phase"],
-  "UN target": ["Cible ONU", "UN-Unterziel"]
+  "UN target": ["Cible ONU", "UN-Unterziel"],
+  "Supporting families today. Planting the seeds of tomorrow.": ["Soutenir les familles aujourd’hui. Semer les graines de demain.", "Heute Familien unterstützen. Die Saat für morgen säen."],
+  "Together, we can turn hope into lasting change.": ["Ensemble, nous pouvons transformer l’espoir en un changement durable.", "Gemeinsam können wir Hoffnung in nachhaltigen Wandel verwandeln."]
 }

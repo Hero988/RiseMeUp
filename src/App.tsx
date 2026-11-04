@@ -229,6 +229,9 @@ export default function App() {
             <a className="button" style={{ whiteSpace: "nowrap", flexShrink: 0 }} href="/crisis-response/">Read our support story <Arrow /></a>
           </aside>
         </section>
+        <div className="section-message">
+          <p><span>Supporting families today. Planting the seeds of tomorrow.</span></p>
+        </div>
         <section id="virgin-mary-farm" className="section farm farm-estate-intro">
           <span className="anchor" id="projects" />
           <div className="rm-estate-band">
@@ -415,6 +418,9 @@ export default function App() {
         </section>
         <ClassicFounder />
         <ClassicCommunityHistory />
+        <div className="section-message">
+          <p><span>Together, we can turn hope into lasting change.</span></p>
+        </div>
         <section id="donate" className="section support">
           <div className="container">
             <p className="eyebrow">Support Risemeup</p>
