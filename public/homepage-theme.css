@@ -1263,7 +1263,7 @@
 @media(max-width:400px){.home-page.warm-brand #contact .form-row{grid-template-columns:1fr;gap:0}}
 
 /* Approved support option 1: ivory background and soft sage support cards. */
-.home-page.warm-brand #donate.support{background:#fbf8f0;color:#294b38;padding:45px 0;font:400 16px/1.85 'DM Sans',Arial,sans-serif}
+.home-page.warm-brand #donate.support{background:#fbf8f0;color:#294b38;padding:45px 0 24px;font:400 16px/1.85 'DM Sans',Arial,sans-serif}
 .home-page.warm-brand #donate > .container{width:min(1120px,88%);max-width:1120px;margin:auto}
 .home-page.warm-brand #donate .eyebrow{text-align:center;font:400 11px/1.85 'DM Sans',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#526b53;margin:0 0 14px}
 .home-page.warm-brand #donate .eyebrow::before,.home-page.warm-brand #donate .eyebrow::after{content:none;display:none}

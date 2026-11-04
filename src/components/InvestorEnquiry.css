@@ -1,4 +1,5 @@
-.home-page #investor-enquiry { background: #faf7ef; color: #294b38; }
+.home-page #investor-enquiry { background: #faf7ef; color: #294b38; padding-block: 24px; }
+.home-page.warm-brand #investor-enquiry + #contact { padding-top: 24px; }
 .home-page #investor-enquiry .investor-header { max-width: 790px; margin-bottom: 42px; }
 .home-page #investor-enquiry h2 { font-family: 'Lora', Georgia, serif; font-size: clamp(34px, 4vw, 56px); line-height: 1.2; letter-spacing: -.035em; margin: 14px 0 20px; }
 .home-page #investor-enquiry h2 em, .home-page #investor-enquiry h3 em { color: #386b48; font-family: inherit; font-weight: inherit; }
