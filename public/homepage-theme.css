@@ -17,12 +17,12 @@
   gap: 24px;
 }
 .home-page .site-header .brand {
-  position: relative;
-  margin-top: 24px;
-  inset-inline-start: -36px;
+  margin-top: 48px;
+  max-width: 100%;
 }
 .home-page .site-header .brand img {
-  width: 320px;
+  width: 420px;
+  max-width: 100%;
   height: auto;
 }
 .home-page .site-header nav {
@@ -182,20 +182,11 @@
   outline-offset: 5px;
 }
 @media (max-width: 1160px) {
-  .home-page .site-header .brand {
-    inset-inline-start: -24px;
-  }
-  .home-page .site-header .brand img {
-    width: 300px;
-  }
   .home-page .site-header nav {
     gap: 14px;
   }
 }
 @media (max-width: 1000px) {
-  .home-page .site-header .brand {
-    inset-inline-start: -16px;
-  }
   .home-page .site-header nav > a:not(.button),
   .home-page .site-header nav > .button {
     font-size: 16px;

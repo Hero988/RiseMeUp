@@ -24,6 +24,7 @@
   outline-offset: 3px;
 }
 .home-page .site-header .header-inner {
+  width: calc(100% - 32px);
   flex-wrap: wrap;
   gap: 12px 20px;
   padding-top: 12px;
@@ -78,7 +79,7 @@ html[lang="de"] h2 {
 }
 @media (max-width: 1000px) {
   .home-page .site-header .brand img {
-    width: clamp(185px, 53vw, 285px);
+    width: min(420px, 100%);
   }
   .home-page .site-header .menu-button {
     order: 3;
@@ -107,5 +108,10 @@ html[lang="de"] h2 {
 @media (max-width: 600px) {
   .site-header .header-inner {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .home-page .site-header .brand img {
+    width: min(360px, 100%);
   }
 }
