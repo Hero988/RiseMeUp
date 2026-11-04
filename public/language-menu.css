@@ -78,7 +78,7 @@ html[lang="de"] h2 {
 }
 @media (max-width: 1000px) {
   .home-page .site-header .brand img {
-    width: clamp(135px, 31vw, 260px);
+    width: clamp(185px, 53vw, 285px);
   }
   .home-page .site-header .menu-button {
     order: 3;
