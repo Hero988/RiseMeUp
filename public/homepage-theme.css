@@ -16,8 +16,12 @@
   min-height: 100px;
   gap: 24px;
 }
+.home-page .site-header .brand {
+  position: relative;
+  top: 6px;
+}
 .home-page .site-header .brand img {
-  width: 210px;
+  width: 240px;
   height: auto;
 }
 .home-page .site-header nav {
@@ -174,7 +178,7 @@
 }
 @media (max-width: 1160px) {
   .home-page .site-header .brand img {
-    width: 190px;
+    width: 218px;
   }
   .home-page .site-header nav {
     gap: 14px;
