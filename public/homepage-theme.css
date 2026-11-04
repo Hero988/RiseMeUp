@@ -25,6 +25,12 @@
   max-width: 100%;
   height: auto;
 }
+@media (min-width: 900px) {
+  .home-page .site-header .brand img {
+    transform: scaleX(1.25);
+    transform-origin: left center;
+  }
+}
 .home-page .site-header nav {
   gap: 20px;
   color: #263e2c;
