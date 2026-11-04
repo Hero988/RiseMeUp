@@ -60,16 +60,18 @@ export default function FarmRoadmap() {
       </div>
       <a className="button growth-view-image" href="/virgin-mary-five-phase-roadmap.jpeg" target="_blank" rel="noopener noreferrer">Open the picture at full size ↗</a>
       <section className="growth-phase-one" id="phase-one-equipment" aria-labelledby="phase-one-equipment-title">
-        <p className="eyebrow">A closer look at Phase 1</p>
-        <h4 id="phase-one-equipment-title">The tools to start growing.</h4>
-        <p>The illustration explores equipment for a possible 20–30 hectare production block. The assessed first growing area may be smaller; water availability, training needs and funding will determine the equipment required.</p>
-        <figure className="growth-illustration">
+        <figure className="growth-illustration growth-phase-one-layout">
           <a href="/virgin-mary-phase-one-machinery.jpg?v=2" target="_blank" rel="noopener noreferrer" aria-label="Open the proposed equipment and Phase 1 services illustration at full size in a new tab">
             <img src="/virgin-mary-phase-one-machinery.jpg?v=2" width="1024" height="1536" loading="lazy" alt="Virgin Mary Farm Phase 1 planning illustration with the original Risemeup logo, eight proposed equipment categories and nine planned support activities, including technical design, crop planning, equipment sourcing, irrigation, land preparation, supplier coordination, training, monitoring and expansion planning. No estimated prices are shown." />
           </a>
-          <figcaption>Proposed equipment and project-support activities, not existing assets or confirmed purchases. Water restoration comes first. Machinery specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</figcaption>
+          <figcaption>
+            <p className="eyebrow">A closer look at Phase 1</p>
+            <h4 id="phase-one-equipment-title">The tools to start growing.</h4>
+            <p>The illustration explores equipment for a possible 20–30 hectare production block. The assessed first growing area may be smaller; water availability, training needs and funding will determine the equipment required.</p>
+            <p className="growth-equipment-note">Proposed equipment and project-support activities, not existing assets or confirmed purchases. Water restoration comes first. Machinery specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</p>
+            <div className="actions"><a className="button" href="/virgin-mary-phase-one-machinery.jpg?v=2" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="button" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
+          </figcaption>
         </figure>
-        <div className="actions"><a className="button" href="/virgin-mary-phase-one-machinery.jpg?v=2" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="button" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
       </section>
       <details className="growth-details">
       <summary>Read the five phases and funding approach</summary>
