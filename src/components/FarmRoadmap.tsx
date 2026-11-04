@@ -66,9 +66,11 @@ export default function FarmRoadmap() {
           </a>
           <figcaption>
             <p className="eyebrow">A closer look at Phase 1</p>
-            <h4 id="phase-one-equipment-title">The tools to start growing.</h4>
-            <p>The illustration explores equipment for a possible 20–30 hectare production block. The assessed first growing area may be smaller; water availability, training needs and funding will determine the equipment required.</p>
-            <p className="growth-equipment-note">Proposed equipment and project-support activities, not existing assets or confirmed purchases. Water restoration comes first. Machinery specifications and quantities will follow technical assessment. A costed first-stage plan will be agreed before fundraising for equipment delivery.</p>
+            <h4 id="phase-one-equipment-title">The tools to grow a stronger future.</h4>
+            <p>Rebuilding Virgin Mary Farm starts with the essentials: reliable water, the right equipment and practical training. Together, these could help families return to farming, grow food and begin rebuilding their livelihoods.</p>
+            <p>With the right tools, land can become productive again.<br />With practical training, skills can grow into opportunities.<br />With your support, we can help turn this vision into a new beginning.</p>
+            <p>The illustration shows proposed equipment for a possible 20–30 hectare first growing area. The starting area may be smaller, depending on water availability, training needs and funding.</p>
+            <p className="growth-equipment-note">These are proposed plans—not equipment already owned or purchases confirmed. Restoring water comes first. Equipment specifications and quantities will follow a technical assessment, and a costed first-stage plan will be agreed before fundraising for equipment delivery.</p>
             <div className="actions"><a className="button" href="/virgin-mary-phase-one-machinery.jpg?v=2" target="_blank" rel="noopener noreferrer">Open the equipment picture ↗</a><a className="button" href="/development-partners/#phase-one-concept">Explore equipment needs →</a></div>
           </figcaption>
         </figure>
