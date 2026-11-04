@@ -78,6 +78,7 @@ html[lang="de"] h2 {
   .home-page .site-header nav {
     flex-basis: 100%;
     justify-content: flex-start;
+    padding-inline-start: 48px;
   }
 }
 @media (max-width: 1000px) {
