@@ -19,14 +19,19 @@
 .home-page .site-header .brand {
   position: relative;
   top: 6px;
+  inset-inline-start: -20px;
 }
 .home-page .site-header .brand img {
-  width: 240px;
+  width: 260px;
   height: auto;
 }
 .home-page .site-header nav {
   gap: 20px;
   color: #263e2c;
+}
+.home-page .site-header nav > a:not(.button),
+.home-page .site-header nav > .button {
+  font-size: 15px;
 }
 .home-page .site-header nav > a:hover {
   color: #9e431e;
@@ -178,13 +183,20 @@
 }
 @media (max-width: 1160px) {
   .home-page .site-header .brand img {
-    width: 218px;
+    width: 236px;
   }
   .home-page .site-header nav {
     gap: 14px;
   }
 }
 @media (max-width: 1000px) {
+  .home-page .site-header .brand {
+    inset-inline-start: -12px;
+  }
+  .home-page .site-header nav > a:not(.button),
+  .home-page .site-header nav > .button {
+    font-size: 16px;
+  }
   .home-page .header-inner {
     min-height: 90px;
   }
