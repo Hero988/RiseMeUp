@@ -254,6 +254,9 @@
 
 /* Tighten only the transition from the about slogan to the Sudan context. */
 .home-page #about{padding-bottom:36px}
+.home-page #about .about-photo-banner{margin:0 0 30px}
+.home-page #about .about-photo-banner img{display:block;width:100%;height:clamp(150px,26vw,330px);object-fit:cover;object-position:50% 62%;border-radius:17px;filter:saturate(.88)}
+.home-page #about .about-photo-banner figcaption{margin-top:8px;font-size:12px;line-height:1.5;color:#617159}
 .home-page #sudan-crisis{padding-top:36px}
 @media(max-width:600px){.home-page #about{padding-bottom:28px}.home-page #sudan-crisis{padding-top:28px}}
 

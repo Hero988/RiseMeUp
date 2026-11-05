@@ -8,6 +8,12 @@ export function ClassicAbout() {
     ["✧", "Food assistance", "Practical help today"],
   ];
   return <section id="about" className="section classic-about">
+    <div className="container">
+      <figure className="about-photo-banner">
+        <img src="/obj-rural-farming.jpeg" alt="Golden fields beneath mountains and a warm evening sky" width="1600" height="1066" loading="lazy" decoding="async" />
+        <figcaption>Illustrative landscape — not a photograph of Virgin Mary Farm.</figcaption>
+      </figure>
+    </div>
     <div className="container"><p className="classic-about-slogan">Think globally, act locally.</p></div>
     <div className="container classic-about-grid">
       <div className="classic-about-visual">
