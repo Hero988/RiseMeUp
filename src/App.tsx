@@ -24,7 +24,7 @@ const team = [
   {
     name: "Dr. Eng. Khalid Salih",
     role: "Renewable energy & training",
-    image: "/team-khalid-new-portrait.jpg",
+    image: "/team-khalid-salih-portrait.jpg",
     bio: "Renewable energy and workforce-training expertise. Former university lecturer in Berlin, Xplines International founder and DIESALIHS chairman.",
     qualifications: "PhD in Control Engineering",
     website: "https://www.xplines.org/",
